@@ -1,0 +1,49 @@
+---
+layout: post
+title: SSH tunnel into a DMZ
+categories:
+- work
+tags:
+- code
+- jmx
+status: publish
+type: post
+published: true
+meta:
+  _thumbnail_id: '71'
+  _publicize_pending: '1'
+author: 
+---
+<p>There are already many guides on the internet about how to set up SSH tunnelling <a title="SSH Tunneling Made Easy By Frank Wiles" href="http://www.revsys.com/writings/quicktips/ssh-tunnel.html" target="_blank">[1]</a><a title="Tunneling everything with SSH... or how to make VPNs..." href="http://sgros.blogspot.co.uk/2011/11/tunneling-everything-with-ssh-or-how-to.html" target="_blank">[2]</a>. This one isn't nearly as detailed as some, but it has one thing going for it: a picture! We all love pictures.</p>
+<p>It's really easy. It's a one-liner.<!--more--></p>
+<h1>Motivating use cases</h1>
+<p>I'm running a service in a DMZ on port 1234. I want to access this from my desktop in the internal network without opening another port in the firewall.</p>
+<p>This is all required for accessing JMX on a Java process running in the DMZ. JMX over one tunnelled port turns out to be more complicated; there'll be another post about that.</p>
+<h1>Prerequisites</h1>
+<p>We're going to assume that a competent sysadmin set up the DMZ. This means that</p>
+<ul>
+<li>very few ports are open through the firewall for connection into machines in the DMZ. We'll assume only that port 22 is open for SSH.</li>
+<li>in particular the port to which we want to connect, 1234, is not directly accessible from anywhere except the host on which it is listening.</li>
+<li>SSH TCP forwarding has probably been turned off</li>
+</ul>
+<p>We shouldn't need to change any of the firewall or iptables setup.</p>
+<p>How can you tell if SSH TCP forwarding is enabled? You might not need it anyway, but if the below doesn't work, get verbose logging with the <code>-v</code> switch and look for <code>open failed: administratively prohibited</code>. You'll have to get this enabled on the host in the DMZ. Persuade your sysadmin that this is ok by suggesting that they use iptables rules to block all ports to which you don't need access from outside the host, including 1234.</p>
+<p>We're going to set up the tunnel on a host in the internal network, to which the client has access. (We'll use a port on the <code>app-server</code> that's different to the target port in the DMZ, just for clarity.)</p>
+<h1>Get digging</h1>
+<p>This is the magic beans:</p>
+<blockquote>
+<pre>ssh -f -L app-server:1235:127.0.0.1:1234 -N user@web-server</pre>
+</blockquote>
+<p>This says:</p>
+<ul>
+<li>create a socket on <code>app-server</code> listening on port 1235</li>
+<li>send any traffic over SSH to <code>web-server</code></li>
+<li>on <code>web-server</code>, send any traffic received through the tunnel to <code>127.0.0.1:1234</code>. This won't go through the firewall and won't be blocked by iptables rules.</li>
+<li>the <code>-N</code> means "don't run a command on the target host". If you don't have this switch, you'll just get a shell on <code>web-server</code>.</li>
+<li>the <code>-f</code> runs the tunnel in the background</li>
+</ul>
+<p>That's it.</p>
+<h1>Caveats</h1>
+<p>Obviously I take no responsiblity for your web security.</p>
+<p>If an attacker gets a shell on your web server then they'll have access to the service whose port you've forwarded, because they can connect directly to it. Though if they get that far maybe you'll likely have bigger worries anyway.</p>
+<p>You could consider running the tunnel only when you actually want access to the management agent, and killing it when you're done.</p>
