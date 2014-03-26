@@ -8,11 +8,12 @@ tags:
 status: publish
 type: post
 published: true
-meta:
-  _publicize_pending: '1'
-  _thumbnail_id: '32'
-author: 
+author: Joe Kearney
 ---
+
+<div class="title-image">
+	<img src="/assets/i-can-haz-ze-job.jpg" alt="I can haz ze job?">
+</div>
 
 In the last three years I've given about 150 job interviews, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.
 

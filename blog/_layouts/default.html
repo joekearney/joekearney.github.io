@@ -4,40 +4,51 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-        <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
     </head>
     <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+      <div class="jumbotron"> 
+        <div class="container">
+          <a href="/">
+            <h1>{{ site.name }}</h1>
+          </a>
+          <p>{{ site.description }}</p>
+        </div>
+      </div>
+
+      <div class="container">
+
+        {{ content }}
+
+        <div class="row contact">
+          <div class="col-sm-6">
+            <p>
+              Powered by <a href="http://pages.github.com/">GitHub Pages</a><br />
+              mail@joekearney.co.uk
+            </p>
           </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Joe Kearney<br />
-                mail@joekearney.co.uk
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/joekearney">github.com/joekearney</a><br />
-                <a href="https://twitter.com/joejkearney">twitter.com/joejkearney</a><br />
-              </p>
-            </div>
+          <div class="col-sm-6 text-right">
+            <p>
+              <a href="https://github.com/joekearney">github.com/joekearney</a><br />
+              <a href="https://twitter.com/joejkearney">twitter.com/joejkearney</a><br />
+            </p>
           </div>
         </div>
+      </div>
 
     </body>
 </html>
