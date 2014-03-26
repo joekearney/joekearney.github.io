@@ -21,13 +21,13 @@ It seems only fair to try to describe how I approach giving an interview, to dis
 
 Let's start at the beginning.
 
-### What are we trying to achieve in an interview?
+## What are we trying to achieve in an interview?
 
 I'm a programmer, you're a programmer. The reason you're here is to decide whether we will be able to work productively together, should you be offered a job.
 
 My interviews broadly attempt to answer three questions. Hopefully the answer for all three will be positive; then you might get a good mark from me. After that it's up to your other interlocutors.
 
-### 1. Can I have a meaningful conversation with you?
+## 1. Can I have a meaningful conversation with you?
 
 This section should be about little more than vocabulary and the ability to sustain conversation in a programming or computer science context. If we're going to work together we need to be able to share ideas in design and implementation. **This is the part where you need some actual knowledge and an understanding of the first principles**, from which we can derive everything else later.
 
@@ -39,7 +39,7 @@ This should all be *just* vocabulary; it should be second nature. This stuff s
 
 Often the first technical question in an interview with me is a test of your plausibility as a developer. The great candidates sail through it and might add some sprinkles of novelty, but there's just not a lot of room to impress yet. Even the average candidates should answer this with no trouble. The value here is that it exposes the weak. If we spend more than about three minutes here then either it's going very badly or you've found some new fascinating angle on an almost trivial problem. I have had one or two marvellous interviews of the latter type, but too many where I get the sinking feeling within five sentences that everyone is wasting their time.
 
-### 2. Can you apply your knowledge?
+## 2. Can you apply your knowledge?
 
 Having the vocabulary is required just to participate in the conversation. Once we've established that, I want you to **show some real understanding of these structures and show that you're smart enough to use that understanding effectively**.
 
@@ -47,7 +47,7 @@ Perhaps you can adapt a standard data structure to adhere to some new constraint
 
 This is also where concurrency might come in. We might talk about different models of concurrency; most people who get through are comfortable talking about using locks and lock striping, map-reduce-style algorithms, and sometimes onto the more interesting lock- and wait-free algorithms. Maybe we'll look a level of abstraction higher, at executors, futures and more general message passing. At the sophisticated end it's quite difficult to cover the details with pen and paper, but again you should at least be able to indicate what's going on, perhaps with the aid of the *happens-before* descriptions of the JMM or similar. If you say you know concurrency in Java, know what `volatile` actually means. Maybe you've looked at [CLQ](http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html) and Michael and Scott, or the cool new [TransferQueue](http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/LinkedTransferQueue.html) stuff, and if so it's great when we can share some enthusiasm about how these outrageously clever ideas can be so elegant.
 
-### 3. Could we solve problems working together?
+## 3. Could we solve problems working together?
 
 Up until this point we've remained quite academic, and hopefully not used more than half of my hour. If you've got this far, we should have established that we can succinctly discuss problems and designs for solutions.
 
@@ -57,7 +57,7 @@ So this section will often come as something with a more practical bent. I try t
 
 An alternative is a small coding example. Yes, this is notoriously difficult to get right on paper, and no, there's no real opportunity here to shine. There is, however, ample opportunity to shoot yourself in the foot; this is often another question that separates the weak candidates from rest rather than the strong from the others, and as such it shouldn't take long. I don't care about typos that you'd never make in an IDE. The lack of a compiler in my sheet of A4 means that this really will be a short example – I won't ask you to do anything that should take more than 8-10 lines of code. With a little organisation, and probably after drawing for yourself some little pictures of the problem, there's little excuse for failing to get this completely correct. (Assuming you pass a few interviews I would expect you to face a larger coding exercise outside the interview room, which will provide a far better indication of actual *coding* ability.)
 
-### What have we learned?
+## What have we learned?
 
 If you get this far then hopefully we'll have talked about some interesting corners of computer science, as well as having glossed over the easy basics. It's much more interesting for both of us, and more likely to be successful for you, if this is a conversation between curious equals and not an interrogation.
 
