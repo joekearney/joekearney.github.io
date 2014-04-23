@@ -1,4 +1,17 @@
-name: Joe's Mots
-description: Trying to be cogent
-markdown: redcarpet
+markdown: rdiscount
 pygments: true
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
+exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components ]
+title : Joe's Mots
+production_url : http://www.joekearney.co.uk
+description: "Trying to be cogent."
+analytics: UA-49379324-1
+#disqus: on
+#gauges: 50f2b533613f5d7c8000000c
+author :
+  name : Joe Kearney
+  github : joekearney
+  twitter : joejkearney
+  email: mail@joekearney.co.uk

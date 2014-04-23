@@ -5,7 +5,7 @@ categories:
 - algorithms-string-matching
 status: draft
 type: post
-published: true
+published: false
 author: Joe Kearney
 permalink: /algorithms/string-matching/aho-corasick.html
 ---

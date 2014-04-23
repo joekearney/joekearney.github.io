@@ -1,11 +1,16 @@
 ---
-layout: default
+layout: layout
 ---
 
-<div class="row">
-	<div class="page-header">
-		<h1><a href="{{ page.url }}">{{ page.title }}</a> <small class="pull-right">{{ page.date | date_to_string }} &ndash; {{ page.author }}</small></h1>
-	</div>
+<article>
+  <h1 class="title-colour">
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
 
-	{{ content }}
-</div>
+  <section class="byline">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
+
+  {{ content }}
+  <div class="pull"></div>
+</article>

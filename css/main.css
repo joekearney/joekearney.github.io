@@ -1,14 +1,31 @@
+.title h1 {
+  font-size: 45pt;
+  text-align: center;
+}
+.title p {
+  text-align: center;
+}
+.title-colour, .title-colour a {
+  color: #b12930;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Podkova, Georgia, serif;
+}
+.navbar-brand {
+  color: #b12930;
+}
+h1, .h1 {
+  border-bottom: 1px solid #ddd;
 }
 body {
   font-family: Metrophobic, Verdana, sans-serif;
   text-align: justify;
 }
 
-html {
+/*html {
   font-size: 100%;
-}
+}*/
 
 .page-header h1 a {
   text-decoration: none;
@@ -19,18 +36,6 @@ html {
   text-align: center;
   background: black;
   margin-bottom: 25px;
-}
-
-.jumbotron a:hover {
-  color: black;
-  text-decoration: none;
-}
-.jumbotron h1 {
-  color: #b12930;
-  border-bottom: 1px solid #ddd;
-}
-.jumbotron {
-  text-align: center;
 }
 
 .contact {
