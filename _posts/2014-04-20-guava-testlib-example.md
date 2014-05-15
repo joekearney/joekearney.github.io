@@ -19,7 +19,7 @@ permalink: /work/guava-testlib-example.html
 
 Guava Testlib was written to test collections implementations exhaustively. It's general enough to allow tests to be written for any interface and have them run against many different implementations. It generates the cross product (filtered according to features) of tests and implementations and puts them in a nice hierarchy that looks great in Eclipse.
 
-The example here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, any any common tests are easy to factor out and apply to all solutions.
+The example here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, and any common tests are easy to factor out to apply to all solutions.
 
 Tests can be annotated with `Feature`s that correspond to differences in implementations of the interface specification &ndash; the same set of tests can be used to test mutable and immutable collections, for example, and the framework will decide which tests to add to which suite.
 
