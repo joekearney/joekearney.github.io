@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .navbar-brand {
   color: #b12930;
+  font-size: 18px;
 }
 h1, .h1 {
   border-bottom: 1px solid #ddd;
@@ -21,6 +22,11 @@ h1, .h1 {
 body {
   font-family: Metrophobic, Verdana, sans-serif;
   text-align: justify;
+  font-size: 16px;
+}
+
+blockquote p {
+  font-size: 20px;
 }
 
 /*html {
