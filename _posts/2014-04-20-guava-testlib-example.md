@@ -12,7 +12,14 @@ author: Joe Kearney
 permalink: /work/guava-testlib-example.html
 ---
 
+<div style="float: right" class="inline-image">
+  <img src="/images/hacker-rank-testlib-junit.png" alt="Hierarchy of tests in Eclipse JUnit view" title="Testlib hierarchy example" />
+  <div class="inline-image-cap"><p>Hierarchy of tests in Eclipse JUnit view</p></div>
+</div>
+
 Guava Testlib was written to test collections implementations exhaustively. It's general enough to allow tests to be written for any interface and have them run against many different implementations. It generates the cross product (filtered according to features) of tests and implementations and puts them in a nice hierarchy that looks great in Eclipse.
+
+The example here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, any any common tests are easy to factor out and apply to all solutions.
 
 Tests can be annotated with `Feature`s that correspond to differences in implementations of the interface specification &ndash; the same set of tests can be used to test mutable and immutable collections, for example, and the framework will decide which tests to add to which suite.
 
