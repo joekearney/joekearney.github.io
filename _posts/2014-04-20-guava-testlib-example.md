@@ -25,7 +25,7 @@ Tests can be annotated with `Feature`s that correspond to differences in impleme
 
 This project shows a simple and contrived example of how to set up these tests. We have a `Calculator` interface and various implementations that support some of the operations for some of the parameters.
 
-Check out the project from Github [here](https://github.com/joekearney/guava-testlib-example.git). This page walks through the bits that make up that project, so read through or skip to the whole thing.
+> Check out the project from Github [here](https://github.com/joekearney/guava-testlib-example.git). This page walks through the bits that make up that project, so read through or skip to the whole thing.
 
 This page doesn't go into any detail on derived test suites, where sub-test suites can be created recursively based on the test subject. There's a wealth of examples in the library itself around tests of collections and their derived collections (views, iterators, reserialised, etc).
 
