@@ -71,4 +71,8 @@ article .inline-image-cap {
 
 #footer p {
   color: gray;
+  font-size: 100%;
+}
+#footer section.meta a {
+  font-size: 100%;
 }
