@@ -12,7 +12,7 @@ author: Joe Kearney
 permalink: /work/guava-testlib-example.html
 ---
 
-<div style="float: right" class="inline-image">
+<div class="inline-image inline-image-right">
   <img src="/images/hacker-rank-testlib-junit.png" alt="Hierarchy of generated tests in Eclipse JUnit view" title="Testlib hierarchy example" />
   <div class="inline-image-cap"><p>Hierarchy of generated tests</p></div>
 </div>
