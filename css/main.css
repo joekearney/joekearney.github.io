@@ -61,14 +61,20 @@ article img {
   border: 1px solid #e7e7e7;
 }
 
-article .inline-image {
+.inline-image {
   padding: 18px 18px 0px 18px;
   background: #f8f8f8;
   border: 1px solid #e7e7e7;
+}
+.inline-image-right {
   float: right;
   margin-left: 20px;
 }
-article .inline-image-cap {
+.inline-image-left {
+  float: left;
+  margin-right: 20px;
+}
+.inline-image-cap {
   text-align: center;
   margin-top: 4px;
 }
