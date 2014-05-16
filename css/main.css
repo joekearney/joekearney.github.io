@@ -68,3 +68,7 @@ article .inline-image-cap {
   text-align: center;
   margin-top: 4px;
 }
+
+#footer p {
+  color: gray;
+}
