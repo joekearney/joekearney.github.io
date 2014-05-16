@@ -42,6 +42,11 @@ blockquote p {
   text-align: center;
   background: black;
   margin-bottom: 25px;
+  display: inline;
+}
+.title-image img {
+  display: inline;
+  border: none;
 }
 
 .contact {
