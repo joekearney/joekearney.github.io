@@ -13,7 +13,7 @@ meta:
   _publicize_pending: '1'
 author: Joe Kearney
 ---
-<p>We want to manage a Java web server running in a DMZ using JMX. Here we describe how to set this up, with JMX access from clients over SSH. My <a title="SSH tunnel into a DMZ" href="http://joekearney.wordpress.com/2013/06/13/jmx-ssh-tunnelling-into-a-dmz/" target="_blank">last post describes</a> how to set up connect to a port in the DMZ through an SSH tunnel (yes, it's simple). Once we have that, JMX-managed apps can be configured to allow JMX clients to connect to the source-host of the tunnel.</p>
+<p>We want to manage a Java web server running in a DMZ using JMX. Here we describe how to set this up, with JMX access from clients over SSH. My <a title="SSH tunnel into a DMZ" href="/posts/jmx-ssh-tunnelling-into-a-dmz/">last post describes</a> how to set up connect to a port in the DMZ through an SSH tunnel (yes, it's simple). Once we have that, JMX-managed apps can be configured to allow JMX clients to connect to the source-host of the tunnel.</p>
 <p><!--more--></p>
 <p>This post is in part a distillation of information found in Oracle blog posts <a title="Oracle: JMX - connection through firewalls" href="https://blogs.oracle.com/jmxetc/entry/jmx_connecting_through_firewalls_using" target="_blank">[1]</a><a title="Oracle - RMI Connectors, Single Port, SSL, and Firewall" href="https://blogs.oracle.com/jmxetc/entry/java_5_premain_rmi_connectors" target="_blank">[2]</a> from 2007/8 with some contributions from <a title="Mark Feeney - JMX through a ssh tunnel" href="http://blog.markfeeney.com/2010/10/jmx-through-ssh-tunnel.html" target="_blank">this one</a>, and some of my own trial-and-error testing.</p>
 <h1>How are JMX connections established?</h1>
