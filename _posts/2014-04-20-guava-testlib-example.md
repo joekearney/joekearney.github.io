@@ -111,18 +111,18 @@ The builder builds the test suite for a subject generator that you provide. Here
 
 {% highlight java %}
 public class TestsForCalculators {
-	public static Test suite() {
-		TestSuite suite = new TestSuite("Calculators");
+  public static Test suite() {
+    TestSuite suite = new TestSuite("Calculators");
 
-		suite.addTest(CalculatorTestSuiteBuilder.using(new CalculatorTestSubjectGenerator() {
-				@Override public Calculator createTestSubject() {
-					return new BigDecimalCalculator();
-				}})
-			.named("BigDecimalCalculator")
-			.createTestSuite());
+    suite.addTest(CalculatorTestSuiteBuilder.using(new CalculatorTestSubjectGenerator() {
+        @Override public Calculator createTestSubject() {
+          return new BigDecimalCalculator();
+        }})
+      .named("BigDecimalCalculator")
+      .createTestSuite());
 		
-		return suite;
-	}
+    return suite;
+  }
 }
 {% endhighlight %}
 
@@ -136,18 +136,18 @@ Features are declared as an enum, and carry their own `@Require` annotation to d
 
 {% highlight java %}
 public enum CalculatorFeature implements Feature<Calculator> {
-	POSITIVE_NUMBERS,
-	NEGATIVE_NUMBERS,
-	ANY_SIGN(NEGATIVE_NUMBERS, POSITIVE_NUMBERS),
+  POSITIVE_NUMBERS,
+  NEGATIVE_NUMBERS,
+  ANY_SIGN(NEGATIVE_NUMBERS, POSITIVE_NUMBERS),
 	
-	INTEGER_PARAMETERS,
-	FLOATING_POINT_PARAMETERS,
-	ANY_TYPE(INTEGER_PARAMETERS, FLOATING_POINT_PARAMETERS),
+  INTEGER_PARAMETERS,
+  FLOATING_POINT_PARAMETERS,
+  ANY_TYPE(INTEGER_PARAMETERS, FLOATING_POINT_PARAMETERS),
 	
   GENERAL_PURPOSE(ANY_SIGN, ANY_TYPE),
   ;
 
-	/* snip boilerplate */
+  /* snip boilerplate */
 }
 {% endhighlight %}
 
@@ -156,8 +156,8 @@ Then, for example, a test case is annotated thus:
 {% highlight java %}
 @Require({CalculatorFeature.NEGATIVE_NUMBERS, CalculatorFeature.INTEGER_PARAMETERS})
 public void testMinusOnePlusMinusOne() {
-	Number result = getSubjectGenerator().createTestSubject().add(-1, -1);
-	assertEqualsExact(result, -2);
+  Number result = getSubjectGenerator().createTestSubject().add(-1, -1);
+  assertEqualsExact(result, -2);
 }
 {% endhighlight %}
 
