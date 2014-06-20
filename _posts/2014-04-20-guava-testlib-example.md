@@ -43,11 +43,11 @@ We'll start with a really simple calculator interface. We can consider an implem
 
 {% highlight java %}
 public interface Calculator {
-	default Number add(Number a, Number b) { throw new UnsupportedOperationException(); }
-	default Number multiply(Number a, Number b) { throw new UnsupportedOperationException(); }
+  default Number add(Number a, Number b) { throw new UnsupportedOperationException(); }
+  default Number multiply(Number a, Number b) { throw new UnsupportedOperationException(); }
 	
-	/** Converts some useful classes of {@link Number} to {@link BigDecimal}. */
-	public static BigDecimal toBigDecimal(Number num) { ... }
+  /** Converts some useful classes of {@link Number} to {@link BigDecimal}. */
+  public static BigDecimal toBigDecimal(Number num) { ... }
 }
 {% endhighlight %}
 
@@ -56,12 +56,12 @@ The central part of the test framework is test suite builder that you need to wr
 {% highlight java %}
 public class CalculatorTestSuiteBuilder extends
       FeatureSpecificTestSuiteBuilder<CalculatorTestSuiteBuilder, CalculatorTestSubjectGenerator> {
-	@Override protected List<Class<? extends AbstractTester>> getTesters() {
-		return ImmutableList.of();
-	}
-	public static CalculatorTestSuiteBuilder using(CalculatorTestSubjectGenerator generator) {
-		return new CalculatorTestSuiteBuilder().usingGenerator(generator);
-	}
+  @Override protected List<Class<? extends AbstractTester>> getTesters() {
+    return ImmutableList.of();
+  }
+  public static CalculatorTestSuiteBuilder using(CalculatorTestSubjectGenerator generator) {
+    return new CalculatorTestSuiteBuilder().usingGenerator(generator);
+  }
 }
 {% endhighlight %}
 
@@ -73,16 +73,16 @@ To start with, let's write a superclass for our test cases, which can contain th
 
 {% highlight java %}
 public class CalculatorTester extends AbstractTester<CalculatorTestSubjectGenerator> {
-	protected static void assertEqualsExact(Number actual, long expected) {
-		assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
-	}
-	protected static void assertEqualsExact(Number actual, double expected) {
-		assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
-	}
-	protected static void assertEqualsExact(BigDecimal actual, BigDecimal expected) {
-		assertTrue("Expected [" + expected + "] but got [" + actual + "]",
-				actual.compareTo(expected) == 0);
-	}
+  protected static void assertEqualsExact(Number actual, long expected) {
+    assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
+  }
+  protected static void assertEqualsExact(Number actual, double expected) {
+    assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
+  }
+  protected static void assertEqualsExact(BigDecimal actual, BigDecimal expected) {
+    assertTrue("Expected [" + expected + "] but got [" + actual + "]",
+      actual.compareTo(expected) == 0);
+  }
 }
 {% endhighlight %}
 
@@ -90,10 +90,10 @@ We'll divide the test cases by the separate features of the Calculator that we'r
 
 {% highlight java %}
 public class AddTester extends CalculatorTester {
-	public void testAddZero() throws Exception {
-		Number result = getSubjectGenerator().createTestSubject().add(0, 0);
-		assertEqualsExact(result, 0);
-	}
+  public void testAddZero() throws Exception {
+    Number result = getSubjectGenerator().createTestSubject().add(0, 0);
+    assertEqualsExact(result, 0);
+  }
 }
 {% endhighlight %}
 
@@ -101,7 +101,7 @@ Now the test class can be added to the list of testers in the `CalculatorTestSui
 
 {% highlight java %}
 @Override protected List<Class<? extends AbstractTester>> getTesters() {
-	return ImmutableList.of(AddTester.class);
+  return ImmutableList.of(AddTester.class);
 }
 {% endhighlight %}
 
@@ -165,12 +165,12 @@ and the test suites are constructed declaring the features implemented by each i
 
 {% highlight java %}
 suite.addTest(CalculatorTestSuiteBuilder.using(new CalculatorTestSubjectGenerator() {
-		@Override public Calculator createTestSubject() {
-			return new PositiveIntegerCalculator();
-		}})
-	.named("PositiveIntegerCalculator")
-	.withFeatures(CalculatorFeature.INTEGER_PARAMETERS, CalculatorFeature.POSITIVE_NUMBERS)
-	.createTestSuite());
+    @Override public Calculator createTestSubject() {
+      return new PositiveIntegerCalculator();
+    }})
+  .named("PositiveIntegerCalculator")
+  .withFeatures(CalculatorFeature.INTEGER_PARAMETERS, CalculatorFeature.POSITIVE_NUMBERS)
+  .createTestSuite());
 {% endhighlight %}
 
 Note you can also annotate tests to run only if the feature is not implemented by a specific test subject, using `@Require(absent=CalculatorFeature.NEGATIVE_NUMBERS)`, for example.
