@@ -31,13 +31,13 @@ This page doesn't go into any detail on derived test suites, where sub-test suit
 
 ***
 
-## What are the components?
+# What are the components?
 
 * `FeatureSpecificTestSuiteBuilder` &ndash; this creates the test suite. Extend this, pass it a subject generator and call `createTestSuite`. This is where the set of tester classes is declared.
 * `AbstractTester` &ndash; extend this to provide actual tests. Test methods should be JUnit 3 style tests, not using `@Test` annotations. This class provides access to the subject generator. You might also want an abstract subclass from which your test cases extend if you want to give default assertion methods, for example.
 * `TestSubjectGenerator` &ndash; this is just a supplier of your implementation.
 
-## Let's get started
+# Let's get started
 
 We'll start with a really simple calculator interface. We can consider an implementation that uses `BigDecimal` to make accurate calculations, and an integer calculator that doesn't know about decimals and throws if passed anything other than an `Integer`. Or even a broken integer calculator that can't handle negative numbers.
 
@@ -67,7 +67,7 @@ public class CalculatorTestSuiteBuilder extends
 
 As soon as we write any test classes we'll add those classes to the list returned from `getTesters`.
 
-## Writing a first test
+# Writing a first test
 
 To start with, let's write a superclass for our test cases, which can contain the common assertions and functions that we'll want to use.
 
@@ -105,7 +105,7 @@ Now the test class can be added to the list of testers in the `CalculatorTestSui
 }
 {% endhighlight %}
 
-## Running the tests
+# Running the tests
 
 The builder builds the test suite for a subject generator that you provide. Here, all the generator has to do is to supply an instance the calculator.
 
@@ -128,7 +128,7 @@ public class TestsForCalculators {
 
 Now you can just keep adding tests that are independent of the impleentations.
 
-## Features
+# Features
 
 Different implementations can have different features. If we know that a specific Calculator won't handle non-integers, or negative numbers, say, then the tests asserting behaviour around these features shouldn't be run. Even better, we should test that they throw `IllegalArgumentException` or some other consistent response.
 
@@ -175,7 +175,7 @@ suite.addTest(CalculatorTestSuiteBuilder.using(new CalculatorTestSubjectGenerato
 
 Note you can also annotate tests to run only if the feature is not implemented by a specific test subject, using `@Require(absent=CalculatorFeature.NEGATIVE_NUMBERS)`, for example.
 
-## Next steps
+# Next steps
 
 * Our Calculators don't do much, we need to add implementations of other operations, such as multiply.
 * Once we've got tests for new features, we could add them to the `Feature` enum. Test suites implementing a new `MULTIPLY` feature could be declared as such so that only those calculators that support it are tested.
