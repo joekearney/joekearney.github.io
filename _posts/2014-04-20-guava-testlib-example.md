@@ -19,7 +19,7 @@ permalink: /work/guava-testlib-example.html
 
 Guava Testlib was written to test collections implementations exhaustively. It's general enough to allow tests to be written for any interface and have them run against many different implementations. It generates the cross product (filtered according to features) of tests and implementations and puts them in a nice hierarchy that looks great in Eclipse.
 
-The example here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, and any common tests are easy to factor out to apply to all solutions.
+The example here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, and any common tests are easy to factor out to apply to all solutions. (This was a silly use of testlib, but was fun to put together nonetheless.)
 
 Tests can be annotated with `Feature`s that correspond to differences in implementations of the interface specification &ndash; the same set of tests can be used to test mutable and immutable collections, for example, and the framework will decide which tests to add to which suite.
 
@@ -28,6 +28,12 @@ This project shows a simple and contrived example of how to set up these tests. 
 > Check out the project from Github [here](https://github.com/joekearney/guava-testlib-example.git). This page walks through the bits that make up that project, so read through or skip to the whole thing.
 
 This page doesn't go into any detail on derived test suites, where sub-test suites can be created recursively based on the test subject. There's a wealth of examples in the library itself around tests of collections and their derived collections (views, iterators, reserialised, etc).
+
+***
+
+# What's the big idea?
+
+> Write tests against the interface. Run the generated test suite per implementation, with the set of features that your implementation supports.
 
 ***
 
