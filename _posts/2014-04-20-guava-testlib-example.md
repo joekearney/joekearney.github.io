@@ -78,7 +78,7 @@ As soon as we write any test classes we'll add those classes to the list returne
 To start with, let's write a superclass for our test cases, which can contain the common assertions and functions that we'll want to use.
 
 {% highlight java %}
-public class CalculatorTester extends AbstractTester<CalculatorTestSubjectGenerator> {
+public abstract class CalculatorTester extends AbstractTester<CalculatorTestSubjectGenerator> {
   protected static void assertEqualsExact(Number actual, long expected) {
     assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
   }
