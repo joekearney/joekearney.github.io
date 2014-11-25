@@ -65,6 +65,7 @@ If you get this far then hopefully we'll have talked about some interesting corn
 
 I get quite hung up on the idea that you should nail the basics, the stuff that should be your primitives. So I'll reiterate this once more. [Joel Spolsky](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html) states the same sentiment thus:
 > If the basic concepts aren't so easy that you don’t even have to think about them, you’re not going to get the big concepts.
+> 
 > -- <cite>Joel Spolsky</cite>
 
 But if we can have a real conversation then this could be the start of something.
