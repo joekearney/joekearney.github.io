@@ -17,7 +17,7 @@ permalink: /work/interviewing-for-programmers.html
 	<img src="/images/i-can-haz-ze-job.jpg" alt="I can haz ze job?">
 </div>
 
-In the last three years I've given about 150 job interviews, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.)
+In the last four years at GSA Capital I've given almost 200 job interviews to software engineers, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.)
 
 It seems only fair to try to describe how I approach giving an interview, to distil some of my aims.
 
