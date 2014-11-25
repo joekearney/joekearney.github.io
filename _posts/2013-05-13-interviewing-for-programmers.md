@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interviewing for programmers
+title: Interviewing for Programmers
 categories:
 - work
 tags:
