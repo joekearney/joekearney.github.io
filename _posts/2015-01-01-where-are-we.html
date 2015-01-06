@@ -1,0 +1,101 @@
+---
+layout: post
+title: Where Are We?
+categories:
+- travel
+tags:
+- interesting
+status: published
+type: post
+published: false
+author: Joe Kearney
+permalink: /where
+---
+
+<style type="text/css">
+  #map-canvas img { max-width: none; max-height: none; } /* fix for badly sized map controls when using bootstrap */
+  #map-canvas { height: 600px; }
+</style>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"></script>
+<script type="text/javascript">
+var locations = ['London, UK', 'Dubai, United Arab Emirates', 'Hong Kong', 'Singapore', 'Sydney, Australia', 'Canberra, Australia', 'Melbourne, Australia', 'Adelaide, Australia'];
+
+var numLocations = locations.length;
+
+var map;
+var points = {};
+var pointsFound = 0;
+var polyline;
+
+function onComplete() {
+  var pathElements = [];
+  locations.forEach(function(v) { pathElements.push(points[v]); });
+  polyline = new google.maps.Polyline({
+    path: pathElements,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  polyline.setMap(map);
+}
+
+function addAddresses(addresses) {
+  function addMarker(map, results, address) {
+    var marker = new google.maps.Marker({
+      map: map,
+      position: results[0].geometry.location,
+      title: results[0].formatted_address
+    });
+
+    points[address] = results[0].geometry.location;
+    pointsFound++;
+
+    if (pointsFound == numLocations) {
+      onComplete();
+    }
+  }
+  function addAddress(geocoder, address) {
+    geocoder.geocode({
+        'address': address
+      }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          addMarker(map, results, address);
+        } else {
+          console.log("Failed to geocode address " + address);
+        }
+      });
+  }
+
+  geocoder = new google.maps.Geocoder();
+  var firstAddress = addresses[addresses.length - 1];
+  geocoder.geocode({
+      address: firstAddress
+    }, function(results, status) {
+      var canvas = document.getElementById('map-canvas');
+      if (status == google.maps.GeocoderStatus.OK) {
+        var mapOptions = {
+          zoom: 4,
+          center: results[0].geometry.location
+        }
+        map = new google.maps.Map(canvas, mapOptions);
+        addMarker(map, results, firstAddress);
+
+        for (i = addresses.length - 2; i >= 0; --i) {
+          addAddress(geocoder, addresses[i]);
+        }
+      } else {
+        console.log("Failed to geocode address " + firstAddress);
+      }
+    }
+  );
+}
+
+google.maps.event.addDomListener(window, 'load', addAddresses(locations));
+</script>
+
+<iframe src="https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/" width="800" height="600" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=b39k3119t78koksiunitchppm0%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=Etc%2FGMT" style=" border-width:0 " width="300" height="600" frameborder="0" scrolling="no"></iframe>
+
+<div id="map-canvas"></div>
