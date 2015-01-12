@@ -7,7 +7,7 @@ tags:
 - interesting
 status: publish
 type: post
-published: false
+published: true
 author: Joe Kearney
 permalink: /work/distrib-proto
 ---
