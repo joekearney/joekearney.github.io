@@ -21,7 +21,7 @@ Guava Testlib was written to test collections implementations exhaustively. It's
 
 The example in the image here shows the tests I wrote for a few of my Hacker Rank [submissions](https://github.com/joekearney/hacker-rank). Problems that have more than one solution do not require the tests to be duplicated, and any common tests are easy to factor out to apply to all solutions. (This was a silly use of testlib, but was fun to put together nonetheless.)
 
-Tests can be annotated with `Feature`s that correspond to differences in implementations of the interface specification &ndash; the same set of tests can be used to test mutable and immutable collections, for example, and the framework will decide which tests to add to which suite.
+Tests can be annotated with `Feature`s that correspond to differences in implementations of the interface specification -- the same set of tests can be used to test mutable and immutable collections, for example, and the framework will decide which tests to add to which suite.
 
 [This project](https://github.com/joekearney/guava-testlib-example.git), described on this page, gives a simple and contrived example of how to set up these tests. We have a `Calculator` interface and various implementations that support some of the operations for some of the parameters.
 
@@ -39,9 +39,9 @@ This page doesn't go into any detail on derived test suites, where sub-test suit
 
 # What are the components?
 
-* `FeatureSpecificTestSuiteBuilder` &ndash; this creates the test suite. Extend this, pass it a subject generator and call `createTestSuite`. This is where the set of tester classes is declared.
-* `AbstractTester` &ndash; extend this to provide actual tests. Test methods should be JUnit 3 style tests, not using `@Test` annotations. This class provides access to the subject generator. You might also want an abstract subclass from which your test cases extend if you want to give default assertion methods, for example.
-* `TestSubjectGenerator` &ndash; this is just a supplier of your implementation.
+* `FeatureSpecificTestSuiteBuilder` -- this creates the test suite. Extend this, pass it a subject generator and call `createTestSuite`. This is where the set of tester classes is declared.
+* `AbstractTester` -- extend this to provide actual tests. Test methods should be JUnit 3 style tests, not using `@Test` annotations. This class provides access to the subject generator. You might also want an abstract subclass from which your test cases extend if you want to give default assertion methods, for example.
+* `TestSubjectGenerator` -- this is just a supplier of your implementation.
 
 # Let's get started
 
