@@ -2,15 +2,18 @@
 layout: layout
 ---
 
-<article>
-  <h1 class="title-colour">
-    <a href="{{ page.url }}">{{ page.title }}</a>
-  </h1>
 
-  <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
-  </section>
+<div class="container">
+  <article>
+    <h1 class="title-colour">
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h1>
 
-  {{ content }}
-  <div class="pull"></div>
-</article>
+    <section class="byline">
+      {{ page.date | date: "%B %e, %Y" }}
+    </section>
+
+    {{ content }}
+    <div class="pull"></div>
+  </article>
+</div>

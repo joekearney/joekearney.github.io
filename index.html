@@ -3,35 +3,37 @@ layout: layout
 title: "Posts"
 ---
 
-<section class="content">
-  <div class="title">
-    <h1 class="title-colour">Joe's Mots</h1>
-    <p>Trying to be cogent.</p>
-  </div>
+<div class="container">
+  <section class="content">
+    <div class="title">
+      <h1 class="title-colour">Joe's Mots</h1>
+      <p>Trying to be cogent.</p>
+    </div>
 
-  <h2 class="thin">Interesting Posts</h2>
-  <ul class="listing">
-    {% for post in site.posts %}
-      {% if post.categories contains 'work' and post.tags contains 'interesting' %}
-        <li>
-          <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-<!--
-    <li><a href="/work/guava-testlib-example.html">Guava Testlib Example</a></li>
-    <li><a href="/work/interviewing-for-programmers.html">Inteviewing for Programmers</a></li>
--->
-  </ul>
+    <h2 class="thin">Interesting Posts</h2>
+    <ul class="listing">
+      {% for post in site.posts %}
+        {% if post.categories contains 'work' and post.tags contains 'interesting' %}
+          <li>
+            <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+  <!--
+      <li><a href="/work/guava-testlib-example.html">Guava Testlib Example</a></li>
+      <li><a href="/work/interviewing-for-programmers.html">Inteviewing for Programmers</a></li>
+  -->
+    </ul>
 
-  <h2 class="thin">All Software Posts</h2> 
-  <ul class="listing">
-    {% for post in site.posts %}
-      {% if post.categories contains 'work' %}
-        <li>
-          <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</section>
+    <h2 class="thin">All Software Posts</h2> 
+    <ul class="listing">
+      {% for post in site.posts %}
+        {% if post.categories contains 'work' %}
+          <li>
+            <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+</div>

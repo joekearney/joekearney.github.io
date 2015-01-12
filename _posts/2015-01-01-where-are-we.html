@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layout
 title: Where Are We?
 categories:
 - travel
@@ -7,14 +7,14 @@ tags:
 - interesting
 status: published
 type: post
-published: false
+published: true
 author: Joe Kearney
 permalink: /where
 ---
 
 <style type="text/css">
   #map-canvas img { max-width: none; max-height: none; } /* fix for badly sized map controls when using bootstrap */
-  #map-canvas { height: 600px; }
+  #map-canvas { height: 600px; width: 100%; }
 </style>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"></script>
 <script type="text/javascript">
@@ -94,8 +94,25 @@ function addAddresses(addresses) {
 google.maps.event.addDomListener(window, 'load', addAddresses(locations));
 </script>
 
-<iframe src="https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/" width="800" height="600" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-<iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=b39k3119t78koksiunitchppm0%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=Etc%2FGMT" style=" border-width:0 " width="300" height="600" frameborder="0" scrolling="no"></iframe>
+<div class="container-fluid">
+  <article>
+    <h1 class="title-colour">
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h1>
 
-<div id="map-canvas"></div>
+    <div class="row">
+      <div class="col-md-8">
+        <iframe src="https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/" width="100%" height="600" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+
+      <div class="col-md-4">
+        <iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=b39k3119t78koksiunitchppm0%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=Etc%2FGMT" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="map-canvas"></div>
+    </div>
+  </article>
+</div>
