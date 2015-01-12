@@ -5,9 +5,6 @@ categories:
 - work
 tags:
 - interesting
-status: publish
-type: post
-published: true
 author: Joe Kearney
 permalink: /work/distrib-proto
 ---
