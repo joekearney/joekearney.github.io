@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Protocols for Distribution
+title: Protocols for Distributed State
 categories:
 - work
 tags:
