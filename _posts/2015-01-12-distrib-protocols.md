@@ -11,14 +11,14 @@ author: Joe Kearney
 
 <div class="inline-image inline-image-right">
   <img src="/images/CAP.png" alt="Available choices satisfying the CAP theorem" title="CAP theorem choices" />
-  <div class="inline-image-cap"><p>CAP theorem choices</p></div>
+  <div class="inline-image-cap"><p>CAP theorem choices<sup>[from <a href="http://book.mixu.net/distsys/abstractions.html">Mixu</a>]</sup></p></div>
 </div>
 
 The CAP theorem states that among Consistency, Availability and Partition tolerance, only two can be provided simultaneously in any distributed system. This article is intended not so much to debate interpretations of the CAP theorem so much as to give an outline of some approaches that provide different choices of guarantees and interpretations of the CAP conditions.
 
 According to CAP there are basically three options as to which guarantees to lose. We'll look at algorithms that make each of these choices.
 
-There are plenty of resources describing this stuff in a lot more detail, including Mixu's [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html), a much more comprehensive overview. This page is intended to be a short summary, and nothing more.
+There are plenty of resources describing this stuff in a lot more detail, including Mixu's much more comprehensive and very readable overview: [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html). This article is intended to be a short summary, and nothing more.
 
 # What is a distributed system?
 
