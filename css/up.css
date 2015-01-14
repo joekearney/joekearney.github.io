@@ -444,7 +444,7 @@ ul.listing li{list-style-type:none;padding:7px 5px;border-bottom:1px solid #EEE}
 ul.listing li span{padding-top:3px;float:right;font-size:12px;color:#999}
 .navbar-blog,.navbar-blog a.brand{font-weight:100}
 #footer{border-top:1px solid #f5f5f5}
-#footer section.meta{padding:30px;color:#EEE;text-align:center}
+#footer section.meta{color:#EEE;text-align:center}
 #footer section.meta a{font-size:.8em;color:#555;text-decoration:none;transition:color .25s ease-in;-webkit-transition:color .25s ease-in}
 #footer section.meta a:hover{color:#307ea9}
 #footer i.icon{display:block;margin:auto}

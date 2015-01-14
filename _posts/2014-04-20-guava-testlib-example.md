@@ -7,7 +7,6 @@ tags:
 - interesting
 status: publish
 type: post
-published: true
 author: Joe Kearney
 ---
 
@@ -46,7 +45,7 @@ This page doesn't go into any detail on derived test suites, where sub-test suit
 
 We'll start with a really simple calculator interface. We can consider an implementation that uses `BigDecimal` to make accurate calculations, and an integer calculator that doesn't know about decimals and throws if passed anything other than an `Integer`. Or even a broken integer calculator that can't handle negative numbers.
 
-{% highlight java %}
+{% highlight java linenos %}
 public interface Calculator {
   default Number add(Number a, Number b) { throw new UnsupportedOperationException(); }
   default Number multiply(Number a, Number b) { throw new UnsupportedOperationException(); }
@@ -58,7 +57,7 @@ public interface Calculator {
 
 The central part of the test framework is test suite builder that you need to write. The below is the trivial such builder. You can do all sorts of other things in here, from simple things like determining the name automatically from the generator, to creating more complex hierarchies of tests (see `TestsForSetsInJavaUtil`, for example).
 
-{% highlight java %}
+{% highlight java linenos %}
 public class CalculatorTestSuiteBuilder extends
       FeatureSpecificTestSuiteBuilder<CalculatorTestSuiteBuilder, CalculatorTestSubjectGenerator> {
   @Override protected List<Class<? extends AbstractTester>> getTesters() {
@@ -76,7 +75,7 @@ As soon as we write any test classes we'll add those classes to the list returne
 
 To start with, let's write a superclass for our test cases, which can contain the common assertions and functions that we'll want to use.
 
-{% highlight java %}
+{% highlight java linenos %}
 public abstract class CalculatorTester extends AbstractTester<CalculatorTestSubjectGenerator> {
   protected static void assertEqualsExact(Number actual, long expected) {
     assertEqualsExact(toBigDecimal(actual), new BigDecimal(expected));
@@ -93,7 +92,7 @@ public abstract class CalculatorTester extends AbstractTester<CalculatorTestSubj
 
 We'll divide the test cases by the separate features of the Calculator that we're testing.
 
-{% highlight java %}
+{% highlight java linenos %}
 public class AddTester extends CalculatorTester {
   public void testAddZero() throws Exception {
     Number result = getSubjectGenerator().createTestSubject().add(0, 0);
@@ -104,7 +103,7 @@ public class AddTester extends CalculatorTester {
 
 Now the test class can be added to the list of testers in the `CalculatorTestSuiteBuilder`:
 
-{% highlight java %}
+{% highlight java linenos %}
 @Override protected List<Class<? extends AbstractTester>> getTesters() {
   return ImmutableList.of(AddTester.class);
 }
@@ -114,7 +113,7 @@ Now the test class can be added to the list of testers in the `CalculatorTestSui
 
 The builder builds the test suite for a subject generator that you provide. Here, all the generator has to do is to supply an instance the calculator.
 
-{% highlight java %}
+{% highlight java linenos %}
 public class TestsForCalculators {
   public static Test suite() {
     TestSuite suite = new TestSuite("Calculators");
@@ -139,7 +138,7 @@ Different implementations can have different features. If we know that a specifi
 
 Features are declared as an enum, and carry their own `@Require` annotation to determine which features are tested by which test cases. Most of this class is boilerplate setting, typed accordingly. The only interesting bit is the enum constants that you declare, and their implied features (passed as enum constructor arguments), which can be arbitrarily nested. See `CalculatorFeature` for the rest of the boilerplate.
 
-{% highlight java %}
+{% highlight java linenos %}
 public enum CalculatorFeature implements Feature<Calculator> {
   POSITIVE_NUMBERS,
   NEGATIVE_NUMBERS,
@@ -158,7 +157,7 @@ public enum CalculatorFeature implements Feature<Calculator> {
 
 Then, for example, a test case is annotated thus:
 
-{% highlight java %}
+{% highlight java linenos %}
 @Require({CalculatorFeature.NEGATIVE_NUMBERS, CalculatorFeature.INTEGER_PARAMETERS})
 public void testMinusOnePlusMinusOne() {
   Number result = getSubjectGenerator().createTestSubject().add(-1, -1);
@@ -168,7 +167,7 @@ public void testMinusOnePlusMinusOne() {
 
 and the test suites are constructed declaring the features implemented by each implementation. This one will generate a test suite that won't include the above test, for example.
 
-{% highlight java %}
+{% highlight java linenos %}
 suite.addTest(CalculatorTestSuiteBuilder.using(new CalculatorTestSubjectGenerator() {
     @Override public Calculator createTestSubject() {
       return new PositiveIntegerCalculator();
