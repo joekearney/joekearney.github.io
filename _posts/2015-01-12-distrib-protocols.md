@@ -14,7 +14,7 @@ author: Joe Kearney
   <div class="inline-image-cap"><p>CAP theorem choices</p></div>
 </div>
 
-The CAP theorem states that among Consistency, Availability and Partition tolerance, only two can be provided simultaneously in any distributed system. This article is intended not so much to debate the CAP theorem so much as to give an outline of some approaches that provide different choices of guarantees and interpretations of the CAP conditions.
+The CAP theorem states that among Consistency, Availability and Partition tolerance, only two can be provided simultaneously in any distributed system. This article is intended not so much to debate interpretations of the CAP theorem so much as to give an outline of some approaches that provide different choices of guarantees and interpretations of the CAP conditions.
 
 According to CAP there are basically three options as to which guarantees to lose. We'll look at algorithms that make each of these choices.
 
