@@ -441,7 +441,8 @@ article.error h1,.content.error h1{color:#f5f5f5;font-size:10em;font-weight:bold
 article div.pull,.content div.pull{padding-top:20px}
 ul.listing{margin:0 0 25px 0;padding:0}
 ul.listing li{list-style-type:none;padding:7px 5px;border-bottom:1px solid #EEE}
-ul.listing li span{padding-top:3px;float:right;font-size:12px;color:#999}
+ul.listing li span.post-date{padding-top:3px;float:right;font-size:12px;color:#999}
+ul.listing li span.post-description{color:#999}
 .navbar-blog,.navbar-blog a.brand{font-weight:100}
 #footer{border-top:1px solid #f5f5f5}
 #footer section.meta{color:#EEE;text-align:center}

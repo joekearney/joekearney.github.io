@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Interviewing for Programmers
+description: my approach to interviewing
 categories:
 - work
 tags:

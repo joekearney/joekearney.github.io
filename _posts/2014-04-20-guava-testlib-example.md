@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Guava Testlib Example
+description: a brief introduction into generated test suites with Guava Testlib
 categories:
 - work
 tags:
