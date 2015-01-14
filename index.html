@@ -20,7 +20,7 @@ title: "Posts"
                 <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                 <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
                 {% unless post.description == blank %}
-                  &ndash; <span class="post-description">{{ post.description }}</span>
+                  <span class="post-description">&ndash; {{ post.description }}</span>
                 {% endunless %}
               </li>
             {% endif %}
