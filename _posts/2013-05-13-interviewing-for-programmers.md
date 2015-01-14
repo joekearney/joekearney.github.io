@@ -10,7 +10,6 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
-permalink: /work/interviewing-for-programmers.html
 ---
 
 <div class="title-image">

@@ -9,7 +9,6 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
-permalink: /work/guava-testlib-example.html
 ---
 
 <div class="inline-image inline-image-right">

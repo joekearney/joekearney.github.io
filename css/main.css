@@ -21,7 +21,6 @@ h1, .h1 {
 }
 body {
   font-family: Metrophobic, Verdana, sans-serif;
-  text-align: justify;
   font-size: 16px;
 }
 
@@ -60,6 +59,9 @@ article img {
   margin: 0px;
   border: 1px solid #e7e7e7;
 }
+article p {
+  text-align: justify;
+}
 
 .inline-image {
   padding: 18px 18px 0px 18px;
@@ -85,4 +87,50 @@ article img {
 }
 #footer section.meta a {
   font-size: 100%;
+}
+#footer #text-right {
+  text-align: right;
+}
+#footer #text-left {
+  text-align: left;
+}
+
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout h4 {
+  margin: 0px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code,
+.bs-callout .highlight {
+  background-color: #fff;
+}
+
+/* Themes for different contexts */
+.bs-callout-danger {
+  border-left-color: #b12930;
+}
+.bs-callout-danger h4 {
+  color: #b12930;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
 }

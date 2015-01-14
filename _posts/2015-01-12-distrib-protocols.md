@@ -5,8 +5,8 @@ categories:
 - work
 tags:
 - interesting
+- draft
 author: Joe Kearney
-permalink: /work/distrib-proto
 ---
 
 <div class="inline-image inline-image-right">
@@ -18,7 +18,7 @@ The CAP theorem states that among Consistency, Availability and Partition tolera
 
 According to CAP there are basically three options as to which guarantees to lose. We'll look at algorithms that make each of these choices.
 
-There are plenty of resources describing this stuff in a lot more detail, including [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html), a much more comprehensive overview. This page is intended to be a short summary, and nothing more.
+There are plenty of resources describing this stuff in a lot more detail, including Mixu's [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html), a much more comprehensive overview. This page is intended to be a short summary, and nothing more.
 
 # What is a distributed system?
 
@@ -40,7 +40,7 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 > 
 > Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
 
-<div class="inline-image inline-image-cap" style="background: rgb(240, 71, 71)"><p>Discuss partitions</p></div>
+<div class="bs-callout bs-callout-danger"><b>TODO</b> Discuss partitions</div>
 
 ### Failure handling
 
@@ -53,7 +53,7 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 
 * Tree-based 2PC for reducing the workload of the coordinator at the expense of more message-passing delays up the tree of participants
 
-<div class="inline-image inline-image-cap" style="background: rgb(240, 71, 71)"><p>Discuss extensions in availability groups</p></div>
+<div class="bs-callout bs-callout-danger"><b>TODO</b> Discuss extensions in availability groups, standard optimisations</div>
 
 # CP -- sacrificing availability
 
@@ -71,7 +71,7 @@ Paxos does not appear to be so widely known or understood as 2PC. Indeed the Raf
 
 ## Raft
 
-<div class="inline-image inline-image-cap" style="background: rgb(240, 71, 71)"><p>TODO</p></div>
+<div class="bs-callout bs-callout-danger"><b>TODO</b></div>
 
 # AP -- sacrificing consistency
 
@@ -79,7 +79,7 @@ You may not always need strict 'one-copy' consistency, in which all of the state
 
 It boils down to being able to handle updates being processed out of order.  This typically requires some means of conflict resolution (specify some domain-specific rules about how to process the updates, or use time to synchronize) or arranging that updates will never conflict (make operations commutative/associative/idempotent). Updates might need to be constrained to being causally ordered, but that's usually fine too.
 
-<div class="inline-image inline-image-cap" style="background: rgb(240, 71, 71)"><p>EXPAND</p></div>
+<div class="bs-callout bs-callout-danger"><b>TODO</b> expand</div>
 
 There are a few versions of this:
 
@@ -90,5 +90,5 @@ Enter **C**onflict-free **R**eplicated **D**ata **T**ypes, built on the idea tha
 
 You'll CRDTs described in two flavours, both of which can be called conflict-free. The **C** can stand for
 
-* **commutative** -- the operations one. Nodes send messages describing operations to be performed
-* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in
+* **commutative** -- the operations one. Nodes send messages describing operations to be performed (think: arithmetic, with a way of ensuring idempotency)
+* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: counting storing the local count, merge operation is `max`)

@@ -13,6 +13,10 @@ layout: layout
       {{ page.date | date: "%B %e, %Y" }}
     </section>
 
+    {% if page.tags contains 'draft' %}
+      <div class="bs-callout bs-callout-danger"><h4>This post is a <b>draft</b></h4></div>
+    {% endif %}
+
     {{ content }}
     <div class="pull"></div>
   </article>
