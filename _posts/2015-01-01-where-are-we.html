@@ -20,13 +20,18 @@ container_type: container-fluid
 
 <div class="container-fluid">
   <article>
-    <h1 class="title-colour">
-      <a href="{{ page.url }}">{{ page.title }}</a>
-    </h1>
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="title-colour">
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </h1>
 
-    <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to bring up any photos that we took there.</p>
-
-    <div class="bs-callout bs-callout-info">Current location: arrived in <b id="current-location-text">...</b> on <b id="current-location-arrival">...</b></div>
+        <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to bring up any photos that we took there.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="bs-callout bs-callout-danger">Current location: <b id="current-location-text">...</b> since <b id="current-location-arrival">...</b></div>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-md-8">

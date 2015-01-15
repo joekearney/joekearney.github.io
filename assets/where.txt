@@ -4,5 +4,5 @@
 # date yyyy-MM-dd | location, searchable in Google Maps | Flickr photo in slideshow link
 
 2015-01-09|London, UK|https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/
-2015-01-11|New York, US|https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
+2015-01-11|New York, United States|https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
 2015-01-17|London, UK|

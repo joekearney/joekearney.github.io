@@ -139,3 +139,5 @@ article p {
 #map-canvas { height: 800px; width: 100%; }
 
 .infowindow-content { max-width: none; max-height: none; }
+
+#current-location-text, #current-location-arrival { white-space: nowrap; }
