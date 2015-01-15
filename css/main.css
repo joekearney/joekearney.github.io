@@ -134,3 +134,8 @@ article p {
 .bs-callout-info h4 {
   color: #5bc0de;
 }
+
+#map-canvas img { max-width: none; max-height: none; } /* fix for badly sized map controls when using bootstrap */
+#map-canvas { height: 800px; width: 100%; }
+
+.infowindow-content { max-width: none; max-height: none; }

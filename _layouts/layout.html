@@ -22,6 +22,12 @@
 
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="/js/up.min.js"></script>
+
+
+  {% for js in page.js-require %}
+  <script type="text/javascript" src="{{ js }}"></script>
+  {% endfor %}
+
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Podkova:400,700|Metrophobic' rel='stylesheet' type='text/css'>
 </head>
 

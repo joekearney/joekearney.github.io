@@ -1,6 +1,10 @@
 <div id="footer" class="hidden-print">
   <section class="meta">
+    {% if page.container_type %}
+    <div class={{ page.container_type }}>
+    {% else %}
     <div class="container">
+    {% endif %}
       <div class="row contact">
         <div class="col-md-6 text-left">
           <p>
@@ -11,7 +15,6 @@
         <div class="col-md-6 text-right">
           <p>
             <script type="text/javascript" language="javascript">
-              <!--
               // Email obfuscator script 2.1 by Tim Williams, University of Arizona
               // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
               // This code is freeware provided these four comment lines remain intact
@@ -32,7 +35,6 @@
                 }
               document.write("<a href='mailto:"+link+"'>"+link+"</a><br />")
               }
-              //-->
             </script>
             On 
             <a href="https://github.com/{{ site.author.github }}">GitHub</a>, <a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a>
