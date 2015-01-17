@@ -81,6 +81,9 @@ article p {
   margin-top: 4px;
 }
 
+#footer {
+  padding-bottom: 0px;
+}
 #footer p {
   color: gray;
   font-size: 100%;
@@ -110,8 +113,7 @@ article p {
 .bs-callout p:last-child {
   margin-bottom: 0;
 }
-.bs-callout code,
-.bs-callout .highlight {
+.bs-callout code {
   background-color: #fff;
 }
 
@@ -119,25 +121,29 @@ article p {
 .bs-callout-danger {
   border-left-color: #b12930;
 }
-.bs-callout-danger h4 {
+.bs-callout-danger .heading {
   color: #b12930;
 }
 .bs-callout-warning {
   border-left-color: #f0ad4e;
 }
-.bs-callout-warning h4 {
+.bs-callout-warning .heading {
   color: #f0ad4e;
 }
 .bs-callout-info {
   border-left-color: #5bc0de;
 }
-.bs-callout-info h4 {
+.bs-callout-info .heading {
   color: #5bc0de;
+  font-weight: bold;
+}
+.bs-callout .heading {
+  font-weight: bold;
 }
 
 #map-canvas img { max-width: none; max-height: none; } /* fix for badly sized map controls when using bootstrap */
 #map-canvas { height: 800px; width: 100%; }
 
-.infowindow-content { max-width: none; max-height: none; }
+#infowindow-content { max-width: none; max-height: none; }
 
 #current-location-text, #current-location-arrival { white-space: nowrap; }

@@ -11,6 +11,7 @@ function parseHistory(historyText) {
   var now = moment();
   lines.forEach(function(line) {
     if (line.length > 0 && line.charAt(0) != '#') {
+      console.log("Parsing " + line);
       var matches = line.match(/(.*)[|](.*)[|](.*)/);
       var day = moment(matches[1], 'YYYY-MM-DD');
       var place = matches[2];
@@ -26,6 +27,12 @@ function parseHistory(historyText) {
   });
 
   numLocations = locations.length;
+
+  if (numLocations > 0) {
+    var currentLocation = locations[locations.length - 1];
+    document.getElementById('current-location-text').innerHTML = currentLocation;
+    document.getElementById('current-location-arrival').innerHTML = dates[numLocations - 1].format('dddd MMMM Do, YYYY');
+  }
 
   google.maps.event.addDomListener(window, 'load', addAddresses(locations));
 }
@@ -86,7 +93,7 @@ function addAddresses(addresses) {
 
     var infoWindow = new google.maps.InfoWindow({
         content: infoboxContentString,
-        maxWidth: 320
+        maxWidth: 300
     });
     infoWindows[addressIndex] = infoWindow;
 
@@ -125,9 +132,6 @@ function addAddresses(addresses) {
   var latestPlaceIndex = addresses.length - 1;
 
   var currentLocation = addresses[latestPlaceIndex];
-
-  document.getElementById('current-location-text').innerHTML = currentLocation;
-  document.getElementById('current-location-arrival').innerHTML = dates[latestPlaceIndex].format('dddd MMMM Do, YYYY');
 
   geocoder.geocode({
       address: currentLocation

@@ -40,7 +40,7 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 > 
 > Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
 
-<div class="bs-callout bs-callout-danger"><b>TODO</b> Discuss partitions</div>
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> Discuss partitions</div>
 
 ### Failure handling
 
@@ -53,7 +53,7 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 
 * Tree-based 2PC for reducing the workload of the coordinator at the expense of more message-passing delays up the tree of participants
 
-<div class="bs-callout bs-callout-danger"><b>TODO</b> Discuss extensions in availability groups, standard optimisations</div>
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> Discuss extensions in availability groups, standard optimisations</div>
 
 # CP -- sacrificing availability
 
@@ -71,7 +71,7 @@ Paxos does not appear to be so widely known or understood as 2PC. Indeed the Raf
 
 ## Raft
 
-<div class="bs-callout bs-callout-danger"><b>TODO</b></div>
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span></div>
 
 # AP -- sacrificing consistency
 
@@ -79,7 +79,7 @@ You may not always need strict 'one-copy' consistency, in which all of the state
 
 It boils down to being able to handle updates being processed out of order.  This typically requires some means of conflict resolution (specify some domain-specific rules about how to process the updates, or use time to synchronize) or arranging that updates will never conflict (make operations commutative/associative/idempotent). Updates might need to be constrained to being causally ordered, but that's usually fine too.
 
-<div class="bs-callout bs-callout-danger"><b>TODO</b> expand</div>
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> expand</div>
 
 There are a few versions of this:
 
