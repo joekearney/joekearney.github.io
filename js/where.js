@@ -34,9 +34,14 @@ function parseHistory(historyText) {
   numLocations = locations.length;
 
   if (numLocations > 0) {
-    var currentLocation = locations[locations.length - 1];
+    var currentIndex = 0;
+    while (currentIndex+1 < numLocations.length && dates[currentIndex+1].isBefore(now)) {
+      currentIndex = currentIndex + 1;
+    }
+
+    var currentLocation = locations[currentIndex];
     document.getElementById('current-location-text').innerHTML = currentLocation;
-    document.getElementById('current-location-arrival').innerHTML = dates[numLocations - 1].format('dddd MMMM Do, YYYY');
+    document.getElementById('current-location-arrival').innerHTML = dates[currentIndex].format('dddd MMMM Do, YYYY');
   }
 
   google.maps.event.addDomListener(window, 'load', addAddresses(locations));
