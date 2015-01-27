@@ -147,3 +147,10 @@ article p {
 #infowindow-content { max-width: none; max-height: none; }
 
 #current-location-text, #current-location-arrival { white-space: nowrap; }
+
+#map-canvas #infowindow-content h2,
+#map-canvas #infowindow-content h3,
+#map-canvas #infowindow-content h4,
+#map-canvas #infowindow-content h5 {
+  margin-top: 0;
+}
