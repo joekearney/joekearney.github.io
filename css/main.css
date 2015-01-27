@@ -82,7 +82,7 @@ article p {
 }
 
 #footer {
-  padding-bottom: 0px;
+  padding: 0px;
 }
 #footer p {
   color: gray;
