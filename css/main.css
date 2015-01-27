@@ -106,6 +106,7 @@ article p {
   border: 1px solid #eee;
   border-left-width: 5px;
   border-radius: 3px;
+  background-color: #f8f8f8;
 }
 .bs-callout h4 {
   margin: 0px;
