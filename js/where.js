@@ -15,7 +15,6 @@ function parseHistory(historyText) {
   var now = moment();
   lines.forEach(function(line) {
     if (line.length > 0 && line.charAt(0) != '#') {
-      console.log("Parsing " + line);
       var matches = line.match(/(.*)[|](.*)[|](.*)/);
       var day = moment(matches[1], 'YYYY-MM-DD');
       var place = matches[2];
@@ -55,20 +54,21 @@ var map;
 var points = {};
 var polyline;
 
-function setFlickrLinkFor(placeName) {
-  var addressIndex = locations.lastIndexOf(placeName);
-  console.log("Found addressIndex " + addressIndex + " for place " + placeName);
+function setFlickrLinkForIndex(addressIndex) {
   if (addressIndex >= 0) {
     var flickrLink = flickrLinks[addressIndex];
     var flickrIframe = document.getElementById("flickr-canvas");
     if (flickrIframe.src != flickrLink && flickrLink.length != 0) {
       flickrIframe.src = flickrLink;
-    } else {
-      console.log("Found no flickr link for placeName " + placeName + " at index " + addressIndex);
     }
   } else {
     flickrIframe.src = '';
   }
+}
+function setFlickrLinkFor(placeName) {
+  var addressIndex = locations.lastIndexOf(placeName);
+  console.log("Found addressIndex " + addressIndex + " for place " + placeName);
+  setFlickrLinkForIndex(addressIndex);
 }
 
 function onComplete() {
@@ -125,9 +125,34 @@ function onComplete() {
     }
 
     function setUpInfoBox(placeForMarker, markerForInfoBox) {
+      function indexesOf(place) {
+        var indexes = [];
+        for (var i = 0; i < locations.length; i++) {
+          if (locations[i] == place) {
+            indexes.push(i);
+          }
+        }
+        return indexes;
+      }
+      function toList(is) {
+        function flickrLinkOrEmpty(i) {
+          if (flickrLinks[i].length > 0) {
+            return " (<a href='javascript:setFlickrLinkForIndex(" + i + ")'>photos</a>)";
+          } else {
+            return "";
+          }
+        }
+        var listString = "";
+        is.forEach(function(i) {
+          // Arrived ' + lastDateAtLocation[place].format('ddd MMM Do, YYYY')
+          listString = listString + "<li>" + dates[i].format('ddd MMM Do, YYYY') + flickrLinkOrEmpty(i) + "</li>";
+        });
+        return listString;
+      }
       var infoboxContentString =  '<div id="infowindow-content">' +
                                     '<h2 id="firstHeading" class="firstHeading">' + place + '</h2>'+
-                                    '<p>Arrived ' + lastDateAtLocation[place].format('ddd MMM Do, YYYY') + '</p>' +
+                                    '<h4>Arrived</h4><ul>'
+                                      + toList(indexesOf(place)) + '</ul>'
                                   '</div>';
 
       var infoWindow = new google.maps.InfoWindow({
@@ -136,21 +161,17 @@ function onComplete() {
       });
       infoWindows[place] = infoWindow;
     }
+    // have to do this through a closure to capture one value of marker! WAT!
     function attachMarkerClickListener(m) {
       google.maps.event.addListener(m, 'click', function() {
-        console.log("CLICK!!! on marker " + m + " with title " + m.title);
         markerClick(m, markers);
       });
     }
 
     // get the latest marker for each location, attach to the infobox and the map
-    console.log("There are " + Object.keys(markers).length + " markers in the hash: " + markers);
     for (var place in markers) {
       var marker = markers[place];
-      console.log("Creating infobox on marker with title " + marker.title + " at " + place);
-
       setUpInfoBox(place, marker);
-
       attachMarkerClickListener(marker);
     }
   }
@@ -166,15 +187,15 @@ function addAddresses(addresses) {
 
   function addMarker(map, results, addressIndex) {
     // note these don't come in any particular order
-
     var address = addresses[addressIndex];
-
 
     if (markers[address]) {
       console.log("Already have a marker for " + address);
     } else {
-      console.log("Creating marker for " + address);
+      // TODO 
       var pin = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+
+      // home different colour
       if (address.indexOf('London') >= 0) {
         pin = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
       }
@@ -185,7 +206,6 @@ function addAddresses(addresses) {
         title: address
       });
 
-      console.log("Adding marker to the hash for address " + address);
       markers[address] = marker;
     }
 
