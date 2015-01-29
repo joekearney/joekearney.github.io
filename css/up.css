@@ -108,7 +108,7 @@ cite{font-style:normal}
 .text-right{text-align:right}
 .text-center{text-align:center}
 .page-header{padding-bottom:9.5px;margin:42px 0 21px;border-bottom:1px solid #eee}
-ul,ol{margin-top:0;margin-bottom:10.5px}
+ul,ol{margin-top:0;margin-bottom:0px;padding-left:20px;}
 ul ul,ol ul,ul ol,ol ol{margin-bottom:0}
 .list-unstyled{padding-left:0;list-style:none}
 .list-inline{padding-left:0;list-style:none}
@@ -142,6 +142,7 @@ blockquote.pull-right small:after,blockquote.pull-right .small:after{content:'\0
 blockquote:before,blockquote:after{content:""}
 address{margin-bottom:21px;font-style:normal;line-height:1.428571429}
 /*code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}*/
+/* no padding on the right allows plurals, and doesn't look too silly standalone */
 code{padding: 2px 0px 2px 2px;margin-right: 1px;font-size:80%;color:#c7254e;background-color:#f9f2f4;white-space:nowrap;border-radius:4px;border-color: rgba(199, 37, 78, 0.22);border-style: solid;border-width: 1px;}
 pre{display:block;padding:10px;margin:0 0 10.5px;font-size:14px;line-height:1.428571429;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
