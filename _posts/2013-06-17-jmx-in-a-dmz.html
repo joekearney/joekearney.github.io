@@ -38,16 +38,14 @@ author: Joe Kearney
 </ol>
 <p>Usually you don't need to know the dynamic port used here until runtime, but obviously this isn't going to fly when connecting through a well-secured firewall.</p>
 <p>You can specify that the connection server factory should use the same port for these two roles when creating the JMX connection server programmatically in the <code>JMXServiceURL</code>, for example:</p>
-<blockquote>
 <pre>service:jmx:rmi://&lt;jmxHost:jmxPort&gt;/jndi/rmi://&lt;rmiHost:rmiPort&gt;/jmxrmi</pre>
-</blockquote>
 <p>Here the first port is that used for exported JMX RMI connection objects and the second port is where the RMI registry listens. The value of <code>jmxHost</code> here is ignored always.</p>
 <h1>Three addresses</h1>
 <p>There are many addresses that can be configured in various places.</p>
 <ol>
 <li>The system property <code>java.rmi.server.hostname</code> (<a title="Oracle - java.rmi properties documentation" href="http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/javarmiproperties.html" target="_blank">Oracle docs</a>). Contrary to some writings, this has nothing to do with where any listeners are established, so this can basically anything. This is the address that clients are given by the RMI registry, to which they attempt to make JMX connections. <strong>So this should be the name of the host originating the SSH tunnel.</strong></li>
-<li><code>jmxHost</code> in the <code>JMXServiceURL</code>, which is always ignored</li>
-<li><code>rmiHost</code> in the <code>JMXServiceURL</code> has to be resolvable by the managed application. Setting this to be 127.0.0.1, localhost or the machine name all appear to do the same thing, namely to bind to all interfaces on the machine.</li>
+<li><code>jmxHost</code> in the <code>JMXServiceURL</code>, which is <b>always ignored</b></li>
+<li><code>rmiHost</code> in the <code>JMXServiceURL</code> has to be <b>resolvable by the managed application</b>. Setting this to be 127.0.0.1, localhost or the machine name all appear to do the same thing, namely to bind to all interfaces on the machine.</li>
 <li>If the JMX/RMIConnectorServer is created and bound into the RMI registry manually, you'll specify the host in new instance of <code>JMXServiceURL</code>. In that case the <code>rmiHost</code> above is ignored.</li>
 </ol>
 <h1>Points of sadness</h1>

@@ -11,6 +11,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+js-require:
+-  http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 ---
 
 <div class="title-image">
@@ -29,11 +31,13 @@ I'm a programmer, you're a programmer. The reason you're here is to decide wheth
 
 My interviews broadly attempt to answer three questions. Hopefully the answer for all three will be positive; then you might get a good mark from me. After that it's up to your other interlocutors.
 
+***
+
 ## 1. Can I have a meaningful conversation with you?
 
 This section should be about little more than vocabulary and the ability to sustain conversation in a programming or computer science context. If we're going to work together we need to be able to share ideas in design and implementation. **This is the part where you need some actual knowledge and an understanding of the first principles**, from which we can derive everything else later.
 
-You should be able to describe how to construct a hash table and tell me that insertion and lookup take constant time, preferably with that slightly worried frown that shows that you're worried about the cases in which that can't be considered true. Obviously you need a grasp of the basic list implementations and their properties, because this is what you learned in the first week of your degree, back when you were paying attention. You should know that operations on trees are logarithmic and maybe even know of a couple of different implementations. We need to be able to talk fluently about complexity of the usual operations -- *O*(*n*&nbsp;log&nbsp;*n*) should make you jump up and scream "sorting!" (We actually have acoustic tiles in some of the meeting rooms, and that must be for just this purpose.)
+You should be able to describe how to construct a hash table and tell me that insertion and lookup take constant time, preferably with that slightly worried frown that shows that you're worried about the cases in which that can't be considered true. Obviously you need a grasp of the basic list implementations and their properties, because this is what you learned in the first week of your degree, back when you were paying attention. You should know that operations on trees are logarithmic and maybe even know of a couple of different implementations. We need to be able to talk fluently about complexity of the usual operations -- \\(O(n \log n)\\) should make you jump up and scream "sorting!" (We actually have acoustic tiles in some of the meeting rooms, and that must be for just this purpose.)
 
 It's nice to know that once upon a time you cared enough to understand how various implementations compare and why some are chosen over others, and that you were curious enough to stumble across and be enriched by their less popular cousins like the skip list and the Fibonacci heap. But I do not expect deep specific knowledge of obscure structures. I don't expect you to be able to describe in detail, from memory, the fiddly bits of standards (for example red-black tree node rotation or even quicksort), though you might drop a hint in passing that you're aware of what happens in principle. I have a copy of the [CLRS book](http://mitpress.mit.edu/books/introduction-algorithms) on my desk for when I really need to implement or remind myself about the low level details, but it doesn't get used all that often -- even as a library developer I didn't need to implement sorting. Anyway.
 
@@ -59,11 +63,14 @@ So this section will often come as something with a more practical bent. I try t
 
 An alternative is a small coding example. Yes, this is notoriously difficult to get right on paper, and no, there's no real opportunity here to shine. There is, however, ample opportunity to shoot yourself in the foot; this is often another question that separates the weak candidates from rest rather than the strong from the others, and as such it shouldn't take long. I don't care about typos that you'd never make in an IDE. The lack of a compiler in my sheet of A4 means that this really will be a short example -- I won't ask you to do anything that should take more than 8-10 lines of code. With a little organisation, and probably after drawing for yourself some little pictures of the problem, there's little excuse for failing to get this completely correct. (Assuming you pass a few interviews I would expect you to face a larger coding exercise outside the interview room, which will provide a far better indication of actual *coding* ability.)
 
+***
+
 ## What have we learned?
 
 If you get this far then hopefully we'll have talked about some interesting corners of computer science, as well as having glossed over the easy basics. It's much more interesting for both of us, and more likely to be successful for you, if this is a conversation between curious equals and not an interrogation.
 
 I get quite hung up on the idea that you should nail the basics, the stuff that should be your primitives. So I'll reiterate this once more. [Joel Spolsky](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html) states the same sentiment thus:
+
 > If the basic concepts aren't so easy that you don’t even have to think about them, you’re not going to get the big concepts.
 > 
 > <cite>-- Joel Spolsky</cite>
