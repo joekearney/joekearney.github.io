@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Protocols for Distributed State
-description: an overview of distributed state management
+description: overview of consensus
 categories:
 - work
 tags:
 - interesting
 - draft
 author: Joe Kearney
+js-require:
+-  http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 ---
 
 <div class="inline-image inline-image-right">
@@ -29,34 +31,64 @@ Many expositions of these algorithms (at least those that have strong consistenc
 
 These algorithms handle failure of a participant by crashing (allowing that it may restart later), and not necessarily Byzantine (malicious or buggy) failures that may send arbitrary messages. It gets much more complicated to handle this.
 
+***
+
 # CA -- sacrificing partition tolerance
 
 ## Two-phase commit
 
-2PC is the granddaddy of distributed system protocols. It's widely used in traditional database clustering implementations. There's a huge body of literature behind it, encompassing the algorithm itself and optimisations that make it work well in practice.
+> The proposer of a new value asks all other participants to vote to commit, then announces the decision.
 
->	* A distinguished coordinator sends the new value to all participants who vote on whether to commit
->	* The coordinator **waits** for a `yes` vote from each
->	* Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
+2PC is the granddaddy of distributed system protocols. It's widely used in traditional database clustering implementations. There's a huge body of literature behind it, encompassing the algorithm itself and optimisations and heuristics that make it work well in practice.
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> Discuss partitions</div>
+Often the proposer is a designated coordinator, and remains so for many transactions. (Think database clustering, where you have a single primary and many secondary replicas.) This is not required to be the case -- multi-resource XA transaction management in principal allows any participant to propse a new value.
+
+### Steps
+
+1. A coordinator sends the new value to all participants who vote on whether to commit
+2. The coordinator **waits** for a `yes` vote from each
+3. Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
 
 ### Failure handling
 
-* On a `no` vote from any participant, the coordinator rolls back the transaction, and the state is unchanged.
+* On a `no` vote from any participant, the coordinator rolls back the transaction, and the state is unchanged. (This can lead to obvious liveness problems if multiple proposers are competing for the next value, but it remains safe.)
 * Failure of a participant before reply leads to a delay, after which the coordinator times out. It could remove the failed participant from the system and retry.
 * Failure of a participant after reply leaves all other participants unaffected and in the new state.
 * Failure of the coordinator is bad. Participants will remain in a valid state, that of the previous commit, but something else is required to pick a new coordinator and continue.
+
+### Partial handling of partitions
+
+Partitions in the network always mean that some nodes become stale. However as with all of the limitations discussed here there are heuristics allowing various degrees of tolerance. It's straightforward to add some handling that allows the system to continue in the presence of a partition.
+
+Suppose that a minority of nodes is partitioned from the rest. No proposal from within that minority will be unanimously accepted, so no new values will be agreed; any clients connecting to a node in the minority will see no progress. However the majority can still continue -- note that if the majority of nodes can still communicate with each other then it is safe to reduce the size of the cluster to that majority, ignoring the other nodes for the purposes of voting. (Yes, there's some handwaving happening here around managing that reduction safely.)
+
+#### Availability Groups
+
+This section describes a practical use case based on 2PC plus a lot of heuristics. Basic 2PC is buried in there somewhere, underneath a lot of other technology.
+
+**SQL Server Availability Groups** (AG) implement this sort of explicit quorum management, where the _new value_ is a transaction and there's always a distinguished **primary** replica acting as the coordinator and some secondary replicas. All writes go through the primary, which pushes new data out to each secondary replica using 2PC. Secondary replicas are available for read-only access by clients, giving good read availability. (I'll only consider the synchronous replication model here; the asynchronous version allows consistency violations -- you can lose data when the primary fails.)
+
+The interesting feature which allows for some partition tolerance is management of the set of replicas required for a _vote-to-commit_. The system uses a combination of  communication required for commit and extra periodic polling. If a replica fails and the primary notices either through timeout during a transaction commit or failure to respond to a periodic check, the bad node can be evicted from the quorum of nodes required for commit. The system can continue to work with the smaller set of nodes. Indeed, any minority of replicas (not containing the current primary) can be removed in this way and, from the point of view of the primary, life goes on. 
+
+Progress from an external point of view does require some cooperation by clients, because any client connected solely to node on the other side of the partition to the primary will not be able to see new updates. A removed replica will know that it has been separated if it stops receiving the periodic communication, so can reject further communication with clients. If the client is able to connect to a replica in the same partition as the primary then the system is still available, from the clients point of view -- this is the extent to which AGs are tolerant to partitions.
+
+As parts of the system fail, or become partitioned away from the primary, the rest can recalculate the required quorum. If two secondary replicas disappear from a cluster of five, the remaining three can agree that as they are the only ones left, a quorum of two of those is now sufficient to maake progress. In general as long as only a minority of nodes fail between each such recalculation, the system can decrease to only two nodes. Noting that nodes in a minority partition will never become primary, we can gradually fail down to a single primary node, which still keeps running. this does avoid the worst possible mode of failure of a cluster with a leader, which occurs when you get a split brain -- two nodes which both think they're in charge.
+
+Failure of the primary in a system with a dedicated leader requires something else, such as a round of a consensus protocol to elect a new leader. Paxos can be used here in general. In smaller cases that may not required -- you can set up an AG with two SQL Server replicas plus a mutually accessible file share as the third "vote". The two real replicas compete to acquire a lock on a file in the share, and the winner is the new leader. Once the leader is chosen, this cluster will tolerate failure of the file share, the secondary replica or both. In general, once a new leader is chosen it can establish as large a quorum of nodes as possible from the accessible nodes.
+
+In summary, it is possible to extend 2PC to be tolerant to some degree to network partitions. SQL Server clustering and AGs are a centralised solution to this, but only as a side effect of fixing a coordinator. In the presence of network partitions the system is only available to clients in the same partition as the leader. You get very strong consistency, and without partitions clients always see the latest state.
 
 ### See also
 
 * Tree-based 2PC for reducing the workload of the coordinator at the expense of more message-passing delays up the tree of participants
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> Discuss extensions in availability groups, standard optimisations</div>
+***
 
 # CP -- sacrificing availability
 
 ## Paxos
+
+> Ask for the right to set the \\(n\\)th value. If a majority promise to follow you, then you can assert your value to all others. Otherwise, you're already behind someone else -- try again.
 
 Paxos does not appear to be so widely known or understood as 2PC. Indeed the Raft algorithm was designed specifically to be easier to learn than Paxos while giving the same guarantees.
 
@@ -68,6 +100,8 @@ Paxos does not appear to be so widely known or understood as 2PC. Indeed the Raf
 ## Raft
 
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span></div>
+
+***
 
 # AP -- sacrificing consistency
 
@@ -87,4 +121,4 @@ Enter **C**onflict-free **R**eplicated **D**ata **T**ypes, built on the idea tha
 You'll CRDTs described in two flavours, both of which can be called conflict-free. The **C** can stand for
 
 * **commutative** -- the operations one. Nodes send messages describing operations to be performed (think: arithmetic, with a way of ensuring idempotency)
-* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: counting storing the local count, merge operation is `max`)
+* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: counting by storing the count at each replica, merge operation is \\(\max(\cdot, \cdot)\\))
