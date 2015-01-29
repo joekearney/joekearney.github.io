@@ -35,11 +35,9 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 
 2PC is the granddaddy of distributed system protocols. It's widely used in traditional database clustering implementations. There's a huge body of literature behind it, encompassing the algorithm itself and optimisations that make it work well in practice.
 
-> A distinguished coordinator sends the new value to all participants who vote on whether to commit
->
-> The coordinator **waits** for a `yes` vote from each
-> 
-> Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
+>	* A distinguished coordinator sends the new value to all participants who vote on whether to commit
+>	* The coordinator **waits** for a `yes` vote from each
+>	* Once it has received all votes, it sends a `commit` command to each, or a `rollback` if there was any `no` or timeout
 
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> Discuss partitions</div>
 
@@ -62,13 +60,10 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 
 Paxos does not appear to be so widely known or understood as 2PC. Indeed the Raft algorithm was designed specifically to be easier to learn than Paxos while giving the same guarantees.
 
-> The _proposer_ **prepares** an update by asking a quorum of _acceptors_ to promise not to accept any proposal numbered less than `n`
->
-> The _acceptors_ reply with this **promise** (along with the greatest number proposal for which they've given the same promise) or a `CONFLICT` message indicating that they can't
->
-> The _proposer_ **requests accept**, asking those _acceptors_ to accept its value `v` numbered `n`
->
-> the _acceptors_ **accept** the value unless they've already promised not to. The value `v` is chosen once a quorum accept it
+> * The _proposer_ **prepares** an update by asking a quorum of _acceptors_ to promise not to accept any proposal numbered less than `n`
+> * The _acceptors_ reply with this **promise** (along with the greatest number proposal for which they've given the same promise) or a `CONFLICT` message indicating that they can't
+> * The _proposer_ **requests accept**, asking those _acceptors_ to accept its value `v` numbered `n`
+> * The _acceptors_ **accept** the value unless they've already promised not to. The value `v` is chosen once a quorum accept it
 
 ## Raft
 
