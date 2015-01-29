@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: "Posts"
+title: "Home"
 ---
 
 <div class="container">
@@ -29,8 +29,16 @@ title: "Posts"
       </ul>
     </div></div>
 
+    {% comment %}If there are drafts use col-md-4, otherwise use col-md-6{% endcomment %}
+    {% assign coltype = 'col-md-6' %}
+    {% for post in site.posts %}
+      {% if post.tags contains 'draft' %}
+        {% assign coltype = 'col-md-4' %}
+      {% endif %}
+    {% endfor %}
+
     <div class="row">
-      <div class="col-md-4">
+      <div class="{{ coltype }}">
         <h2 class="thin">Software</h2> 
         <ul class="listing">
           {% for post in site.posts %}
@@ -43,7 +51,7 @@ title: "Posts"
           {% endfor %}
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="{{ coltype }}">
         <h2 class="thin">Cycling</h2> 
         <ul class="listing">
           {% for post in site.posts %}
@@ -56,6 +64,8 @@ title: "Posts"
           {% endfor %}
         </ul>
       </div>
+
+      {% if coltype == 'col-md-4' %}
       <div class="col-md-4">
         <h2 class="thin">Drafts</h2> 
         <ul class="listing">
@@ -70,6 +80,7 @@ title: "Posts"
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
     </div>
   </section>
 </div>

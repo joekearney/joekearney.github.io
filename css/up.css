@@ -72,7 +72,7 @@ img{vertical-align:middle}
 .img-rounded{border-radius:6px}
 .img-thumbnail{padding:4px;line-height:1.428571429;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}
 .img-circle{border-radius:50%}
-hr{margin-top:21px;margin-bottom:21px;border:0;border-top:1px solid #eee}
+hr{margin-top:25px;margin-bottom:20px;border:0;border-top:1px solid #eee}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:100;line-height:1.1;color:inherit}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small{font-weight:normal;line-height:1;color:#999}
@@ -434,7 +434,7 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#428bca}
 
 body{padding-top:50px}
 h1,h2,h3,h4,h5,h6{font-weight:100;margin-top:20px}
-h2,h3,h4,h5,h6{border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;padding:5px}
+h2,h3,h4,h5,h6{/*border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;*/padding:5px}
 article,.content,#footer{height:100%;min-height:100%;padding:10px}
 article img,.content img{max-width:70%;max-height:70%;display:block;margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px}
 article img.noclip,.content img.noclip{clear:both;display:inline-block}
@@ -451,7 +451,6 @@ ul.listing li{list-style-type:none;padding:7px 5px;border-bottom:1px solid #EEE}
 ul.listing li span.post-date{padding-top:3px;float:right;font-size:12px;color:#999}
 ul.listing li span.post-description{color:#999}
 .navbar-blog,.navbar-blog a.brand{font-weight:100}
-#footer{border-top:1px solid #f5f5f5}
 #footer section.meta{color:#EEE;text-align:center}
 #footer section.meta a{font-size:.8em;color:#555;text-decoration:none;transition:color .25s ease-in;-webkit-transition:color .25s ease-in}
 #footer section.meta a:hover{color:#307ea9}

@@ -157,7 +157,7 @@ function onComplete() {
 
       var infoWindow = new google.maps.InfoWindow({
           content: infoboxContentString,
-          maxWidth: 300
+          maxWidth: 500
       });
       infoWindows[place] = infoWindow;
     }

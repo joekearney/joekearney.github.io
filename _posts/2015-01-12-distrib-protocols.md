@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Protocols for Distributed State
+description: an overview of distributed state management
 categories:
 - work
 tags:

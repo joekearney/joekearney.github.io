@@ -5,9 +5,11 @@ layout: layout
 
 <div class="container">
   <article>
-    <h1 class="title-colour">
-      <a href="{{ page.url }}">{{ page.title }}</a>
-    </h1>
+    <div class="title-group">
+      <h1 class="h1 title title-colour">
+        <a href="{{ page.url }}">{{ page.title | replace:'-','&ndash;' }}</a>
+      </h1>
+    </div>
 
     <section class="byline">
       {{ page.date | date: "%B %e, %Y" }}

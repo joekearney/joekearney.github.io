@@ -17,7 +17,7 @@ author: Joe Kearney
 	<img src="/images/i-can-haz-ze-job.jpg" alt="I can haz ze job?">
 </div>
 
-In the last four years at GSA Capital I've given almost 200 job interviews to software engineers, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.)
+In five years at GSA Capital I gave almost 200 job interviews to software engineers, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.)
 
 It seems only fair to try to describe how I approach giving an interview, to distil some of my aims.
 
@@ -66,6 +66,6 @@ If you get this far then hopefully we'll have talked about some interesting corn
 I get quite hung up on the idea that you should nail the basics, the stuff that should be your primitives. So I'll reiterate this once more. [Joel Spolsky](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html) states the same sentiment thus:
 > If the basic concepts aren't so easy that you don’t even have to think about them, you’re not going to get the big concepts.
 > 
-> <span class="pull-right">-- <cite>Joel Spolsky</cite></span>
+> <cite>-- Joel Spolsky</cite>
 
 But if we can have a real conversation then this could be the start of something.
