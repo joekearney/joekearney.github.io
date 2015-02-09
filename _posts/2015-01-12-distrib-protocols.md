@@ -109,9 +109,9 @@ Paxos is a consensus algorithm. It is renowned for being difficult to understand
 
 Paxos is usually described in its _single decree_ form, as an algorithm for deciding upon a single value. Clearly in the real world this isn't sufficient, and _multi-Paxos_ is the extension to a sequence of decisions. 
 
-> * The _proposer_ **prepares** an update by asking a quorum of _acceptors_ to promise not to accept any proposal numbered less than `n`
+> * The _proposer_ **prepares** an update by asking a quorum of _acceptors_ to promise not to accept any proposal numbered less than \\(n\\)
 > * The _acceptors_ reply with this **promise** (along with the greatest number proposal for which they've given the same promise) or a `CONFLICT` message indicating that they can't
-> * The _proposer_ **requests accept**, asking those _acceptors_ to accept its value `v` numbered `n`
+> * The _proposer_ **requests accept**, asking those _acceptors_ to accept its value `v` numbered \\(n\\)
 > * The _acceptors_ **accept** the value unless they've already promised not to. The value `v` is chosen once a quorum accept it
 
 As with 2PC matters are simplified if a single leader is chosen, at least until that leader fails or is partitioned away.
