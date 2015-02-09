@@ -3,7 +3,9 @@
 
 # date yyyy-MM-dd | location, searchable in Google Maps | Flickr photo in slideshow link
 
-2015-01-09|London, UK|https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/
+2015-01-01|London, UK|
+2015-01-11|New York, US|https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
+2015-01-17|London, UK|https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/
 2015-03-03|Singapore|
 2015-03-24|Adelaide, Australia|
 2015-05-01|Sydney, Australia|

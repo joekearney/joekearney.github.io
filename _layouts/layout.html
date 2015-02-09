@@ -16,6 +16,12 @@
   <link href="/css/main.css" rel="stylesheet">
   <link href="/css/syntax.css" rel="stylesheet">
 
+  {% for css in page.css-require %}
+  <link href="{{ css }}" rel="stylesheet">
+  {% endfor %}
+
+  <link href='http://fonts.googleapis.com/css?family=Podkova|Metrophobic' rel='stylesheet' type='text/css'>
+
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,8 +29,6 @@
   {% for js in page.js-require %}
   <script type="text/javascript" src="{{ js }}"></script>
   {% endfor %}
-
-  <link href='http://fonts.googleapis.com/css?family=Podkova|Metrophobic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>

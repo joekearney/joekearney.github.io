@@ -20,13 +20,13 @@ function parseHistory(historyText) {
       var place = matches[2];
       var flickrLink = matches[3];
 
-//      if (day.isBefore(now)) {
+     if (day.isBefore(now)) {
         // note these come in order in the file
         locations.push(place);
         dates.push(day);
         flickrLinks.push(flickrLink); // these might be empty if no link
         lastDateAtLocation[place] = day;
-//      }
+     }
     }
   });
 

@@ -12,7 +12,7 @@ type: post
 published: true
 author: Joe Kearney
 js-require:
--  http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+- http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 ---
 
 <div class="title-image">

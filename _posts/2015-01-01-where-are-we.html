@@ -11,6 +11,9 @@ published: true
 author: Joe Kearney
 permalink: /where
 
+css-require:
+- /css/where.css
+
 js-require:
 - https://maps.googleapis.com/maps/api/js?signed_in=true&amp;key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo
 - https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js
@@ -18,7 +21,7 @@ js-require:
 container_type: container-fluid
 ---
 
-<div class="container-fluid">
+<div class="container-fluid where">
   <article>
     <div class="row">
       <div class="col-md-8">
@@ -26,7 +29,7 @@ container_type: container-fluid
           <a href="{{ page.url }}">{{ page.title }}</a>
         </h1>
 
-        <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to bring up any photos that we took there.</p>
+        <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to see photos that we took there.</p>
       </div>
       <div class="col-md-4">
         <div class="bs-callout bs-callout-danger">Current location: <b id="current-location-text">...</b> since <b id="current-location-arrival">...</b></div>
@@ -39,7 +42,11 @@ container_type: container-fluid
       </div>
 
       <div class="col-md-4">
-        <iframe id="flickr-canvas" src="" width="100%" height="500" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <div class="flickr-loader flickr-div">
+          <i class="flickr-dot-pink"></i>
+          <i class="flickr-dot-blue"></i>
+        </div>
+        <iframe id="flickr-canvas" class="flickr-div" src="" width="100%" height="500" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
         <iframe id="calendar-canvas" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=b39k3119t78koksiunitchppm0%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=Europe%2FLondon" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
       </div>
