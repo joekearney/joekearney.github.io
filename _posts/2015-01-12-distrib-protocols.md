@@ -145,3 +145,5 @@ You'll see CRDTs described in two flavours, both of which can be called conflict
 
 * **commutative** -- the operations one. Nodes send messages describing commutative operations to be performed (for a counter consider addition, with messages like "add three", plus a way of ensuring idempotency).
 * **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: "I'm up to five", with \\(\max(\cdot, \cdot)\\) as the commutative, associative and idempotent merge operation). The states converge to a common value.
+
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> give examples of basic structures</div>
