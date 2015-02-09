@@ -116,7 +116,7 @@ Paxos is usually described in its _single decree_ form, as an algorithm for deci
 
 As with 2PC matters are simplified if a single leader is chosen, at least until that leader fails or is partitioned away.
 
-The important piece is the promise by a majority not to accept other values for earlier proposals. In a sense the \\(\ceil(n/2)th\\) promise is the linearisation point of a successful commit.
+The important piece is the promise by a majority not to accept other values for earlier proposals. In a sense the \\(\left \lceil{n/2}\right \rceil  th\\) promise is the linearisation point of a successful commit.
 
 ## Raft
 
