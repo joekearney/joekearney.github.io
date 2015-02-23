@@ -5,3 +5,6 @@ body {
 article h1:first-child {
   margin-top: 0;
 }
+#photos {
+	background-color: white;
+}

@@ -1,22 +1,21 @@
-# Note that this file can cope with future events (they are hidden, so this could be used for scheduling)
-# but it feels like we should only update manually, to show that we've arrived.
+# date yyyy-MM-dd | location, searchable in Google Maps | (blank) or 'arrived' | Flickr photo in slideshow link
 
-# date yyyy-MM-dd | location, searchable in Google Maps | Flickr photo in slideshow link
-
-2015-01-01|London, UK|
-2015-01-11|New York, US|https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
-2015-01-17|London, UK|https://www.flickr.com/photos/joekearney/16022004018/in/set-72157647810587354/player/
-2015-03-03|Singapore|
-2015-03-09|Kuala Lumpur, Malaysia|
-2015-03-12|Siem Reap, Cambodia|
-2015-03-16|Phnom Penh, Cambodia|
-2015-03-20|Singapore|
-2015-03-24|Adelaide, Australia|
-2015-05-01|Sydney, Australia|
-2015-05-07|Christchurch, New Zealand|
-2015-06-01|Auckland, New Zealand|
-2015-06-04|Brisbane, Australia|
-2015-06-28|Cairns, Australia|
-2015-06-29|Sydney, Australia|
-2015-07-06|Hong Kong|
-2015-07-21|London, UK|
+#2015-01-01|London, UK||
+#2015-01-11|New York, US||https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
+2015-01-17|London, UK|arrived|https://www.flickr.com/photos/joekearney/16409134537/in/set-72157647810587354/player/
+2015-03-03|Singapore||
+2015-03-09|Kuala Lumpur, Malaysia||
+2015-03-12|Siem Reap, Cambodia||
+2015-03-16|Phnom Penh, Cambodia||
+2015-03-20|Singapore||
+2015-03-24|Adelaide, Australia||
+2015-05-01|Sydney, Australia||
+2015-05-07|Christchurch, New Zealand||
+2015-06-01|Auckland, New Zealand||
+2015-06-04|Brisbane, Australia||
+2015-06-28|Cairns, Australia||
+2015-06-29|Sydney, Australia||
+2015-07-06|Hong Kong||
+2015-07-10|Hanoi, Vietnam||
+2015-07-16|Hong Kong||
+2015-07-21|London, UK||

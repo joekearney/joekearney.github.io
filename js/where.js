@@ -1,7 +1,28 @@
+// static lag/longs for the places we're going.
+// This data was acquired from the Google Maps API geocoder and is only used with the API.
+var latLngs = {};
+latLngs["Singapore"] = new google.maps.LatLng(1.352083,103.819836);
+latLngs["London, UK"] = new google.maps.LatLng(51.507351,-0.127758);
+latLngs["Phnom Penh, Cambodia"] = new google.maps.LatLng(11.544873,104.892167);
+latLngs["Siem Reap, Cambodia"] = new google.maps.LatLng(13.367097,103.844813);
+latLngs["Kuala Lumpur, Malaysia"] = new google.maps.LatLng(3.139003,101.686855);
+latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
+latLngs["Hong Kong"] = new google.maps.LatLng(22.396428,114.109497);
+latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
+latLngs["Christchurch, New Zealand"] = new google.maps.LatLng(-43.532054,172.636225);
+latLngs["Cairns, Australia"] = new google.maps.LatLng(-16.920334,145.77086);
+latLngs["Brisbane, Australia"] = new google.maps.LatLng(-27.471011,153.023449);
+latLngs["Adelaide, Australia"] = new google.maps.LatLng(-34.928621,138.599959);
+latLngs["Auckland, New Zealand"] = new google.maps.LatLng(-36.84846,174.763332);
+latLngs["Hanoi, Vietnam"] = new google.maps.LatLng(21.027764,105.83416);
+
 // stuff per line of where.txt
 var locations = [];
 var dates = [];
+var statuses = [];
 var flickrLinks = [];
+
+var currentLocationIndex = 0;
 
 // stuff per location, where location is from where.txt
 var markers = {};
@@ -13,34 +34,34 @@ function parseHistory(historyText) {
   var lines = historyText.split(/\r?\n/);
   var lineNum = 1;
   var now = moment();
+
   lines.forEach(function(line) {
     if (line.length > 0 && line.charAt(0) != '#') {
-      var matches = line.match(/(.*)[|](.*)[|](.*)/);
+      var matches = line.match(/(.*)[|](.*)[|](.*)[|](.*)/);
       var day = moment(matches[1], 'YYYY-MM-DD');
       var place = matches[2];
-      var flickrLink = matches[3];
+      var status = matches[3];
+      var flickrLink = matches[4];
 
-     if (day.isBefore(now)) {
-        // note these come in order in the file
-        locations.push(place);
-        dates.push(day);
-        flickrLinks.push(flickrLink); // these might be empty if no link
-        lastDateAtLocation[place] = day;
-     }
+      locations.push(place);
+      dates.push(day);
+      statuses.push(status);
+      flickrLinks.push(flickrLink); // these might be empty if no link
+      lastDateAtLocation[place] = day;
     }
   });
 
   numLocations = locations.length;
 
   if (numLocations > 0) {
-    var currentIndex = 0;
-    while (currentIndex+1 < numLocations.length && dates[currentIndex+1].isBefore(now)) {
-      currentIndex = currentIndex + 1;
+    currentLocationIndex = 0;
+    while (currentLocationIndex+1 < numLocations && statuses[currentLocationIndex+1] == 'arrived') {
+      currentLocationIndex = currentLocationIndex + 1;
     }
 
-    var currentLocation = locations[currentIndex];
+    var currentLocation = locations[currentLocationIndex];
     document.getElementById('current-location-text').innerHTML = currentLocation;
-    document.getElementById('current-location-arrival').innerHTML = dates[currentIndex].format('dddd MMMM Do, YYYY');
+    document.getElementById('current-location-arrival').innerHTML = dates[currentLocationIndex].format('dddd MMMM Do, YYYY');
   }
 
   google.maps.event.addDomListener(window, 'load', addAddresses(locations));
@@ -50,9 +71,9 @@ var numLocations;
 
 // the actual map object
 var map;
-// hash from location name to point
-var points = {};
-var polyline;
+
+var polylineUntilNow;
+var polylineAfterNow;
 
 function setFlickrLinkForIndex(addressIndex) {
   if (addressIndex >= 0) {
@@ -67,29 +88,60 @@ function setFlickrLinkForIndex(addressIndex) {
 }
 function setFlickrLinkFor(placeName) {
   var addressIndex = locations.lastIndexOf(placeName);
-  console.log("Found addressIndex " + addressIndex + " for place " + placeName);
   setFlickrLinkForIndex(addressIndex);
 }
 
 function onComplete() {
-  function setUpPolyline() {
-    // set up the polyline to trace the route
+  function setUpPolylines() {
+    // set up the polylineUntilNow to trace the route up to now
     var pathElements = [];
-    locations.forEach(function(v) { pathElements.push(points[v]); });
-    polyline = new google.maps.Polyline({
-      path: pathElements,
+    locations.forEach(function(v) { if (latLngs[v]) { pathElements.push(latLngs[v]); } else {
+      console.log("Not found latLng for " + v);
+    } });
+
+    var locationsUntilNow = pathElements.slice(0, currentLocationIndex + 1);
+    // locationsAfterNow[0] is the current location, so that the polylines join
+    var locationsAfterNow = pathElements.slice(currentLocationIndex);
+
+    polylineUntilNow = new google.maps.Polyline({
+      path: locationsUntilNow,
       geodesic: true,
       strokeColor: '#FF0000',
       strokeOpacity: 1.0,
-      strokeWeight: 2
+      strokeWeight: 3
     });
-    polyline.setMap(map);
+    polylineUntilNow.setMap(map);
 
-    // make sure that the map contains the last four items on the polyline
-    var bounds = new google.maps.LatLngBounds();
-    locations.slice(Math.max(locations.length - 4, 0)).forEach(function(a) {
-      bounds.extend(points[a]);
+    // Define a symbol using SVG path notation, with an opacity of 1.
+    var dashedLineSymbol = {
+      path: 'M 0,-1 0,1',
+      strokeOpacity: 1,
+      strokeWeight: 2,
+      scale: 4
+    };
+
+    polylineAfterNow = new google.maps.Polyline({
+      path: locationsAfterNow,
+      geodesic: true,
+      strokeColor: '#0000FF',
+      strokeWeight: 0,
+      icons: [{
+        icon: dashedLineSymbol,
+        offset: '0',
+        repeat: '20px'
+      }]
     });
+    polylineAfterNow.setMap(map);
+
+    // make sure that the map contains the last four items on the polylineUntilNow
+    var bounds = new google.maps.LatLngBounds();
+    locationsUntilNow.slice(Math.max(locationsUntilNow.length - 4, 0)).forEach(function(a) {
+      bounds.extend(a);
+    });
+    // add the next location if there aren't many up to now
+    if (locationsUntilNow.length < 3 && locationsAfterNow.length > 1) {
+      bounds.extend(locationsAfterNow[1]);
+    }
     map.fitBounds(bounds);
   }
 
@@ -176,21 +228,20 @@ function onComplete() {
     }
   }
 
-  setUpPolyline();
   setUpFlickr();
   setUpMarkers();
+  setUpPolylines();
 }
 
 function addAddresses(addresses) {
-  // size of points hash
+  // number of places processed
   var pointsFound = 0;
 
-  function addMarker(map, results, addressIndex) {
+  function addMarker(map, latLng, addressIndex) {
     // note these don't come in any particular order
     var address = addresses[addressIndex];
 
     if (markers[address]) {
-      console.log("Already have a marker for " + address);
     } else {
       // TODO 
       var pin = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
@@ -202,57 +253,83 @@ function addAddresses(addresses) {
       var marker = new google.maps.Marker({
         map: map,
         icon: pin,
-        position: results[0].geometry.location,
+        position: latLng,
         title: address
       });
 
       markers[address] = marker;
     }
 
-    points[address] = results[0].geometry.location;
     pointsFound++;
 
     if (pointsFound == numLocations) {
       onComplete();
+    } else if (pointsFound > numLocations) {
+      console.error("addMarker called too many times");
     }
   }
   function addAddress(geocoder, addressIndex) {
-    geocoder.geocode({
-        'address': addresses[addressIndex]
-      }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          addMarker(map, results, addressIndex);
-        } else {
-          console.log("Failed to geocode address " + addresses[addressIndex]);
-        }
-      });
+    var address = addresses[addressIndex];
+    if (latLngs[address]) {
+      addMarker(map, latLngs[address], addressIndex);
+    } else {
+      geocoder.geocode({
+          'address': addresses[addressIndex]
+        }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var latLng = results[0].geometry.location;
+            latLngs[address] = latLng;
+            console.log("latLngs[\"" + address + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
+            addMarker(map, latLng, addressIndex);
+          } else {
+            console.error("Failed to geocode address " + addresses[addressIndex] + " status: " + status);
+          }
+        });
+    }
   }
 
   geocoder = new google.maps.Geocoder();
-  var latestPlaceIndex = addresses.length - 1;
+  var currentLocation = addresses[currentLocationIndex];
+  console.log("Current location: " + currentLocation);
 
-  var currentLocation = addresses[latestPlaceIndex];
-
-  geocoder.geocode({
-      address: currentLocation
-    }, function(results, status) {
-      var canvas = document.getElementById('map-canvas');
-      if (status == google.maps.GeocoderStatus.OK) {
-        var mapOptions = {
-          zoom: 18,
-          center: results[0].geometry.location
-        }
-        map = new google.maps.Map(canvas, mapOptions);
-        addMarker(map, results, latestPlaceIndex);
-
-        for (var i = addresses.length - 2; i >= 0; --i) {
-          addAddress(geocoder, i);
-        }
-      } else {
-        console.log("Failed to geocode address " + addresses[latestPlaceIndex]);
-      }
+  if (latLngs[currentLocation]) {
+    console.log("Creating map with center " + latLngs[currentLocation]);
+    var canvas = document.getElementById('map-canvas');
+    var mapOptions = {
+      zoom: 10,
+      center: latLngs[currentLocation]
     }
-  );
+    map = new google.maps.Map(canvas, mapOptions);
+
+    for (var i = addresses.length - 1; i >= 0; --i) {
+      addAddress(geocoder, i);
+    }
+  } else {
+    geocoder.geocode({
+        address: currentLocation
+      }, function(results, status) {
+        var canvas = document.getElementById('map-canvas');
+        if (status == google.maps.GeocoderStatus.OK) {
+          var mapOptions = {
+            zoom: 18,
+            center: results[0].geometry.location
+          }
+          map = new google.maps.Map(canvas, mapOptions);
+
+          var latLng = results[0].geometry.location;
+          latLngs[address] = latLng;
+          console.log("latLngs[\"" + address + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
+          addMarker(map, latLng, currentLocationIndex);
+
+          for (var i = addresses.length - 1; i >= 0; --i) {
+            addAddress(geocoder, i);
+          }
+        } else {
+          console.error("Failed to geocode address " + currentLocation);
+        }
+      }
+    );
+  }
 }
 
 function initialiseWhere() {
