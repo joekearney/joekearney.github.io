@@ -228,9 +228,38 @@ function onComplete() {
     }
   }
 
+  function setUpTime() {
+    function parseTime(timeObj) {
+      if (timeObj.status == "OK") {
+        var offset = timeObj.dstOffset + timeObj.rawOffset;
+        window.setInterval(function(){
+          document.getElementById("current-time-text").innerHTML = moment().add(offset, 's').format("HH:mm a, dddd MMMM Do")
+        }, 1000);
+      } else {
+        console.error("Failed to load time from Google Time API: " + timeObj.status);
+      }
+    }
+
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+      var timeRequest = new XMLHttpRequest();
+      timeRequest.onreadystatechange = function() {
+        if (timeRequest.readyState == 4 && timeRequest.status == 200) {
+          parseTime(JSON.parse(timeRequest.responseText));
+        }
+      }
+      var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo&location=" + latLngs[locations[currentLocationIndex]].toUrlValue() + "&timestamp=" + moment().unix();
+      console.log(requestUrl);
+      timeRequest.open("GET", requestUrl, true); // add random to disable caching
+      timeRequest.send();
+    } else {
+      alert("Sorry, your browser can't support tracking our travels. Upgrade!");
+    }
+  }
+
   setUpFlickr();
   setUpMarkers();
   setUpPolylines();
+  setUpTime();
 }
 
 function addAddresses(addresses) {
@@ -334,16 +363,16 @@ function addAddresses(addresses) {
 
 function initialiseWhere() {
   if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        parseHistory(xmlhttp.responseText);
+    var whereTxtRequest = new XMLHttpRequest();
+    whereTxtRequest.onreadystatechange = function() {
+      if (whereTxtRequest.readyState == 4 && whereTxtRequest.status == 200) {
+        parseHistory(whereTxtRequest.responseText);
       }
     }
-    xmlhttp.open("GET", "/assets/where.txt?t=" + Math.random(), true); // add random to disable caching
-    xmlhttp.send();
+    whereTxtRequest.open("GET", "/assets/where.txt?t=" + Math.random(), true); // add random to disable caching
+    whereTxtRequest.send();
   } else {
-    alert("Sorry, your browser isn't support for tracking our travels. Upgrade!");
+    alert("Sorry, your browser can't support tracking our travels. Upgrade!");
   }
 }
 

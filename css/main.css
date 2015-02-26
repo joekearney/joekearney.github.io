@@ -179,23 +179,6 @@ blockquote {
   background-color: #f8f8f8;
 }
 
-#map-canvas img { max-width: none; max-height: none; } /* fix for badly sized map controls when using bootstrap */
-#map-canvas { height: 800px; width: 100%; }
-
-#infowindow-content {
-  overflow: hidden;
-  white-space: pre;
-}
-
-#current-location-text, #current-location-arrival { white-space: nowrap; }
-
-#map-canvas #infowindow-content h2,
-#map-canvas #infowindow-content h3,
-#map-canvas #infowindow-content h4,
-#map-canvas #infowindow-content h5 {
-  margin-top: 0;
-}
-
 table.highlighttable td.code {
   width: 100%;
 }
@@ -205,4 +188,8 @@ table.highlighttable td.linenos pre code {
 
 .glyph:hover {
   color: #b12930;
+}
+
+#current-location-block, #current-location-block>p {
+  text-align: left;
 }
