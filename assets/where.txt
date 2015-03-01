@@ -9,6 +9,7 @@
 2015-03-16|Phnom Penh, Cambodia||
 2015-03-20|Singapore||
 2015-03-24|Adelaide, Australia||
+2015-03-28|Melbourne, Australia||
 2015-05-01|Sydney, Australia||
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||

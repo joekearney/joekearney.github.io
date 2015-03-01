@@ -6,6 +6,7 @@ latLngs["London, UK"] = new google.maps.LatLng(51.507351,-0.127758);
 latLngs["Phnom Penh, Cambodia"] = new google.maps.LatLng(11.544873,104.892167);
 latLngs["Siem Reap, Cambodia"] = new google.maps.LatLng(13.367097,103.844813);
 latLngs["Kuala Lumpur, Malaysia"] = new google.maps.LatLng(3.139003,101.686855);
+latLngs["Melbourne, Australia"] = new google.maps.LatLng(-37.814107,144.96328);
 latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
 latLngs["Hong Kong"] = new google.maps.LatLng(22.396428,114.109497);
 latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
@@ -195,16 +196,38 @@ function onComplete() {
           }
         }
         var listString = "";
+        var now = moment();
         is.forEach(function(i) {
           // Arrived ' + lastDateAtLocation[place].format('ddd MMM Do, YYYY')
-          listString = listString + "<li>" + dates[i].format('ddd MMM Do, YYYY') + flickrLinkOrEmpty(i) + "</li>";
+          var current = false;
+          if (dates[i].isBefore(now) && (i + 1 == dates.length || dates[i+1].isAfter(now))) {
+            current = true;
+          }
+          var itemString = "";
+
+          if (current) {
+            itemString += "<b>";
+          }
+
+          itemString += dates[i].format('ddd MMM Do, YYYY');
+
+          if (i + 1 < dates.length) {
+            itemString += " to " + dates[i+1].format('ddd MMM Do, YYYY')
+          }
+
+          if (current) {
+            itemString += "</b>";
+          }
+
+          itemString += flickrLinkOrEmpty(i);
+
+          listString += "<li>" + itemString + "</li>";
         });
         return listString;
       }
       var infoboxContentString =  '<div id="infowindow-content">' +
                                     '<h2 id="firstHeading" class="firstHeading">' + place + '</h2>'+
-                                    '<h4>Arrived</h4><ul>'
-                                      + toList(indexesOf(place)) + '</ul>'
+                                    '<ul>' + toList(indexesOf(place)) + '</ul>'
                                   '</div>';
 
       var infoWindow = new google.maps.InfoWindow({
@@ -229,31 +252,37 @@ function onComplete() {
   }
 
   function setUpTime() {
-    function parseTime(timeObj) {
+    function parseTime(timeObj, targetElement) {
       if (timeObj.status == "OK") {
         var offset = timeObj.dstOffset + timeObj.rawOffset;
         window.setInterval(function(){
-          document.getElementById("current-time-text").innerHTML = moment().add(offset, 's').format("HH:mm a, dddd MMMM Do")
+          document.getElementById(targetElement).innerHTML = moment().add(offset, 's').format("HH:mm a, dddd MMMM Do")
         }, 1000);
       } else {
         console.error("Failed to load time from Google Time API: " + timeObj.status);
       }
     }
 
-    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-      var timeRequest = new XMLHttpRequest();
-      timeRequest.onreadystatechange = function() {
-        if (timeRequest.readyState == 4 && timeRequest.status == 200) {
-          parseTime(JSON.parse(timeRequest.responseText));
+    function requestTime(location, targetElement) {
+      if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        var timeRequest = new XMLHttpRequest();
+        timeRequest.onreadystatechange = function() {
+          if (timeRequest.readyState == 4 && timeRequest.status == 200) {
+            parseTime(JSON.parse(timeRequest.responseText), targetElement);
+          }
         }
+        var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"
+                          + "&location=" + latLngs[locations[currentLocationIndex]].toUrlValue()
+                          + "&timestamp=" + moment().unix();
+        timeRequest.open("GET", requestUrl, true); // add random to disable caching
+        timeRequest.send();
+      } else {
+        alert("Sorry, your browser can't support tracking our travels. Upgrade!");
       }
-      var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo&location=" + latLngs[locations[currentLocationIndex]].toUrlValue() + "&timestamp=" + moment().unix();
-      console.log(requestUrl);
-      timeRequest.open("GET", requestUrl, true); // add random to disable caching
-      timeRequest.send();
-    } else {
-      alert("Sorry, your browser can't support tracking our travels. Upgrade!");
     }
+
+    requestTime(latLngs[locations[currentLocationIndex]], "current-time-text");
+    requestTime(latLngs["London, UK"], "current-time-london");
   }
 
   setUpFlickr();
