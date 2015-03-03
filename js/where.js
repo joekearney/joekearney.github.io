@@ -272,7 +272,7 @@ function onComplete() {
           }
         }
         var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"
-                          + "&location=" + latLngs[locations[currentLocationIndex]].toUrlValue()
+                          + "&location=" + location.toUrlValue()
                           + "&timestamp=" + moment().unix();
         timeRequest.open("GET", requestUrl, true); // add random to disable caching
         timeRequest.send();
