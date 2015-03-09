@@ -1,0 +1,29 @@
+---
+layout: layout
+title: "Home"
+---
+
+<div class="container">
+  <section class="content">
+    <div class="row"><div class="col-md-12">
+      <div class="title">
+        <h1 class="title-colour"><a href="{{ page.url }}">Backpacking with a suitcase</a></h1>
+        <p>Minimal blog of what we've been up to. Maybe we'll think of a better name later.</p>
+      </div>
+
+      <ul class="listing">
+        {% for post in site.posts %}
+          {% if post.tags contains 'travel' %}
+            <li>
+              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+              <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+              {% unless post.description == "" %}
+                <span class="post-description">&ndash; {{ post.description }}</span>
+              {% endunless %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div></div>
+  </section>
+</div>

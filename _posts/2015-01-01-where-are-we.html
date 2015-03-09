@@ -30,6 +30,23 @@ container_type: container-fluid
         </h1>
 
         <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to see photos that we took there.</p>
+
+        <h2>Backpacking with a Suitcase <span class="post-description">&ndash; minimal blog of what we've been up to &ndash; <a href="/travel-index.html">see all</a></span></h2>
+        <ul class="listing">
+          {% for post in site.posts limit: 3 %}
+            {% unless post.tags contains 'draft' %}
+              {% if post.tags contains 'travel' %}
+                <li>
+                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                  {% unless post.description == "" %}
+                    <span class="post-description">&ndash; {{ post.description }}</span>
+                  {% endunless %}
+                </li>
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+        </ul>
       </div>
       <div class="col-md-4">
         <div class="bs-callout bs-callout-danger" id="current-location-block">

@@ -15,7 +15,7 @@ layout: layout
     </div>
 
     <section class="byline">
-      {{ page.date | date: "%B %e, %Y" }}
+      {{ page.date | date: "%B %e, %Y" }} &ndash; {{ page.author}}
     </section>
 
     {% if page.tags contains 'draft' %}
