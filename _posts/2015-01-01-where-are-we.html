@@ -34,20 +34,20 @@ container_type: container-fluid
         <h2>Backpacking with a Suitcase <span class="post-description">&ndash; minimal blog of what we've been up to &ndash; <a href="/travel-index.html">see all</a></span></h2>
         <ul class="listing">
           {% for post in site.posts limit: 3 %}
-            {% unless post.tags contains 'draft' %}
-              {% if post.tags contains 'travel' %}
-                <li>
-                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                  {% unless post.description == "" %}
-                    <span class="post-description">&ndash; {{ post.description }}</span>
-                  {% endunless %}
-                </li>
-              {% endif %}
-            {% endunless %}
+            {% if post.tags contains 'travel' %}
+              <li>
+                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                {% unless post.description == "" %}
+                  <span class="post-description">&ndash; {{ post.description }}</span>
+                {% endunless %}
+              </li>
+            {% endif %}
           {% endfor %}
+          <li><span class="post-description"><a href="/travel-index.html">...more</a></span></li>
         </ul>
       </div>
+
       <div class="col-md-4">
         <div class="bs-callout bs-callout-danger" id="current-location-block">
           <p>Current location: <b id="current-location-text">...</b> since <b id="current-location-arrival">...</b></p>
