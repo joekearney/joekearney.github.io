@@ -88,7 +88,7 @@ function setFlickrLinkForIndex(addressIndex) {
   }
 }
 function setFlickrLinkFor(placeName) {
-  var addressIndex = locations.lastIndexOf(placeName);
+  var addressIndex = locations.slice(0, currentLocationIndex+1).lastIndexOf(placeName);
   setFlickrLinkForIndex(addressIndex);
 }
 
