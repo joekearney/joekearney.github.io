@@ -6,7 +6,7 @@
 2015-03-03|Singapore|arrived|https://www.flickr.com/photos/joekearney/16515374488/in/set-72157651147972555/player/
 2015-03-09|Kuala Lumpur, Malaysia|arrived|https://www.flickr.com/photos/joekearney/16585994177/in/set-72157651245066316/player/
 2015-03-12|Siem Reap, Cambodia|arrived|
-2015-03-16|Phnom Penh, Cambodia||
+2015-03-16|Phnom Penh, Cambodia|arrived|
 2015-03-20|Singapore||
 2015-03-24|Adelaide, Australia||
 2015-03-28|Melbourne, Australia||
