@@ -15,6 +15,7 @@ title: "Home"
         {% for post in site.posts %}
           {% if post.tags contains 'travel' %}
               <li>
+                {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
                 <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                 {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
                 <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
