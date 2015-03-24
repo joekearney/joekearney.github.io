@@ -8,7 +8,7 @@
 2015-03-12|Siem Reap, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16186545634/in/set-72157650927970970/player/
 2015-03-16|Phnom Penh, Cambodia|arrived|
 2015-03-20|Singapore|arrived|
-2015-03-24|Adelaide, Australia||
+2015-03-24|Adelaide, Australia|arrived|
 2015-03-28|Melbourne, Australia||
 2015-05-01|Sydney, Australia||
 2015-05-07|Christchurch, New Zealand||
