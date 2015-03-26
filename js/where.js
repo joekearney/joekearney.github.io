@@ -16,6 +16,7 @@ latLngs["Brisbane, Australia"] = new google.maps.LatLng(-27.471011,153.023449);
 latLngs["Adelaide, Australia"] = new google.maps.LatLng(-34.928621,138.599959);
 latLngs["Auckland, New Zealand"] = new google.maps.LatLng(-36.84846,174.763332);
 latLngs["Hanoi, Vietnam"] = new google.maps.LatLng(21.027764,105.83416);
+latLngs["Mount Gambier, Australia"] = new google.maps.LatLng(-37.827922,140.775253);
 
 // stuff per line of where.txt
 var locations = [];
