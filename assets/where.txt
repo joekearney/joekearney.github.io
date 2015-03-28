@@ -10,7 +10,8 @@
 2015-03-20|Singapore|arrived|https://www.flickr.com/photos/joekearney/16281296323/in/set-72157651098127520/player/
 2015-03-24|Adelaide, Australia|arrived|
 2015-03-26|Mount Gambier, Australia|arrived|
-2015-03-28|Melbourne, Australia||
+2015-03-26|Apollo Bay, Australia|arrived|
+2015-03-28|Melbourne, Australia|arrived|
 2015-05-01|Sydney, Australia||
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||
