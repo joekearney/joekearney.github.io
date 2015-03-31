@@ -12,7 +12,10 @@
 2015-03-26|Mount Gambier, Australia|arrived|
 2015-03-26|Apollo Bay, Australia|arrived|
 2015-03-28|Melbourne, Australia|arrived|
-2015-05-01|Sydney, Australia||
+2015-04-12|Uluru, Australia||
+2015-04-13|King's Canyon, Australia||
+2015-04-14|Alice Springs, Australia||
+2015-04-15|Sydney, Australia||
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
