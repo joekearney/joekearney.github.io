@@ -19,7 +19,7 @@ latLngs["Hanoi, Vietnam"] = new google.maps.LatLng(21.027764,105.83416);
 latLngs["Mount Gambier, Australia"] = new google.maps.LatLng(-37.827922,140.775253);
 latLngs["Apollo Bay, Australia"] = new google.maps.LatLng(-38.757167,143.669613);
 latLngs["Uluru, Australia"] = new google.maps.LatLng(-25.352594,131.034361);
-latLngs["Kings Canyon, Australia"] = new google.maps.LatLng(-24.259315,131.488466);
+latLngs["King's Canyon, Australia"] = new google.maps.LatLng(-24.259315,131.488466);
 latLngs["Alice Springs, Australia"] = new google.maps.LatLng(-23.70021,133.880611);
 
 // stuff per line of where.txt
