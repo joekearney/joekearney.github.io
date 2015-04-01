@@ -6,9 +6,9 @@
 2015-03-12|Siem Reap, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16859789842/in/set-72157649351024524/player/
 2015-03-16|Phnom Penh, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16994728741/in/set-72157649351024524/player/
 2015-03-20|Singapore|arrived|https://www.flickr.com/photos/joekearney/16281296323/in/set-72157651689493255/player/
-2015-03-24|Adelaide, Australia|arrived|https://www.flickr.com/photos/joekearney/16378861643/in/set-72157651231664507/player
-2015-03-26|Mount Gambier, Australia|arrived|https://www.flickr.com/photos/joekearney/16973032076/in/set-72157651231664507
-2015-03-26|Apollo Bay, Australia|arrived|https://www.flickr.com/photos/joekearney/16997612222/in/set-72157651231664507
+2015-03-24|Adelaide, Australia|arrived|https://www.flickr.com/photos/joekearney/16378861643/in/set-72157651231664507/player/
+2015-03-26|Mount Gambier, Australia|arrived|https://www.flickr.com/photos/joekearney/16973032076/in/set-72157651231664507/player/
+2015-03-26|Apollo Bay, Australia|arrived|https://www.flickr.com/photos/joekearney/16997612222/in/set-72157651231664507/player/
 2015-03-28|Melbourne, Australia|arrived|
 2015-04-12|Uluru, Australia||
 2015-04-13|King's Canyon, Australia||
