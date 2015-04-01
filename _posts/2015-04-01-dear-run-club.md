@@ -24,6 +24,7 @@ Singapore humidity makes for pathetic running. We've been trying to get into the
 Bring on the British weather!
 
 Love and stretches,
+
 Joe
 
 <div class="container-fluid">
