@@ -101,6 +101,10 @@ In summary, it is possible to extend 2PC to be tolerant to some degree to networ
 
 # CP -- sacrificing availability
 
+In general, the class of CP algorithms sacrifice availability in some portion of the network -- the distributed service as a whole may remain available when some of its nodes are not. For instance, if a minority of nodes gets partitioned off, the majority may be able to proceed as normal but since no updates will reach nodes in the minority, any clients connecting to one of these will not see a state consistent with the majority.
+
+This might be fine in practice -- clients connected to a small partitioned segment of the network might see stale data, but none of these algorithms should allow new updates in the minority. Maybe stale data is ok if there's a promise of avoiding a split-brain, where both partitions continue with unrelated updates. Similarly there may be enough information in the clients or servers of the minority partition to figure out what's happening and move clients to connect elsewhere.
+
 ## Paxos
 
 > Ask for the right to set the \\(n\\)th value. If a majority promise to follow you, then you can assert your value to all others. Otherwise, you're already behind someone else -- try again.
@@ -138,6 +142,8 @@ There are a few versions of this:
 
 * eventual consistency -- requiring that for each node, any update is eventually visible
 * quiescent consistency -- if you stop updating the state, eventually all nodes converge to the same state
+
+## CRDTs
 
 Enter **C**onflict-free **R**eplicated **D**ata **T**ypes, built on the idea that if you can describe the operations on your state machine to be commutative, associative and idempotent then each node just dumps whatever operation it performs into the rest of the network.
 

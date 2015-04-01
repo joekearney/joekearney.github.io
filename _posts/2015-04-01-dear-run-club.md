@@ -29,7 +29,7 @@ Joe
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12 inline-image">
-			<iframe src='https://www.strava.com/activities/267396900/embed/7ec4e69f05ec31b75075d6a26d45bee34977be87' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
+			<iframe src='https://www.strava.com/activities/272036214/embed/fe68ea2c4a00eceac4e29d73c2b1d0bd19aee903' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
 		</div>
 	</div>
 </div>
