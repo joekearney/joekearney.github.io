@@ -1,13 +1,11 @@
 # date yyyy-MM-dd | location, searchable in Google Maps | (blank) or 'arrived' | Flickr photo in slideshow link
 
-#2015-01-01|London, UK||
-#2015-01-11|New York, US||https://www.flickr.com/photos/joekearney/16096618530/in/set-72157650293499321/player/
 2015-01-17|London, UK|arrived|https://www.flickr.com/photos/joekearney/16409134537/in/set-72157647810587354/player/
-2015-03-03|Singapore|arrived|https://www.flickr.com/photos/joekearney/16515374488/in/set-72157651147972555/player/
-2015-03-09|Kuala Lumpur, Malaysia|arrived|https://www.flickr.com/photos/joekearney/16585994177/in/set-72157651245066316/player/
-2015-03-12|Siem Reap, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16186545634/in/set-72157650927970970/player/
-2015-03-16|Phnom Penh, Cambodia|arrived|
-2015-03-20|Singapore|arrived|https://www.flickr.com/photos/joekearney/16281296323/in/set-72157651098127520/player/
+2015-03-03|Singapore|arrived|https://www.flickr.com/photos/joekearney/16993757822/in/set-72157651213580997/player/
+2015-03-09|Kuala Lumpur, Malaysia|arrived|https://www.flickr.com/photos/joekearney/72157651224467947/player/
+2015-03-12|Siem Reap, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16859789842/in/set-72157649351024524/player/
+2015-03-16|Phnom Penh, Cambodia|arrived|https://www.flickr.com/photos/joekearney/16994728741/in/set-72157649351024524/player/
+2015-03-20|Singapore|arrived|https://www.flickr.com/photos/joekearney/16281296323/in/set-72157651689493255/player/
 2015-03-24|Adelaide, Australia|arrived|
 2015-03-26|Mount Gambier, Australia|arrived|
 2015-03-26|Apollo Bay, Australia|arrived|
