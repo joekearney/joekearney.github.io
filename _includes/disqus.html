@@ -1,0 +1,26 @@
+{% if page.container_type %}
+<div id="disqus_container" class={{ page.container_type }}>
+{% else %}
+<div id="disqus_container" class="container">
+{% endif %}
+
+	<div class="row">
+		<div id="disqus_thread" class="col-md-12 inline-image"></div>
+	</div>
+
+</div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'joekearney';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title = "{{ site.title }} - {{ page.title }}";
+    var disqus_url = "{{ site.production_url }}{{ page.url }}";
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments</a></noscript>

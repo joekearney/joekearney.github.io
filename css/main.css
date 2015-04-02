@@ -193,3 +193,11 @@ table.highlighttable td.linenos pre code {
 #current-location-block, #current-location-block>p {
   text-align: left;
 }
+
+#disqus_container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#disqus_thread {
+  padding: 18px;
+}
