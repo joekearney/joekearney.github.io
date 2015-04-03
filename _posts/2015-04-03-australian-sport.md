@@ -7,7 +7,6 @@ categories:
 tags:
 - travel
 - new
-- nocomments
 status: publish
 type: post
 published: true
@@ -18,7 +17,7 @@ author: Joe Kearney
 	<iframe src="https://www.flickr.com/photos/joekearney/16973168376/in/set-72157651625179136/player/" width="1024" height="512" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </div>
 
-After the [trauma of participating in sport in Singapore](/posts/dear-run-club) we've taken a more relaxed approach in Australia, avoiding any form of group exercise!
+After the [trauma of participating in sport in Singapore](/posts/dear-run-club) we've taken a more relaxed approach in Australia.
 
 We've been to the Melbourne Cricket Ground twice in a week. It's pretty cool -- it's the biggest stadium by capacity in the country and the 13th largest in world, after the football stadium in Pyongyang, North Korea and a bunch of American college football grounds. It's so well designed that the gap between one tier and next allows a view of the pitch from the bar -- well done, Australia.
 
