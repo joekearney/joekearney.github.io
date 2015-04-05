@@ -14,7 +14,7 @@ author: Joe Kearney
 ---
 
 <div class="title-image">
-	<iframe src="https://www.flickr.com/photos/joekearney/16973168376/in/set-72157651625179136/player/" width="1024" height="512" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	<iframe src="https://www.flickr.com/photos/joekearney/16973168376/in/set-72157651625179136/player/" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </div>
 
 After the [trauma of participating in sport in Singapore](/posts/dear-run-club) we've taken a more relaxed approach in Australia.

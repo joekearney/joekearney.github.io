@@ -13,7 +13,7 @@ author: Joanna Heald
 ---
 
 <div class="title-image">
-	<iframe src="https://www.flickr.com/photos/joekearney/16998079751/in/set-72157651231664507/player/" width="100%" height="512" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	<iframe src="https://www.flickr.com/photos/joekearney/16998079751/in/set-72157651231664507/player/" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </div>
 
 We left Adelaide early, ready to cover 1000km in 2.5 days to get to Melbourne in time for the cricket world cup final. We definitely did not allow enough time to really make the most of the trip, but boy did we fit a lot in!

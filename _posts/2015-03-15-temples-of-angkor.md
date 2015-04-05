@@ -13,7 +13,7 @@ author: Joanna Heald and Joe Kearney
 ---
 
 <div class="title-image">
-	<iframe src="https://www.flickr.com/photos/joekearney/16186545634/in/set-72157650927970970/player/" width="100%" height="512" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	<iframe src="https://www.flickr.com/photos/joekearney/16186545634/in/set-72157650927970970/player/" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </div>
 
 Cambodians proudly include the temples at Angkor among the seven man-made wonders of the world, and they certainly deserve the many superlatives that are used to describe them. In the vast jungle complex, majestic ruins appear from nowhere as you turn a corner, impressing with their scale and grandeur almost a thousand years after they were built.
