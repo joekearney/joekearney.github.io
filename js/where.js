@@ -39,7 +39,6 @@ var lastDateAtLocation = {};
 function parseHistory(historyText) {
   var lines = historyText.split(/\r?\n/);
   var lineNum = 1;
-  var now = moment();
 
   lines.forEach(function(line) {
     if (line.length > 0 && line.charAt(0) != '#') {
@@ -261,7 +260,7 @@ function onComplete() {
       if (timeObj.status == "OK") {
         var offset = timeObj.dstOffset + timeObj.rawOffset;
         window.setInterval(function(){
-          document.getElementById(targetElement).innerHTML = moment().add(offset, 's').format("HH:mm a, dddd MMMM Do")
+          document.getElementById(targetElement).innerHTML = moment.utc().add(offset, 's').format("HH:mm a, dddd")
         }, 1000);
       } else {
         console.error("Failed to load time from Google Time API: " + timeObj.status);
@@ -278,7 +277,7 @@ function onComplete() {
         }
         var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"
                           + "&location=" + location.toUrlValue()
-                          + "&timestamp=" + moment().unix();
+                          + "&timestamp=" + moment.utc().unix();
         timeRequest.open("GET", requestUrl, true); // add random to disable caching
         timeRequest.send();
       } else {
