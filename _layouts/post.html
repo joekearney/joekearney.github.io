@@ -2,6 +2,12 @@
 layout: layout
 ---
 
+{% for category in site.categories %}
+    {% assign catg_name = category.first %}
+    {% if catg_name == page.categories.first | downcase %}
+        {% assign catg_posts = category.last %}
+    {% endif %}
+{% endfor %}
 
 <div class="container">
   <article>
@@ -23,5 +29,24 @@ layout: layout
     {% endif %}
 
     {{ content }}
+
+    <div class="row">
+    {% for post in catg_posts %}
+      {% if post.title == page.title %}
+        <hr></hr>
+        <div class="col-sm-6 prev-article-link">
+          {% unless forloop.last %}
+            {% assign next = catg_posts[forloop.index] %}
+            &larr; <a href="{{ site.url }}{{ next.url }}">{{ next.title }}</a>
+          {% endunless %}
+        </div>
+        <div class="col-sm-6 next-article-link">
+          {% unless forloop.first %}
+            <a href="{{ site.url }}{{ prev.url }}">{{ prev.title }}</a> &rarr;
+          {% endunless %}
+        </div>
+      {% endif %}
+      {% assign prev = post %}
+    {% endfor %}
   </article>
 </div>
