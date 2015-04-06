@@ -102,12 +102,20 @@ article p {
   }
 }
 
-@media (max-width:383) { .title-image { height: 256px; } }
-@media (min-width:384px) and (max-width:450px) { .title-image { height: 384px; } }
-@media (min-width:451px) { .title-image { height: 512px; } }
-.title-image > iframe, .title-image {
+@media (max-width:383) {
+  .title-image > iframe { height: 256px; }
+  .title-image, .title-image > img { max-height: 256px; }
+}
+@media (min-width:384px) and (max-width:450px) {
+  .title-image > iframe { height: 384px; }
+  .title-image, .title-image > img { max-height: 384px; }
+}
+@media (min-width:451px) {
+  .title-image > iframe { height: 512px; }
+  .title-image, .title-image > img { max-height: 512px; }
+}
+.title-image > iframe {
   width: 100%;
-  height: 100%;
 }
 
 #footer {
