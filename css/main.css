@@ -224,3 +224,9 @@ table.highlighttable td.linenos pre code {
 .next-article-link {
   text-align: right;
 }
+.article-index-link {
+  text-align: center;
+}
+.byline .article-index-link {
+  text-align: right;
+}

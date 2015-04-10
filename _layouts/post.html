@@ -11,7 +11,7 @@ layout: layout
 
 <div class="container">
   <article>
-    <div class="title-group">
+    <div class="row title-group">
       <h1 class="h1 title title-colour">
         <a href="{{ page.url }}">{{ page.title | replace:'-','&ndash;' }}</a>
         {% unless page.description == blank %}
@@ -21,7 +21,16 @@ layout: layout
     </div>
 
     <section class="byline">
-      {{ page.date | date: "%B %e, %Y" }} &ndash; {{ page.author}}
+      <div class="row">
+        <div class="col-xs-8">
+          {{ page.date | date: "%B %e, %Y" }} &ndash; {{ page.author }}
+        </div>
+        <div class="col-xs-4 article-index-link">
+          {% if catg_name == 'travel' %}
+            <a href="/travel-index.html">travel index</a>
+          {% endif %}
+        </div>
+      </div>
     </section>
 
     {% if page.tags contains 'draft' %}
@@ -34,15 +43,20 @@ layout: layout
     {% for post in catg_posts %}
       {% if post.title == page.title %}
         <hr></hr>
-        <div class="col-sm-6 prev-article-link">
+        <div class="col-xs-4 prev-article-link">
           {% unless forloop.last %}
             {% assign next = catg_posts[forloop.index] %}
-            &larr; <a href="{{ site.url }}{{ next.url }}">{{ next.title }}</a>
+            &larr; <a href="{{ next.url }}">{{ next.title }}</a>
           {% endunless %}
         </div>
-        <div class="col-sm-6 next-article-link">
+        <div class="col-xs-4 article-index-link">
+          {% if post.categories contains 'travel' %}
+            <a href="/travel-index.html">travel index</a>
+          {% endif %}
+        </div>
+        <div class="col-xs-4 next-article-link">
           {% unless forloop.first %}
-            <a href="{{ site.url }}{{ prev.url }}">{{ prev.title }}</a> &rarr;
+            <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
           {% endunless %}
         </div>
       {% endif %}
