@@ -36,8 +36,4 @@ We went for a walk along the Yarra river out to the north-east of the city, wher
 	<iframe id="cafe-melbourne-youtube-embed" src="https://www.youtube.com/embed/HZ87476iI9c" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<!--
-href='javascript:document.getElementById("cafe-melbourne-youtube-embed").src = "https://www.youtube.com/embed/HZ87476iI9c"'
--->
-
-In the city centre there's a section of the south bank of the Yarra eerily similar to London's South Bank, with an arts centre and concert hall, then loads of bars facing out onto the river. We found a full five-piece band set up outside a bar playing covers, and they were there for hours! <a>Jo was spun around for a while</a><sup>[video to follow]</sup> by some random old asian guy who wanted a dance, before working his way around the crowd with other partners! There followed more music and dancing in a bar down the strip with its own band, like a live version of the music at Flares. We're getting so used to the Aussie accent that we didn't realise our waiter was from Leeds until we asked which AFL team he supports.
+In the city centre there's a section of the south bank of the Yarra eerily similar to London's South Bank, with an arts centre and concert hall, then loads of bars facing out onto the river. We found a full five-piece band set up outside a bar playing covers, and they were there for hours! <a title="show video of Jo dancing!" onclick='document.getElementById("cafe-melbourne-youtube-embed").src = "https://www.youtube.com/embed/8pPpvn-mkmU"; return false;'>Jo was spun around for a while</a> by some random old asian guy who wanted a dance, before working his way around the crowd with other partners! There followed more music and dancing in a bar down the strip with its own band, like a live version of the music at Flares. We're getting so used to the Aussie accent that we didn't realise our waiter was from Leeds until we asked which AFL team he supports.
