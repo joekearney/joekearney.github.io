@@ -21,6 +21,7 @@ latLngs["Apollo Bay, Australia"] = new google.maps.LatLng(-38.757167,143.669613)
 latLngs["Uluru, Australia"] = new google.maps.LatLng(-25.352594,131.034361);
 latLngs["King's Canyon, Australia"] = new google.maps.LatLng(-24.259315,131.488466);
 latLngs["Alice Springs, Australia"] = new google.maps.LatLng(-23.70021,133.880611);
+latLngs["Katoomba, Australia"] = new google.maps.LatLng(-33.714955,150.311407);
 
 // stuff per line of where.txt
 var locations = [];

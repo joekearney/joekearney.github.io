@@ -11,9 +11,11 @@
 2015-03-26|Apollo Bay, Australia|arrived|https://www.flickr.com/photos/joekearney/16997612222/in/set-72157651231664507/player/
 2015-03-28|Melbourne, Australia|arrived|https://www.flickr.com/photos/joekearney/16376715374/in/set-72157651625179136/player/
 2015-04-12|Uluru, Australia|arrived|
-2015-04-13|King's Canyon, Australia||
-2015-04-14|Alice Springs, Australia||
+2015-04-13|King's Canyon, Australia|arrived|
+2015-04-14|Alice Springs, Australia|arrived|
 2015-04-15|Sydney, Australia||
+2015-04-16|Katoomba, Australia||
+2015-04-21|Sydney, Australia||
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
