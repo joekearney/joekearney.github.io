@@ -38,8 +38,6 @@ The algorithms discussed here are consensus protocols, which provide a way for a
 
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> look at Paxos Made Live</div>
 
-<div class="todo">look at more things</div>
-
 ***
 
 # CA -- sacrificing partition tolerance
@@ -134,7 +132,7 @@ The Raft algorithm was designed specifically to be easier to learn than Paxos wh
 
 You may not always need strict 'one-copy' consistency, in which all of the state machines have the same state all of the time. It is unlikely that you'll want your system's nodes to become arbitrarily different, but it may be OK to weaken the consistency requirement. It might even be that you can never guarantee that two nodes of your system are in the same state at any one time, and that might be fine.
 
-It boils down to being able to handle updates being processed out of order. This typically requires some means of conflict resolution (specify some domain-specific rules about how to process the updates, or use time to synchronize) or arranging that updates will never conflict (make operations commutative/associative/idempotent). Updates might need to be constrained to being causally ordered, but that's usually fine too.
+It boils down to being able to handle updates being processed out of order. This typically requires some means of conflict resolution (specify some domain-specific rules about how to process the updates, or use time to synchronize) or arranging that updates will never conflict (make operations commutative, associative, idempotent). Updates might need to be constrained to being causally ordered, but that's usually fine too.
 
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> expand</div>
 
@@ -150,6 +148,10 @@ Enter **C**onflict-free **R**eplicated **D**ata **T**ypes, built on the idea tha
 You'll see CRDTs described in two flavours, both of which can be called conflict-free. The **C** can stand for
 
 * **commutative** -- the operations one. Nodes send messages describing commutative operations to be performed (for a counter consider addition, with messages like "add three", plus a way of ensuring idempotency).
-* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: "I'm up to five", with \\(\max(\cdot, \cdot)\\) as the commutative, associative and idempotent merge operation). The states converge to a common value.
+* **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: "I'm up to five" for each node, with \\(\max(\cdot, \cdot)\\) as the commutative, associative and idempotent merge operation). The states converge to a common value.
 
+<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> link to David Brooks scalax talk</div>
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> give examples of basic structures</div>
+
+## Cassandra
+
