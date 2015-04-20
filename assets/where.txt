@@ -13,9 +13,9 @@
 2015-04-12|Uluru, Australia|arrived|
 2015-04-13|King's Canyon, Australia|arrived|
 2015-04-14|Alice Springs, Australia|arrived|
-2015-04-15|Sydney, Australia||
-2015-04-16|Katoomba, Australia||
-2015-04-21|Sydney, Australia||
+2015-04-15|Sydney, Australia|arrived|
+2015-04-16|Katoomba, Australia|arrived|
+2015-04-20|Sydney, Australia|arrived|
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
