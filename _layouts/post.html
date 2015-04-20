@@ -33,6 +33,17 @@ layout: layout
       </div>
     </section>
 
+    {% if page.title_image_img %}
+      <div class="title-image">
+        <img src="{{ page.title_image_img }}" alt="I can haz ze job?">
+      </div>
+    {% endif %}
+    {% if page.title_image_iframe %}
+      <div class="title-image">
+        <iframe src="{{ page.title_image_iframe }}" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      </div>
+    {% endif %}
+
     {% if page.tags contains 'draft' %}
       <div class="bs-callout bs-callout-danger"><p><span class="heading">Note:</span> this post is a <b>draft</b></p></div>
     {% endif %}

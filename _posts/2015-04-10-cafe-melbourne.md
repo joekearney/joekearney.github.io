@@ -11,12 +11,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+title_image_iframe: "https://www.flickr.com/photos/joekearney/16474009964/in/set-72157651625179136/player/"
 ---
-
-<div class="title-image">
-	<iframe src="https://www.flickr.com/photos/joekearney/16474009964/in/set-72157651625179136/player/" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-</div>
-
 
 We didn't feel like we'd stayed still for any length of time until we arrived in Melbourne almost four weeks after leaving the UK. The first leg through Singapore and driving down from Adelaide was hectic, so it's been nice to have the chance to get used to a place over a slightly longer time. The melburnian travel agent expressed horror at the idea of spending two whole weeks here. "What will you do?!" On the contrary we've had no trouble filling the time. We've seen a lot of the city and a couple of the suburbs, and we've developed a healthy caffeine addiction.
 

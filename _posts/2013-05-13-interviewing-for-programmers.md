@@ -13,11 +13,8 @@ published: true
 author: Joe Kearney
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+title_image_img: /images/i-can-haz-ze-job.jpg
 ---
-
-<div class="title-image">
-	<img src="/images/i-can-haz-ze-job.jpg" alt="I can haz ze job?">
-</div>
 
 In five years at GSA Capital I gave almost 200 job interviews to software engineers, not an unusual rate among our developers. The company is renowned for its arduous interview process; I had about 15 interviews before receiving an offer. (This isn't the moment, but I applaud the thorough nature of this process and am happy to argue the case against those who claim it's too much.)
 
