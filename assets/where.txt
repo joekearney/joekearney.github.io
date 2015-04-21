@@ -14,7 +14,7 @@
 2015-04-13|King's Canyon, Australia|arrived|https://www.flickr.com/photos/joekearney/16591436323/in/set-72157651662279490/player/
 2015-04-14|Alice Springs, Australia|arrived|https://www.flickr.com/photos/joekearney/16589317524/in/set-72157651662279490/player/
 2015-04-15|Sydney, Australia|arrived|
-2015-04-16|Katoomba, Australia|arrived|
+2015-04-16|Katoomba, Australia|arrived|https://www.flickr.com/photos/joekearney/16603615583/in/set-72157652104352875/player/
 2015-04-20|Sydney, Australia|arrived|
 2015-05-07|Christchurch, New Zealand||
 2015-06-01|Auckland, New Zealand||
