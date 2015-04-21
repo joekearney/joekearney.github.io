@@ -14,7 +14,7 @@ I have got away without using non-blocking IO directly until recently, because I
 
 Time to learn: this post is an effort to explain to myself what's going on and why, and what better place to write than on a flight over hours of empty outback!
 
-The introductions I've seen to asynchronous/non-blocking IO tend to talk about selectors and keys, the mechanics of how it works. I think the motivating examples from a higher level can be more instructive of the general shape of what's going on, and the details can follow. What follows describes the different options I covered when figuring out how to make IO scale from first principles with the tools that we already have, that is, using blocking IO. It turns out that "real" async IO does roughly the same thing, but the deeper hooks allow this to be done more efficiently.
+The introductions I've seen to asynchronous/non-blocking IO tend to talk about selectors and keys, the mechanics of how it works. I think the motivating examples from a higher level can be more instructive of the general shape of what's going on, and the details can follow (not in this post). What follows describes the different options I covered when trying to figure out how to make IO scale, from first principles with the tools that we already have, that is, using blocking IO. It turns out that "real" async IO does roughly the same thing, but the deeper hooks allow this to be done more efficiently.
 
 As a little context, **the use case that motivated this** was a server processing an ordered stream of messages to be sent to many connected clients. Each client receives some subset of the messages and must receive its messages in order.
 
