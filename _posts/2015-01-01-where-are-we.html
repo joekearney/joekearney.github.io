@@ -49,7 +49,7 @@ container_type: container-fluid
           {% assign counter = 0 %}
           {% for post in site.posts %}
             {% if post.tags contains 'travel' %}
-              {% if counter < 3 or post.tags contains 'new' %}
+              {% if counter < 4 or post.tags contains 'new' %}
                 {% assign counter = counter | plus: 1 %}
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
