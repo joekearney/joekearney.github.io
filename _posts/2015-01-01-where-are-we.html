@@ -45,16 +45,21 @@ container_type: container-fluid
       <div id="div-blog-listing" class="col-md-8">
         <h2>Backpacking with a Suitcase <span class="post-description">&ndash; minimal blog of what we've been up to &ndash; <a href="/travel-index.html">see all</a></span></h2>
         <ul class="listing">
-          {% for post in site.posts limit: 3 %}
+          {% comment %} Only list the top 3 and any new items further down the list {% endcomment %}
+          {% assign counter = 0 %}
+          {% for post in site.posts %}
             {% if post.tags contains 'travel' %}
-              <li>
-                {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                {% unless post.description == "" %}
-                  <span class="post-description">&ndash; {{ post.description }}</span>
-                {% endunless %}
-              </li>
+              {% if counter < 3 or post.tags contains 'new' %}
+                {% assign counter = counter | plus: 1 %}
+                <li>
+                  {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                  {% unless post.description == "" %}
+                    <span class="post-description">&ndash; {{ post.description }}</span>
+                  {% endunless %}
+                </li>
+              {% endif %}
             {% endif %}
           {% endfor %}
           <li><span class="post-description"><a href="/travel-index.html">...more</a></span></li>
