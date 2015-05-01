@@ -35,7 +35,7 @@ layout: layout
 
     {% if page.title_image_img %}
       <div class="title-image">
-        <img src="{{ page.title_image_img }}" alt="I can haz ze job?">
+        <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}">
       </div>
     {% endif %}
     {% if page.title_image_iframe %}
