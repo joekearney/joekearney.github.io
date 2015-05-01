@@ -6,7 +6,6 @@ categories:
 - work
 tags:
 - interesting
-- draft
 author: Joe Kearney
 ---
 
