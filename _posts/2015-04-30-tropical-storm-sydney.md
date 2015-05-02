@@ -38,4 +38,4 @@ Our next residential stop was a move out of the city centre to Drummoyne, anothe
 
 ***
 
-Sydney's been a bit of mixed bag, and honestly hasn't captured our hearts in quite the way that Melbourne did. The weather hasn't exactly co-operated but we perhaps haven't been as proactive as we might have been on the rainy days. We're going to the Opera House tonight and a netball match tomorrow before heading off to the countryside for a couple more days in Harry's ginger walls, and before long the real next step of the adventure beckons in New Zealand. Time to invest in some more thermals.
+Sydney's been a bit of mixed bag, and honestly hasn't captured our hearts in quite the way that Melbourne did. The weather certainly hasn't co-operated. We're going to the Opera House tonight and a netball match tomorrow before heading off to the countryside for a couple more days in Harry's ginger walls, and before long the real next step of the adventure beckons in New Zealand. Time to invest in some more thermals.
