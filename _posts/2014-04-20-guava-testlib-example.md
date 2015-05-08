@@ -3,9 +3,10 @@ layout: post
 title: Guava Testlib Example
 description: a brief introduction to generated tests
 categories:
-- work
+- article
 tags:
 - interesting
+- software
 status: publish
 type: post
 author: Joe Kearney

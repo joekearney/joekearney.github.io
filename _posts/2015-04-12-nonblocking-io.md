@@ -3,9 +3,10 @@ layout: post
 title: "Learning about Non-blocking IO"
 description: "no-code intro"
 categories:
-- work
+- article
 tags:
 - interesting
+- software
 author: Joe Kearney
 ---
 

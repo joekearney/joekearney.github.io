@@ -3,10 +3,11 @@ layout: post
 title: Protocols for Distributed State
 description: overview of consensus
 categories:
-- work
+- article
 tags:
 - interesting
 - draft
+- software
 author: Joe Kearney
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

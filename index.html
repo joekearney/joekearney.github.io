@@ -15,11 +15,11 @@ title: "Joe's Mots"
       <ul class="listing">
         {% for post in site.posts %}
           {% unless post.tags contains 'draft' %}
-            {% if post.categories contains 'work' and post.tags contains 'interesting' %}
+            {% if post.categories contains 'article' and post.tags contains 'interesting' %}
               <li>
                 <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                 <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                {% unless post.description == blank %}
+                {% unless post.description == blank or post.description == "" %}
                   <span class="post-description">&ndash; {{ post.description }}</span>
                 {% endunless %}
               </li>

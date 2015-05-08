@@ -3,6 +3,8 @@ layout: post
 title: Aho-Corasick String Matching
 categories:
 - algorithms-string-matching
+tags:
+- software
 status: draft
 type: post
 published: false
