@@ -23,6 +23,12 @@ latLngs["King's Canyon, Australia"] = new google.maps.LatLng(-24.259315,131.4884
 latLngs["Alice Springs, Australia"] = new google.maps.LatLng(-23.70021,133.880611);
 latLngs["Katoomba, Australia"] = new google.maps.LatLng(-33.714955,150.311407);
 latLngs["Bundeena, Australia"] = new google.maps.LatLng(-34.08392,151.151583);
+latLngs["Atakoa, New Zealand"] = new google.maps.LatLng(-43.803666,172.968262);
+latLngs["Mount Cook, New Zealand"] = new google.maps.LatLng(-43.735880, 170.098661);
+latLngs["Dunedin, New Zealand"] = new google.maps.LatLng(-45.87876,170.502798);
+latLngs["Oamaru, New Zealand"] = new google.maps.LatLng(-45.097512,170.970415);
+latLngs["Akaroa, New Zealand"] = new google.maps.LatLng(-43.803666,172.968262);
+latLngs["Waihi Gorge, New Zealand"] = new google.maps.LatLng(-43.999637,171.134737);
 
 // stuff per line of where.txt
 var locations = [];

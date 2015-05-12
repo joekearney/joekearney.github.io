@@ -19,6 +19,11 @@
 2015-05-03|Bundeena, Australia|arrived|https://www.flickr.com/photos/joekearney/16770370783/in/set-72157652300500261/player/
 2015-05-06|Sydney, Australia|arrived|
 2015-05-07|Christchurch, New Zealand|arrived|
+2015-05-09|Akaroa, New Zealand|arrived|
+2015-05-10|Waihi Gorge, New Zealand|arrived|
+2015-05-11|Mount Cook, New Zealand|arrived|
+2015-05-12|Oamaru, New Zealand||
+2015-05-13|Dunedin, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
 2015-06-28|Cairns, Australia||

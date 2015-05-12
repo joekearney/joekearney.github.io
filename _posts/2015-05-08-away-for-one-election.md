@@ -5,7 +5,6 @@ description: ""
 categories:
 - article
 tags:
-- new
 - blog
 - nocomments
 - interesting
