@@ -18,8 +18,8 @@
 2015-04-20|Sydney, Australia|arrived|https://www.flickr.com/photos/joekearney/17339005565/in/set-72157652300500261/player/
 2015-05-03|Bundeena, Australia|arrived|https://www.flickr.com/photos/joekearney/16770370783/in/set-72157652300500261/player/
 2015-05-06|Sydney, Australia|arrived|
-2015-05-07|Christchurch, New Zealand|arrived|
-2015-05-09|Akaroa, New Zealand|arrived|
+2015-05-07|Christchurch, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17449015850/in/set-72157652379606419/player/
+2015-05-09|Akaroa, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17450849299/in/set-72157652379606419/player/
 2015-05-10|Waihi Gorge, New Zealand|arrived|
 2015-05-11|Mount Cook, New Zealand|arrived|
 2015-05-13|Oamaru, New Zealand|arrived|
