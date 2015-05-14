@@ -11,6 +11,7 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+title_image_iframe: https://www.flickr.com/photos/joekearney/17016725833/in/album-72157652379606419/player/
 ---
 
 The New Zealand road trip started as usual, with a night-time arrival at the first campsite after lots of faff leaving Christchurch.

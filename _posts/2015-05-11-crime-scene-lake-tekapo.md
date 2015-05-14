@@ -11,6 +11,7 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+title_image_iframe: https://www.flickr.com/photos/joekearney/17635437682/in/album-72157652379606419/player/
 ---
 
 Three days in, and New Zealand really is ridiculously beautiful. We woke up early this morning to the pattering of Waihi Gorge and looked outside to a trio of sheep dogs (not pigs, I checked) efficiently manoeuvring a herd of sheep across the sun-tipped hillside, watched by a shepherd clutching his staff. A perfect rural English scene.
