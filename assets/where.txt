@@ -22,8 +22,10 @@
 2015-05-09|Akaroa, New Zealand|arrived|
 2015-05-10|Waihi Gorge, New Zealand|arrived|
 2015-05-11|Mount Cook, New Zealand|arrived|
-2015-05-12|Oamaru, New Zealand||
-2015-05-13|Dunedin, New Zealand||
+2015-05-13|Middlemarch, New Zealand|arrived|
+2015-05-14|Dunedin, New Zealand|arrived|
+2015-05-16|Milford Sound, New Zealand||
+2015-05-18|Queenstown, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
 2015-06-28|Cairns, Australia||
