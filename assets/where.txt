@@ -22,6 +22,7 @@
 2015-05-09|Akaroa, New Zealand|arrived|
 2015-05-10|Waihi Gorge, New Zealand|arrived|
 2015-05-11|Mount Cook, New Zealand|arrived|
+2015-05-13|Oamaru, New Zealand|arrived|
 2015-05-13|Middlemarch, New Zealand|arrived|
 2015-05-14|Dunedin, New Zealand|arrived|
 2015-05-16|Milford Sound, New Zealand||
