@@ -25,8 +25,9 @@
 2015-05-13|Oamaru, New Zealand|arrived|
 2015-05-13|Middlemarch, New Zealand|arrived|
 2015-05-14|Dunedin, New Zealand|arrived|
-2015-05-16|Milford Sound, New Zealand||
-2015-05-18|Queenstown, New Zealand||
+2015-05-16|Te Anau, New Zealand||
+2015-05-17|Milford Sound, New Zealand||
+2015-05-19|Queenstown, New Zealand||
 2015-06-01|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
 2015-06-28|Cairns, Australia||
