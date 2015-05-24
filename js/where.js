@@ -33,6 +33,10 @@ latLngs["Queenstown, New Zealand"] = new google.maps.LatLng(-45.031162,168.66264
 latLngs["Middlemarch, New Zealand"] = new google.maps.LatLng(-45.507065,170.119349);
 latLngs["Milford Sound, New Zealand"] = new google.maps.LatLng(-44.671625,167.925621);
 latLngs["Te Anau, New Zealand"] = new google.maps.LatLng(-45.414451,167.718053);
+latLngs["Bay of Islands, New Zealand"] = new google.maps.LatLng(-35.18437,174.164616);
+latLngs["Rotorua, New Zealand"] = new google.maps.LatLng(-38.136848,176.249746);
+latLngs["Gore, New Zealand"] = new google.maps.LatLng(-46.098799,168.945819);
+latLngs["Lake Taupo, New Zealand"] = new google.maps.LatLng(-38.79029,175.889555);
 
 // stuff per line of where.txt
 var locations = [];

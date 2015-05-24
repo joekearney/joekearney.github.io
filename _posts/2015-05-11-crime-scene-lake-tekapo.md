@@ -6,7 +6,6 @@ categories:
 - travel
 tags:
 - travel
-- new
 status: publish
 type: post
 published: true
@@ -29,3 +28,5 @@ The first glimpse of Lake Tekapo was breathtaking -- the kind of silly pretty th
 Our descent was filled with plans for our night sky adventure (and scheduling our toilet trips so that we could camp for free in the nearby field). But the rain clouds that had been looming behind us eventually caught up with our power-walking pace and the heavens opened. With 90% cloud cover predicted for the night, we abandoned our Patrick Moore fantasies and opted to make progress towards Mount Cook.
 
 We were back in Barry as the rain streamed and fog descended, while the Austrian landscape gradually faded into craggy Scotland. As darkness set in, all we could see were white lines and occasional bunny rabbits bobbing across the road. You'll be pleased to hear we swerved more successfully for them.
+
+{% comment %} add strava embed {% endcomment %}

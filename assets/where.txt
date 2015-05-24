@@ -1,3 +1,4 @@
+
 # date yyyy-MM-dd | location, searchable in Google Maps | (blank) or 'arrived' | Flickr photo in slideshow link
 
 2015-01-17|London, UK|arrived|https://www.flickr.com/photos/joekearney/16409134537/in/set-72157647810587354/player/
@@ -25,10 +26,20 @@
 2015-05-13|Oamaru, New Zealand|arrived|
 2015-05-13|Middlemarch, New Zealand|arrived|
 2015-05-14|Dunedin, New Zealand|arrived|
-2015-05-16|Te Anau, New Zealand||
-2015-05-17|Milford Sound, New Zealand||
-2015-05-19|Queenstown, New Zealand||
-2015-06-01|Auckland, New Zealand||
+2015-05-15|Gore, New Zealand|arrived|
+2015-05-16|Te Anau, New Zealand|arrived|
+2015-05-17|Milford Sound, New Zealand|arrived|
+2015-05-18|Queenstown, New Zealand|arrived|
+#2015-05-21|Haast, New Zealand|arrived|
+#2015-05-22|Franz Josef, New Zealand|arrived|
+#2015-05-23|Lake Ianthe, New Zealand|arrived|
+#2015-05-24|Nelson, New Zealand|arrived|
+#2015-05-24|Picton, New Zealand|arrived|
+#2015-05-25|Wellington, New Zealand|arrived|
+2015-05-26|Lake Taupo, New Zealand||
+2015-05-27|Rotorua, New Zealand||
+2015-05-29|Bay of Islands, New Zealand||
+2015-06-31|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
 2015-06-28|Cairns, Australia||
 2015-06-29|Sydney, Australia||
