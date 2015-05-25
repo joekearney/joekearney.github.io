@@ -1,3 +1,4 @@
+
 // static lag/longs for the places we're going.
 // This data was acquired from the Google Maps API geocoder and is only used with the API.
 var latLngs = {};
@@ -37,6 +38,11 @@ latLngs["Bay of Islands, New Zealand"] = new google.maps.LatLng(-35.18437,174.16
 latLngs["Rotorua, New Zealand"] = new google.maps.LatLng(-38.136848,176.249746);
 latLngs["Gore, New Zealand"] = new google.maps.LatLng(-46.098799,168.945819);
 latLngs["Lake Taupo, New Zealand"] = new google.maps.LatLng(-38.79029,175.889555);
+latLngs["Haast, New Zealand"] = new google.maps.LatLng(-43.8803,169.0400);
+latLngs["Franz Josef, New Zealand"] = new google.maps.LatLng(-43.4000,170.1833);
+latLngs["Nelson, New Zealand"] = new google.maps.LatLng(-41.2708,173.2839);
+latLngs["Picton, New Zealand"] = new google.maps.LatLng(-41.2833,174.0000);
+latLngs["Wellington, New Zealand"] = new google.maps.LatLng(-41.2889,174.7772);
 
 // stuff per line of where.txt
 var locations = [];

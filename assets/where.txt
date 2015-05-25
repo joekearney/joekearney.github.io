@@ -30,12 +30,11 @@
 2015-05-16|Te Anau, New Zealand|arrived|
 2015-05-17|Milford Sound, New Zealand|arrived|
 2015-05-18|Queenstown, New Zealand|arrived|
-#2015-05-21|Haast, New Zealand|arrived|
-#2015-05-22|Franz Josef, New Zealand|arrived|
-#2015-05-23|Lake Ianthe, New Zealand|arrived|
-#2015-05-24|Nelson, New Zealand|arrived|
-#2015-05-24|Picton, New Zealand|arrived|
-#2015-05-25|Wellington, New Zealand|arrived|
+2015-05-21|Haast, New Zealand|arrived|
+2015-05-22|Franz Josef, New Zealand|arrived|
+2015-05-24|Nelson, New Zealand|arrived|
+2015-05-24|Picton, New Zealand|arrived|
+2015-05-25|Wellington, New Zealand|arrived|
 2015-05-26|Lake Taupo, New Zealand||
 2015-05-27|Rotorua, New Zealand||
 2015-05-29|Bay of Islands, New Zealand||
