@@ -21,11 +21,11 @@
 2015-05-06|Sydney, Australia|arrived|
 2015-05-07|Christchurch, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17449015850/in/set-72157652379606419/player/
 2015-05-09|Akaroa, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17450849299/in/set-72157652379606419/player/
-2015-05-10|Waihi Gorge, New Zealand|arrived|
-2015-05-11|Mount Cook, New Zealand|arrived|
-2015-05-13|Oamaru, New Zealand|arrived|
-2015-05-13|Middlemarch, New Zealand|arrived|
-2015-05-14|Dunedin, New Zealand|arrived|
+2015-05-10|Waihi Gorge, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17635437682/in/album-72157652379606419/player/
+2015-05-11|Mount Cook, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18195211411/in/album-72157652379606419/player/
+2015-05-13|Oamaru, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17573853583/in/album-72157652379606419/player/
+2015-05-13|Middlemarch, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18195712161/in/sets-72157652379606419/player/
+2015-05-14|Dunedin, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17573943463/in/album-72157652379606419/player/
 2015-05-15|Gore, New Zealand|arrived|
 2015-05-16|Te Anau, New Zealand|arrived|
 2015-05-17|Milford Sound, New Zealand|arrived|
