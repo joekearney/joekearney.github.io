@@ -35,8 +35,9 @@
 2015-05-24|Nelson, New Zealand|arrived|
 2015-05-24|Picton, New Zealand|arrived|
 2015-05-25|Wellington, New Zealand|arrived|
-2015-05-26|Lake Taupo, New Zealand||
-2015-05-27|Rotorua, New Zealand||
+2015-05-25|Tongariro National Park, New Zealand|arrived|
+2015-05-26|Taupo, New Zealand|arrived|
+2015-05-27|Rotorua, New Zealand|arrived|
 2015-05-29|Bay of Islands, New Zealand||
 2015-06-31|Auckland, New Zealand||
 2015-06-04|Brisbane, Australia||
