@@ -44,6 +44,9 @@ latLngs["Nelson, New Zealand"] = new google.maps.LatLng(-41.2708,173.2839);
 latLngs["Picton, New Zealand"] = new google.maps.LatLng(-41.2833,174.0000);
 latLngs["Wellington, New Zealand"] = new google.maps.LatLng(-41.2889,174.7772);
 latLngs["Tongariro National Park, New Zealand"] = new google.maps.LatLng(-39.203089,175.546519);
+latLngs["Ruakaka, New Zealand"] = new google.maps.LatLng(-35.906396,174.447129);
+latLngs["Paihia, New Zealand"] = new google.maps.LatLng(-35.280668,174.091034);
+latLngs["Kaiwaka, New Zealand"] = new google.maps.LatLng(-36.161244,174.44341);
 
 // stuff per line of where.txt
 var locations = [];
@@ -402,8 +405,11 @@ function addAddresses(addresses) {
           map = new google.maps.Map(canvas, mapOptions);
 
           var latLng = results[0].geometry.location;
-          latLngs[address] = latLng;
-          console.log("latLngs[\"" + address + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
+          if (!latLng) {
+            console.log("Failed to find latLng for " + currentLocation);
+          }
+          latLngs[currentLocation] = latLng;
+          console.log("latLngs[\"" + currentLocation + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
           addMarker(map, latLng, currentLocationIndex);
 
           for (var i = addresses.length - 1; i >= 0; --i) {
