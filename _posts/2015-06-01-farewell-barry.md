@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Farewell Barry"
+title: "Farewell, Barry"
 description: "Ruakaka to Auckland"
 categories:
 - travel
