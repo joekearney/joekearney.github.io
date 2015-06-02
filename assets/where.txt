@@ -27,11 +27,11 @@
 2015-05-13|Middlemarch, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18195712161/in/sets-72157652379606419/player/
 2015-05-14|Dunedin, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17573943463/in/album-72157652379606419/player/
 2015-05-15|Gore, New Zealand|arrived|
-2015-05-16|Te Anau, New Zealand|arrived|
-2015-05-17|Milford Sound, New Zealand|arrived|
-2015-05-18|Queenstown, New Zealand|arrived|
-2015-05-21|Haast, New Zealand|arrived|
-2015-05-22|Franz Josef, New Zealand|arrived|
+2015-05-16|Te Anau, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18168069756/in/album-72157652379606419/player/
+2015-05-17|Milford Sound, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18006874480/in/album-72157652379606419/player/
+2015-05-18|Queenstown, New Zealand|arrived|https://www.flickr.com/photos/joekearney/18377225992/in/album-72157652379606419/player/
+2015-05-21|Haast, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17758694274/in/album-72157652379606419/player/
+2015-05-22|Franz Josef, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17758713404/in/album-72157652379606419/player/
 2015-05-24|Nelson, New Zealand|arrived|
 2015-05-24|Picton, New Zealand|arrived|
 2015-05-25|Wellington, New Zealand|arrived|
