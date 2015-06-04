@@ -1,4 +1,3 @@
-
 # date yyyy-MM-dd | location, searchable in Google Maps | (blank) or 'arrived' | Flickr photo in slideshow link
 
 2015-01-17|London, UK|arrived|https://www.flickr.com/photos/joekearney/16409134537/in/set-72157647810587354/player/
@@ -42,7 +41,7 @@
 2015-05-30|Paihia, New Zealand|arrived|
 2015-05-31|Ruakaka, New Zealand|arrived|
 2015-06-01|Auckland, New Zealand|arrived|
-2015-06-04|Brisbane, Australia||
+2015-06-04|Brisbane, Australia|arrived|
 2015-06-28|Cairns, Australia||
 2015-06-29|Sydney, Australia||
 2015-07-06|Hong Kong||
