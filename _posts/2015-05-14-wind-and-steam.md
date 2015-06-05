@@ -10,6 +10,7 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+title_image_iframe: https://www.flickr.com/photos/joekearney/18008315439/in/album-72157652379606419/player/
 ---
 
 Barry is not, shall we say, a triumph of aerodynamic engineering. On the road it's sometimes like trying to steer a washing machine through a wind tunnel. We paid extra for insurance to cover rolling over, after we were told that someone's camper was recently toppled by the wind _while parked_. Last night we were grateful for this when Barry was buffeted all through the night.

@@ -50,6 +50,16 @@ layout: layout
 
     {{ content }}
 
+    {% if page.footer_strava_embed %}
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 inline-image">
+            <iframe src='{{ page.footer_strava_embed }}' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
     <div class='clearfix'></div>
 
     <div class="row">

@@ -10,6 +10,7 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+title_image_iframe: https://www.flickr.com/photos/joekearney/18377206802/in/album-72157652379606419/player/
 ---
 
 Queenstown likes to describe itself as 'the adrenaline-rush capital of the world'. That sounds like fun, but I definitely had preconceptions of streets overrun with bungy jumpers, skydivers and snowboarders. Basically, I was expecting a cross between a too-cool ski resort and a seedy Faliraki filled with overcooked teenagers. Fun for a day to do something crazy and move on.

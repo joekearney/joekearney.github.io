@@ -10,6 +10,9 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: https://www.flickr.com/photos/joekearney/18006874480/in/album-72157652379606419/player/
+footer_strava_embed: https://www.strava.com/activities/312455919/embed/948f532c9d71564bae9832a32fbc6290330fb820
 ---
 
 Fiordland National Park is huge. It's the south-west corner of New Zealand, about the size of Wales and almost totally uninhabited. The geology is all glacial, so huge U-shaped valleys and steep sided mountains everywhere (Mr Tyler would be proud). From the sea you see openings to some of these valleys, the most famous of which is Milford Sound, whose floors are well submerged, so the cliff faces rise almost vertically from the water with waterfalls gushing everywhere around.
@@ -31,5 +34,3 @@ After a night in a basic campsite near the end of the Routeburn, the following m
 On our return out of Fiordland we finally saw the views that the guide book had promised would be evident in daylight. We were treated to seeing some kea birds attacking some guy's car, pulling at the rubber bits around the doors. We drank some stream water (tasted like mineral water), saw the Mirror Pools that reflect the next range of mountains, and generally marvelled at the continuous unfolding of...
 
 I honestly run out of ways to describe this; there are only so many adjectives. New Zealand really is this pretty, just everywhere. It's silly.
-
-{% comment %} add strava embed {% endcomment %}

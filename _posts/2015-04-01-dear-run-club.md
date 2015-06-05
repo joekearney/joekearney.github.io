@@ -10,6 +10,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+footer_strava_embed: https://www.strava.com/activities/272036214/embed/fe68ea2c4a00eceac4e29d73c2b1d0bd19aee903
 ---
 
 Dear Run Club,
@@ -25,11 +27,3 @@ Bring on the British weather!
 Love and stretches,
 
 Joe
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 inline-image">
-			<iframe src='https://www.strava.com/activities/272036214/embed/fe68ea2c4a00eceac4e29d73c2b1d0bd19aee903' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
-		</div>
-	</div>
-</div>

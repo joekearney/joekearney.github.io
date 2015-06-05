@@ -10,7 +10,9 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+
 title_image_iframe: https://www.flickr.com/photos/joekearney/17635437682/in/album-72157652379606419/player/
+footer_strava_embed: https://www.strava.com/activities/302225993/embed/dc7ac4072d99e0ace66603945a66cc16903915d5
 ---
 
 Three days in, and New Zealand really is ridiculously beautiful. We woke up early this morning to the pattering of Waihi Gorge and looked outside to a trio of sheep dogs (not pigs, I checked) efficiently manoeuvring a herd of sheep across the sun-tipped hillside, watched by a shepherd clutching his staff. A perfect rural English scene.
@@ -28,5 +30,3 @@ The first glimpse of Lake Tekapo was breathtaking -- the kind of silly pretty th
 Our descent was filled with plans for our night sky adventure (and scheduling our toilet trips so that we could camp for free in the nearby field). But the rain clouds that had been looming behind us eventually caught up with our power-walking pace and the heavens opened. With 90% cloud cover predicted for the night, we abandoned our Patrick Moore fantasies and opted to make progress towards Mount Cook.
 
 We were back in Barry as the rain streamed and fog descended, while the Austrian landscape gradually faded into craggy Scotland. As darkness set in, all we could see were white lines and occasional bunny rabbits bobbing across the road. You'll be pleased to hear we swerved more successfully for them.
-
-{% comment %} add strava embed {% endcomment %}

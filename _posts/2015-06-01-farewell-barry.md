@@ -6,7 +6,6 @@ categories:
 - travel
 tags:
 - travel
-- new
 status: publish
 type: post
 published: true

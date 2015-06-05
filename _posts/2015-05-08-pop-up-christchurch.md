@@ -10,6 +10,7 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+title_image_iframe: https://www.flickr.com/photos/joekearney/17016430843/in/album-72157652379606419/player/
 ---
 
 On 4 September 2010, a magnitude 7.1 earthquake hit Christchurch. Buildings were damaged as New Zealand's second largest city shook, but no lives were lost. Less than six months later, as the damage from that event was still being cleared, a second major earthquake struck on 22 February 2011. Though the magnitude was smaller at 6.3, the epicentre was closer to the city centre, and struck at lunch time as many residents and office workers were out and about in town. This time, the earthquake devastated the city and claimed 185 lives. 

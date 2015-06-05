@@ -10,7 +10,9 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
 title_image_iframe: https://www.flickr.com/photos/joekearney/17202814148/in/set-72157652300500261/player/
+footer_strava_embed: https://www.strava.com/activities/297804420/embed/1d576d92c9168991c00dbc1fcda7f59090d7cf36
 ---
 
 The sun did not shine, it was too wet to play. So we sat in the hostel all that cold, cold wet day and decided to go on an adventure and make our own fun.
@@ -39,5 +41,3 @@ This was all on the first half of the walk, as the return leg was almost entirel
 The views were incredible. For hours we were accompanied by the waves crashing below us. We saw the famous Wedding Cake Rock (but failed to take any pictures of us sitting on it, sorry mum!), purple and red rocks and the remains of a massive boulder encasing other rocks (groovy!). We befriended two caterpillars who attached themselves to our bags at lunch and a bird who liked our salt and vinegar crackers. The final tally was 31.1km in about 11 hours. After a quick barbecue I was asleep by 730.
 
 That it seemed reasonable to assume that the rocks wouldn't be floating sums up the luck we had on this walk. For all of that it was awesome. We've had an adventure and I'll never let Jo forget that she got wet in a pile of rocks!
-
-{% comment %} add strava embed {% endcomment %}

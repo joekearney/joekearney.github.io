@@ -10,6 +10,9 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+
+title_image_iframe: https://www.flickr.com/photos/joekearney/18167635036/in/album-72157652379606419/player/
+footer_strava_embed: https://www.strava.com/activities/302779451/embed/f7ade0ca0e50705d0b3ad6019c90dd33d3253f47
 ---
 
 We spent the night camping in the foothills of Mt Cook, famously climbed by Sir Edmund Hillary as training for his Everest expedition. We awoke to the sound of rain hammering on the roof, which is all of 10cm above our heads. But by the time we'd got dressed quickly (still no shower) and had breakfast slowly, the sun was glimpsing through. Enthusiastically, we nipped down to the information centre for advice on local walking routes, and expressed our interest in something challenging with altitude. We were encouraged to take the stepped route halfway up the mountain, which sounded good, until we spotted the route continued further under a new name. "That's a mountaineering route, it's a steep rocky climb beyond the snow line" we were told, discouragingly. Now, given our recent hike on the flooded Coast Track, we figured we're experienced hikers. Joe and I were looking excitedly at each other, as the information lady eyed us sceptically and continued to explain why the route was not appropriate... avalanche routes, unpredictable weather etc.
@@ -29,8 +32,3 @@ We're now sitting in chilly Barry, looking like Michelin Men wrapped in seven la
 ***
 
 *Ok, so it wasn't actually Mt Cook, which I think requires ropes and ice picks (and skill) to climb, but it was one of it's equally snowy neighbours. So I think that still counts.
-
-
-
-
-{% comment %} add strava embed {% endcomment %}
