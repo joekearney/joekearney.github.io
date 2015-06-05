@@ -10,7 +10,7 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
-title_image_iframe: https://www.flickr.com/photos/joekearney/18377351252/in/album-72157652379606419/player/
+title_image_iframe: https://www.flickr.com/photos/joekearney/17758713404/in/album-72157652379606419/player/
 ---
 
 We went on a helicopter! And climbed a glacier! And saw a kiwi! So not a bad day, all-in-all.
