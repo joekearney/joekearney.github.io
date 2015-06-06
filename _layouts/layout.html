@@ -36,12 +36,6 @@
 
   {{ content }}
 
-  {% if page.tags contains 'travel' %}
-  {% unless page.tags contains 'nocomments' %}
-  {% include disqus.html %}
-  {% endunless %}
-  {% endif %}
-
   {% include footer.html %}
   {% include analytics.html %}
 </body>

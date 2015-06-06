@@ -86,4 +86,10 @@ layout: layout
       {% assign prev = post %}
     {% endfor %}
   </article>
+
+  {% if page.tags contains 'travel' %}
+    {% unless page.tags contains 'nocomments' %}
+      {% include disqus.html %}
+    {% endunless %}
+  {% endif %}
 </div>
