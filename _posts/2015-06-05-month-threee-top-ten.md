@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Month Three Top Ten"
-description: "When Five is not Enough"
+description: "When Five Is Not Enough"
 categories:
 - travel
 tags:
