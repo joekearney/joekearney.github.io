@@ -42,6 +42,7 @@
 2015-05-31|Ruakaka, New Zealand|arrived|
 2015-06-01|Auckland, New Zealand|arrived|
 2015-06-04|Brisbane, Australia|arrived|
+2015-06-09|Fraser Island, Australia||
 2015-06-28|Cairns, Australia||
 2015-06-29|Sydney, Australia||
 2015-07-06|Hong Kong||
