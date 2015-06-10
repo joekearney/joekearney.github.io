@@ -48,6 +48,7 @@ latLngs["Ruakaka, New Zealand"] = new google.maps.LatLng(-35.906396,174.447129);
 latLngs["Paihia, New Zealand"] = new google.maps.LatLng(-35.280668,174.091034);
 latLngs["Kaiwaka, New Zealand"] = new google.maps.LatLng(-36.161244,174.44341);
 latLngs["Fraser Island, Australia"] = new google.maps.LatLng(-25.266315,153.156085);
+latLngs["Noosa, Australia"] = new google.maps.LatLng(-26.390617,153.104945);
 
 // stuff per line of where.txt
 var locations = [];
