@@ -23,4 +23,4 @@ Along the walk it seemed that we were getting a reprise of all the sights New Ze
 
 It wasn't supposed to be a long walk so we had no food or water with us, and certainly hadn't thought to bring the headtorches that we usually carried on bigger walks as a last resort. The sun was setting, and our last sight of a New Zealand sunset over the rocks out to sea (beautiful, naturally) was accompanied by the realisation that we were going to cut it fine to get back to the ferry with any light. As day faded to a moonless dusk we were edging along a road down to the coast, where the path was supposed to traverse the beach to the ferry terminal. Navigational failure had led us to the shortcut that is impassable around high tide, though we discovered this only when we reached the waves lapping against the rock face.
 
-So it was that our last walk in this wonderful country finished along a country road in almost complete darkness. You win, NZ!
+So it was that our last walk in this wonderful country finished along a road in almost complete darkness. You win, NZ!
