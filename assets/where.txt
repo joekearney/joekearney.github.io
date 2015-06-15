@@ -43,10 +43,10 @@
 2015-06-01|Auckland, New Zealand|arrived|
 2015-06-04|Brisbane, Australia|arrived|
 2015-06-09|Noosa, Australia|arrived|
-2015-06-12|Rainbow Beach, Australia||
-2015-06-13|Fraser Island, Australia||
-2015-06-14|Hervey Bay, Australia||
-2015-06-15|Bundaberg, Australia||
+2015-06-12|Rainbow Beach, Australia|arrived|
+2015-06-13|Fraser Island, Australia|arrived|
+2015-06-13|Hervey Bay, Australia|arrived|
+2015-06-15|Bundaberg, Australia|arrived|
 2015-06-17|Mackay, Australia||
 2015-06-18|Whitsunday Island, Australia||
 2015-06-20|Townsville, Australia||
