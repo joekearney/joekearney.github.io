@@ -57,6 +57,12 @@ latLngs["Mackay, Australia"] = new google.maps.LatLng(-21.14121,149.185625);
 latLngs["Bundaberg, Australia"] = new google.maps.LatLng(-24.865391,152.348739);
 latLngs["Hervey Bay, Australia"] = new google.maps.LatLng(-25.289619,152.830916);
 latLngs["Rainbow Beach, Australia"] = new google.maps.LatLng(-25.902021,153.092132);
+latLngs["Iceberg, off Whitsunday Island"] = new google.maps.LatLng(-20.172757,148.954783);
+latLngs["Airlie Beach, Australia"] = new google.maps.LatLng(-20.26872,148.718456);
+latLngs["Magnetic Island, Australia"] = new google.maps.LatLng(-19.135865,146.842356);
+latLngs["Mission Beach, Australia"] = new google.maps.LatLng(-17.869121,146.106338);
+latLngs["Rockhampton, Australia"] = new google.maps.LatLng(-23.377915,150.510103);
+latLngs["Town of 1770, Australia"] = new google.maps.LatLng(-24.163686,151.885102);
 
 // stuff per line of where.txt
 var locations = [];

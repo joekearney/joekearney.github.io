@@ -47,10 +47,16 @@
 2015-06-13|Fraser Island, Australia|arrived|
 2015-06-13|Hervey Bay, Australia|arrived|
 2015-06-15|Bundaberg, Australia|arrived|
-2015-06-17|Mackay, Australia||
-2015-06-18|Whitsunday Island, Australia||
-2015-06-20|Townsville, Australia||
-2015-06-21|Cairns, Australia||
+2015-06-17|Town of 1770, Australia|arrived|
+2015-06-18|Rockhampton, Australia|arrived|
+2015-06-19|Airlie Beach, Australia|arrived|
+2015-06-20|Iceberg, off Whitsunday Island|arrived|
+2015-06-21|Airlie Beach, Australia|arrived|
+2015-06-22|Townsville, Australia||
+2015-06-23|Magnetic Island, Australia||
+2015-06-23|Townsville, Australia||
+2015-06-23|Mission Beach, Australia||
+2015-06-24|Cairns, Australia||
 2015-06-25|Port Douglas, Australia||
 2015-06-26|Daintree National Park, Australia||
 2015-06-28|Cairns, Australia||
