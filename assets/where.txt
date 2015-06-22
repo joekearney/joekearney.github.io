@@ -52,7 +52,7 @@
 2015-06-19|Airlie Beach, Australia|arrived|
 2015-06-20|Iceberg, off Whitsunday Island|arrived|
 2015-06-21|Airlie Beach, Australia|arrived|
-2015-06-22|Townsville, Australia||
+2015-06-22|Townsville, Australia|arrived|
 2015-06-23|Magnetic Island, Australia||
 2015-06-23|Townsville, Australia||
 2015-06-23|Mission Beach, Australia||
