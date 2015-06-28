@@ -63,6 +63,8 @@ latLngs["Magnetic Island, Australia"] = new google.maps.LatLng(-19.135865,146.84
 latLngs["Mission Beach, Australia"] = new google.maps.LatLng(-17.869121,146.106338);
 latLngs["Rockhampton, Australia"] = new google.maps.LatLng(-23.377915,150.510103);
 latLngs["Town of 1770, Australia"] = new google.maps.LatLng(-24.163686,151.885102);
+latLngs["Cape Tribulation, Australia"] = new google.maps.LatLng(-16.083333,145.483333);
+latLngs["Mossman Gorge, Daintree National Park, Australia"] = new google.maps.LatLng(-16.471943,145.331867);
 
 // stuff per line of where.txt
 var locations = [];

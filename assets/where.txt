@@ -56,9 +56,10 @@
 2015-06-23|Magnetic Island, Australia|arrived|
 2015-06-23|Townsville, Australia|arrived|
 2015-06-24|Mission Beach, Australia|arrived|
-2015-06-25|Port Douglas, Australia||
-2015-06-26|Daintree National Park, Australia||
-2015-06-27|Cairns, Australia||
+2015-06-25|Port Douglas, Australia|arrived|
+2015-06-26|Mossman Gorge, Daintree National Park, Australia|arrived|
+2015-06-26|Cape Tribulation, Australia|arrived|
+2015-06-27|Cairns, Australia|arrived|
 2015-06-29|Sydney, Australia||
 2015-07-06|Hong Kong||
 2015-07-07|Hanoi, Vietnam||
