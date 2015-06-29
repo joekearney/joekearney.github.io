@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Leaving NZ in Darkness"
-description: ""
+description: "Auckland"
 categories:
 - travel
 tags:
@@ -10,9 +10,11 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: https://www.flickr.com/photos/joekearney/18629801263/in/album-72157652379606419/player/
 ---
 
-Four weeks back we were in Christchurch, and it felt relatively small and, in many respects, barely functioning. Wellington was bigger and felt like a town in its normal stride. Auckland brought us back to urban civilisation. It's a much bigger and more lively affair with the usual array of shopping streets, arty precincts and Canary Wharf-lookalike areas.
+Four weeks back we were in [Christchurch](/posts/pop-up-christchurch/), and it felt relatively small and, in many respects, barely functioning. [Wellington](/posts/bumpy-strait/) was bigger and felt like a town in its normal stride. Auckland brought us back to urban civilisation. It's a much bigger and more lively affair with the usual array of shopping streets, arty precincts and Canary Wharf-lookalike areas.
 
 As usual we started with a potter through the centre. It was warm! None of this freeze-your-bollocks-off two-jumpers weather to which we'd become accustomed. Pretty parks in the sunshine, plenty of shopping to keep Jo occupied for far longer than we'd have here, no shortage of coffee.
 

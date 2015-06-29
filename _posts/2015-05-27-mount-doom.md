@@ -11,6 +11,7 @@ type: post
 published: true
 author: Joe Kearney
 
+title_image_iframe: https://www.flickr.com/photos/joekearney/19063849829/in/album-72157652379606419/player/
 footer_strava_embed: https://www.strava.com/activities/313171877/embed/bf30f034f7ab3a50423c3c96a6eebbabaaf721f4
 ---
 

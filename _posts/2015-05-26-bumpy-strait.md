@@ -10,6 +10,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: https://www.flickr.com/photos/joekearney/19243973932/in/album-72157652379606419/player/
 ---
 
 Our last single-use town in the South Island of New Zealand was Picton, home of the ferry that crosses the Cook Strait to Wellington in the North. The adverts for the ferry promise relaxation, three hours of putting your feet up while the kids silently watch a family friendly film, that kind of thing.

@@ -32,15 +32,15 @@
 2015-05-21|Haast, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17758694274/in/album-72157652379606419/player/
 2015-05-22|Franz Josef, New Zealand|arrived|https://www.flickr.com/photos/joekearney/17758713404/in/album-72157652379606419/player/
 2015-05-24|Nelson, New Zealand|arrived|
-2015-05-24|Picton, New Zealand|arrived|
-2015-05-25|Wellington, New Zealand|arrived|
-2015-05-26|Tongariro National Park, New Zealand|arrived|
-2015-05-27|Taupo, New Zealand|arrived|
-2015-05-28|Rotorua, New Zealand|arrived|
+2015-05-24|Picton, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19243973932/in/album-72157652379606419/player/
+2015-05-25|Wellington, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19062315800/in/album-72157652379606419/player/
+2015-05-26|Tongariro National Park, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19062335398/in/album-72157652379606419/player/
+2015-05-27|Taupo, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19223919106/in/album-72157652379606419/player/
+2015-05-28|Rotorua, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19062622718/in/album-72157652379606419/player/
 2015-05-29|Kaiwaka, New Zealand|arrived|
-2015-05-30|Paihia, New Zealand|arrived|
-2015-05-31|Ruakaka, New Zealand|arrived|
-2015-06-01|Auckland, New Zealand|arrived|
+2015-05-30|Paihia, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19244342062/in/album-72157652379606419/player/
+2015-05-31|Ruakaka, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19064181659/in/album-72157652379606419/player/
+2015-06-01|Auckland, New Zealand|arrived|https://www.flickr.com/photos/joekearney/19250310985/in/album-72157652379606419/player/
 2015-06-04|Brisbane, Australia|arrived|
 2015-06-09|Noosa, Australia|arrived|
 2015-06-12|Rainbow Beach, Australia|arrived|
