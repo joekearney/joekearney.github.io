@@ -15,7 +15,7 @@ tags:
 
       <ul class="listing">
         {% for post in site.posts %}
-          {% unless post.tags contains 'draft' %}
+          {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
             {% if post.tags contains 'travel' %}
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
