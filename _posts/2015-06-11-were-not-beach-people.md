@@ -12,7 +12,7 @@ published: true
 author: Joe Kearney
 ---
 
-We're not beach people, really. Sitting around on the beach is fine for a while, and eventually it's a bit boring. The Sunshine Coast promises sun, sand, sea and surf; the fun version of a day at the beach. When you imagine stereotypical Australia this is the image; golden sandy beaches stretching for miles, huge waves breaking ashore dotted with surfers an sparkling in the sunshine, the lifeguard post with toned men in red shorts (concentrate, Jo), red and yellow flags fluttering in the gentle breeze. The temperature display at the top of the Surf and Lifesaving Club reads 29, and they still have the audacity to call this winter.
+We're not beach people, really. Sitting around on the beach is fine for a while, and eventually it's a bit boring. The Sunshine Coast promises sun, sand, sea and surf; the fun version of a day at the beach. When you imagine stereotypical Australia this is the image; golden sandy beaches stretching for miles, huge waves breaking ashore dotted with surfers and sparkling in the sunshine, the lifeguard post with toned men in red shorts (concentrate, Jo), red and yellow flags fluttering in the gentle breeze. The temperature display at the top of the Surf and Lifesaving Club reads 29, and they still have the audacity to call this winter.
 
 We dragged ourselves away from the coffee to go for an easy run through the waves along the beach. On the way back we went into the water for a dip to enjoy being buffeted around by the big swell. Waves are fun! We hadn't used enough suncream so looked quite the lame white British couple swimming in our t-shirts. We're not really beach people.
 
