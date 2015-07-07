@@ -63,6 +63,8 @@
 2015-06-27|Cairns, Australia|arrived|
 2015-06-29|Sydney, Australia|arrived|
 2015-07-06|Hong Kong|arrived|
-2015-07-07|Hanoi, Vietnam||
+2015-07-07|Hanoi, Vietnam|arrived|
+2015-07-09|Ha Long Bay, Vietnam||
+2015-07-11|Hoi An, Vietnam||
 2015-07-13|Hong Kong||
 2015-07-21|London, UK||
