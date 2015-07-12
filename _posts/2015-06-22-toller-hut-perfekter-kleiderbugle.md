@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Toller Hut; Perfekter Kleiderbügle"
+title: "Toller Hut; Perfekter Kleiderbügel"
 description: "Whitsunday Islands"
 categories:
 - travel
@@ -26,4 +26,4 @@ In all the excitement the reef and fish were totally forgotten. In the current w
 
 And all of a sudden we were on the home straight. The wind had picked up again so the water was choppy, and as we sat on the high side of the angled deck, our feet were splashed with surprisingly warm water. We arrived back at the marina sunkissed, windswept and salt-encrusted -- what a way to spend a weekend.
 
-On departing from Iceberg Mikhael and Mark swapped their cool hats, green beanie for captain's sun hat. In an attempt to join in the German I asked Jo the words for "great hat". Perhaps my pronunciation wasn't up to it. "Toller hut!" He looked very confused for a moment. "Perfekter kleiderbügle?"
+On departing from Iceberg Mikhael and Mark swapped their cool hats, green beanie for captain's sun hat. In an attempt to join in the German I asked Jo the words for "great hat". Perhaps my pronunciation wasn't up to it. "Toller hut!" He looked very confused for a moment. "Perfekter kleiderbügel?"
