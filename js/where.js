@@ -67,6 +67,7 @@ latLngs["Cape Tribulation, Australia"] = new google.maps.LatLng(-16.083333,145.4
 latLngs["Mossman Gorge, Daintree National Park, Australia"] = new google.maps.LatLng(-16.471943,145.331867);
 latLngs["Hoi An, Vietnam"] = new google.maps.LatLng(15.880058,108.338047);
 latLngs["Ha Long Bay, Vietnam"] = new google.maps.LatLng(20.957282,107.023203);
+latLngs["Danang, Vietnam"] = new google.maps.LatLng(16.054407,108.202167);
 
 // stuff per line of where.txt
 var locations = [];
