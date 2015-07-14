@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Christmas Markets in the Sun"
+description: ""
+categories:
+- travel
+tags:
+- travel
+- new
+status: publish
+type: post
+published: true
+author: Joe Kearney
+---
+
+Our second visit to Sydney was more sunny than the first, but that's a pretty low bar! Returning here it felt much more like we know how the city works; we weren't so much exploring anew as coming back to a place we've lived. We strolled confidently onto the subway, knew the way to the hotel in advance and had our first running route planned from last time.
+
+We were staying in the suburb of Surry Hills, where we'd drunk far too much wine on our first visit, in a hotel that happily fed various addictions with coffee and sweets on tap in the lobby. There was a continuous stream of people walking past with ice creams from a famous gelato parlour up the road that had a queue at all times of day. 
+
+Australians don't handle the cold well, but also don't seem to understand what cold really means. It was only down to maybe 15 degrees this week at the lowest, bright and sunny, and with the feel of early summer at home. Everyone was dressed in their winter gear -- scarves, big coats, woolly hats -- as we walked past in shorts and t-shirts! They mark the occasion of this "winter" with glühwein and ice rinks (and seagulls!) at Christmas markets, and there are signs around cafes advertising hot soup! Bunch of pansies, the lot of them. Our [rafting guide in New Zealand](/posts/avoiding-bungy-ropes/) would not have been impressed.
+
+It's getting towards time to think about employment when we come back north. This trip has been wonderful, but we are beginning to yearn for something more closely approximating normal life. It was nice to spend a couple of sessions in the peaceful state library starting to reawaken those parts of our brains that will come in useful for activities other than camping, eating and walking on the beach.
+
+But before that we have our mini holiday-within-a-honeyment, two weeks in Hong Kong and Vietnam with a visit from Kate and sunny weather close to  body temperature!
