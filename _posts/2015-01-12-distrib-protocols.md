@@ -23,11 +23,15 @@ The [CAP theorem](http://en.wikipedia.org/wiki/CAP_theorem) states that among Co
 
 According to CAP there are basically three options as to which guarantees to lose; however this takes a very hard line on the meanings of the three properties. We'll look at algorithms that choose to forfeit each of these, and ways in which the impact can be lessened.
 
-There are plenty of resources describing this stuff in a lot more detail, including Mixu's much more comprehensive and very readable overview: [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html). This article is intended to be a short summary, and nothing more.
+There are plenty of resources describing this stuff in a lot more detail, including Mixu's much more comprehensive and very readable overview: [Distributed Systems for Fun and Profit](http://book.mixu.net/distsys/index.html). {% comment %} TODO add this-long-run link {% endcomment %}
+
+This article is intended to be a short summary of a few bits, and nothing more.
 
 ## What is a distributed system?
 
-Throughout this, we can consider _distrubuted system_ to mean loosely that we have a state machine with copies on multiple machines. The execution of the system is then the sequence of states, and we may want each machine to see the same states. The extent to which the different machines see differences in the sequence of states is determined by the choices around consistency, availability and partition tolerance.
+We can consider _distrubuted system_ to mean loosely that we have a state machine with copies on multiple machines. The execution of the system is then the sequence of states, and we may want each machine to see the same states or we may allow some divergence. On a larger scale, consider storing data on a number of machines, whether as key-value pairs or a file system, whatever.
+
+The extent to which the different machines see differences in the sequence of states is determined by the choices around consistency, availability and partition tolerance.
 
 Many expositions of these algorithms (at least those that have strong consistency guarantees) describe how to choose a single value in the system. At runtime in a real system you'd expect to run these algorithms many times to progress between states.
 
@@ -154,5 +158,9 @@ You'll see CRDTs described in two flavours, both of which can be called conflict
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> link to David Brooks scalax talk</div>
 <div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> give examples of basic structures</div>
 
-## Cassandra
+## Dynamo and Cassandra
+
+Dynamo and Cassandra are the Amazon and Facebook (respectively) implementations of an AP key-value data store. They have many similarities and some important differences. The following is based on the exposition given in the papers published to describe them, and not any more recent changes.
+
+**Dynamo** is the NRW one -- per instance you configure the number \\N\\ of desired replicas of the data, the number \\R\\ of readers required per query
 
