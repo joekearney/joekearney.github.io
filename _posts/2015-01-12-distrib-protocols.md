@@ -164,3 +164,4 @@ Dynamo and Cassandra are the Amazon and Facebook (respectively) implementations 
 
 **Dynamo** is the NRW one -- per instance you configure the number \\N\\ of desired replicas of the data, the number \\R\\ of readers required per query
 
+{% comment %}See Slide 58 on http://www.slideshare.net/aszegedi/everything-i-ever-learned-about-jvm-performance-tuning-twitter about Cassandra slab allocator, special GC enabled by every write being sequential{% endcomment %}
