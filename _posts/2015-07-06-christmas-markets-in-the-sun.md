@@ -5,11 +5,10 @@ description: ""
 categories:
 - travel
 tags:
-- travel
-- new
+- honeyment
 status: publish
 type: post
-published: false
+published: true
 author: Joe Kearney
 ---
 

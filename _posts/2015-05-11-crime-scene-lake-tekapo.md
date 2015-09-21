@@ -5,7 +5,7 @@ description: "Waihi Gorge to Lake Tekapo"
 categories:
 - travel
 tags:
-- travel
+- honeyment
 status: publish
 type: post
 published: true

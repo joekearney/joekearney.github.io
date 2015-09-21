@@ -5,8 +5,7 @@ description: ""
 categories:
 - travel
 tags:
-- travel
-- new
+- honeyment
 status: publish
 type: post
 published: true

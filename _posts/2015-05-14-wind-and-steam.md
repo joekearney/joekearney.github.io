@@ -5,7 +5,7 @@ description: "Mount Cook to Middlemarch"
 categories:
 - travel
 tags:
-- travel
+- honeyment
 status: publish
 type: post
 published: true

@@ -6,7 +6,7 @@ categories:
 tags:
 - interesting
 - nocomments
-- travel
+- honeyment
 - landing
 status: published
 type: post
@@ -50,7 +50,7 @@ container_type: container-fluid
           {% comment %} Only list the top 3 and any new items further down the list {% endcomment %}
           {% assign counter = 0 %}
           {% for post in site.posts %}
-            {% if post.tags contains 'travel' %}
+            {% if post.tags contains 'honeyment' %}
               {% unless post.tags contains 'draft' %}
                 {% if counter < 3 or post.tags contains 'new' %}
                   {% assign counter = counter | plus: 1 %}

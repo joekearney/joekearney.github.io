@@ -5,7 +5,7 @@ description: "Kayaking, Caves and a blog from Kate"
 categories:
 - travel
 tags:
-- travel
+- honeyment
 status: publish
 type: post
 published: true

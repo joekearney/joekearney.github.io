@@ -5,7 +5,7 @@ description: "Rotorua to Bay of Islands"
 categories:
 - travel
 tags:
-- travel
+- honeyment
 status: publish
 type: post
 published: true
