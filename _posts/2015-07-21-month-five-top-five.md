@@ -21,6 +21,6 @@ We're home! I can't believe it's all over already, but what an amazing trip! Som
 
 1. **[Cooking, Vietnam style](/posts/hoi-an/)** -- Learning to cook delicious Vietnamese dishes with about eight times as many herbs and spices as I'd ever consider at home. Who knew that six cloves of garlic is not too many cloves of garlic? No vampires in Vietnam.
 
-1. **[HK skyline at night](/posts/hong-kong/)** -- Watching the city light up into an unending metropolis of colourful skyscrapers, while Kate ran around the deck of the Star Ferry, squealing with delight.
+1. **[HK skyline at night](/posts/people-everywhere/)** -- Watching the city light up into an unending metropolis of colourful skyscrapers, while Kate ran around the deck of the Star Ferry, squealing with delight.
 
 1. Tea at the Mandarin Oriental -- Making like an expat and enjoying a spot of afternoon tea under sparkly chandeliers. Because there is no such thing as too much cake. Especially not on this trip.
