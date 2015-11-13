@@ -230,3 +230,9 @@ table.highlighttable td.linenos pre code {
 .byline .article-index-link {
   text-align: right;
 }
+
+span.post-author {
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}

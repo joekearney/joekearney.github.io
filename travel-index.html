@@ -25,6 +25,7 @@ tags:
                   {% unless post.description == "" %}
                     <span class="post-description">&ndash; {{ post.description }}</span>
                   {% endunless %}
+                  <span class="post-author"> &ndash; {{ post.author }}</span>
                 </li>
             {% endif %}
           {% endunless %}
