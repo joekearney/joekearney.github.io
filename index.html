@@ -9,7 +9,7 @@ tags:
   <section class="content">
     <div class="row"><div class="col-md-12">
       <div class="title">
-        <h1 class="title-colour">Joe's Mots</h1>
+        <h1 class="title-colour"><a href="/">Joe's Mots</a></h1>
         <p>Trying to be cogent.</p>
       </div>
 
@@ -41,7 +41,7 @@ tags:
 
     <div class="row">
       <div class="{{ coltype }}">
-        <h2 class="thin">Software</h2> 
+        <h2 class="thin">Software</h2>
         <ul class="listing">
           {% for post in site.posts %}
             {% if post.categories contains 'work' %} {% unless post.tags contains 'interesting' or post.tags contains 'draft' %}
@@ -54,7 +54,7 @@ tags:
         </ul>
       </div>
       <div class="{{ coltype }}">
-        <h2 class="thin">Cycling</h2> 
+        <h2 class="thin">Cycling</h2>
         <ul class="listing">
           {% for post in site.posts %}
             {% if post.categories contains 'cycling' %} {% unless post.tags contains 'draft' %}
@@ -69,7 +69,7 @@ tags:
 
       {% if coltype == 'col-md-4' %}
       <div class="col-md-4">
-        <h2 class="thin">Drafts</h2> 
+        <h2 class="thin">Drafts</h2>
         <ul class="listing">
           {% for post in site.posts %}
             {% if post.tags contains 'draft' %}
