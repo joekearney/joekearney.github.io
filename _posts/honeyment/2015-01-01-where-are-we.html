@@ -1,0 +1,93 @@
+---
+layout: layout
+title: Where Are We?
+categories:
+- travel
+tags:
+- interesting
+- nocomments
+- honeyment
+- landing
+status: published
+type: post
+published: true
+author: Joe Kearney
+permalink: /where
+
+css-require:
+- /css/where.css
+
+js-require:
+- https://maps.googleapis.com/maps/api/js?signed_in=true&amp;key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo
+- https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js
+- /js/where.js
+container_type: container-fluid
+---
+
+<div class="container-fluid where">
+  <article>
+    <div class="row">
+      <div id="div-page-title" class="col-md-8">
+        <h1 class="title title-colour title-group">
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </h1>
+
+        <p>This page shows where we are in the world. Click on the markers on the map to show when we got there, and to see photos that we took there.</p>
+      </div>
+
+      <div id="div-current-location" class="col-md-4">
+        <div class="bs-callout bs-callout-danger" id="current-location-block">
+          <p>Current location: <b id="current-location-text">...</b> since <b id="current-location-arrival">...</b></p>
+          <p>Our time: <b id="current-time-text">...</b> UK time: <b id="current-time-london">...</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="div-blog-listing" class="col-md-8">
+        <h2><span class="title-colour">Honeyment</span> <span class="post-description">&ndash; {{ site.travel_description }} &ndash; <a href="/travel-index.html">see all</a></span></h2>
+        <ul class="listing">
+          {% comment %} Only list the top 3 and any new items further down the list {% endcomment %}
+          {% assign counter = 0 %}
+          {% for post in site.posts %}
+            {% if post.tags contains 'honeyment' %}
+              {% unless post.tags contains 'draft' %}
+                {% if counter < 3 or post.tags contains 'new' %}
+                  {% assign counter = counter | plus: 1 %}
+                  <li>
+                    {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                    <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                    {% unless post.description == "" %}
+                      <span class="post-description">&ndash; {{ post.description }}</span>
+                    {% endunless %}
+                  </li>
+                {% endif %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+          <li><span class="post-description"><a href="/travel-index.html">...more</a></span></li>
+        </ul>
+      </div>
+
+<!--
+      <div id="div-tumblr-iframe" class="col-md-4" style="height: 100%">
+        <iframe src="http://jo-and-joe-travels.tumblr.com/post/embed" height="100%" width="100%" scrolling="no" style="border-width:0" frameborder="0"></iframe>
+      </div>
+ -->
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div id="map-canvas"></div>
+      </div>
+
+      <div class="col-md-4">
+        <iframe id="flickr-canvas" class="flickr-div" src="" width="100%" height="500" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+        <iframe id="calendar-canvas" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=b39k3119t78koksiunitchppm0%40group.calendar.google.com&amp;color=%231B887A&amp;src=3mdro88t4nhkc5iv5ghibqhbcc%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Pacific%2FAuckland" style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+
+  </article>
+</div>
