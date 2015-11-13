@@ -32,7 +32,6 @@ Once you get past the craziness, Hanoi is an undeniably unique and throbbing cit
 
 ***
 
-We had anticipated Vietnam would be similar to Cambodia, and whilst that was certainly the case, there was a striking difference in the relative prosperity. Crossing the road in Siem Reap was tricky because a hundred tuk-tuks zipped around, with no obvious signs of lane discipline. Here, it was motorbikes and 4x4 cars. Cambodia's infrastructure was dirt roads. Here, it was proper motorways and bitumen, not to mention the odd tree-lined French-influenced boulevard. Vietnam is clearly a few years ahead of Cambodia in its tourism economy, and noticeably more developed, but still retains the charm (and fairy lights) that we loved there. 
+We had anticipated Vietnam would be similar to Cambodia, and whilst that was certainly the case, there was a striking difference in the relative prosperity. Crossing the road in Siem Reap was tricky because a hundred tuk-tuks zipped around, with no obvious signs of lane discipline. Here, it was motorbikes and 4x4 cars. Cambodia's infrastructure was dirt roads. Here, it was proper motorways and bitumen, not to mention the odd tree-lined French-influenced boulevard. Vietnam is clearly a few years ahead of Cambodia in its tourism economy, and noticeably more developed, but still retains the charm (and fairy lights) that we loved there.
 
 Nonetheless, after two hectic days in Hanoi, we were looking forward to the promise of calmer roads in Hoi An. Or at least we hoped that was where we were going, as our 'tour guide' Kate kept using the two town names interchangeably...
-

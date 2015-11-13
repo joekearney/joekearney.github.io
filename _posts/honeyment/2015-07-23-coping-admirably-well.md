@@ -6,7 +6,6 @@ categories:
 - travel
 tags:
 - honeyment
-- new
 status: publish
 type: post
 published: true
