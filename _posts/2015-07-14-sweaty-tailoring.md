@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sweaty Tailoring"
-description: ""
+description: "Hoi An"
 categories:
 - travel
 tags:
@@ -9,7 +9,7 @@ tags:
 - new
 status: publish
 type: post
-published: false
+published: true
 author: Joe Kearney
 ---
 
