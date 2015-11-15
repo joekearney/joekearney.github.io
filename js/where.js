@@ -1,462 +1,471 @@
-
-// static lag/longs for the places we're going.
-// This data was acquired from the Google Maps API geocoder and is only used with the API.
-var latLngs = {};
-latLngs["Singapore"] = new google.maps.LatLng(1.352083,103.819836);
-latLngs["London, UK"] = new google.maps.LatLng(51.507351,-0.127758);
-latLngs["Phnom Penh, Cambodia"] = new google.maps.LatLng(11.544873,104.892167);
-latLngs["Siem Reap, Cambodia"] = new google.maps.LatLng(13.367097,103.844813);
-latLngs["Kuala Lumpur, Malaysia"] = new google.maps.LatLng(3.139003,101.686855);
-latLngs["Melbourne, Australia"] = new google.maps.LatLng(-37.814107,144.96328);
-latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
-latLngs["Hong Kong"] = new google.maps.LatLng(22.396428,114.109497);
-latLngs["Sydney, Australia"] = new google.maps.LatLng(-33.867487,151.20699);
-latLngs["Christchurch, New Zealand"] = new google.maps.LatLng(-43.532054,172.636225);
-latLngs["Cairns, Australia"] = new google.maps.LatLng(-16.920334,145.77086);
-latLngs["Brisbane, Australia"] = new google.maps.LatLng(-27.471011,153.023449);
-latLngs["Adelaide, Australia"] = new google.maps.LatLng(-34.928621,138.599959);
-latLngs["Auckland, New Zealand"] = new google.maps.LatLng(-36.84846,174.763332);
-latLngs["Hanoi, Vietnam"] = new google.maps.LatLng(21.027764,105.83416);
-latLngs["Mount Gambier, Australia"] = new google.maps.LatLng(-37.827922,140.775253);
-latLngs["Apollo Bay, Australia"] = new google.maps.LatLng(-38.757167,143.669613);
-latLngs["Uluru, Australia"] = new google.maps.LatLng(-25.352594,131.034361);
-latLngs["King's Canyon, Australia"] = new google.maps.LatLng(-24.259315,131.488466);
-latLngs["Alice Springs, Australia"] = new google.maps.LatLng(-23.70021,133.880611);
-latLngs["Katoomba, Australia"] = new google.maps.LatLng(-33.714955,150.311407);
-latLngs["Bundeena, Australia"] = new google.maps.LatLng(-34.08392,151.151583);
-latLngs["Atakoa, New Zealand"] = new google.maps.LatLng(-43.803666,172.968262);
-latLngs["Mount Cook, New Zealand"] = new google.maps.LatLng(-43.735880, 170.098661);
-latLngs["Dunedin, New Zealand"] = new google.maps.LatLng(-45.87876,170.502798);
-latLngs["Oamaru, New Zealand"] = new google.maps.LatLng(-45.097512,170.970415);
-latLngs["Akaroa, New Zealand"] = new google.maps.LatLng(-43.803666,172.968262);
-latLngs["Waihi Gorge, New Zealand"] = new google.maps.LatLng(-43.999637,171.134737);
-latLngs["Queenstown, New Zealand"] = new google.maps.LatLng(-45.031162,168.662644);
-latLngs["Middlemarch, New Zealand"] = new google.maps.LatLng(-45.507065,170.119349);
-latLngs["Milford Sound, New Zealand"] = new google.maps.LatLng(-44.671625,167.925621);
-latLngs["Te Anau, New Zealand"] = new google.maps.LatLng(-45.414451,167.718053);
-latLngs["Bay of Islands, New Zealand"] = new google.maps.LatLng(-35.18437,174.164616);
-latLngs["Rotorua, New Zealand"] = new google.maps.LatLng(-38.136848,176.249746);
-latLngs["Gore, New Zealand"] = new google.maps.LatLng(-46.098799,168.945819);
-latLngs["Taupo, New Zealand"] = new google.maps.LatLng(-38.685692,176.07021);
-latLngs["Haast, New Zealand"] = new google.maps.LatLng(-43.8803,169.0400);
-latLngs["Franz Josef, New Zealand"] = new google.maps.LatLng(-43.4000,170.1833);
-latLngs["Nelson, New Zealand"] = new google.maps.LatLng(-41.2708,173.2839);
-latLngs["Picton, New Zealand"] = new google.maps.LatLng(-41.2833,174.0000);
-latLngs["Wellington, New Zealand"] = new google.maps.LatLng(-41.2889,174.7772);
-latLngs["Tongariro National Park, New Zealand"] = new google.maps.LatLng(-39.203089,175.546519);
-latLngs["Ruakaka, New Zealand"] = new google.maps.LatLng(-35.906396,174.447129);
-latLngs["Paihia, New Zealand"] = new google.maps.LatLng(-35.280668,174.091034);
-latLngs["Kaiwaka, New Zealand"] = new google.maps.LatLng(-36.161244,174.44341);
-latLngs["Fraser Island, Australia"] = new google.maps.LatLng(-25.266315,153.156085);
-latLngs["Noosa, Australia"] = new google.maps.LatLng(-26.390617,153.104945);
-latLngs["Daintree National Park, Australia"] = new google.maps.LatLng(-16.301438,145.248021);
-latLngs["Port Douglas, Australia"] = new google.maps.LatLng(-16.483978,145.465833);
-latLngs["Townsville, Australia"] = new google.maps.LatLng(-19.257622,146.817879);
-latLngs["Whitsunday Island, Australia"] = new google.maps.LatLng(-20.256651,148.977958);
-latLngs["Mackay, Australia"] = new google.maps.LatLng(-21.14121,149.185625);
-latLngs["Bundaberg, Australia"] = new google.maps.LatLng(-24.865391,152.348739);
-latLngs["Hervey Bay, Australia"] = new google.maps.LatLng(-25.289619,152.830916);
-latLngs["Rainbow Beach, Australia"] = new google.maps.LatLng(-25.902021,153.092132);
-latLngs["Iceberg, off Whitsunday Island"] = new google.maps.LatLng(-20.172757,148.954783);
-latLngs["Airlie Beach, Australia"] = new google.maps.LatLng(-20.26872,148.718456);
-latLngs["Magnetic Island, Australia"] = new google.maps.LatLng(-19.135865,146.842356);
-latLngs["Mission Beach, Australia"] = new google.maps.LatLng(-17.869121,146.106338);
-latLngs["Rockhampton, Australia"] = new google.maps.LatLng(-23.377915,150.510103);
-latLngs["Town of 1770, Australia"] = new google.maps.LatLng(-24.163686,151.885102);
-latLngs["Cape Tribulation, Australia"] = new google.maps.LatLng(-16.083333,145.483333);
-latLngs["Mossman Gorge, Daintree National Park, Australia"] = new google.maps.LatLng(-16.471943,145.331867);
-latLngs["Hoi An, Vietnam"] = new google.maps.LatLng(15.880058,108.338047);
-latLngs["Ha Long Bay, Vietnam"] = new google.maps.LatLng(20.957282,107.023203);
-latLngs["Danang, Vietnam"] = new google.maps.LatLng(16.054407,108.202167);
-
-// stuff per line of where.txt
-var locations = [];
-var dates = [];
-var statuses = [];
-var flickrLinks = [];
-
-var currentLocationIndex = 0;
-
-// stuff per location, where location is from where.txt
-var markers = {};
-var infoWindows = {};
-var lastDateAtLocation = {};
-
-// parse out the lines of where.txt, 
-function parseHistory(historyText) {
-  var lines = historyText.split(/\r?\n/);
-  var lineNum = 1;
-
-  lines.forEach(function(line) {
-    if (line.length > 0 && line.charAt(0) != '#') {
-      var matches = line.match(/(.*)[|](.*)[|](.*)[|](.*)/);
-      var day = moment(matches[1], 'YYYY-MM-DD');
-      var place = matches[2];
-      var status = matches[3];
-      var flickrLink = matches[4];
-
-      locations.push(place);
-      dates.push(day);
-      statuses.push(status);
-      flickrLinks.push(flickrLink); // these might be empty if no link
-      lastDateAtLocation[place] = day;
-    }
-  });
-
-  numLocations = locations.length;
-
-  if (numLocations > 0) {
-    currentLocationIndex = 0;
-    while (currentLocationIndex+1 < numLocations && statuses[currentLocationIndex+1] == 'arrived') {
-      currentLocationIndex = currentLocationIndex + 1;
-    }
-
-    var currentLocation = locations[currentLocationIndex];
-    document.getElementById('current-location-text').innerHTML = currentLocation;
-    document.getElementById('current-location-arrival').innerHTML = dates[currentLocationIndex].format('dddd MMMM Do, YYYY');
+function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOnMap) {
+  this.locationsCsvUrl = locationsCsvUrl;
+  this.locationsTimelineUrl = locationsTimelineUrl;
+  if (!numberOfPointsToShowOnMap) {
+    numberOfPointsToShowOnMap = 10000;
   }
+  this.numberOfPointsToShowOnMap = numberOfPointsToShowOnMap;
 
-  google.maps.event.addDomListener(window, 'load', addAddresses(locations));
-}
+  // static lag/longs for the places we're going, one per entry in locations file.
+  // This data was acquired from the Google Maps API geocoder and is only used with the API.
+  this.latLngs = {};
 
-var numLocations;
+  // stuff per entry in locations timeline
+  this.locations = [];
+  this.dates = [];
+  this.statuses = [];
+  this.flickrLinks = [];
 
-// the actual map object
-var map;
+  this.currentLocationIndex = 0;
 
-var polylineUntilNow;
-var polylineAfterNow;
+  // stuff per location, where location is from where.txt
+  this.markers = {};
+  this.infoWindows = {};
+  this.lastDateAtLocation = {};
 
-function setFlickrLinkForIndex(addressIndex) {
-  if (addressIndex >= 0) {
-    var flickrLink = flickrLinks[addressIndex];
-    var flickrIframe = document.getElementById("flickr-canvas");
-    if (flickrIframe.src != flickrLink && flickrLink.length != 0) {
-      flickrIframe.src = flickrLink;
-    }
-  } else {
-    flickrIframe.src = '';
-  }
-}
-function setFlickrLinkFor(placeName) {
-  var addressIndex = locations.slice(0, currentLocationIndex+1).lastIndexOf(placeName);
-  setFlickrLinkForIndex(addressIndex);
-}
+  this.latLngsReady = false;
+  this.historyReady = false;
 
-function onComplete() {
-  function setUpPolylines() {
-    // set up the polylineUntilNow to trace the route up to now
-    var pathElements = [];
-    locations.forEach(function(v) { if (latLngs[v]) { pathElements.push(latLngs[v]); } else {
-      console.log("Not found latLng for " + v);
-    } });
-
-    var locationsUntilNow = pathElements.slice(0, currentLocationIndex + 1);
-    // locationsAfterNow[0] is the current location, so that the polylines join
-    var locationsAfterNow = pathElements.slice(currentLocationIndex);
-
-    polylineUntilNow = new google.maps.Polyline({
-      path: locationsUntilNow,
-      geodesic: true,
-      strokeColor: '#FF0000',
-      strokeOpacity: 1.0,
-      strokeWeight: 3
-    });
-    polylineUntilNow.setMap(map);
-
-    // Define a symbol using SVG path notation, with an opacity of 1.
-    var dashedLineSymbol = {
-      path: 'M 0,-1 0,1',
-      strokeOpacity: 1,
-      strokeWeight: 2,
-      scale: 4
-    };
-
-    polylineAfterNow = new google.maps.Polyline({
-      path: locationsAfterNow,
-      geodesic: true,
-      strokeColor: '#0000FF',
-      strokeWeight: 0,
-      icons: [{
-        icon: dashedLineSymbol,
-        offset: '0',
-        repeat: '20px'
-      }]
-    });
-    polylineAfterNow.setMap(map);
-
-    // make sure that the map contains the last four items on the polylineUntilNow
-    var bounds = new google.maps.LatLngBounds();
-    locationsUntilNow.slice(Math.max(locationsUntilNow.length - 4, 0)).forEach(function(a) {
-      bounds.extend(a);
-    });
-    // add the next location if there aren't many up to now
-    if (locationsUntilNow.length < 3 && locationsAfterNow.length > 1) {
-      bounds.extend(locationsAfterNow[1]);
-    }
-    map.fitBounds(bounds);
-  }
-
-  function setUpFlickr() {
-    // find the latest non-empty flickr link
-    var latestFlickrLink = "";
-    for (var i = flickrLinks.length; i-- > 0 && latestFlickrLink.length == 0; ) {
-      latestFlickrLink = flickrLinks[i];
-    }
-    document.getElementById("flickr-canvas").src = latestFlickrLink;
-  }
-
-
-  function setUpMarkers() {
-    function markerClick(m, ms) {
-      // close all others
-      for (var place2 in ms) {
-        var iw = infoWindows[place2];
-        if (iw) {
-          iw.close(map, ms[place2]);
-        }
-      }
-
-      var placeForMarker = m.title;
-
-      var iwToOpen = infoWindows[placeForMarker];
-      if (iwToOpen) {
-        iwToOpen.open(map, m);
-        setFlickrLinkFor(placeForMarker);
-      } else {
-        console.log("Found no infoWindow for " + placeForMarker);
-      }
-    }
-
-    function setUpInfoBox(placeForMarker, markerForInfoBox) {
-      function indexesOf(place) {
-        var indexes = [];
-        for (var i = 0; i < locations.length; i++) {
-          if (locations[i] == place) {
-            indexes.push(i);
-          }
-        }
-        return indexes;
-      }
-      function toList(is) {
-        function flickrLinkOrEmpty(i) {
-          if (flickrLinks[i].length > 0) {
-            return " (<a href='javascript:setFlickrLinkForIndex(" + i + ")'>photos</a>)";
-          } else {
-            return "";
-          }
-        }
-        var listString = "";
-        var now = moment();
-        is.forEach(function(i) {
-          // Arrived ' + lastDateAtLocation[place].format('ddd MMM Do, YYYY')
-          var current = false;
-          if (dates[i].isBefore(now) && (i + 1 == dates.length || dates[i+1].isAfter(now))) {
-            current = true;
-          }
-          var itemString = "";
-
-          if (current) {
-            itemString += "<b>";
-          }
-
-          itemString += dates[i].format('ddd MMM Do, YYYY');
-
-          if (i + 1 < dates.length) {
-            itemString += " to " + dates[i+1].format('ddd MMM Do, YYYY')
-          }
-
-          if (current) {
-            itemString += "</b>";
-          }
-
-          itemString += flickrLinkOrEmpty(i);
-
-          listString += "<li>" + itemString + "</li>";
-        });
-        return listString;
-      }
-      var infoboxContentString =  '<div id="infowindow-content">' +
-                                    '<h2 id="firstHeading" class="firstHeading">' + place + '</h2>'+
-                                    '<ul>' + toList(indexesOf(place)) + '</ul>'
-                                  '</div>';
-
-      var infoWindow = new google.maps.InfoWindow({
-          content: infoboxContentString,
-          maxWidth: 500
-      });
-      infoWindows[place] = infoWindow;
-    }
-    // have to do this through a closure to capture one value of marker! WAT!
-    function attachMarkerClickListener(m) {
-      google.maps.event.addListener(m, 'click', function() {
-        markerClick(m, markers);
-      });
-    }
-
-    // get the latest marker for each location, attach to the infobox and the map
-    for (var place in markers) {
-      var marker = markers[place];
-      setUpInfoBox(place, marker);
-      attachMarkerClickListener(marker);
+  this.notifyFileLoaded = function(component) {
+    console.debug("Finished loading " + component);
+    if (this.latLngsReady && this.historyReady) {
+      var self = this;
+      console.debug("Loading Google Maps...");
+      self.addAddresses(self.locations);
     }
   }
 
-  function setUpTime() {
-    function parseTime(timeObj, targetElement) {
-      if (timeObj.status == "OK") {
-        var offset = timeObj.dstOffset + timeObj.rawOffset;
-        window.setInterval(function(){
-          document.getElementById(targetElement).innerHTML = moment.utc().add(offset, 's').format("HH:mm a, dddd")
-        }, 1000);
-      } else {
-        console.error("Failed to load time from Google Time API: " + timeObj.status);
-      }
-    }
+  this.parseLocations = function(locationsText) {
+    var lines = locationsText.split(/\r?\n/);
+    var self = this;
 
-    function requestTime(location, targetElement) {
-      if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-        var timeRequest = new XMLHttpRequest();
-        timeRequest.onreadystatechange = function() {
-          if (timeRequest.readyState == 4 && timeRequest.status == 200) {
-            parseTime(JSON.parse(timeRequest.responseText), targetElement);
-          }
-        }
-        var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"
-                          + "&location=" + location.toUrlValue()
-                          + "&timestamp=" + moment.utc().unix();
-        timeRequest.open("GET", requestUrl, true); // add random to disable caching
-        timeRequest.send();
-      } else {
-        alert("Sorry, your browser can't support tracking our travels. Upgrade!");
-      }
-    }
-
-    requestTime(latLngs[locations[currentLocationIndex]], "current-time-text");
-    requestTime(latLngs["London, UK"], "current-time-london");
-  }
-
-  setUpFlickr();
-  setUpMarkers();
-  setUpPolylines();
-  setUpTime();
-}
-
-function addAddresses(addresses) {
-  // number of places processed
-  var pointsFound = 0;
-
-  function addMarker(map, latLng, addressIndex) {
-    // note these don't come in any particular order
-    var address = addresses[addressIndex];
-
-    if (markers[address]) {
-    } else {
-      // TODO 
-      var pin = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
-
-      // home different colour
-      if (address.indexOf('London') >= 0) {
-        pin = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-      }
-      var marker = new google.maps.Marker({
-        map: map,
-        icon: pin,
-        position: latLng,
-        title: address
-      });
-
-      markers[address] = marker;
-    }
-
-    pointsFound++;
-
-    if (pointsFound == numLocations) {
-      onComplete();
-    } else if (pointsFound > numLocations) {
-      console.error("addMarker called too many times");
-    }
-  }
-  function addAddress(geocoder, addressIndex) {
-    var address = addresses[addressIndex];
-    if (latLngs[address]) {
-      addMarker(map, latLngs[address], addressIndex);
-    } else {
-      geocoder.geocode({
-          'address': addresses[addressIndex]
-        }, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            var latLng = results[0].geometry.location;
-            latLngs[address] = latLng;
-            console.log("latLngs[\"" + address + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
-            addMarker(map, latLng, addressIndex);
-          } else {
-            console.error("Failed to geocode address " + addresses[addressIndex] + " status: " + status);
-          }
-        });
-    }
-  }
-
-  geocoder = new google.maps.Geocoder();
-  var currentLocation = addresses[currentLocationIndex];
-  console.log("Current location: " + currentLocation);
-
-  if (latLngs[currentLocation]) {
-    console.log("Creating map with center " + latLngs[currentLocation]);
-    var canvas = document.getElementById('map-canvas');
-    var mapOptions = {
-      zoom: 10,
-      center: latLngs[currentLocation]
-    }
-    map = new google.maps.Map(canvas, mapOptions);
-
-    for (var i = addresses.length - 1; i >= 0; --i) {
-      addAddress(geocoder, i);
-    }
-  } else {
-    geocoder.geocode({
-        address: currentLocation
-      }, function(results, status) {
-        var canvas = document.getElementById('map-canvas');
-        if (status == google.maps.GeocoderStatus.OK) {
-          var mapOptions = {
-            zoom: 18,
-            center: results[0].geometry.location
-          }
-          map = new google.maps.Map(canvas, mapOptions);
-
-          var latLng = results[0].geometry.location;
-          if (!latLng) {
-            console.log("Failed to find latLng for " + currentLocation);
-          }
-          latLngs[currentLocation] = latLng;
-          console.log("latLngs[\"" + currentLocation + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
-          addMarker(map, latLng, currentLocationIndex);
-
-          for (var i = addresses.length - 1; i >= 0; --i) {
-            addAddress(geocoder, i);
-          }
+    lines.forEach(function(line) {
+      if (line.length > 0 && line.charAt(0) != '#') {
+        var lineComponents = line.split('|');
+        if (lineComponents.length != 3) {
+          alert("Bad location entry: " + line);
         } else {
-          console.error("Failed to geocode address " + currentLocation);
+          var name = lineComponents[0];
+          var lat = lineComponents[1];
+          var long = lineComponents[2];
+          var latLng = new google.maps.LatLng(lat,long);
+          self.latLngs[name] = latLng;
         }
       }
-    );
-  }
-}
+    });
 
-function initialiseWhere() {
-  if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
-    var whereTxtRequest = new XMLHttpRequest();
-    whereTxtRequest.onreadystatechange = function() {
-      if (whereTxtRequest.readyState == 4 && whereTxtRequest.status == 200) {
-        parseHistory(whereTxtRequest.responseText);
+    this.latLngsReady = true;
+    this.notifyFileLoaded("locations");
+  }
+
+  // parse out the lines of where.txt,
+  this.parseTimeline = function(timelineText) {
+    var lines = timelineText.split(/\r?\n/);
+    var lineNum = 1;
+    var self = this;
+
+    lines.forEach(function(line) {
+      if (line.length > 0 && line.charAt(0) != '#') {
+        var matches = line.match(/(.*)[|](.*)[|](.*)[|](.*)/);
+        var day = moment(matches[1], 'YYYY-MM-DD');
+        var place = matches[2];
+        var status = matches[3];
+        var flickrLink = matches[4];
+
+        self.locations.push(place);
+        self.dates.push(day);
+        self.statuses.push(status);
+        self.flickrLinks.push(flickrLink); // these might be empty if no link
+        self.lastDateAtLocation[place] = day;
+      }
+    });
+
+    this.numLocations = this.locations.length;
+
+    if (this.numLocations > 0) {
+      this.currentLocationIndex = 0;
+      while (this.currentLocationIndex+1 < this.numLocations && this.statuses[this.currentLocationIndex+1] == 'arrived') {
+        this.currentLocationIndex++;
+      }
+
+      var currentLocation = this.locations[this.currentLocationIndex];
+      document.getElementById('current-location-text').innerHTML = currentLocation;
+      document.getElementById('current-location-arrival').innerHTML = this.dates[this.currentLocationIndex].format('dddd MMMM Do, YYYY');
+    }
+
+    this.historyReady = true;
+    this.notifyFileLoaded("history");
+  }
+
+  this.numLocations;
+
+  // the actual map object
+  this.map;
+
+  this.polylineUntilNow;
+  this.polylineAfterNow;
+
+  this.setFlickrLinkForIndex = function(addressIndex) {
+    if (addressIndex >= 0) {
+      var flickrLink = flickrLinks[addressIndex];
+      var flickrIframe = document.getElementById("flickr-canvas");
+      if (flickrIframe.src != flickrLink && flickrLink.length != 0) {
+        flickrIframe.src = flickrLink;
+      }
+    } else {
+      flickrIframe.src = '';
+    }
+  }
+  this.setFlickrLinkFor = function(placeName) {
+    var addressIndex = locations.slice(0, this.currentLocationIndex+1).lastIndexOf(placeName);
+    this.setFlickrLinkForIndex(addressIndex);
+  }
+
+  this.onAllMapMarkersSetUp = function() {
+    var self = this;
+    function setUpMapPolylines() {
+      console.debug("Setting up map polylines...");
+      // set up the polylineUntilNow to trace the route up to now
+      var pathElements = [];
+      self.locations.forEach(function(v) { if (self.latLngs[v]) { pathElements.push(self.latLngs[v]); } else {
+        console.log("Not found latLng for " + v);
+      } });
+
+      var locationsUntilNow = pathElements.slice(0, self.currentLocationIndex + 1);
+      // locationsAfterNow[0] is the current location, so that the polylines join
+      var locationsAfterNow = pathElements.slice(self.currentLocationIndex);
+
+      self.polylineUntilNow = new google.maps.Polyline({
+        path: locationsUntilNow,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 3
+      });
+      self.polylineUntilNow.setMap(self.map);
+
+      // Define a symbol using SVG path notation, with an opacity of 1.
+      var dashedLineSymbol = {
+        path: 'M 0,-1 0,1',
+        strokeOpacity: 1,
+        strokeWeight: 2,
+        scale: 4
+      };
+
+      self.polylineAfterNow = new google.maps.Polyline({
+        path: locationsAfterNow,
+        geodesic: true,
+        strokeColor: '#0000FF',
+        strokeWeight: 0,
+        icons: [{
+          icon: dashedLineSymbol,
+          offset: '0',
+          repeat: '20px'
+        }]
+      });
+      self.polylineAfterNow.setMap(self.map);
+
+      // make sure that the map contains the last four items on the polylineUntilNow
+      var bounds = new google.maps.LatLngBounds();
+      locationsUntilNow.slice(Math.max(locationsUntilNow.length - numberOfPointsToShowOnMap, 0)).forEach(function(a) {
+        bounds.extend(a);
+      });
+      // add the next location if there aren't many up to now
+      if (locationsUntilNow.length < 3 && locationsAfterNow.length > 1) {
+        bounds.extend(locationsAfterNow[1]);
+      }
+      self.map.fitBounds(bounds);
+    }
+
+    function setUpFlickr() {
+      console.debug("Setting up flickr canvas...");
+      var flickrCanvas = document.getElementById("flickr-canvas");
+      if (flickrCanvas != null) {
+        // find the latest non-empty flickr link
+        var latestFlickrLink = "";
+        for (var i = self.flickrLinks.length; i-- > 0 && latestFlickrLink.length == 0; ) {
+          latestFlickrLink = self.flickrLinks[i];
+        }
+        document.getElementById("flickr-canvas").src = latestFlickrLink;
       }
     }
-    whereTxtRequest.open("GET", "/assets/where.txt?t=" + Math.random(), true); // add random to disable caching
-    whereTxtRequest.send();
-  } else {
-    alert("Sorry, your browser can't support tracking our travels. Upgrade!");
+
+    function setUpMapMarkers() {
+      console.debug("Setting up map markers...");
+      function markerClick(m, ms) {
+        // close all others
+        for (var place2 in ms) {
+          var iw = self.infoWindows[place2];
+          if (iw) {
+            iw.close(map, ms[place2]);
+          }
+        }
+
+        var placeForMarker = m.title;
+
+        var iwToOpen = self.infoWindows[placeForMarker];
+        if (iwToOpen) {
+          iwToOpen.open(map, m);
+          setFlickrLinkFor(placeForMarker);
+        } else {
+          console.log("Found no infoWindow for " + placeForMarker);
+        }
+      }
+
+      function setUpInfoBox(placeForMarker, markerForInfoBox) {
+        function indexesOf(place) {
+          var indexes = [];
+          for (var i = 0; i < self.locations.length; i++) {
+            if (self.locations[i] == place) {
+              indexes.push(i);
+            }
+          }
+          return indexes;
+        }
+        function toList(is) {
+          function flickrLinkOrEmpty(i) {
+            if (self.flickrLinks[i].length > 0) {
+              return " (<a href='javascript:setFlickrLinkForIndex(" + i + ")'>photos</a>)";
+            } else {
+              return "";
+            }
+          }
+          var listString = "";
+          var now = moment();
+          is.forEach(function(i) {
+            // Arrived ' + lastDateAtLocation[place].format('ddd MMM Do, YYYY')
+            var current = false;
+            if (self.dates[i].isBefore(now) && (i + 1 == self.dates.length || self.dates[i+1].isAfter(now))) {
+              current = true;
+            }
+            var itemString = "";
+
+            if (current) {
+              itemString += "<b>";
+            }
+
+            itemString += self.dates[i].format('ddd MMM Do, YYYY');
+
+            if (i + 1 < self.dates.length) {
+              itemString += " to " + self.dates[i+1].format('ddd MMM Do, YYYY')
+            }
+
+            if (current) {
+              itemString += "</b>";
+            }
+
+            itemString += flickrLinkOrEmpty(i);
+
+            listString += "<li>" + itemString + "</li>";
+          });
+          return listString;
+        }
+        var infoboxContentString =  '<div id="infowindow-content">' +
+                                      '<h2 id="firstHeading" class="firstHeading">' + place + '</h2>'+
+                                      '<ul>' + toList(indexesOf(place)) + '</ul>'
+                                    '</div>';
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: infoboxContentString,
+            maxWidth: 500
+        });
+        self.infoWindows[place] = infoWindow;
+      }
+      // have to do this through a closure to capture one value of marker! WAT!
+      function attachMarkerClickListener(m) {
+        google.maps.event.addListener(m, 'click', function() {
+          markerClick(m, markers);
+        });
+      }
+
+      // get the latest marker for each location, attach to the infobox and the map
+      for (var place in self.markers) {
+        var marker = self.markers[place];
+        setUpInfoBox(place, marker);
+        attachMarkerClickListener(marker);
+      }
+    }
+
+    function setUpTime() {
+      function parseTime(timeObj, targetElement) {
+        if (timeObj.status == "OK") {
+          var offset = timeObj.dstOffset + timeObj.rawOffset;
+          window.setInterval(function() {
+            document.getElementById(targetElement).innerHTML = moment.utc().add(offset, 's').format("HH:mm a, dddd")
+          }, 1000);
+        } else {
+          console.error("Failed to load time from Google Time API: " + timeObj.status);
+        }
+      }
+
+      function requestTime(location, targetElement) {
+        if (window.XMLHttpRequest) {
+          var timeRequest = new XMLHttpRequest();
+          timeRequest.onreadystatechange = function() {
+            if (timeRequest.readyState == 4 && timeRequest.status == 200) {
+              parseTime(JSON.parse(timeRequest.responseText), targetElement);
+            }
+          }
+          var requestUrl = "https://maps.googleapis.com/maps/api/timezone/json?key=AIzaSyARro1ojL1tMxwDIYlRiBGOFShRBSl0kBo"
+                            + "&location=" + location.toUrlValue()
+                            + "&timestamp=" + moment.utc().unix();
+          timeRequest.open("GET", requestUrl);
+          timeRequest.send();
+        } else {
+          alert("Sorry, your browser can't support tracking our travels. Upgrade!");
+        }
+      }
+
+      if (document.getElementById("current-time-text") != null) {
+        requestTime(self.latLngs[self.locations[self.currentLocationIndex]], "current-time-text");
+      }
+      if (document.getElementById("current-time-london") != null) {
+        requestTime(self.latLngs["London, UK"], "current-time-london");
+      }
+    }
+
+    setUpFlickr();
+    setUpMapMarkers();
+    setUpMapPolylines();
+    setUpTime();
+  }
+
+  this.addAddresses = function(addresses) {
+    console.debug("Adding locations to the map...");
+    // number of places processed
+    var markersSetUpCount = 0;
+    var self = this;
+
+    function addMarker(map, latLng, addressIndex) {
+      // note these don't come in any particular order
+      var address = addresses[addressIndex];
+
+      if (self.markers[address]) {
+      } else {
+        // TODO
+        var pin = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+
+        // home different colour
+        if (address.indexOf('London') >= 0) {
+          pin = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+        }
+        var marker = new google.maps.Marker({
+          map: map,
+          icon: pin,
+          position: latLng,
+          title: address
+        });
+
+        self.markers[address] = marker;
+      }
+
+      markersSetUpCount++;
+
+      if (markersSetUpCount == self.numLocations) {
+        self.onAllMapMarkersSetUp();
+      } else if (markersSetUpCount > self.numLocations) {
+        console.error("addMarker called too many times");
+      }
+    }
+    function addAddress(geocoder, addressIndex) {
+      var address = addresses[addressIndex];
+      if (self.latLngs[address]) {
+        addMarker(self.map, self.latLngs[address], addressIndex);
+      } else {
+        geocoder.geocode({
+            'address': addresses[addressIndex]
+          }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              var latLng = results[0].geometry.location;
+              self.latLngs[address] = latLng;
+              console.log("latLngs[\"" + address + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
+              addMarker(self.map, latLng, addressIndex);
+            } else {
+              console.error("Failed to geocode address " + addresses[addressIndex] + " status: " + status);
+            }
+          });
+      }
+    }
+
+    this.geocoder = new google.maps.Geocoder();
+    var currentLocation = addresses[this.currentLocationIndex];
+
+    if (this.latLngs[currentLocation]) {
+      var canvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        zoom: 10,
+        center: this.latLngs[currentLocation]
+      }
+      this.map = new google.maps.Map(canvas, mapOptions);
+
+      for (var i = addresses.length - 1; i >= 0; --i) {
+        addAddress(this.geocoder, i);
+      }
+    } else {
+      this.geocoder.geocode({
+          address: currentLocation
+        }, function(results, status) {
+          var canvas = document.getElementById('map-canvas');
+          if (status == google.maps.GeocoderStatus.OK) {
+            var mapOptions = {
+              zoom: 18,
+              center: results[0].geometry.location
+            }
+            this.map = new google.maps.Map(canvas, mapOptions);
+
+            var latLng = results[0].geometry.location;
+            if (!latLng) {
+              console.log("Failed to find latLng for " + currentLocation);
+            }
+            this.latLngs[this.currentLocation] = latLng;
+            console.log("latLngs[\"" + this.currentLocation + "\"] = new google.maps.LatLng(" + latLng.toUrlValue() + ");");
+            addMarker(this.map, latLng, this.currentLocationIndex);
+
+            for (var i = addresses.length - 1; i >= 0; --i) {
+              addAddress(this.geocoder, i);
+            }
+          } else {
+            console.error("Failed to geocode address " + this.currentLocation);
+          }
+        }
+      );
+    }
+  }
+
+  function loadFileForFunction(url, functionOnComplete, forceNoCache) {
+    forceNoCache = forceNoCache || true;
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+      var fileRequest = new XMLHttpRequest();
+      fileRequest.onreadystatechange = function() {
+        if (fileRequest.readyState == 4 && fileRequest.status == 200) {
+          functionOnComplete(fileRequest.responseText);
+        }
+      }
+      var urlToUse;
+      if (forceNoCache) {
+        urlToUse = url + "?t=" + Math.random();
+      } else {
+        urlToUse = url;
+      }
+      fileRequest.open("GET", urlToUse);
+      fileRequest.send();
+    } else {
+      alert("Sorry, your browser can't support tracking our travels. Upgrade!");
+    }
+  }
+
+  this.start = function() {
+    var self = this;
+    google.maps.event.addDomListener(window, "load", function() {
+      loadFileForFunction(locationsCsvUrl, function(text) {self.parseLocations(text)});
+    });
+    google.maps.event.addDomListener(window, "load", function() {
+      loadFileForFunction(locationsTimelineUrl, function(text) {self.parseTimeline(text)});
+    });
   }
 }
 
-google.maps.event.addDomListener(window, "load", initialiseWhere);
+function loadWherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOnMap) {
+  var wherePage = new WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOnMap);
+  wherePage.start();
+}

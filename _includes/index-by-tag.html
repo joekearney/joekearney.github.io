@@ -1,22 +1,21 @@
----
-layout: layout
-title: "Honeyment"
-tags:
-- honeyment
----
-
 <div class="container">
   <section class="content">
     <div class="row"><div class="col-md-12">
       <div class="title">
         <h1 class="title-colour"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-        <p>{{ site.travel_description }}.</p>
+        {% if include.description %}
+          <p>{{ include.description }}.</p>
+        {% endif %}
       </div>
+
+      {% if include.include_sub_header %}
+        {% include {{ include.include_sub_header }} %}
+      {% endif %}
 
       <ul class="listing">
         {% for post in site.posts %}
           {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
-            {% if post.tags contains 'honeyment' %}
+            {% if post.tags contains include.tag %}
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
