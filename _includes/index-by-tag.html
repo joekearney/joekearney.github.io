@@ -13,7 +13,13 @@
       {% endif %}
 
       <ul class="listing">
-        {% for post in site.posts %}
+        {% if include.orderAscending %}
+          {% assign orderedPosts = site.posts | reverse %}
+        {% else %}
+          {% assign orderedPosts = site.posts %}
+        {% endif %}
+
+        {% for post in orderedPosts %}
           {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
             {% if post.tags contains include.tag %}
                 <li>

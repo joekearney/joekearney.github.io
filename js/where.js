@@ -89,8 +89,14 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
       }
 
       var currentLocation = this.locations[this.currentLocationIndex];
-      document.getElementById('current-location-text').innerHTML = currentLocation;
-      document.getElementById('current-location-arrival').innerHTML = this.dates[this.currentLocationIndex].format('dddd MMMM Do, YYYY');
+      var currLocationTextBox = document.getElementById('current-location-text');
+      if (currLocationTextBox != null) {
+        currLocationTextBox.innerHTML = currentLocation;
+      }
+      var currArrivalTextBox = document.getElementById('current-location-arrival');
+      if (currArrivalTextBox != null) {
+        currArrivalTextBox.innerHTML = this.dates[this.currentLocationIndex].format('dddd MMMM Do, YYYY');
+      }
     }
 
     this.historyReady = true;

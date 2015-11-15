@@ -236,3 +236,13 @@ span.post-author {
   font-size: 12px;
   color: #999;
 }
+
+.map-full-width {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 400px;
+}
+.filler-400px {
+  margin-bottom: 420px;
+}
