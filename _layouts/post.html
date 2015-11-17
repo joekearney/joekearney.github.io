@@ -56,6 +56,17 @@ layout: layout
       {% endif %}
     {% endif %}
 
+    {% if page.title_image_float_right_url %}
+      <div class="inline-image inline-image-right">
+        <img src="{{page.title_image_float_right_url}}"
+          {% if page.title_image_float_right_alt %} alt="{{page.title_image_float_right_alt}}" title="{{page.title_image_float_right_alt}}"{% endif %}
+        />
+        {% if page.title_image_float_right_text %}
+          <p class="inline-image-cap">{{page.title_image_float_right_text}}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
     {% if page.tags contains 'draft' %}
       <div class="bs-callout bs-callout-danger"><p><span class="heading">Note:</span> this post is a <b>draft</b></p></div>
     {% endif %}

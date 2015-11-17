@@ -11,6 +11,10 @@ status: publish
 type: post
 published: true
 source: http://www.jamieoliver.com/recipes/lamb-recipes/empire-roast-lamb/
+
+title_image_float_right_url: "https://jamieoliverprod.s3.amazonaws.com/recipe-database/oldImages/recipe_single/1053_1_1439211737.jpg"
+title_image_float_right_alt: "Empire Roast Lamb"
+title_image_float_right_text: "Empire Roast Lamb"
 ---
 
 Beautifully tender roast lamb marinated with a whole load of spice to give you amazingly gnarly, sticky, sweet but feisty Empire roast lamb.

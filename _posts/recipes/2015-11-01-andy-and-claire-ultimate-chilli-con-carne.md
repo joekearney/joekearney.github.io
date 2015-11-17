@@ -10,12 +10,11 @@ tags:
 status: publish
 type: post
 published: true
----
 
-<div class="inline-image inline-image-right">
-  <img src="/images/andy-ultimate-chilli-con-carne.jpg" alt="Ultimate Chilli con Carne" title="Ultimate Chilli con Carne" />
-	<p class="inline-image-cap">Mmmmmm, tasty!</p>
-</div>
+title_image_float_right_url: "/images/andy-ultimate-chilli-con-carne.jpg"
+title_image_float_right_alt: "Ultimate Chilli con Carne"
+title_image_float_right_text: "Mmmmmm, tasty!"
+---
 
 This is truly an amazing chilli con carne. The recipe gets its trademark by the addition of coffee and dark beer. Don't be afraid to try this! Freeze in batches with great success.
 
