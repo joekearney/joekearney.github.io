@@ -89,26 +89,27 @@ layout: layout
     <div class='clearfix'></div>
 
     <div class="row">
-    {% for post in catg_posts %}
-      {% if post.title == page.title %}
-        <hr></hr>
-        <div class="col-xs-5 prev-article-link">
-          {% unless forloop.last %}
-            {% assign next = catg_posts[forloop.index] %}
-            &larr; <a href="{{ next.url }}">{{ next.title }}</a>
-          {% endunless %}
-        </div>
-        <div class="col-xs-2 article-index-link">
-          {% include auto-tag-index-link.html %}
-        </div>
-        <div class="col-xs-5 next-article-link">
-          {% unless forloop.first %}
-            <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
-          {% endunless %}
-        </div>
-      {% endif %}
-      {% assign prev = post %}
-    {% endfor %}
+      {% for post in catg_posts %}
+        {% if post.title == page.title %}
+          <hr></hr>
+          <div class="col-xs-5 prev-article-link">
+            {% unless forloop.last %}
+              {% assign next = catg_posts[forloop.index] %}
+              &larr; <a href="{{ next.url }}">{{ next.title }}</a>
+            {% endunless %}
+          </div>
+          <div class="col-xs-2 article-index-link">
+            {% include auto-tag-index-link.html %}
+          </div>
+          <div class="col-xs-5 next-article-link">
+            {% unless forloop.first %}
+              <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
+            {% endunless %}
+          </div>
+        {% endif %}
+        {% assign prev = post %}
+      {% endfor %}
+    </div>
   </article>
 
   {% if page.tags contains 'travel' %}
