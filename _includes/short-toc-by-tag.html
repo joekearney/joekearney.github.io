@@ -1,7 +1,6 @@
 <h2>
-  <span class="title-colour">{{ include.title }}</span>
-  <span class="post-description">&ndash; {% if include.description %}{{ include.description }} &ndash;{% endif %}
-    <a href="/{{ include.tag }}-index">see all</a>
+  <span class="title-colour"><a href="/{{include.tag}}-index">{{ include.title }}</a></span>
+  <span class="post-description">&ndash; {% if include.description %}{{ include.description }}{% endif %}
     {% if include.additionalLinkUrl %}
       &ndash; <a href="{{include.additionalLinkUrl}}">{{include.additionalLinkText}}</a>
     {% endif %}

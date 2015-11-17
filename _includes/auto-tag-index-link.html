@@ -1,5 +1,11 @@
-{% if page.tags contains 'honeyment' %}
-  <a href="/honeyment-index">{{site.honeyment_tag_name}} index</a>
+{% for pageTag in page.tags %}
+  {% if site.enumerable-tags contains pageTag %}
+    {% assign chosenTag = pageTag %}
+  {% endif %}
+{% endfor %}
+
+{% if chosenTag == 'honeyment' %}
+  <a href="/honeyment-index">{{site.honeyment.tag_name}} index</a>
 {% elsif page.tags contains 'tasty-rsvps' %}
-  <a href="/tasty-rsvps-index">{{site.tasty-rsvps_tag_name}} index</a>
+  <a href="/tasty-rsvps-index">{{site.tasty-rsvps.tag_name}} index</a>
 {% endif %}

@@ -16,8 +16,18 @@ author :
   twitter : joejkearney
   email: mail@joekearney.co.uk
 
-honeyment_description: "Post-engagement pre-honeymoon adventure"
-honeyment_tag_name: "Honeyment"
-tasty-rsvps_description: "Our wedding guest book of recipes"
-tasty-rsvps_link: http://www.joandjoegetmarried.co.uk/#!rsvp
-tasty-rsvps_tag_name: "Tasty RSVPs"
+enumerable-tags:
+- honeyment
+- tasty-rsvps
+- germany
+
+honeyment:
+  tag_description: "Post-engagement pre-honeymoon adventure"
+  tag_name: "Honeyment"
+tasty-rsvps:
+  tag_description: "Our wedding guest book of recipes"
+  website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
+  tag_name: "Tasty RSVPs"
+germany:
+  tag_name: "Ich Bin Ein Berliner"
+  description: "The Jo(e)s Fighting Bureaucracy Since 2015"

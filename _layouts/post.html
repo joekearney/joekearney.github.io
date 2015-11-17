@@ -2,13 +2,6 @@
 layout: layout
 ---
 
-{% for category in site.categories %}
-    {% assign catg_name = category.first %}
-    {% if catg_name == page.categories.first | downcase %}
-        {% assign catg_posts = category.last %}
-    {% endif %}
-{% endfor %}
-
 <div class="container">
   <article>
     <div class="row title-group">
@@ -24,7 +17,8 @@ layout: layout
     <section class="byline">
       <div class="row">
         <div class="col-xs-8">
-          {{ page.date | date: "%B %e, %Y" }}{% if page.author %} &ndash; {{ page.author }}{% endif %}
+          {% unless page.tags contains 'no-date' %}{{ page.date | date: "%B %e, %Y" }}{% endunless %}
+          {% if page.author %} &ndash; {{ page.author }}{% endif %}
           {% if page.source %}<br />Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>{% endif %}
         </div>
         <div class="col-xs-4 article-index-link">
@@ -88,28 +82,7 @@ layout: layout
 
     <div class='clearfix'></div>
 
-    <div class="row">
-      {% for post in catg_posts %}
-        {% if post.title == page.title %}
-          <hr></hr>
-          <div class="col-xs-5 prev-article-link">
-            {% unless forloop.last %}
-              {% assign next = catg_posts[forloop.index] %}
-              &larr; <a href="{{ next.url }}">{{ next.title }}</a>
-            {% endunless %}
-          </div>
-          <div class="col-xs-2 article-index-link">
-            {% include auto-tag-index-link.html %}
-          </div>
-          <div class="col-xs-5 next-article-link">
-            {% unless forloop.first %}
-              <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
-            {% endunless %}
-          </div>
-        {% endif %}
-        {% assign prev = post %}
-      {% endfor %}
-    </div>
+    {% include auto-prev-next.html %}
   </article>
 
   {% if page.tags contains 'travel' %}
