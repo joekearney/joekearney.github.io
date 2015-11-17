@@ -12,6 +12,11 @@ type: post
 published: true
 ---
 
+<div class="inline-image inline-image-right">
+  <img src="/images/andy-ultimate-chilli-con-carne.jpg" alt="Ultimate Chilli con Carne" title="Ultimate Chilli con Carne" />
+	<p class="inline-image-cap">Mmmmmm, tasty!</p>
+</div>
+
 This is truly an amazing chilli con carne. The recipe gets its trademark by the addition of coffee and dark beer. Don't be afraid to try this! Freeze in batches with great success.
 
 This isn’t really about the meat as far as I’m concerned, it’s about the beans and the sauce. It’s sweet, smoky, spicy and thick. It can be quite spicy so if you want to dial back on the chilli powder or the chipotle paste then that’s fine although you’ll lose some of the smoky character if you reduce the amount of paste.

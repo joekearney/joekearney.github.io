@@ -14,7 +14,7 @@ author: Joe Kearney
 
 <div class="inline-image inline-image-right">
   <img src="/images/hacker-rank-testlib-junit.png" alt="Hierarchy of generated tests in Eclipse JUnit view" title="Testlib hierarchy example" />
-  <div class="inline-image-cap"><p>Hierarchy of generated tests</p></div>
+  <p class="inline-image-cap">Hierarchy of generated tests</p>
 </div>
 
 Guava Testlib was written to test collections implementations exhaustively. It's general enough to allow tests to be written for any interface and have them run against many different implementations. It generates the cross product (filtered according to features) of tests and implementations and puts them in a nice hierarchy that looks great in Eclipse.
@@ -51,7 +51,7 @@ We'll start with a really simple calculator interface. We can consider an implem
 public interface Calculator {
   default Number add(Number a, Number b) { throw new UnsupportedOperationException(); }
   default Number multiply(Number a, Number b) { throw new UnsupportedOperationException(); }
-	
+
   /** Converts some useful classes of {@link Number} to {@link BigDecimal}. */
   public static BigDecimal toBigDecimal(Number num) { ... }
 }
@@ -126,7 +126,7 @@ public class TestsForCalculators {
         }})
       .named("BigDecimalCalculator")
       .createTestSuite());
-		
+
     return suite;
   }
 }
@@ -145,11 +145,11 @@ public enum CalculatorFeature implements Feature<Calculator> {
   POSITIVE_NUMBERS,
   NEGATIVE_NUMBERS,
   ANY_SIGN(NEGATIVE_NUMBERS, POSITIVE_NUMBERS),
-	
+
   INTEGER_PARAMETERS,
   FLOATING_POINT_PARAMETERS,
   ANY_TYPE(INTEGER_PARAMETERS, FLOATING_POINT_PARAMETERS),
-	
+
   GENERAL_PURPOSE(ANY_SIGN, ANY_TYPE),
   ;
 
@@ -188,4 +188,3 @@ Note you can also annotate tests to run only if the feature is not implemented b
 * Our Calculators don't do much, we need to add implementations of other operations, such as multiply.
 * Once we've got tests for new features, we could add them to the `Feature` enum. Test suites implementing a new `MULTIPLY` feature could be declared as such so that only those calculators that support it are tested.
 * Tester classes can be annnotated as well as methods, so we might annotate the `AddTester` class itself with `@Require(CalculatorFeature.ADDITION)`.
-
