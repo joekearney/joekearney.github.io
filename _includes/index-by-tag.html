@@ -2,7 +2,7 @@
   <section class="content">
     <div class="row"><div class="col-md-12">
       <div class="title">
-        <h1 class="title-colour"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <h1 class="title-colour"><a href="{{ page.url }}">{{ include.title }}</a></h1>
         {% if include.description %}
           <p>{{ include.description }}.</p>
         {% endif %}
@@ -27,9 +27,11 @@
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                   {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
                   <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                  {% unless post.description == "" %}
-                    <span class="post-description">&ndash; {{ post.description }}</span>
-                  {% endunless %}
+                  {% if post.description %}
+                    {% unless post.description == "" %}
+                      <span class="post-description">&ndash; {{ post.description }}</span>
+                    {% endunless %}
+                  {% endif %}
                   <span class="post-author"> &ndash; {{ post.author }}</span>
                 </li>
             {% endif %}

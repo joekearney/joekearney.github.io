@@ -15,6 +15,7 @@ layout: layout
       <h1 class="h1 title title-colour">
         <a href="{{ page.url }}">{{ page.title | replace:' - ',' &ndash; ' }}</a>
         {% unless page.description == blank %}
+          {% if page.description-newline == true %}<br />{% endif %}
           <small>{{ page.description }}</small>
         {% endunless %}
       </h1>
@@ -23,25 +24,42 @@ layout: layout
     <section class="byline">
       <div class="row">
         <div class="col-xs-8">
-          {{ page.date | date: "%B %e, %Y" }} &ndash; {{ page.author }}
+          {{ page.date | date: "%B %e, %Y" }}{% if page.author %} &ndash; {{ page.author }}{% endif %}
+          {% if page.source %}<br />Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>{% endif %}
         </div>
         <div class="col-xs-4 article-index-link">
-          {% if page.categories contains 'travel' %}
-            <a href="/travel-index.html">travel index</a>
+          {% comment %}TODO extract this{% endcomment %}
+          {% if page.tags contains 'honeyment' %}
+            <a href="/honeyment-index.html">Honeyment index</a>
+          {% endif %}
+          {% if page.tags contains 'tasty-rsvps' %}
+            <a href="/tasty-rsvps-index.html">Tasty RSVPs index</a>
           {% endif %}
         </div>
       </div>
     </section>
 
     {% if page.title_image_img %}
-      <div class="title-image">
-        <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}">
-      </div>
+      {% if page.title_image_href %}
+        <a href="{{page.title_image_href}}">
+      {% endif %}
+          <div class="title-image">
+            <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}" onerror="this.onerror=null;this.src='';">
+          </div>
+      {% if page.title_image_href %}
+        </a>
+      {% endif %}
     {% endif %}
     {% if page.title_image_iframe %}
-      <div class="title-image">
-        <iframe src="{{ page.title_image_iframe }}" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-      </div>
+      {% if page.title_image_href %}
+        <a href="{{page.title_image_href}}">
+      {% endif %}
+          <div class="title-image">
+            <iframe src="{{ page.title_image_iframe }}" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
+      {% if page.title_image_href %}
+        </a>
+      {% endif %}
     {% endif %}
 
     {% if page.tags contains 'draft' %}
@@ -66,18 +84,16 @@ layout: layout
     {% for post in catg_posts %}
       {% if post.title == page.title %}
         <hr></hr>
-        <div class="col-xs-4 prev-article-link">
+        <div class="col-xs-5 prev-article-link">
           {% unless forloop.last %}
             {% assign next = catg_posts[forloop.index] %}
             &larr; <a href="{{ next.url }}">{{ next.title }}</a>
           {% endunless %}
         </div>
-        <div class="col-xs-4 article-index-link">
-          {% if post.categories contains 'travel' %}
-            <a href="/travel-index.html">travel index</a>
-          {% endif %}
+        <div class="col-xs-2 article-index-link">
+          {% include auto-tag-index-link.html %}
         </div>
-        <div class="col-xs-4 next-article-link">
+        <div class="col-xs-5 next-article-link">
           {% unless forloop.first %}
             <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
           {% endunless %}

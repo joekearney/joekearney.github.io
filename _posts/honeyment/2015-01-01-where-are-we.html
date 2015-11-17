@@ -48,37 +48,9 @@ container_type: container-fluid
     </div>
 
     <div class="row">
-      <div id="div-blog-listing" class="col-md-8">
-        <h2><span class="title-colour">Honeyment</span> <span class="post-description">&ndash; {{ site.honeyment_description }} &ndash; <a href="/travel-index.html">see all</a></span></h2>
-        <ul class="listing">
-          {% comment %} Only list the top 3 and any new items further down the list {% endcomment %}
-          {% assign counter = 0 %}
-          {% for post in site.posts %}
-            {% if post.tags contains 'honeyment' %}
-              {% unless post.tags contains 'draft' %}
-                {% if counter < 3 or post.tags contains 'new' %}
-                  {% assign counter = counter | plus: 1 %}
-                  <li>
-                    {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                    <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                    {% unless post.description == "" %}
-                      <span class="post-description">&ndash; {{ post.description }}</span>
-                    {% endunless %}
-                  </li>
-                {% endif %}
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
-          <li><span class="post-description"><a href="/travel-index.html">...more</a></span></li>
-        </ul>
+      <div class="col-md-8">
+        {% include short-toc-by-tag.html tag='honeyment' title='Honeyment' description=site.honeyment_description %}
       </div>
-
-<!--
-      <div id="div-tumblr-iframe" class="col-md-4" style="height: 100%">
-        <iframe src="http://jo-and-joe-travels.tumblr.com/post/embed" height="100%" width="100%" scrolling="no" style="border-width:0" frameborder="0"></iframe>
-      </div>
- -->
     </div>
 
     <div class="row">

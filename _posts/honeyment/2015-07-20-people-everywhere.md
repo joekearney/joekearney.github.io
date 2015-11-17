@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "People Everywhere"
-description: ""
+description: "Hong Kong"
 categories:
 - travel
 tags:

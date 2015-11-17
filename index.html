@@ -6,14 +6,27 @@ tags:
 ---
 
 <div class="container">
-  <section class="content">
-    <div class="row"><div class="col-md-12">
-      <div class="title">
-        <h1 class="title-colour"><a href="/">Joe's Mots</a></h1>
-        <p>Trying to be cogent.</p>
-      </div>
 
-      <h2 class="thin">Articles</h2>
+  <div class="title">
+    <h1 class="title-colour"><a href="/">Joe's Mots</a></h1>
+    <p>Trying to be cogent.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      {% include short-toc-by-tag.html tag='tasty-rsvps' title='Tasty RSVPs' description=site.tasty-rsvps_description numPosts='10' %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      {% include short-toc-by-tag.html tag='honeyment' title='Honeyment' description=site.honeyment_description numPosts='5' additionalLinkUrl="/where" additionalLinkText="where page" %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="title-colour">Articles</h2>
       <ul class="listing">
         {% for post in site.posts %}
           {% unless post.tags contains 'draft' %}
@@ -29,62 +42,62 @@ tags:
           {% endunless %}
         {% endfor %}
       </ul>
-    </div></div>
-
-    {% comment %}If there are drafts use col-md-4, otherwise use col-md-6{% endcomment %}
-    {% assign coltype = 'col-md-6' %}
-    {% for post in site.posts %}
-      {% if post.tags contains 'draft' %}
-        {% assign coltype = 'col-md-4' %}
-      {% endif %}
-    {% endfor %}
-
-    <div class="row">
-      <div class="{{ coltype }}">
-        <h2 class="thin">Software</h2>
-        <ul class="listing">
-          {% for post in site.posts %}
-            {% if post.categories contains 'work' %} {% unless post.tags contains 'interesting' or post.tags contains 'draft' %}
-              <li>
-                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-              </li>
-            {% endunless %} {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="{{ coltype }}">
-        <h2 class="thin">Cycling</h2>
-        <ul class="listing">
-          {% for post in site.posts %}
-            {% if post.categories contains 'cycling' %} {% unless post.tags contains 'draft' %}
-              <li>
-                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-              </li>
-            {% endunless %} {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-
-      {% if coltype == 'col-md-4' %}
-      <div class="col-md-4">
-        <h2 class="thin">Drafts</h2>
-        <ul class="listing">
-          {% for post in site.posts %}
-            {% if post.tags contains 'draft' %}
-              {% unless post.tags contains 'travel' %}
-                <li>
-                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                  <span class="post-description">[Draft]</span>
-                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                </li>
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
     </div>
-  </section>
+  </div>
+
+  {% comment %}If there are drafts use col-md-4, otherwise use col-md-6{% endcomment %}
+  {% assign coltype = 'col-md-6' %}
+  {% for post in site.posts %}
+    {% if post.tags contains 'draft' %}
+      {% assign coltype = 'col-md-4' %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="row">
+    <div class="{{ coltype }}">
+      <h2 class="thin">Software</h2>
+      <ul class="listing">
+        {% for post in site.posts %}
+          {% if post.categories contains 'work' %} {% unless post.tags contains 'interesting' or post.tags contains 'draft' %}
+            <li>
+              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+              <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+            </li>
+          {% endunless %} {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="{{ coltype }}">
+      <h2 class="thin">Cycling</h2>
+      <ul class="listing">
+        {% for post in site.posts %}
+          {% if post.categories contains 'cycling' %} {% unless post.tags contains 'draft' %}
+            <li>
+              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+              <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+            </li>
+          {% endunless %} {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% if coltype == 'col-md-4' %}
+    <div class="col-md-4">
+      <h2 class="thin">Drafts</h2>
+      <ul class="listing">
+        {% for post in site.posts %}
+          {% if post.tags contains 'draft' %}
+            {% unless post.tags contains 'travel' %}
+              <li>
+                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                <span class="post-description">[Draft]</span>
+                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+              </li>
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
 </div>
