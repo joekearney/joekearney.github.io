@@ -4,9 +4,10 @@ title: "Ros and Robin's (Cheat) Sausage Casserole"
 author: "Robin and Ros Allen"
 description-newline: true
 categories:
-- wedding
+- post
 tags:
 - tasty-rsvps
+- wedding
 status: publish
 type: post
 published: true

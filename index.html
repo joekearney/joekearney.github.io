@@ -1,6 +1,8 @@
 ---
 layout: layout
 title: "Joe's Mots"
+categories:
+- index
 tags:
 - landing
 ---
@@ -30,7 +32,7 @@ tags:
       <ul class="listing">
         {% for post in site.posts %}
           {% unless post.tags contains 'draft' %}
-            {% if post.categories contains 'article' and post.tags contains 'interesting' %}
+            {% if post.categories contains 'post' and post.tags contains 'article' %}
               <li>
                 <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                 <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
@@ -58,7 +60,7 @@ tags:
       <h2 class="thin">Software</h2>
       <ul class="listing">
         {% for post in site.posts %}
-          {% if post.categories contains 'work' %} {% unless post.tags contains 'interesting' or post.tags contains 'draft' %}
+          {% if post.categories contains 'post' and post.tags contains 'software' %} {% unless post.tags contains 'article' or post.tags contains 'draft' %}
             <li>
               <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
               <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
@@ -71,7 +73,7 @@ tags:
       <h2 class="thin">Cycling</h2>
       <ul class="listing">
         {% for post in site.posts %}
-          {% if post.categories contains 'cycling' %} {% unless post.tags contains 'draft' %}
+          {% if post.categories contains 'post' and post.tags contains 'cycling' %} {% unless post.tags contains 'draft' %}
             <li>
               <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
               <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>

@@ -4,9 +4,10 @@ title: "Jenny and Rob's Teriyaki Salmon Stir Fry"
 author: "Jenny and Rob Manning"
 description-newline: true
 categories:
-- wedding
+- post
 tags:
 - tasty-rsvps
+- wedding
 status: publish
 type: post
 published: true

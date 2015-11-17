@@ -3,9 +3,9 @@ layout: post
 title: Protocols for Distributed State
 description: overview of consensus
 categories:
-- article
+- post
 tags:
-- interesting
+- article
 - draft
 - software
 author: Joe Kearney
@@ -83,7 +83,7 @@ This section describes a practical use case based on 2PC plus a lot of heuristic
 
 **SQL Server Availability Groups** (AG) implement this sort of explicit quorum management, where the _new value_ is a transaction and there's always a distinguished **primary** replica acting as the coordinator and some secondary replicas. All writes go through the primary, which pushes new data out to each secondary replica using 2PC. Secondary replicas are available for read-only access by clients, giving good read availability. (I'll only consider the synchronous replication model here; the asynchronous version allows consistency violations -- you can lose data when the primary fails.)
 
-The interesting feature which allows for some partition tolerance is management of the set of replicas required for a _vote-to-commit_. The system uses a combination of  communication required for commit and extra periodic polling. If a replica fails and the primary notices either through timeout during a transaction commit or failure to respond to a periodic check, the bad node can be evicted from the quorum of nodes required for commit. The system can continue to work with the smaller set of nodes. Indeed, any minority of replicas (not containing the current primary) can be removed in this way and, from the point of view of the primary, life goes on. 
+The interesting feature which allows for some partition tolerance is management of the set of replicas required for a _vote-to-commit_. The system uses a combination of  communication required for commit and extra periodic polling. If a replica fails and the primary notices either through timeout during a transaction commit or failure to respond to a periodic check, the bad node can be evicted from the quorum of nodes required for commit. The system can continue to work with the smaller set of nodes. Indeed, any minority of replicas (not containing the current primary) can be removed in this way and, from the point of view of the primary, life goes on.
 
 Progress from an external point of view does require some cooperation by clients, because any client connected solely to node on the other side of the partition to the primary will not be able to see new updates. A removed replica will know that it has been separated if it stops receiving the periodic communication, so can reject further communication with clients. If the client is able to connect to a replica in the same partition as the primary then the system is still available, from the clients point of view -- this is the extent to which AGs are tolerant to partitions.
 
@@ -114,7 +114,7 @@ This might be fine in practice -- clients connected to a small partitioned segme
 
 Paxos is a consensus algorithm. It is renowned for being difficult to understand (and I'm not going to embark upon an attempt to rectify that!).
 
-Paxos is usually described in its _single decree_ form, as an algorithm for deciding upon a single value. Clearly in the real world this isn't sufficient, and _multi-Paxos_ is the extension to a sequence of decisions. 
+Paxos is usually described in its _single decree_ form, as an algorithm for deciding upon a single value. Clearly in the real world this isn't sufficient, and _multi-Paxos_ is the extension to a sequence of decisions.
 
 > * The _proposer_ **prepares** an update by asking a quorum of _acceptors_ to promise not to accept any proposal numbered less than \\(n\\)
 > * The _acceptors_ reply with this **promise** (along with the greatest number proposal for which they've given the same promise) or a `CONFLICT` message indicating that they can't

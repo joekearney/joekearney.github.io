@@ -4,9 +4,10 @@ title: "Tom and Naomi's Empire Roast Lamb"
 author: "Tom Lambert and Naomi"
 description-newline: true
 categories:
-- wedding
+- post
 tags:
 - tasty-rsvps
+- wedding
 status: publish
 type: post
 published: true

@@ -2,7 +2,7 @@
 layout: post
 title: Aho-Corasick String Matching
 categories:
-- algorithms-string-matching
+- post
 tags:
 - software
 status: draft

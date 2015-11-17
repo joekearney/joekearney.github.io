@@ -4,9 +4,10 @@ title: "Andy and Claire's Ultimate Chilli con Carne"
 author: "Andy and Claire Lemin"
 description-newline: true
 categories:
-- wedding
+- post
 tags:
 - tasty-rsvps
+- wedding
 status: publish
 type: post
 published: true

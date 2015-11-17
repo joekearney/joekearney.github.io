@@ -21,7 +21,7 @@
 
         {% for post in orderedPosts %}
           {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
-            {% if post.tags contains include.tag %}
+            {% if post.categories contains 'post' and post.tags contains include.tag %}
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>

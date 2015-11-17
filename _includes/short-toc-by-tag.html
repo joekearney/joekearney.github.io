@@ -19,7 +19,7 @@
   {% assign postsNotListed = 0 %}
 
   {% for post in site.posts %}
-    {% if post.tags contains {{include.tag}} %}
+    {% if post.categories contains 'post' and post.tags contains {{include.tag}} %}
       {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
         {% if remaining > 0 or post.tags contains 'new' %}
           {% assign remaining = remaining | minus: 1 %}

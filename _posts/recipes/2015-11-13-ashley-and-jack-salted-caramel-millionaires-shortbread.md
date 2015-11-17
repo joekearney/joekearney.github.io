@@ -4,9 +4,10 @@ title: "Ashley and Jack's Salted Caramel Millionaire's Shortbread"
 author: "Ashley Fryer and Jack Fitzgerald"
 description-newline: true
 categories:
-- wedding
+- post
 tags:
 - tasty-rsvps
+- wedding
 status: publish
 type: post
 published: true
