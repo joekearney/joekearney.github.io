@@ -3,7 +3,7 @@ layout: post
 title: "An Open Letter to GSA Run Club"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

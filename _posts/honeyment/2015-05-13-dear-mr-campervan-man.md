@@ -3,7 +3,7 @@ layout: post
 title: "Dear Mr Campervan Man"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

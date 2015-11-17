@@ -3,7 +3,7 @@ layout: post
 title: "A Foray to the Bay"
 description: "Kayaking, Caves and a blog from Kate"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

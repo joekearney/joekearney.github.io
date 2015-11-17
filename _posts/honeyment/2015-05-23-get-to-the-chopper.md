@@ -3,7 +3,7 @@ layout: post
 title: "Get to the Chopper!"
 description: "Franz Josef Glacier"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

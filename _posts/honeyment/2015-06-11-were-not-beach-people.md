@@ -3,7 +3,7 @@ layout: post
 title: "We're not Beach People"
 description: "Noosa"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

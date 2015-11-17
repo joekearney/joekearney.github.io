@@ -3,7 +3,7 @@ layout: post
 title: "Singapore, baby"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Happy Campers at the Coast Track"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

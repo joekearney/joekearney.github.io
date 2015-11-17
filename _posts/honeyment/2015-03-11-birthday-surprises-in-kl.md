@@ -3,7 +3,7 @@ layout: post
 title: "Birthday Surprises and Elephants in Malaysia"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

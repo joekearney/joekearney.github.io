@@ -3,7 +3,7 @@ layout: post
 title: "Road Trip day 1"
 description: "Wine country and The Big Lobster"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

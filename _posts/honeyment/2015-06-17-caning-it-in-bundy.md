@@ -3,7 +3,7 @@ layout: post
 title: "Caning it in Bundy"
 description: "Bundaberg"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

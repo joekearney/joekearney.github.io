@@ -3,7 +3,7 @@ layout: post
 title: "Walking on Mars"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

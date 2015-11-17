@@ -3,7 +3,7 @@ layout: post
 title: "Gore Town and Country"
 description: "Gore"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Farewell, Barry"
 description: "Ruakaka to Auckland"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

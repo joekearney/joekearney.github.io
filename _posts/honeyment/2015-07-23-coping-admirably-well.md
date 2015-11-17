@@ -3,7 +3,7 @@ layout: post
 title: "Coping Admirably Well"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

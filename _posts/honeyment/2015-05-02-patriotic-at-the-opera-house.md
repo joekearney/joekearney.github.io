@@ -3,7 +3,7 @@ layout: post
 title: "Patriotic at the Opera House"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Entering Jurassic Park"
 description: "Fraser Island"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

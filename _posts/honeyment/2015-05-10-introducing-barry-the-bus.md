@@ -3,7 +3,7 @@ layout: post
 title: "Introducing Barry the Bus"
 description: "Christchurch to Waihi Gorge"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

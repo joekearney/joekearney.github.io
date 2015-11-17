@@ -3,7 +3,7 @@ layout: post
 title: "Climbing Mount Cook (ish*)"
 description: "Mount Cook to Mueller Hut"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Wind and Steam"
 description: "Mount Cook to Middlemarch"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

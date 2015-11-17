@@ -3,7 +3,7 @@ layout: post
 title: "Arrival of the Dharawal"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Crime Scene En Route"
 description: "Waihi Gorge to Lake Tekapo"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

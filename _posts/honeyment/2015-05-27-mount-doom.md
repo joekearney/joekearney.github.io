@@ -3,7 +3,7 @@ layout: post
 title: "Mount Doom"
 description: "Tongariro to Taupo"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

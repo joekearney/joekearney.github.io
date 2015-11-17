@@ -3,7 +3,7 @@ layout: post
 title: "Swimming through the Blue Mountains"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

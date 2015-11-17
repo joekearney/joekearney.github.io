@@ -3,7 +3,7 @@ layout: post
 title: "Open Letter to the Jo(e)s"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

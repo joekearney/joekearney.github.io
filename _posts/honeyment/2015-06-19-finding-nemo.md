@@ -3,7 +3,7 @@ layout: post
 title: "Finding Nemo"
 description: "Lady Musgrave Island"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

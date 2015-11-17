@@ -3,7 +3,7 @@ layout: post
 title: "The Bumpy Strait"
 description: "Picton to Tongariro"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

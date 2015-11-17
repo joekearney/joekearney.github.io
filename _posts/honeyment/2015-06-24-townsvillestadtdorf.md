@@ -3,7 +3,7 @@ layout: post
 title: "Townsvillestadtdorf"
 description: "Townsville and Magnetic Island"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

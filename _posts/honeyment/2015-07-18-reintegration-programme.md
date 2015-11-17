@@ -3,7 +3,7 @@ layout: post
 title: "The Jo(e)s Re-integration Programme"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

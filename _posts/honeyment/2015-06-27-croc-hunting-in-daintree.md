@@ -3,7 +3,7 @@ layout: post
 title: "Croc-hunting in Daintree"
 description: "Daintree National Park"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

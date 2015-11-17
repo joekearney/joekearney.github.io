@@ -3,7 +3,7 @@ layout: post
 title: And So It Begins...
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish
@@ -18,7 +18,7 @@ author: Joanna Heald
 </div>
 
 
-And so it begins... We're off ready for adventure of a lifetime! 
+And so it begins... We're off ready for adventure of a lifetime!
 
 From the first inkling of an idea some 18 months ago, our plans have moved and changed so much we wondered if we'd ever leave (as I think did most of our family and friends). But now with two resignations submitted, boozy leaving drinks survived (thank you Chicken McNuggets*, you served us well) and two wardrobes of clothes squeezed into an impossibly small space, we're finally off. As we taxi the runway I can confirm this is definitely happening!
 

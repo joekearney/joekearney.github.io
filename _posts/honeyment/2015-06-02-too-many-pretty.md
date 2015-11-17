@@ -3,7 +3,7 @@ layout: post
 title: "Too Many Pretty"
 description: "Driving in New Zealand"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

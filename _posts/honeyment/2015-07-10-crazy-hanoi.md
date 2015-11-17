@@ -3,7 +3,7 @@ layout: post
 title: "Crazy Hanoi"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

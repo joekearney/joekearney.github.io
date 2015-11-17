@@ -3,7 +3,7 @@ layout: post
 title: "Avoiding Bungy Ropes"
 description: "Queenstown"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

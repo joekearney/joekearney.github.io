@@ -3,7 +3,7 @@ layout: post
 title: "Sweaty Tailoring"
 description: "Hoi An"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

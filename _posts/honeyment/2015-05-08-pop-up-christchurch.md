@@ -3,7 +3,7 @@ layout: post
 title: "Pop-up Christchurch"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

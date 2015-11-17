@@ -3,7 +3,7 @@ layout: post
 title: "Kiwi Sanctuary Half Marathon"
 description: "Rotorua to Bay of Islands"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

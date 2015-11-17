@@ -3,7 +3,7 @@ layout: post
 title: "Road Trip day 3"
 description: "Sunrise to Melbourne"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

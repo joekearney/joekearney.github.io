@@ -3,7 +3,7 @@ layout: post
 title: "Temples of Angkor"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

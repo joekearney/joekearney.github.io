@@ -3,7 +3,7 @@ layout: post
 title: "Leaving NZ in Darkness"
 description: "Auckland"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

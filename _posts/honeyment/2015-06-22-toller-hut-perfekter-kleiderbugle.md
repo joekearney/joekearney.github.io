@@ -3,7 +3,7 @@ layout: post
 title: "Toller Hut; Perfekter Kleiderbügel"
 description: "Whitsunday Islands"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

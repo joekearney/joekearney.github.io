@@ -3,7 +3,7 @@ layout: post
 title: "Australian Sport"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

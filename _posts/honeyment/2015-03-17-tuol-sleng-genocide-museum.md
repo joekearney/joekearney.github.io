@@ -3,7 +3,7 @@ layout: post
 title: "Tuol Sleng Genocide Museum"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

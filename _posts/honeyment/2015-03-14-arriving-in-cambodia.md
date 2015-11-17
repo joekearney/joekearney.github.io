@@ -3,7 +3,7 @@ layout: post
 title: "Arriving in Cambodia"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

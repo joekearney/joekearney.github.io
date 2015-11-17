@@ -3,7 +3,7 @@ layout: post
 title: "Geological Disneyland"
 description: "Taupo to Rotorua"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

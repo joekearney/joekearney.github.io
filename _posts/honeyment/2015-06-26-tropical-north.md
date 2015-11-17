@@ -3,7 +3,7 @@ layout: post
 title: "Tropical North"
 description: "Port Douglas"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

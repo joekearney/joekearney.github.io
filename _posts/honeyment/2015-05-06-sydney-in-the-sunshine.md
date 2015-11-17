@@ -3,7 +3,7 @@ layout: post
 title: "Sydney in the Sunshine!"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

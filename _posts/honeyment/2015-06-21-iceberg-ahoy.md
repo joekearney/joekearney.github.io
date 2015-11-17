@@ -3,7 +3,7 @@ layout: post
 title: "Iceberg Ahoy!"
 description: "Whitsunday Islands"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Christmas Markets in the Sun"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

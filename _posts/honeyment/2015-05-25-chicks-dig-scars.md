@@ -3,7 +3,7 @@ layout: post
 title: "Chicks Dig Scars"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

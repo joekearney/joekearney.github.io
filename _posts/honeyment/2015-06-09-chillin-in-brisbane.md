@@ -3,7 +3,7 @@ layout: post
 title: "Chillin' in Brisbane"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

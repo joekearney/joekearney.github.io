@@ -3,7 +3,7 @@ layout: post
 title: "Pining for the Fiords"
 description: "Fiordland National Park"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

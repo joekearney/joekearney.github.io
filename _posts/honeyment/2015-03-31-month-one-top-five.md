@@ -3,7 +3,7 @@ layout: post
 title: "Month One Top Five"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

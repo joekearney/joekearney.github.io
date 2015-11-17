@@ -3,7 +3,7 @@ layout: post
 title: "Netball is for Blokes"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

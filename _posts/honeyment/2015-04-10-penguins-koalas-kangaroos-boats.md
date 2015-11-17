@@ -3,7 +3,7 @@ layout: post
 title: "Penguins, Koalas, Kangaroos and Boats"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

@@ -3,7 +3,7 @@ layout: post
 title: "Tropical Storm Sydney"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

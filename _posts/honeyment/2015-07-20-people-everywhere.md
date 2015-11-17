@@ -3,7 +3,7 @@ layout: post
 title: "People Everywhere"
 description: "Hong Kong"
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

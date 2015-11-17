@@ -3,7 +3,7 @@ layout: post
 title: "Café Melbourne"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish

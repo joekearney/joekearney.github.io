@@ -3,7 +3,7 @@ layout: post
 title: "Packing Lightly"
 description: ""
 categories:
-- travel
+- post
 tags:
 - honeyment
 status: publish
