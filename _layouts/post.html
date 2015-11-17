@@ -28,13 +28,7 @@ layout: layout
           {% if page.source %}<br />Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>{% endif %}
         </div>
         <div class="col-xs-4 article-index-link">
-          {% comment %}TODO extract this{% endcomment %}
-          {% if page.tags contains 'honeyment' %}
-            <a href="/honeyment-index.html">Honeyment index</a>
-          {% endif %}
-          {% if page.tags contains 'tasty-rsvps' %}
-            <a href="/tasty-rsvps-index.html">Tasty RSVPs index</a>
-          {% endif %}
+          {% include auto-tag-index-link.html %}
         </div>
       </div>
     </section>

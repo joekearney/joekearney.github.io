@@ -1,5 +1,5 @@
-{% if post.tags contains 'honeyment' %}
-  <a href="/honeyment-index">index</a>
-{% elsif post.tags contains 'tasty-rsvps' %}
-  <a href="/tasty-rsvps-index">index</a>
+{% if page.tags contains 'honeyment' %}
+  <a href="/honeyment-index">{{site.honeyment_tag_name}} index</a>
+{% elsif page.tags contains 'tasty-rsvps' %}
+  <a href="/tasty-rsvps-index">{{site.tasty-rsvps_tag_name}} index</a>
 {% endif %}
