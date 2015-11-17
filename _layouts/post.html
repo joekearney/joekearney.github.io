@@ -34,15 +34,17 @@ layout: layout
     </section>
 
     {% if page.title_image_img %}
-      {% if page.title_image_href %}
-        <a href="{{page.title_image_href}}">
-      {% endif %}
-          <div class="title-image">
-            <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}" onerror="this.onerror=null;this.src='';">
-          </div>
-      {% if page.title_image_href %}
-        </a>
-      {% endif %}
+      <div id="page-title-img-parent-div">
+        {% if page.title_image_href %}
+          <a href="{{page.title_image_href}}">
+        {% endif %}
+            <div class="title-image">
+              <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
+            </div>
+        {% if page.title_image_href %}
+          </a>
+        {% endif %}
+      </div>
     {% endif %}
     {% if page.title_image_iframe %}
       {% if page.title_image_href %}
@@ -57,9 +59,10 @@ layout: layout
     {% endif %}
 
     {% if page.title_image_float_right_url %}
-      <div class="inline-image inline-image-right">
+      <div class="inline-image inline-image-right" id="page-title-img-float-parent-div">
         <img src="{{page.title_image_float_right_url}}"
           {% if page.title_image_float_right_alt %} alt="{{page.title_image_float_right_alt}}" title="{{page.title_image_float_right_alt}}"{% endif %}
+          onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-float-parent-div').style.display = 'none';"
         />
         {% if page.title_image_float_right_text %}
           <p class="inline-image-cap">{{page.title_image_float_right_text}}</p>
