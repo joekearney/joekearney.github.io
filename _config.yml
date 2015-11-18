@@ -16,6 +16,16 @@ author :
   twitter : joejkearney
   email: mail@joekearney.co.uk
 
+
+####
+#### To add a new tag:
+#### - add to enumerable-tags
+#### - add an index page
+####
+#### To rename a tag:
+#### - change the tag_name here
+#### - change the title of the index page for that tag
+####
 enumerable-tags:
 - honeyment
 - tasty-rsvps
@@ -26,7 +36,7 @@ honeyment:
   tag_name: "Honeyment"
 tasty-rsvps:
   tag_description: "Our wedding guest book of recipes"
-  tag_name: "Tasty RSVPs"
+  tag_name: "Tasty RSVP"
   website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
 germany:
   tag_name: "Ich Bin Ein Berliner"
