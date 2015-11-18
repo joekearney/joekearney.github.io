@@ -11,4 +11,22 @@ permalink: /tasty-rsvps-index
 
 ---
 
-{% include index-by-tag.html tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description orderAscending=true %}
+{% include index-by-tag.html header-only=true tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description orderAscending=true %}
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>What's this all about?</h1>
+    <p>We'd like to create a memento of our wedding that we'll be able to use everyday. And we like food, and we'd really like to get better at cooking it.</p>
+    <p>So our plan is to create a guest book from all your tasty recipes that everyone can then sign on the day. Then we'll be reminded of all of you and our wedding day every time we cook a tasty dinner.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="page-title-img-parent-div" class="title-image">
+      <img src="https://farm8.staticflickr.com/7660/17450849299_9343072ab7_b.jpg" width="100%" height="100%" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
+    </div>
+  </div>
+</div>
+
+{% include index-by-tag.html listing-only=true tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description orderAscending=true %}

@@ -20,6 +20,7 @@ permalink: /index-by-tag
     {% if p.tags contains tag %}
       <li>
         {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+        {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
         <a href="{{p.url}}">{{p.title}}</a>
       </li>
     {% endif %}
@@ -37,6 +38,7 @@ permalink: /index-by-tag
       {% if p.tags contains t %}
         <li>
           {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+          {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
           <a href="{{p.url}}">{{p.title}}</a>
         </li>
       {% endif %}

@@ -1,3 +1,22 @@
+{% comment %}
+Set the following variables to use this include:
+  tag - the tag whose posts to index
+  title
+  [description]
+  [include_sub_header] - name of a file to include as a sub header, relative to the post
+  [captured_sub_header] - captured content to have as a sub header
+  [orderAscending] - to make the posts appear chronologically (default is most recent first)
+  [showDrafts] - default false
+
+{% endcomment %}
+
+{% if include.showDrafts %}
+  {% assign hideDrafts = false %}
+{% else %}
+  {% assign hideDrafts = true %}
+{% endif %}
+
+{% unless include.listing-only %}
 <div class="container">
   <section class="content">
     <div class="row"><div class="col-md-12">
@@ -11,6 +30,10 @@
       {% if include.include_sub_header %}
         {% include {{ include.include_sub_header }} %}
       {% endif %}
+      {{ include.captured_sub_header }}
+
+{% endunless %}
+{% unless include.header-only %}
 
       <ul class="listing">
         {% if include.orderAscending %}
@@ -20,24 +43,27 @@
         {% endif %}
 
         {% for post in orderedPosts %}
-          {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
-            {% if post.categories contains 'post' and post.tags contains include.tag %}
-                <li>
-                  {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                  {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                  {% if post.description %}
-                    {% unless post.description == "" %}
-                      <span class="post-description">&ndash; {{ post.description }}</span>
-                    {% endunless %}
-                  {% endif %}
-                  <span class="post-author"> &ndash; {{ post.author }}</span>
-                </li>
-            {% endif %}
+          {% unless post.tags contains 'draft' and hideDrafts %}
+            {% unless post.tags contains 'landing' %}
+              {% if post.categories contains 'post' and post.tags contains include.tag %}
+                  <li>
+                    {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                    {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+                    <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                    {% if post.description %}
+                      {% unless post.description == "" %}
+                        <span class="post-description">&ndash; {{ post.description }}</span>
+                      {% endunless %}
+                    {% endif %}
+                    <span class="post-author"> &ndash; {{ post.author }}</span>
+                  </li>
+              {% endif %}
+            {% endunless %}
           {% endunless %}
         {% endfor %}
       </ul>
     </div></div>
   </section>
 </div>
+{% endunless %}

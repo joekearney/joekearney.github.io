@@ -26,8 +26,8 @@ honeyment:
   tag_name: "Honeyment"
 tasty-rsvps:
   tag_description: "Our wedding guest book of recipes"
-  website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
   tag_name: "Tasty RSVPs"
+  website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
 germany:
   tag_name: "Ich Bin Ein Berliner"
-  description: "The Jo(e)s Fighting Bureaucracy Since 2015"
+  tag_description: "The Jo(e)s Fighting Bureaucracy Since 2015"

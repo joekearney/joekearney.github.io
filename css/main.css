@@ -54,6 +54,7 @@ blockquote p {
 .title-image img {
   display: inline;
   border: none;
+  margin: 0;
 }
 
 .contact {
