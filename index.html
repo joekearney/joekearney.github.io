@@ -28,22 +28,7 @@ tags:
 
   <div class="row">
     <div class="col-md-12">
-      <h2 class="title-colour">Articles</h2>
-      <ul class="listing">
-        {% for post in site.posts %}
-          {% unless post.tags contains 'draft' %}
-            {% if post.categories contains 'post' and post.tags contains 'article' %}
-              <li>
-                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                {% unless post.description == blank or post.description == "" %}
-                  <span class="post-description">&ndash; {{ post.description }}</span>
-                {% endunless %}
-              </li>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
-      </ul>
+      {% include short-toc-by-tag.html tag='article' title='Articles' numPosts='100' %}
     </div>
   </div>
 
