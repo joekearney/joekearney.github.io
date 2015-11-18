@@ -20,7 +20,8 @@ layout: layout
           {% unless page.tags contains 'no-date' %}{{ page.date | date: "%B %e, %Y" }}{% endunless %}
           {% if page.author %} &ndash; {{ page.author }}{% endif %}
           {% if page.source %}<br />
-            {% if page.source.size == 1 %}Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>
+            {% assign numSources = page.source | join: ' ' | number_of_words %}
+            {% if numSources == 1 %}Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>
             {% else %}
             Sources:
               <ul>
