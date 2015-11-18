@@ -25,6 +25,7 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
 
   this.latLngsReady = false;
   this.historyReady = false;
+  this.allowMapScroll = true;
 
   this.notifyFileLoaded = function(component) {
     console.debug("Finished loading " + component);
@@ -400,7 +401,8 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
       var canvas = document.getElementById('map-canvas');
       var mapOptions = {
         zoom: 10,
-        center: this.latLngs[currentLocation]
+        center: this.latLngs[currentLocation],
+        scrollwheel: this.allowMapScroll
       }
       this.map = new google.maps.Map(canvas, mapOptions);
 
@@ -468,6 +470,13 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
     google.maps.event.addDomListener(window, "load", function() {
       loadFileForFunction(locationsTimelineUrl, function(text) {self.parseTimeline(text)});
     });
+  }
+
+  this.disableMapScroll = function() {
+    this.allowMapScroll = false;
+    if (this.mao) {
+      this.map.scrollwheel = false;
+    }
   }
 }
 
