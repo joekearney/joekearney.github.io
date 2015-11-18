@@ -19,9 +19,10 @@ layout: layout
         <div class="col-xs-8">
           {% unless page.tags contains 'no-date' %}{{ page.date | date: "%B %e, %Y" }}{% endunless %}
           {% if page.author %} &ndash; {{ page.author }}{% endif %}
-          {% if page.source %}<br />Source:
-            {% if page.source.size == 1 %}<a href="{{page.source}}" target="_blank">{{page.source}}</a>
+          {% if page.source %}<br />
+            {% if page.source.size == 1 %}Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>
             {% else %}
+            Sources:
               <ul>
                 {% for eachSource in page.source %}
                   <li><a href="{{eachSource}}" target="_blank">{{eachSource}}</a></li>
