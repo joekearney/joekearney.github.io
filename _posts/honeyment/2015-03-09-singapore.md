@@ -10,6 +10,7 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+title_image_iframe: "https://www.flickr.com/photos/joekearney/16714796062/in/album-72157651147972555/player/"
 ---
 
 There's nothing to see on the train from Singapore to Kuala Lumpur but palm trees, so what better way to pass the time but on my laptop!

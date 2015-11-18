@@ -10,7 +10,7 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
-title_image_iframe: "https://www.flickr.com/photos/joekearney/16186545634/in/set-72157650927970970/player/"
+title_image_iframe: "https://www.flickr.com/photos/joekearney/16859764332/in/album-72157650927970970/player/"
 ---
 
 Cambodia made the itinerary because we wanted to visit somewhere a little less western and developed. It would be all too easy to let glampacking take hold and city-hop around rich countries without ever feeling like we'd left Europe, give or take some dim sum. We didn't expect to find that Cambodia works entirely in US dollars, but we can let that one fly.

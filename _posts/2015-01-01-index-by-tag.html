@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Index by Tag"
+categories:
+- index
+tags:
+- landing
+- no-date
+permalink: /index-by-tag
+
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign all_tags = site_tags | split:',' | sort %}
+
+{% for tag in site.enumerable-tags %}
+  <h1>{{ tag }}</h1>
+  <ul>
+  {% for p in site.posts %}
+    {% if p.tags contains tag %}
+      <li>
+        {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+        <a href="{{p.url}}">{{p.title}}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endfor %}
+
+<hr></hr>
+
+{% for t in all_tags %}
+  {% unless site.enumerable-tags contains t %}
+    <h1>{{ t }}</h1>
+    <ul>
+    {% for p in site.posts %}
+      {% if p.tags contains t %}
+        <li>
+          {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+          <a href="{{p.url}}">{{p.title}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endunless %}
+{% endfor %}
