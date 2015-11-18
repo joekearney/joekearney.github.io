@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ich Bin Ein Berliner
+title: "Ich Bin Ein Berliner"
 description: "Writing blogs is admin, too"
 categories:
 - post

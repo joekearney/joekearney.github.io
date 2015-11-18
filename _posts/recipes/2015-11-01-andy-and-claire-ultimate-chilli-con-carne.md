@@ -21,7 +21,9 @@ This is truly an amazing chilli con carne. The recipe gets its trademark by the 
 
 This isn’t really about the meat as far as I’m concerned, it’s about the beans and the sauce. It’s sweet, smoky, spicy and thick. It can be quite spicy so if you want to dial back on the chilli powder or the chipotle paste then that’s fine although you’ll lose some of the smoky character if you reduce the amount of paste.
 
-_Serves: 8_
+_Serves: 8_<br />
+_Prep: 20 mins_<br />
+_Cook: 4 hours_
 
 ## Ingredients
 
@@ -48,8 +50,6 @@ _Serves: 8_
 * Other ingredients I add which are not in the recipe: A few splashes of regular tabasco and smoked chipotle tabasco, a dash of tommy K, a dash of sweet chilli sauce, a whole punnet of mushrooms cut up fairly small (about the size of the kidney beans) and, lastly, a teaspoon -- or more -- of smoked chipotle paste).
 
 ## Method
-
-Prep: 20 mins \| Cook: 4 hours
 
 1. Heat oil in a large saucepan over medium heat. Cook onions, garlic, mince and cubed sirloin in oil for 10 minutes, or until the meat is well browned and the onions are tender.
 1. Mix in the diced tomatoes with juice, beer, coffee, tomato puree and beef stock. Season with brown sugar, chilli powder, cumin, cocoa, oregano, cayenne pepper, coriander and salt and extra ingredients. Stir in 2 tins of the beans and hot chillies. Reduce heat to low, and simmer for 3 hours.

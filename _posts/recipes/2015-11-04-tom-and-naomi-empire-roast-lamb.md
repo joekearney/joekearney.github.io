@@ -20,8 +20,7 @@ title_image_float_right_text: "Empire Roast Lamb"
 
 Beautifully tender roast lamb marinated with a whole load of spice to give you amazingly gnarly, sticky, sweet but feisty Empire roast lamb.
 
-_Serves: 10_
-
+_Serves: 10_<br />
 _Time: 4h40, plus marinating_
 
 ## Ingredients
