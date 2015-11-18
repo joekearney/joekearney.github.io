@@ -19,7 +19,14 @@ layout: layout
         <div class="col-xs-8">
           {% unless page.tags contains 'no-date' %}{{ page.date | date: "%B %e, %Y" }}{% endunless %}
           {% if page.author %} &ndash; {{ page.author }}{% endif %}
-          {% if page.source %}<br />
+        </div>
+        <div class="col-xs-4 article-index-link">
+          {% include auto-tag-index-link.html %}
+        </div>
+      </div>
+      {% if page.source %}
+        <div class="row">
+          <div class="col-xs-12">
             {% assign numSources = page.source | join: ' ' | number_of_words %}
             {% if numSources == 1 %}Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>
             {% else %}
@@ -30,12 +37,9 @@ layout: layout
                 {% endfor %}
               </ul>
             {% endif %}
-          {% endif %}
+          </div>
         </div>
-        <div class="col-xs-4 article-index-link">
-          {% include auto-tag-index-link.html %}
-        </div>
-      </div>
+      {% endif %}
     </section>
 
     {% if page.title_image_img %}
