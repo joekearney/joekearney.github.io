@@ -10,6 +10,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: "https://www.flickr.com/photos/joekearney/22736097727/in/album-72157660647306877/player/"
 ---
 
 Sunday on our [Iceberg trip](/posts/iceberg-ahoy/) was snorkelling day. The first stop, we were assured, is the best reef snorkelling in the Whitsundays. Anchored a little away from the reef itself we suited and masked up, went a little closer on the tender and jumped in.
@@ -27,3 +29,7 @@ In all the excitement the reef and fish were totally forgotten. In the current w
 And all of a sudden we were on the home straight. The wind had picked up again so the water was choppy, and as we sat on the high side of the angled deck, our feet were splashed with surprisingly warm water. We arrived back at the marina sunkissed, windswept and salt-encrusted -- what a way to spend a weekend.
 
 On departing from Iceberg Mikhael and Mark swapped their cool hats, green beanie for captain's sun hat. In an attempt to join in the German I asked Jo the words for "great hat". Perhaps my pronunciation wasn't up to it. "Toller hut!" He looked very confused for a moment. "Perfekter kleiderbügel?"
+
+<div class="title-image">
+	<iframe src="https://www.flickr.com/photos/joekearney/23104174926/in/album-72157660647306877/player/" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+</div>

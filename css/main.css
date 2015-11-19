@@ -48,7 +48,7 @@ blockquote p {
 
 .title-image {
   text-align: center;
-  background: black;
+/*  background: black; */
   margin-bottom: 25px;
 }
 .title-image img {

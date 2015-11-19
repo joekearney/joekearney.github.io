@@ -11,10 +11,9 @@ type: post
 published: true
 author: Joe Kearney
 
-footer_strava_embed: https://www.strava.com/activities/326371398/embed/7c8a3690996c428ce96f10194ed991125e509825
+title_image_iframe: "https://www.flickr.com/photos/joekearney/22735886287/in/album-72157660647306877/player/"
+footer_strava_embed: "https://www.strava.com/activities/326371398/embed/7c8a3690996c428ce96f10194ed991125e509825"
 ---
-
-{% comment %}TODO add picture of lying across the train tracks{% endcomment %}
 
 Bundaberg is yet another single-purpose town, but it's a good one -- here they distill sugar cane harvested from miles around to make the world-famous Bundy Rum. While Jo had a coffee and newspapers (and cake) day in cafés in town I hired a bike for a few hours to venture out to the countryside and village-hop along the coast.
 

@@ -4,7 +4,6 @@ Set the following variables to use this include:
   title
   [description]
   [include_sub_header] - name of a file to include as a sub header, relative to the post
-  [captured_sub_header] - captured content to have as a sub header
   [orderAscending] - to make the posts appear chronologically (default is most recent first)
   [showDrafts] - default false
 
@@ -30,7 +29,6 @@ Set the following variables to use this include:
       {% if include.include_sub_header %}
         {% include {{ include.include_sub_header }} %}
       {% endif %}
-      {{ include.captured_sub_header }}
 
 {% endunless %}
 {% unless include.header-only %}
@@ -63,6 +61,11 @@ Set the following variables to use this include:
           {% endunless %}
         {% endfor %}
       </ul>
+
+      {% if include.include_footer %}
+        {% include {{ include.include_footer }} %}
+      {% endif %}
+
     </div></div>
   </section>
 </div>

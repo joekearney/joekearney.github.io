@@ -10,9 +10,13 @@ status: publish
 type: post
 published: true
 author: Joanna Heald
+
+title_image_iframe: "https://www.flickr.com/photos/joekearney/22735959408/in/album-72157660647306877/player/"
 ---
 
 "Do not carry food. Do not store food. Do not leave backpacks unattended. Do not drop rubbish. Do not carry rubbish. Do not walk alone to the rubbish bin. Do not leave shoes and socks unattended. Do not run. Do not leave children unattended. Do not feed children to the wildlife. Do not feed the wildlife at all. Do not camp in unfenced areas without armed guards. Do not camp in fenced areas without a 4WD tank for your belongings. Always carry weapons. Do no harm."  
+
+***
 
 We alighted the boat with trepidation, uncertain what we might find. Our few sailing compatriots quickly dispersed into the undergrowth and we were left alone, surrounded by forest. We quickly found a spot to gobble down our breakfast, aiming to minimise the amount of food we had to carry. Seeing the warning signs all around, we transferred our sandwich meat into a plastic bottle, hoping to minimise the smell that might attract the native predators. Then, intrepidly, we ventured on to The Fence.
 

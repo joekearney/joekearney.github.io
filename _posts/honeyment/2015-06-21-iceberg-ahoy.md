@@ -10,6 +10,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: "https://www.flickr.com/photos/joekearney/23166170541/in/album-72157660647306877/player/"
 ---
 
 Iceberg is an absurd name for a boat. The company owns another two, called Blizzard and On Ice, and they sail around the toasty warm Whitsunday Islands. Name aside, it's a hell of yacht -- a 52-foot racer that came 16th in the stormy Sydney-Hobart race in 1993 in which two-thirds of the entries failed to finish.

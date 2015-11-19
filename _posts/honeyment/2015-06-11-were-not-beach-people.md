@@ -10,6 +10,8 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
+
+title_image_iframe: "https://www.flickr.com/photos/joekearney/22735770057/in/album-72157660647306877/player/"
 ---
 
 We're not beach people, really. Sitting around on the beach is fine for a while, and eventually it's a bit boring. The Sunshine Coast promises sun, sand, sea and surf; the fun version of a day at the beach. When you imagine stereotypical Australia this is the image; golden sandy beaches stretching for miles, huge waves breaking ashore dotted with surfers and sparkling in the sunshine, the lifeguard post with toned men in red shorts (concentrate, Jo), red and yellow flags fluttering in the gentle breeze. The temperature display at the top of the Surf and Lifesaving Club reads 29, and they still have the audacity to call this winter.
