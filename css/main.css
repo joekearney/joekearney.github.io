@@ -269,3 +269,14 @@ span.post-author {
 .filler-400px {
   margin-bottom: 420px;
 }
+.navbar .divider-vertical {
+  height: 30px;
+  margin: 10px 9px;
+  border-right: 1px solid #777;
+  border-left: 1px solid #f8f8f8;
+}
+@media (max-width: 767px) {
+  .navbar-collapse .nav > .divider-vertical {
+    display: none;
+  }
+}
