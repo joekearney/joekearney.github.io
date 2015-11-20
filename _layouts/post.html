@@ -94,6 +94,15 @@ layout: layout
         </div>
       </div>
     {% endif %}
+    {% if page.footer_image_img %}
+      <div class="container-fluid" id="page-footer-img-parent-div">
+        <div class="row">
+          <div class="col-md-12 footer-image">
+            <img src="{{ page.footer_image_img }}" alt="{{ page.footer_image_alt }}" title="{{ page.footer_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
+          </div>
+        </div>
+      </div>
+    {% endif %}
 
     <div class='clearfix'></div>
 

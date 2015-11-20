@@ -56,6 +56,16 @@ blockquote p {
   border: none;
   margin: 0;
 }
+.footer-image {
+  text-align: center;
+/*  background: black; */
+  margin-top: 25px;
+}
+.footer-image img {
+  display: inline;
+  border: none;
+  margin: 0;
+}
 
 .contact {
   border-top: 1px solid #ddd;
