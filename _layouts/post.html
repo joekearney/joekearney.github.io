@@ -68,15 +68,7 @@ layout: layout
     {% endif %}
 
     {% if page.title_image_float_right_url %}
-      <div class="inline-image inline-image-right" id="page-title-img-float-parent-div">
-        <img src="{{page.title_image_float_right_url}}"
-          {% if page.title_image_float_right_alt %} alt="{{page.title_image_float_right_alt}}" title="{{page.title_image_float_right_alt}}"{% endif %}
-          onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-float-parent-div').style.display = 'none';"
-        />
-        {% if page.title_image_float_right_text %}
-          <p class="inline-image-cap">{{page.title_image_float_right_text}}</p>
-        {% endif %}
-      </div>
+      {% include image-float.html src=page.title_image_float_right_url txt_alt=page.title_image_float_right_alt caption=page.title_image_float_right_text id='title-img-float-right' side='right' %}
     {% endif %}
 
     {% if page.tags contains 'draft' %}
@@ -97,7 +89,7 @@ layout: layout
     {% if page.footer_image_img %}
       <div class="container-fluid" id="page-footer-img-parent-div">
         <div class="row">
-          <div class="col-md-12 footer-image">
+          <div class="col-md-12 image-border-frame footer-image">
             <img src="{{ page.footer_image_img }}" alt="{{ page.footer_image_alt }}" title="{{ page.footer_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
           </div>
         </div>

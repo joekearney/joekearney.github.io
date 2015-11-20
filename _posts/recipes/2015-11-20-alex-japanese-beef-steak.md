@@ -13,7 +13,6 @@ status: publish
 type: post
 published: true
 source: http://www.japanesecooking101.com/japanese-beef-steak-recipe/
-footer_image_img: http://www.japanesecooking101.com/wp-content/uploads/2015/10/IMG_8926-1024x683.jpg
 ---
 
 As for a recipe, how about this for an interesting idea?!
@@ -23,6 +22,10 @@ As for a recipe, how about this for an interesting idea?!
 </div>
 
 More seriously, I really like this take on a classic.
+
+***
+
+{% include image-float.html src='http://www.japanesecooking101.com/wp-content/uploads/2015/10/IMG_8926-1024x683.jpg' txt_alt='The safer option' href=page.source caption='The safer option' id='japanese-beef-steak' side='right' %}
 
 # Japanese Beef Steak
 

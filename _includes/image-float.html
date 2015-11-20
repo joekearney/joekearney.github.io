@@ -1,0 +1,33 @@
+{% comment %}
+Parameters:
+
+  src - image path
+  [txt_alt] - alt text, title
+  [href] - optional url for a link
+  [caption] optional caption
+  id - name of the thing, make it unique
+  [side] - default right
+
+Example:
+ include image-float.html src='http://flickr.com/pic.jpg' txt_alt='popup' href='google.com'
+      caption='This is my cool picture' id='cool-picture-of-a-thing' side='right'
+
+{% endcomment %}
+
+{% if include.side %}
+  {% assign side = include.side %}
+{% else %}
+  {% assign side = 'right' %}
+{% endif %}
+
+<div class="image-border-frame inline-image inline-image-{{side}} {% if include.caption and include.caption != "" %}inline-image-with-caption{% endif %}" id="img-parent-div-for-{{include.id}}">
+  {% if include.href and include.href != '' %}<a href="{{include.href}}">{% endif %}
+  <img src="{{include.src}}" id="img-{{include.id}}"
+    {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}
+    onerror="this.onerror=null;this.src='';document.getElementById('{{include.id}}').style.display = 'none';"
+  />
+  {% if include.href and include.href != '' %}</a>{% endif %}
+  {% if include.caption and include.caption != '' %}
+    <p class="inline-image-cap">{{include.caption}}</p>
+  {% endif %}
+</div>

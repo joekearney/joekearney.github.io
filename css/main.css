@@ -83,11 +83,22 @@ article p {
   text-align: justify;
 }
 
+/* TODO rename */
 .inline-image {
-  /* no padding at bottom */
-  padding: 18px 18px 0px 18px;
+  /* no padding at bottom only when there's a caption */
+  padding: 18px 18px 18px 18px;
   background: #f8f8f8;
   border: 1px solid #e7e7e7;
+}
+.image-border-frame {
+  /* no padding at bottom only when there's a caption */
+  padding: 18px 18px 18px 18px;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  width: auto;
+}
+.inline-image-with-caption {
+  padding-bottom: 0px;
 }
 .inline-image img {
   margin-left: auto;
