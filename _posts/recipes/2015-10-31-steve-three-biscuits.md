@@ -59,7 +59,7 @@ Packed airtight, cookies will keep at room temperature for up to 3 days (Deb not
 
 ***
 
-# 2. Brownie Mosaic Cheesecake
+# 2. [Brownie Mosaic Cheesecake](http://smittenkitchen.com/blog/2007/08/alexs-choice/)
 
 ### Part One: One Bowl Brownies
 Adapted from Baker’s One Bowl Brownies
@@ -124,7 +124,7 @@ Grind the chocolate into powder in the food processor, scald the butter and crea
 
 ***
 
-# 3. Brownie Roll-Out Cookies
+# 3. [Brownie Roll-Out Cookies](http://smittenkitchen.com/blog/2008/04/brownie-roll-out-cookies/)
 Recipe from Deb’s mom
 
 * 3 cups (375 grams) all-purpose flour
