@@ -72,6 +72,6 @@ I get quite hung up on the idea that you should nail the basics, the stuff that 
 
 > If the basic concepts aren't so easy that you don’t even have to think about them, you’re not going to get the big concepts.
 >
-> <cite>-- Joel Spolsky</cite>
+> <p class="cite">&mdash; Joel Spolsky</p>
 
 But if we can have a real conversation then this could be the start of something.

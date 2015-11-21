@@ -288,3 +288,16 @@ span.post-author {
 .navbar-collapse {
   font-size: 16px;
 }
+
+blockquote p.cite {
+  text-align: right;
+  font-size: 18px;
+  font-style: italic;
+}
+blockquote {
+  overflow: auto;
+}
+
+.padding-20 {
+  padding: 20px;
+}

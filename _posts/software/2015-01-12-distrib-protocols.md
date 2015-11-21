@@ -11,13 +11,9 @@ tags:
 author: Joe Kearney
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-- /js/up.js
 ---
 
-<div class="inline-image inline-image-right">
-  <img src="/images/CAP.png" alt="Available choices satisfying the CAP theorem" title="CAP theorem choices" />
-  <div class="inline-image-cap"><p>CAP theorem choices<sup>[from <a href="http://book.mixu.net/distsys/abstractions.html">Mixu</a>]</sup></p></div>
-</div>
+{% include image-float.html src='/images/CAP.png' txt_alt='Available choices satisfying the CAP theorem' href='http://book.mixu.net/distsys/abstractions.html' caption='CAP theorem choices<sup>[from <a href="http://book.mixu.net/distsys/abstractions.html">Mixu</a>]</sup>' id='mixu-venn-diagram' side='right' %}
 
 The [CAP theorem](http://en.wikipedia.org/wiki/CAP_theorem) states that among Consistency, Availability and Partition tolerance, only two can be provided simultaneously in any distributed system. This article is intended not so much to debate interpretations of the CAP theorem so much as to give an outline of some approaches that provide different choices of guarantees and interpretations of the CAP conditions.
 

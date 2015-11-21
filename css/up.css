@@ -14,7 +14,7 @@ b,strong{font-weight:bold}
 dfn{font-style:italic}
 hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
 mark{background:#ff0;color:#000}
-code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}
+code,kbd,pre,samp{font-family:Menlo,Consolas,monospace,serif;font-size:1em}
 pre{white-space:pre-wrap}
 q{quotes:"\201C" "\201D" "\2018" "\2019"}
 small{font-size:80%}

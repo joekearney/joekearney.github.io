@@ -14,9 +14,7 @@ author: Joanna Heald
 
 <div class="inline-image inline-image-right">
 	<iframe class="pull-right" src="https://www.flickr.com/photos/joekearney/16696031682/in/set-72157647810587354/player/" width="300" height="400" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-	<div class="inline-image-cap"><p>&nbsp;</p></div>
 </div>
-
 
 And so it begins... We're off ready for adventure of a lifetime!
 

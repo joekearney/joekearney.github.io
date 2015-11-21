@@ -12,10 +12,7 @@ type: post
 author: Joe Kearney
 ---
 
-<div class="inline-image inline-image-right">
-  <img src="/images/hacker-rank-testlib-junit.png" alt="Hierarchy of generated tests in Eclipse JUnit view" title="Testlib hierarchy example" />
-  <p class="inline-image-cap">Hierarchy of generated tests</p>
-</div>
+{%  include image-float.html src='/images/hacker-rank-testlib-junit.png' txt_alt='Hierarchy of generated tests in Eclipse JUnit view' caption='Hierarchy of generated tests' id='guava-generated-tests-in-eclipse' side='right' %}
 
 Guava Testlib was written to test collections implementations exhaustively. It's general enough to allow tests to be written for any interface and have them run against many different implementations. It generates the cross product (filtered according to features) of tests and implementations and puts them in a nice hierarchy that looks great in Eclipse.
 
