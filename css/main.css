@@ -280,3 +280,6 @@ span.post-author {
     display: none;
   }
 }
+.navbar-collapse {
+  font-size: 16px;
+}
