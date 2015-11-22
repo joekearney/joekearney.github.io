@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: "Ich Bin Ein Berliner"
+title: "Some Stuff I Wrote"
 categories:
 - index
 tags:
