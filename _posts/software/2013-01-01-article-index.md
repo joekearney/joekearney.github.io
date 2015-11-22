@@ -10,4 +10,4 @@ permalink: /article-index
 
 ---
 
-{% include index-by-tag.html tag='article' title=site.article.tag_name description=site.article.tag_description orderAscending=true showDrafts=true %}
+{% include index-by-tag.html tag='article' title=site.article.tag_name description=site.article.tag_description orderAscending=false showDrafts=true %}
