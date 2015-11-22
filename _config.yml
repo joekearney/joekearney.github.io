@@ -31,6 +31,9 @@ enumerable-tags:
 - tasty-rsvps
 - germany
 
+article:
+  tag_description: "Some stuff I wrote"
+  tag_name: "Articles"
 honeyment:
   tag_description: "Post-engagement pre-honeymoon adventure"
   tag_name: "Honeyment"
