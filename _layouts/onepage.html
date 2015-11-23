@@ -3,6 +3,8 @@ layout: layout
 ---
 
 <div class="container">
+  {% include index-by-tag.html header-only=true tag=page.onepage-tag title=page.title description=page.description orderAscending=true %}
+
   {% assign orderedPosts = site.posts | reverse %}
   {% for post in orderedPosts %}
     {% if post.tags contains page.onepage-tag and post.categories contains 'post' %}
