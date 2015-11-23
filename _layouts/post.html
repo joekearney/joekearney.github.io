@@ -4,97 +4,19 @@ layout: layout
 
 <div class="container">
   <article>
-    <div class="row title-group">
-      <h1 class="h1 title title-colour">
-        <a href="{{ page.url }}">{{ page.title | replace:' - ',' &ndash; ' }}</a>
-        {% unless page.description == blank %}
-          {% if page.description-newline == true %}<br />{% endif %}
-          <small>{{ page.description }}</small>
-        {% endunless %}
-      </h1>
-    </div>
+    {% include post-header.html title=page.title description=page.description description-newline=page.description-newline %}
 
-    <section class="byline">
-      <div class="row">
-        <div class="col-xs-8">
-          {% unless page.tags contains 'no-date' %}{{ page.date | date: "%B %e, %Y" }}{% endunless %}
-          {% if page.author %} &ndash; {{ page.author }}{% endif %}
-        </div>
-        <div class="col-xs-4 article-index-link">
-          {% include auto-tag-index-link.html %}
-        </div>
-      </div>
-      {% if page.source %}
-        <div class="row">
-          <div class="col-xs-12">
-            {% assign numSources = page.source | join: ' ' | number_of_words %}
-            {% if numSources == 1 %}Source: <a href="{{page.source}}" target="_blank">{{page.source}}</a>
-            {% else %}
-            Sources:
-              <ul>
-                {% for eachSource in page.source %}
-                  <li><a href="{{eachSource}}" target="_blank">{{eachSource}}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
-    </section>
+    {% include post-byline.html tags=page.tags date=page.date author=page.author source=page.source %}
 
-    {% if page.title_image_img %}
-      <div id="page-title-img-parent-div">
-        {% if page.title_image_href %}
-          <a href="{{page.title_image_href}}">
-        {% endif %}
-            <div class="title-image">
-              <img src="{{ page.title_image_img }}" alt="{{ page.title_image_alt }}" title="{{ page.title_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
-            </div>
-        {% if page.title_image_href %}
-          </a>
-        {% endif %}
-      </div>
-    {% endif %}
-    {% if page.title_image_iframe %}
-      {% if page.title_image_href %}
-        <a href="{{page.title_image_href}}">
-      {% endif %}
-          <div class="title-image">
-            <iframe src="{{ page.title_image_iframe }}" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-          </div>
-      {% if page.title_image_href %}
-        </a>
-      {% endif %}
-    {% endif %}
+    {% include post-header-image.html title_image_img=page.title_image_img title_image_alt=page.title_image_alt page-id=page.id title_image_href=page.title_image_href title_image_iframe=page.title_image_iframe %}
 
-    {% if page.title_image_float_right_url %}
-      {% include image-float.html src=page.title_image_float_right_url txt_alt=page.title_image_float_right_alt caption=page.title_image_float_right_text id='title-img-float-right' side='right' %}
-    {% endif %}
+    {% include post-float-image.html title_image_float_right_url=page.title_image_float_right_url title_image_alt=page.title_image_alt page-id=page.id id='title-img-float-right' title_image_float_right_url=page.title_image_float_right_url caption=page.title_image_float_right_text %}
 
-    {% if page.tags contains 'draft' %}
-      <div class="bs-callout bs-callout-danger"><p><span class="heading">Note:</span> this post is a <b>draft</b></p></div>
-    {% endif %}
+    {% include post-draft-marker.html tags=page.tags %}
 
     {{ content }}
 
-    {% if page.footer_strava_embed %}
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 inline-image">
-            <iframe src='{{ page.footer_strava_embed }}' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-    {% if page.footer_image_img %}
-      <div class="container-fluid" id="page-footer-img-parent-div">
-        <div class="row">
-          <div class="col-md-12 image-border-frame footer-image">
-            <img src="{{ page.footer_image_img }}" alt="{{ page.footer_image_alt }}" title="{{ page.footer_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div').style.display = 'none';">
-          </div>
-        </div>
-      </div>
-    {% endif %}
+    {% include post-footer-embed.html footer_strava_embed=page.footer_strava_embed footer_image_img=page.footer_image_img footer_image_alt=page.footer_image_alt page-id=page.id %}
 
     <div class='clearfix'></div>
 

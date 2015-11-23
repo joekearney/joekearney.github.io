@@ -1,0 +1,27 @@
+<section class="byline">
+  <div class="row">
+    <div class="col-xs-8">
+      {% unless include.tags contains 'no-date' %}{{ include.date | date: "%B %e, %Y" }}{% endunless %}
+      {% if include.author %} &ndash; {{ include.author }}{% endif %}
+    </div>
+    <div class="col-xs-4 article-index-link">
+      {% include auto-tag-index-link.html %}
+    </div>
+  </div>
+  {% if include.source %}
+    <div class="row">
+      <div class="col-xs-12">
+        {% assign numSources = include.source | join: ' ' | number_of_words %}
+        {% if numSources == 1 %}Source: <a href="{{include.source}}" target="_blank">{{include.source}}</a>
+        {% else %}
+        Sources:
+          <ul>
+            {% for eachSource in include.source %}
+              <li><a href="{{eachSource}}" target="_blank">{{eachSource}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+</section>

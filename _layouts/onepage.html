@@ -1,0 +1,30 @@
+---
+layout: layout
+---
+
+<div class="container">
+  {% assign orderedPosts = site.posts | reverse %}
+  {% for post in orderedPosts %}
+    {% if post.tags contains page.onepage-tag and post.categories contains 'post' %}
+
+      <article id="article-{{post.id}}">
+        {% include post-header.html title=post.title description=post.description description-newline=post.description-newline %}
+
+        {% include post-byline.html tags=post.tags date=post.date author=post.author source=post.source %}
+
+        {% include post-header-image.html title_image_img=post.title_image_img title_image_alt=post.title_image_alt page-id=post.id title_image_href=post.title_image_href title_image_iframe=post.title_image_iframe %}
+
+        {% include post-float-image.html title_image_float_right_url=post.title_image_float_right_url title_image_alt=post.title_image_alt page-id=post.id id='title-img-float-right' title_image_float_right_url=post.title_image_float_right_url caption=post.title_image_float_right_text %}
+
+        {% include post-draft-marker.html tags=post.tags %}
+
+        {{ post.content | markdownify }}
+
+        {% include post-footer-embed.html footer_strava_embed=post.footer_strava_embed footer_image_img=post.footer_image_img footer_image_alt=post.footer_image_alt page-id=post.id %}
+
+        <div class='clearfix'></div>
+  </article>
+
+    {% endif %}
+  {% endfor %}
+</div>

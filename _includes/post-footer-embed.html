@@ -1,0 +1,18 @@
+{% if include.footer_strava_embed %}
+  <div class="container-fluid" id="page-footer-strava-parent-div-{{include.page-id}}">
+    <div class="row">
+      <div class="col-md-12 inline-image">
+        <iframe src='{{ include.footer_strava_embed }}' height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no'></iframe>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% if include.footer_image_img %}
+  <div class="container-fluid" id="page-footer-img-parent-div-{{include.page-id}}">
+    <div class="row">
+      <div class="col-md-12 image-border-frame footer-image">
+        <img src="{{ include.footer_image_img }}" alt="{{ include.footer_image_alt }}" title="{{ include.footer_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('post-footer-img-parent-div-{{include.page-id}}').style.display = 'none';">
+      </div>
+    </div>
+  </div>
+{% endif %}
