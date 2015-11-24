@@ -7,6 +7,7 @@ Parameters:
   [caption] optional caption
   id - name of the thing, make it unique
   [side] - default right
+  [kind] - iframe or img, default img
 
 Example:
  include image-float.html src='http://flickr.com/pic.jpg' txt_alt='popup' href='google.com'
@@ -22,14 +23,22 @@ TODO handle iframe instead of img
   {% assign side = 'right' %}
 {% endif %}
 
-<div class="image-border-frame inline-image inline-image-{{side}} {% if include.caption and include.caption != "" %}inline-image-with-caption{% endif %}" id="img-parent-div-for-{{include.id}}">
-  {% if include.href and include.href != '' %}<a href="{{include.href}}">{% endif %}
-  <img src="{{include.src}}" id="img-{{include.id}}"
-    {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}
-    onerror="this.onerror=null;this.src='';document.getElementById('{{include.id}}').style.display = 'none';"
-  />
-  {% if include.href and include.href != '' %}</a>{% endif %}
-  {% if include.caption and include.caption != '' %}
-    <p class="inline-image-cap">{{include.caption}}</p>
-  {% endif %}
-</div>
+{% if include.src %}
+
+  <div class="image-border-frame {% if include.class %}{{include.class}}{% else %}inline-image inline-image-{{side}}{% endif %} {% if include.caption and include.caption != "" %}inline-image-with-caption{% endif %}" id="img-parent-div-for-{{include.id}}">
+    {% if include.href and include.href != '' %}<a href="{{include.href}}">{% endif %}
+    {% if include.kind == 'iframe' %}
+      <iframe src='{{include.src}}' id="iframe-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    {% else %}
+      <img src='{{include.src}}' id="img-{{include.id}}"
+        {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}
+
+      />
+    {% endif %}
+    {% if include.href and include.href != '' %}</a>{% endif %}
+    {% if include.caption and include.caption != '' %}
+      <p class="inline-image-cap">{{include.caption}}</p>
+    {% endif %}
+  </div>
+
+{% endif %}
