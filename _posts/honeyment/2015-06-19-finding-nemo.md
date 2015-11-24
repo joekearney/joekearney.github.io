@@ -14,8 +14,6 @@ author: Joanna Heald
 title_image_iframe: "https://www.flickr.com/photos/joekearney/23104089726/in/album-72157660647306877/player/"
 ---
 
-{% comment %}picture of us looking silly in snorkel{% endcomment %}
-
 Our first taste of the Great Barrier Reef was at Lady Musgrave Island in the southern reef. It's a proper tropical island formed from washed up dead coral -- known as a coral cay -- and surrounded by shallow coral reef. As soon as we got close, we could see glimpses of colour speeding past under the water, offering clues as to the huge volume of life below the surface.
 
 The deserted beaches are covered in coral fragments of assorted shapes and sizes, and dotted with twisted fallen tree branches from the rainforest interior, while clear turquoise waters lap at the shore. And of course, in the true spirit of Australia's everything-can-kill-you fauna, we were quickly warned not to pick up any cone-shaped coral, lest we get fatally zapped by a tiny creature inside -- for which there is no known anti-venom. I kept my flip flops on.
