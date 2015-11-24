@@ -1,7 +1,7 @@
 ---
 layout: post
 title: And So It Begins...
-description: ""
+description: "BA11"
 categories:
 - post
 tags:

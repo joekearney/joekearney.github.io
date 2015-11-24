@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Arriving in Cambodia"
-description: ""
+description: "Siem Reap"
 categories:
 - post
 tags:
