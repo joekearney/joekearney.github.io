@@ -9,7 +9,9 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald and Joe Kearney
+author:
+- Joanna Heald
+- Joe Kearney
 ---
 
 <div class="title-image">
