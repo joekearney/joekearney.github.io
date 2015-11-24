@@ -10,7 +10,7 @@ layout: layout
     {% if post.tags contains page.onepage-tag and post.categories contains 'post' %}
 
       <article id="article-{{post.id}}">
-        {% include post-header.html title=post.title description=post.description description-newline=post.description-newline %}
+        {% include post-header.html title=post.title description=post.description description-newline=post.description-newline url=post.url %}
 
         {% include post-byline.html tags=post.tags date=post.date author=post.author source=post.source %}
 
