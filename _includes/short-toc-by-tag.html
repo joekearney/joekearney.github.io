@@ -31,6 +31,10 @@
                 <span class="post-description">&ndash; {{ post.description }}</span>
               {% endunless %}
             {% endif %}
+            {% if include.showAuthor == "true" %}
+              {% assign authorArray = post.author | join: "|" | split: "|" %}
+              <span class="post-description"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
+            {% endif %}
           </li>
         {% else %}
           {% assign postsNotListed = postsNotListed | plus: 1 %}
