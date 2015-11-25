@@ -8,7 +8,6 @@ categories:
 tags:
 - tasty-rsvps
 - wedding
-- new
 status: publish
 type: post
 published: true
