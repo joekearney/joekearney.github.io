@@ -5,7 +5,12 @@
   <title>{{ page.title }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
-  <meta name="description" content="{% if page.tags contains 'honeyment' %}{{site.travel_description}}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="description" content="{% if page.tags contains 'honeyment' %}{{site.honeyment.tag_description}}
+    {% elsif page.tags contains 'tasty-rsvps' %}{{site.tasty-rsvps.tag_description}}
+    {% elsif page.tags contains 'article' %}{{site.article.tag_description}}
+    {% elsif page.tags contains 'germany' %}{{site.germany.tag_description}}
+    {% elsif page.description %}{{ page.description }}
+    {% else %}{{ site.description }}{% endif %}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="/favicon.ico">

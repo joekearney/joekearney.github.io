@@ -30,6 +30,7 @@ enumerable-tags:
 - honeyment
 - tasty-rsvps
 - germany
+- article
 
 article:
   tag_description: "Some stuff I wrote"
@@ -42,5 +43,5 @@ tasty-rsvps:
   tag_name: "Tasty RSVP"
   website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
 germany:
-  tag_name: "Ich Bin Ein Berliner"
-  tag_description: "The Jo(e)s Fighting Bureaucracy Since 2015"
+  tag_name: "Das Jo(e)"
+  tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
