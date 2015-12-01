@@ -30,4 +30,15 @@ permalink: /tasty-rsvps-index
   </div>
 </div>
 
+{% assign numPosts = 0 %}
+{% for p in site.tags.tasty-rsvps %}
+  {% if p.categories contains 'post' %}
+    {% unless p.tags contains 'draft' or p.tags contains 'landing' %}
+      {% assign numPosts = numPosts | plus: 1 %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<h2>All {{ numPosts }} Tasty RSVPs</h2>
+
 {% include index-by-tag.html listing-only=true tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description orderAscending=false %}
