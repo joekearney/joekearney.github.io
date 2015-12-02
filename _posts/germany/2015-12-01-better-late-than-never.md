@@ -45,7 +45,7 @@ While we've started exploring our local area we've made a poor start to tourism.
 * We visited the depressingly thorough Topography of Terrors museum that documented the administration of the Holocaust, which had many unavoidable parallels with [Tuol Sleng](/posts/tuol-sleng-genocide-museum/).
 * The DDR Museum showed life in East Germany under communist rule, but was interactive and (literally) touchy-feely at the expense of providing much actual information.
 
-There are plenty more to go, but it's already clear from the museums, tourist spots and memorials that the country really goes in for forensic exposition of the atrocities of the past. It hasn't escaped notice
+There are plenty more to go, but it's already clear from the museums, tourist spots and memorials that the country really goes in for forensic exposition of the atrocities of the past.
 
 ***
 
