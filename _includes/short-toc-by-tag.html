@@ -11,7 +11,7 @@
   {% if include.numPosts %}
     {% assign numPosts = include.numPosts %}
   {% else %}
-    {% assign numPosts = 3 %}
+    {% assign numPosts = 5 %}
   {% endif %}
 
   {% assign remaining = numPosts | plus: 0 %}
@@ -25,28 +25,6 @@
 
   {% for post in site.posts %}
     {% if post.categories contains 'post' and post.tags contains {{include.tag}} %}
-<<<<<<< Updated upstream
-      {% unless post.tags contains 'draft' or post.tags contains 'landing' %}
-        {% if remaining > 0 or post.tags contains 'new' %}
-          {% assign remaining = remaining | minus: 1 %}
-          <li>
-            {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-            <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-            <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-            {% if post.description %}
-              {% unless post.description == "" %}
-                <span class="post-description">&ndash; {{ post.description }}</span>
-              {% endunless %}
-            {% endif %}
-            {% if include.showAuthor == "true" %}
-              {% assign authorArray = post.author | join: "|" | split: "|" %}
-              <span class="post-description"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-            {% endif %}
-          </li>
-        {% else %}
-          {% assign postsNotListed = postsNotListed | plus: 1 %}
-        {% endif %}
-=======
       {% unless post.tags contains 'landing' %}
         {% unless post.tags contains 'draft' and hideDrafts %}
           {% if remaining > 0 or post.tags contains 'new' %}
@@ -70,7 +48,6 @@
             {% assign postsNotListed = postsNotListed | plus: 1 %}
           {% endif %}
         {% endunless %}
->>>>>>> Stashed changes
       {% endunless %}
     {% endif %}
   {% endfor %}
