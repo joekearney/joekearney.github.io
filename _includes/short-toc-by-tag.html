@@ -1,3 +1,15 @@
+{% assign anyPosts = false %}
+{% for post in site.categories.post %}
+  {% if post.tags contains {{include.tag}} %}
+    {% unless post.tags contains 'draft' %}
+      {% assign anyPosts = true %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}Don't show anything at all if there are no non-draft posts for the tag{% endcomment %}
+{% if anyPosts %}
+
 <h2>
   <span class="title-colour"><a href="/{{include.tag}}-index">{{ include.title }}</a></span>
   <span class="post-description">{% if include.description %}&ndash; {{ include.description }}{% endif %}
@@ -56,3 +68,5 @@
     <li><span class="post-description"><a href="/{{ include.tag }}-index">...more</a></span></li>
   {% endif %}
 </ul>
+
+{% endif %}
