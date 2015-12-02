@@ -31,8 +31,28 @@ After about three months of paperwork (not to mention the four trips to Ikea) an
 
 ***
 
-If Germany has failed to deliver on its reputation of efficiency, Berlin has certainly lives up to its reputation. It's cool here. Much like the [Melbourne type of cool](/posts/cafe-melbourne/), there's no pretentiousness. Everyone has tattoos of different varieties, you wear what you want, cut your hair however. And yet somehow there is still this high fashion -- on the metro you've never seen so many ways of standing out by wearing all black. I definitely feel like the middle-class Englishman not even attempting to fit in. But that's ok, there are plenty of observer-mode locals and ex-pats too.
+If Germany has failed to deliver on its reputation of efficiency, Berlin has certainly lives up to its reputation. It's cool here. Much like the [Melbourne type of cool](/posts/cafe-melbourne/), there's no pretentiousness. Everyone has tattoos of different varieties, you wear what you want, cut your hair however. And yet somehow there is still this high fashion -- on the metro you've never seen so many different ways of wearing all black. I definitely feel like the middle-class Englishman not even attempting to fit in. But that's ok, there are plenty of observer-mode locals and ex-pats too.
 
 We live on the edge of a lovely suburb of Prenzlauer Berg, full of cafes and bars, young families and little parks. The story goes that after the wall came down, everyone left to go to the west and the area was taken over by the hippies. They settled, grew up, turned into hipsters, coupled up and had babies, and now it's the most middle-class gentrified area you could imagine. We hit peak hipster while flat-hunting, when we stopped for a drink of rhubarb juice in a vegan organic cafe, next to a square full of prams.
 
-Near our flat, Oderbergerstraße, Helmholtzplatz and Kastanienallee all have a delightful array of ways of keeping the palette busy, and we recently discovered Kulturbrauerei, an old brewery converted into a cultural centre. We've been swing dancing and been to the cinema, and as the cold nights have ramped up in bitterness the Scandinavian Christmas market has pushed back with glühwein (Glöggi to the locals!) in mugs with sugar-encrusted rims. Mmmm <abbr title="yummy!">lecker!</abbr>
+Near our flat, Oderbergerstraße, Helmholtzplatz and Kastanienallee all have a delightful array of ways of keeping the palette busy, and we recently discovered Kulturbrauerei, an old brewery converted into a cultural centre. We've been swing dancing and been to the cinema, and as the cold nights have increased in bitterness the Scandinavian Christmas market has fought back with glühwein (glögg to the locals!) in mugs with sugar-encrusted rims. Mmmm <abbr title="yummy!">lecker</abbr>!
+
+***
+
+While we've started exploring our local area we've made a poor start to tourism. There is so much history here, and though it's difficult to miss the remains of the wall and the memorials, it's only now that we've had a couple of sets of visitors from the home that we've started to see some of the important sights and sites together. There are so many museums here, that we should have plenty to see for a while!
+
+* The Berlin Wall Memorial Museum, the Gedenkstätte, has a good timeline of the events from the creation to demolition of the wall, helped a lot with some historical context provided by my own personal historian.
+* We visited the depressingly thorough Topography of Terrors museum that documented the administration of the Holocaust, which had many unavoidable parallels with [Tuol Sleng](/posts/tuol-sleng-genocide-museum/).
+* The DDR Museum showed life in East Germany under communist rule, but was interactive and (literally) touchy-feely at the expense of providing much actual information.
+
+There are plenty more to go, but it's already clear from the museums, tourist spots and memorials that the country really goes in for forensic exposition of the atrocities of the past. It hasn't escaped notice
+
+***
+
+That said, Berlin isn't the sum of its museums any more than London, Sydney or Shrewsbury. It's been interesting to get to know the quirks of the city from being here a little longer, and the defining features for me are no longer those that hit me first.
+
+When we first arrived it was impossible not to notice the graffiti _everywhere_, on every wall in sight on every street. Now we're so used to it that it's just vanished into the fabric of the place. On a Sunday everything shuts, no food shops is a huge pain in the ass, but for the rest of the week the city functions pretty well, as long as you're not in a rush. The metro honestly isn't all that bad, even if you have to wait _#8minutes_ for a train occasionally. Massive queuing in the supermarkets gets old pretty quickly, it hasn't taken long to tire of the abundance of cured pork that seemed so exciting in the first few weeks, but seems to take the place of most other meats that we're used to. We almost long for the rotisserie chicken counters that we so overused in Australian supermarkets!
+
+Some of this is just adaptation that we have yet to concede, and this is all exactly the point of moving away, to try all of these new things in a new setting. On the plus side, there is so much more space than in London!
+
+So the first three months has been great. It's exciting, we've done far too much, even if half of it was admin and wedmin, and we're definitely beginning to get to grips with quotidienne life here. It's easy to complain about the little things but the adventure is much bigger than the paperwork and range of charcuterie.
