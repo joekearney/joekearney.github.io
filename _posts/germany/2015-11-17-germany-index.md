@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: "Ich Bin Ein Berliner"
+title: "Das Jo(e)s"
 categories:
 - index
 tags:

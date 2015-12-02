@@ -14,13 +14,24 @@ permalink: /posts
 {% assign all_tags = site_tags | split:',' | sort %}
 
 {% for tag in site.enumerable-tags %}
-  <h1>{{ tag }}</h1>
+  {% assign numPosts = 0 %}
+  {% for p in site.posts %}
+    {% if p.categories contains 'post' and p.tags contains tag %}
+      {% unless p.tags contains 'draft' or p.tags contains 'landing' %}
+        {% assign numPosts = numPosts | plus: 1 %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  <h1>{{ tag }} &ndash; {{ numPosts }} posts</h1>
   <ul>
   {% for p in site.posts %}
     {% if p.tags contains tag %}
       <li>
-        {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+        {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
         {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
+        {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
+        {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
         <a href="{{p.url}}">{{p.title}}</a>
       </li>
     {% endif %}
@@ -32,13 +43,24 @@ permalink: /posts
 
 {% for t in all_tags %}
   {% unless site.enumerable-tags contains t %}
-    <h1>{{ t }}</h1>
+    {% assign numPosts = 0 %}
+    {% for p in site.posts %}
+      {% if p.categories contains 'post' and p.tags contains t %}
+        {% unless p.tags contains 'draft' or p.tags contains 'landing' %}
+          {% assign numPosts = numPosts | plus: 1 %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+
+    <h1>{{ t }} &ndash; {{ numPosts }} posts</h1>
     <ul>
     {% for p in site.posts %}
       {% if p.tags contains t %}
         <li>
-          {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+          {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
           {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
+          {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
+          {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
           <a href="{{p.url}}">{{p.title}}</a>
         </li>
       {% endif %}
