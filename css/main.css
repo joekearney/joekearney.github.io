@@ -305,3 +305,7 @@ blockquote {
 .padding-20 {
   padding: 20px;
 }
+
+pre code {
+  border-style: none;
+}
