@@ -301,6 +301,10 @@ blockquote {
   padding: 20px;
 }
 
+code,kbd,pre,samp{
+  font-family: Consolas,Menlo,Monaco,"Lucida Console",monospace,monospace;
+  font-size:1em
+}
 pre code {
   border-style: none;
   overflow: auto;
