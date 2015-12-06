@@ -8,7 +8,6 @@ tags:
 - article
 - howto
 - software
-- draft
 status: published
 type: post
 author: Joe Kearney
