@@ -25,7 +25,7 @@ Consider your type to be like `Option` and the other type to be `List`. Starting
 
 ## Executive summary
 
-You don't need much in order to make this work:
+You only need a few things in order to make this work:
 
 * an `Applicative[F]` instance for your type
 * a `Traverse[G]` instance for the other type
