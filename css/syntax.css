@@ -1,6 +1,6 @@
 
 /* syntax highlighting, Monokai theme from http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html */
-.highlight pre { background-color: #272822; }
+.highlight pre { background-color: #272822; color: gray }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */

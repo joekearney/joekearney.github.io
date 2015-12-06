@@ -2,7 +2,6 @@
 layout: post
 title: "How to: Sequence All The Things"
 description: "implement sequence on your own types"
-description-newline: true
 categories:
 - post
 tags:
@@ -32,6 +31,7 @@ You don't need much in order to make this work:
 * an `Applicative[F]` instance for your type
 * a `Traverse[G]` instance for the other type
 * syntax support from `scalaz.syntax.traverse._` to pimp the `G` type with `sequence`
+* consider using `sequenceU` if your type is more complicated than one with a single type parameter
 
 # Simple start with `MyOption[A]`
 
@@ -70,6 +70,7 @@ For a start, scalaz provides the `Traverse[List]` instance for us. This import s
 
 {% highlight scala %}
 import scalaz.std.list._
+  import scalaz.syntax.traverse._
 {% endhighlight %}
 
 Now you need an `Applicative` for `MyOption`. It turns to be easier to create a `Monad`, which extends `Applicative` anyway.
@@ -111,21 +112,15 @@ With `Applicative` the function is also in a context, so you might have an `Opti
 
 The type parameter on `Applicative` is the context type constructor, so for our example it's `MyOption`.
 {% endcapture %}
-***
-{{ what_is_applicative }}
-***
+{% include sidebar.html content=what_is_applicative %}
 
 # Type Lambdas and `Either[L, R]`
 
-It's more tricky when your type has more than one type parameter, because you need to force your type into fitting into `Applicative[A[_]]`, which takes one type parameter. The only good way of doing this is with a type lambda. The idea is that you _fix_ one of the parameter types; here we fix `L`.
+It's more tricky when your type has more than one type parameter, because you need to force your type into fitting into `Applicative[A[_]]`, which takes one type parameter. The only good way of doing this is with a type lambda. The idea is that you _fix_ one of the parameter types; here we fix `L`. You might call this a partially applied type constructor -- this is exactly analogous to partial application of a function, where some of its parameters are fixed.
 
-The expression `({type t[a] = MyEither[L, a]})#t` means:
+The expression `({type t[a] = MyEither[L, a]})#t` means: a type `t` that takes one type parameter, and which is equal to `MyEither[L, _]`. This is an unfortunately complicated syntax for a simple idea.
 
-* a type `t`
-* that takes one type parameter `a`,
-* which is the equal to `MyEither[L, _]`, varying in the second type parameter
-
-Fixing one type parameter gives you a new type constructor that has only one type parameter. We can use this to create the `Applicative`.
+Fixing one type parameter gives you a new type constructor that has only one type parameter. We can use this to create the `Applicative`. Note it's not an `object` now, since we need one per type `L` that we fix for the first type parameter.
 
 {% highlight scala %}
 implicit def MyEitherApplicative[L]: Applicative[({type l[a] = MyEither[L, a]})#l] =
@@ -141,4 +136,25 @@ implicit def MyEitherApplicative[L]: Applicative[({type l[a] = MyEither[L, a]})#
         f <- ef
       } yield f(a)
 }
+{% endhighlight %}
+
+This isn't quite enough: attempting to compile `listOfMyEithers.sequence` gives cryptic error messages about `could not find implicit value for parameter ev: scalaz.Leibniz.===[MyEither[String,Int],G[B]]`, which amounts to saying that it couldn't find the required implicit to prove that `MyEither` has an `Applicative` instance. (The Leibniz part is about the equality condition required between your type and the `Applicative`.)
+
+It's possible to solve this with another type lambda, allowing the compiler to understand how you want to deconstruct the `MyEither` into something that can be expressed with a single type parameter. An easier way is with `sequenceU`, a different implementation of the same idea of `sequence`. With the same imports as above:
+
+{% highlight scala %}
+import scalaz.std.list._
+import scalaz.syntax.traverse._
+val sequencedListOfLefts: MyEither[String, List[Int]] = listOfMyEithers.sequenceU
+{% endhighlight %}
+
+## Woah, what just happened there?
+
+`sequenceU` is a method that implements the same behaviour as `sequence` but expresses the types differently, allowing the types to be inferred. This works through a type called `Unapply` that represents a type with one type parameter, but using a typeclass to provide the relation between the outer and inner types.
+
+The implicit being used here can be created explicitly as the following. This says, paraphrasing the docs: unpack a value of type `MyEither[A, B]` into types `[b]M[A, b]` and `B`, and then find an `Applicative` instance for the partially applied type `MyEither[L, _]`.
+
+{% highlight scala %}
+implicit val u: Unapply[Applicative, MyEither[String, List[Int]]] =
+  Unapply.unapplyMAB2[Applicative, MyEither, String, List[Int]]
 {% endhighlight %}

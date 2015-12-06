@@ -279,12 +279,7 @@ span.post-description {
   border-right: 1px solid #777;
   border-left: 1px solid #f8f8f8;
 }
-@media (max-width: 767px) {
-  .navbar-collapse .nav > .divider-vertical {
-    display: none;
-  }
-}
-@media (max-width: 430px) {
+@media (max-width: 550px) {
   .navbar-collapse {
     display: none;
   }
@@ -308,4 +303,21 @@ blockquote {
 
 pre code {
   border-style: none;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+}
+code {
+  overflow: auto;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: normal;
+}
+pre {
+  border-style: none;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
 }
