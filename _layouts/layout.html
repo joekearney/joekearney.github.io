@@ -5,7 +5,23 @@
   <title>{{ page.title }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
-  <meta name="description" content="{% if page.tags contains 'honeyment' %}{{site.honeyment.tag_description}}{% elsif page.tags contains 'tasty-rsvps' %}{{site.tasty-rsvps.tag_description}}{% elsif page.tags contains 'article' %}{{site.article.tag_description}}{% elsif page.tags contains 'germany' %}{{site.germany.tag_description}}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  {% if page.meta_description %}
+    {% assign meta_description = page.meta_description %}
+  {% elsif page.tags contains 'honeyment' %}
+    {% assign meta_description = site.honeyment.tag_description %}
+  {% elsif page.tags contains 'tasty-rsvps' %}
+    {% assign meta_description = site.tasty-rsvps.tag_description %}
+  {% elsif page.tags contains 'article' %}
+    {% assign meta_description = site.article.tag_description %}
+  {% elsif page.tags contains 'germany' %}
+    {% assign meta_description = site.germany.tag_description %}
+  {% elsif page.description %}
+    {% assign meta_description = page.description %}
+  {% else %}
+    {% assign meta_description = site.description %}
+  {% endif %}
+  <meta name="description" content="{{ meta_description }}" />
+  <meta name="keywords" content="joe kearney,{{ page.tags | join: ',' }},{{ page.keywords | join: ',' }}"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="/favicon.ico">

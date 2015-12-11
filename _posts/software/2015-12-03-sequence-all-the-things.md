@@ -2,12 +2,18 @@
 layout: post
 title: "How to: Sequence All The Things"
 description: "implement sequence on your own types"
+meta_description: "How to add Applicative and Traverse instances for your own types with one or many type parameters, to use sequence, sequenceU, Unapply"
 categories:
 - post
 tags:
 - article
 - howto
 - software
+keywords:
+- scala
+- scalaz
+- sequence
+- applicative
 status: published
 type: post
 author: Joe Kearney
@@ -101,7 +107,7 @@ Then you can do `.sequence` on a `List[MyOption[A]]` and get a `MyOption[List[A]
 {% capture what_is_applicative %}
 ## Sidebar: what is `Applicative`?
 
-From the [scalaz docs](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.1.4/scalaz_2.11-7.1.4-javadoc.jar/!/index.html#scalaz.Applicative) on `Applicative`:
+From the [scalaz docs](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.Applicative) on `Applicative`:
 
 > Whereas a *functor* allows application of a pure function to a value in a context, an *applicative* also allows application of a function in a context to a value in a context
 
@@ -137,7 +143,7 @@ implicit def MyEitherApplicative[L]: Applicative[({type l[a] = MyEither[L, a]})#
 }
 {% endhighlight %}
 
-This isn't quite enough: attempting to compile `listOfMyEithers.sequence` gives cryptic error messages about `could not find implicit value for parameter ev: scalaz.Leibniz.===[MyEither[String,Int],G[B]]`, which amounts to saying that it couldn't find the required implicit to prove that `MyEither` has an `Applicative` instance. (The Leibniz part is about the equality condition required between your type and the `Applicative`.)
+This isn't quite enough: attempting to compile `listOfMyEithers.sequence` gives cryptic error messages about `could not find implicit value for parameter ev: scalaz.Leibniz.===[MyEither[String,Int],G[B]]`, which amounts to saying that it couldn't find the required implicit to prove that `MyEither` has an `Applicative` instance. (The [Leibniz](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.Leibniz) part is about the equality condition required between your type and the `Applicative`.)
 
 It's possible to solve this with another type lambda, allowing the compiler to understand how you want to deconstruct the `MyEither` into something that can be expressed with a single type parameter. An easier way is with `sequenceU`, a different implementation of the same idea of `sequence`. With the same imports as above:
 
