@@ -4,8 +4,8 @@ permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components ]
-title : Joe's Mots
-production_url : http://www.joekearney.co.uk
+title: Joe's Mots
+production_url: "http://www.joekearney.co.uk"
 description: "Trying to be cogent."
 analytics: UA-49379324-1
 #disqus: on

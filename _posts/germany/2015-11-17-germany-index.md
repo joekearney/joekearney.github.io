@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: tag-index
 title: "Das Jo(e)s"
 categories:
 - index
