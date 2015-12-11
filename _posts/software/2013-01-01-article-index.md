@@ -1,5 +1,5 @@
 ---
-layout: tag-index
+layout: layout
 title: "Some Stuff I Wrote"
 categories:
 - index
@@ -7,6 +7,9 @@ tags:
 - article
 - landing
 permalink: /article-index
+sitemap:
+  changefreq: daily
+  priority: 0.9
 
 ---
 

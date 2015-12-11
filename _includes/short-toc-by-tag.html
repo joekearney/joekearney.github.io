@@ -35,6 +35,7 @@
     {% assign hideDrafts = true %}
   {% endif %}
 
+  {% assign totalPostsCount = 0 %}
   {% for post in site.posts %}
     {% if post.categories contains 'post' and post.tags contains {{include.tag}} %}
       {% unless post.tags contains 'landing' %}
@@ -59,13 +60,14 @@
           {% else %}
             {% assign postsNotListed = postsNotListed | plus: 1 %}
           {% endif %}
+          {% assign totalPostsCount = totalPostsCount | plus: 1 %}
         {% endunless %}
       {% endunless %}
     {% endif %}
   {% endfor %}
 
   {% if postsNotListed > 0 %}
-    <li><span class="post-description"><a href="/{{ include.tag }}-index">...more</a></span></li>
+    <li><span class="post-description"><a href="/{{ include.tag }}-index">...see all {{ totalPostsCount }}</a></span></li>
   {% endif %}
 </ul>
 

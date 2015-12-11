@@ -23,7 +23,7 @@ layout: null
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
       <changefreq>weekly</changefreq>
-      <priority>{% if post.categories contains 'index' %}0.9{% else %}0.5{% endif %}</priority>
+      <priority>{% if post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.5{% endif %}</priority>
     </url>
   {% endfor %}
 </urlset>
