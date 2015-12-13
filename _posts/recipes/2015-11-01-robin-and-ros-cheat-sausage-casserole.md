@@ -17,16 +17,16 @@ Serve with mash potatoes (and a nice glass of red of course).
 
 ## Ingredients
 
-Medium onion, chopped
-4 Cumberland sausages
-100g streaky bacon rashers cut into 3 cm pieces
-2 garlic cloves finely chopped
-4 large tomatoes chunky chopped
-Tin of kidney beans (drained)
-Chilli flakes (optional amount)
-fresh thyme
-Chicken stock cube
-200ml water
+* Medium onion, chopped
+* 4 Cumberland sausages
+* 100g streaky bacon rashers cut into 3 cm pieces
+* 2 garlic cloves finely chopped
+* 4 large tomatoes chunky chopped
+* Tin of kidney beans (drained)
+* Chilli flakes (optional amount)
+* fresh thyme
+* Chicken stock cube
+* 200ml water
 
 ## Method
 1. Brown sausages in frying pan (approx 5 mins).
