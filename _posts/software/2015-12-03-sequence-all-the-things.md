@@ -33,8 +33,8 @@ Consider your type to be like `Option` and the other type to be `List`. Starting
 
 You only need a few things in order to make this work:
 
-* an `Applicative[F]` instance for your type
-* a `Traverse[G]` instance for the other type
+* an `Applicative[F]` instance for your type, e.g. `Option`
+* a `Traverse[G]` instance for the other type, e.g. `List`
 * syntax support from `scalaz.syntax.traverse._` to add the `sequence` method to the `G` type
 * consider using `sequenceU` if your type is more complicated than one with a single type parameter
 
