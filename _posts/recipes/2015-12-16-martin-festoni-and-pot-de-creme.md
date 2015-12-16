@@ -20,7 +20,7 @@ Ok, so two recipes, because why not (and because two seems positively restrained
 
 ***
 
-{% include image-float.html src='http://www.antonio-carluccio.com/images/page/lasagne.jpg' txt_alt='Festoni del Ghiottone' caption='Festoni del Ghiottone' id='title-img-float-right' side='right' %}
+{% include image-float.html src='http://www.antonio-carluccio.com/images/page/lasagne.jpg' txt_alt='Festoni del Ghiottone' caption='Festoni del Ghiottone' href='http://www.antonio-carluccio.com/Festoni_del_Ghiottone' id='title-img-float-right' side='right' %}
 
 # Festoni del Ghiottone
 
