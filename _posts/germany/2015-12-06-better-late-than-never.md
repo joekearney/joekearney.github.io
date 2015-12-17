@@ -22,6 +22,11 @@ Work at [SoundCloud](https://soundcloud.com/joejkearney) is a mix of music and e
 
 ***
 
+<div class="image-border-frame inline-image inline-image-right">
+<blockquote class="twitter-tweet" lang="en"><p lang="de" dir="ltr">Ich bin wieder angemeldet!</p>&mdash; Joe Kearney (@joejkearney) <a href="https://twitter.com/joejkearney/status/676713924469878785">December 15, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 Life in Germany for the first couple of months seems to have been basically a game of keeping on top of admin. They love a bit of paperwork.
 
 Two days after we landed, we had to get up at 5am to get in line for an _Anmeldung_, a bit of paper confirming our temporary address for the first month. That allowed us to get a _Schufa_, a credit check to show that we aren't bankrupt in Germany and which allowed us to get a bank account and apply for house rental. We've taken out more forms of insurance than we can remember. We had a letter _in the post_ to tell us that the internet provider didn't have enough detail of our postal address, adding a couple of weeks to delivery. Most phone contracts seem to require you to go into the shop each month to buy more credit. Jo has to fill in a form for her employer's insurance just so that she can work from home.
