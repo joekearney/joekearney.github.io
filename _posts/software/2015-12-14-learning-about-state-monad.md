@@ -8,12 +8,12 @@ categories:
 tags:
 - article
 - software
+- draft
 keywords:
 - scala
 - scalaz
 - state
 - "functional programming"
-- draft
 status: published
 type: post
 author: Joe Kearney
