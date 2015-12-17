@@ -14,15 +14,17 @@ layout: null
   </author>
 
   {% for post in site.posts %}
-  {% if post.categories contains 'post' %}
-  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
-  </entry>
-  {% endif %}
+    {% if post.categories contains 'post' %}
+      {% unless post.tags contains 'draft' %}
+        <entry>
+         <title>{{ post.title }}</title>
+         <link href="{{ site.production_url }}{{ post.url }}"/>
+         <updated>{{ post.date | date_to_xmlschema }}</updated>
+         <id>{{ site.production_url }}{{ post.id }}</id>
+         <content type="html">{{ post.content | xml_escape }}</content>
+        </entry>
+      {% endunless %}
+    {% endif %}
   {% endfor %}
 
 </feed>
