@@ -92,7 +92,7 @@ There are a few standard operations we can use on `State`, which modify the inte
 object State {
   def get[S](): State[S, S] = State { s => (s, s) }
   def set[S, Unit](s2: S): State[S, Unit] = State { s => ((), s2) }
-  def modify(f: S => S): State[S, Unit] = State { s => ((), f(s)) }
+  def modify[S](f: S => S): State[S, Unit] = State { s => ((), f(s)) }
 }
 {% endhighlight %}
 
