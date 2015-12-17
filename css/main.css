@@ -33,10 +33,6 @@ body {
   font-size: 18px;
 }
 
-blockquote p {
-  font-size: 20px;
-}
-
 /*html {
   font-size: 100%;
 }*/
@@ -201,14 +197,39 @@ article p {
 .bs-callout .heading {
   font-weight: bold;
 }
-.bs-callout p, blockquote p {
+.bs-callout p, blockquote:not(.twitter-tweet) p {
   margin: 0;
 }
 
-blockquote p:last-child {
-  margin-bottom: 0;
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
 }
-blockquote {
+/* these bits from the twitter guidance, looks "similar" to the rendered version */
+blockquote.twitter-tweet {
+  display: inline-block;
+  padding: 16px;
+  margin: 10px 0;
+  max-width: 468px;
+  border: #ddd 1px solid;
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  font: bold 14px/18px Helvetica, Arial, sans-serif;
+  color: #000;
+}
+blockquote.twitter-tweet p {
+  font: normal 18px/24px Georgia, "Times New Roman", Palatino, serif;
+  margin: 0 5px 10px 0;
+}
+blockquote.twitter-tweet a[href^="https://twitter.com"] {
+  font-weight: normal;
+  color: #666;
+  font-size: 12px;
+}
+
+blockquote:not(.twitter-tweet) {
   margin: 20px 0;
   padding: 15px 30px 15px 15px;
   border: 1px solid #eee;
@@ -216,6 +237,24 @@ blockquote {
   border-left-width: 5px;
   border-radius: 3px;
   background-color: #f8f8f8;
+}
+blockquote:not(.twitter-tweet) p:last-child {
+  margin-bottom: 0;
+}
+blockquote:not(.twitter-tweet) p.cite {
+  text-align: right;
+  font-size: 18px;
+  font-style: italic;
+}
+blockquote:not(.twitter-tweet) {
+  overflow: auto;
+}
+blockquote:not(.twitter-tweet) p {
+  font-size: 20px;
+}
+blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6,
+blockquote .h1, blockquote .h2, blockquote .h3, blockquote .h4, blockquote .h5, blockquote .h6 {
+  margin-top: 0;
 }
 
 table.highlighttable td.code {
@@ -288,15 +327,6 @@ span.post-description {
   font-size: 16px;
 }
 
-blockquote p.cite {
-  text-align: right;
-  font-size: 18px;
-  font-style: italic;
-}
-blockquote {
-  overflow: auto;
-}
-
 .padding-20 {
   padding: 20px;
 }
@@ -324,4 +354,7 @@ pre {
   white-space: pre;
   word-wrap: normal;
   word-break: normal;
+}
+.inlined {
+  display: inline;
 }
