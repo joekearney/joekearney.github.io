@@ -37,7 +37,7 @@ These algorithms handle failure of a participant by crashing (allowing that it m
 
 The algorithms discussed here are consensus protocols, which provide a way for a number of nodes to decide on a single value. These algorithms are often described in their _single-decree_ form, but in the real world we need to decide on more than one value. Sometimes the extension to deciding a sequence of events (consider a log of multiple transactions, or a counter that receives a stream of increments) is straightforward, sometimes not.
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> look at Paxos Made Live</div>
+{% include todo.html note='look at Paxos Made Live' %}
 
 ***
 
@@ -125,7 +125,7 @@ The important piece is the promise by a majority not to accept other values for 
 
 The Raft algorithm was designed specifically to be easier to learn than Paxos while giving the same guarantees.
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span></div>
+{% include todo.html %}
 
 ***
 
@@ -135,7 +135,7 @@ You may not always need strict 'one-copy' consistency, in which all of the state
 
 It boils down to being able to handle updates being processed out of order. This typically requires some means of conflict resolution (specify some domain-specific rules about how to process the updates, or use time to synchronize) or arranging that updates will never conflict (make operations commutative, associative, idempotent). Updates might need to be constrained to being causally ordered, but that's usually fine too.
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> expand</div>
+{% include todo.html note='expand' %}
 
 There are a few versions of this:
 
@@ -151,13 +151,13 @@ You'll see CRDTs described in two flavours, both of which can be called conflict
 * **commutative** -- the operations one. Nodes send messages describing commutative operations to be performed (for a counter consider addition, with messages like "add three", plus a way of ensuring idempotency).
 * **convergent** -- the state one. Nodes send messages describing the new state, and the state machine has a known way of merging it in (think: "I'm up to five" for each node, with \\(\max(\cdot, \cdot)\\) as the commutative, associative and idempotent merge operation). The states converge to a common value.
 
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> link to David Brooks scalax talk</div>
-<div class="bs-callout bs-callout-danger"><span class="heading">TODO</span> give examples of basic structures</div>
+{% include todo.html note='link to David Brooks scalax talk' %}
+{% include todo.html note='give examples of basic structures' %}
 
 ## Dynamo and Cassandra
 
 Dynamo and Cassandra are the Amazon and Facebook (respectively) implementations of an AP key-value data store. They have many similarities and some important differences. The following is based on the exposition given in the papers published to describe them, and not any more recent changes.
 
-**Dynamo** is the NRW one -- per instance you configure the number \\N\\ of desired replicas of the data, the number \\R\\ of readers required per query
+**Dynamo** is the NRW one -- per instance you configure the number \\(N\\) of desired replicas of the data, the number \\(R\\) of readers required per query
 
 {% comment %}See Slide 58 on http://www.slideshare.net/aszegedi/everything-i-ever-learned-about-jvm-performance-tuning-twitter about Cassandra slab allocator, special GC enabled by every write being sequential{% endcomment %}
