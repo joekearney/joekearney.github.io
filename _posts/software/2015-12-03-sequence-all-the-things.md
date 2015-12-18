@@ -107,7 +107,7 @@ Then you can do `.sequence` on a `List[MyOption[A]]` and get a `MyOption[List[A]
 {% capture what_is_applicative %}
 ## Sidebar: what is `Applicative`?
 
-From the [scalaz docs](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.Applicative) on `Applicative`:
+From the [scalaz docs](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.Applicative) on `Applicative`. Intuitively, start by thinking of _in a context_ as meaning inside a container like `Option`.
 
 > Whereas a *functor* allows application of a pure function to a value in a context, an *applicative* also allows application of a function in a context to a value in a context
 
