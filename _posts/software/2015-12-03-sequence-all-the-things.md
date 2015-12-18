@@ -31,7 +31,7 @@ Consider your type to be like `Option` and the other type to be `List`. Starting
 
 ## Executive summary
 
-You only need a few things in order to make this work:
+You only need a few things in order to make this work, which I'll describe below:
 
 * an `Applicative[F]` instance for your type, e.g. `Option`
 * a `Traverse[G]` instance for the other type, e.g. `List`
