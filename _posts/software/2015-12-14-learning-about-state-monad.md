@@ -38,6 +38,14 @@ The implementation in the book looks like this. The [Scalaz implementation](http
 
 {% highlight scala %}case class State[S, +A](run: S => (A, S)) { ... }{% endhighlight %}
 
+### Motivation
+
+You can use `State` as a pure way to run a computation where you need to modify state but want to hide the intermediate state of a computation.
+
+`State` eliminates a certain class of bugs. The motivation in the book is in using an immutable random number generator by manually composing functions that have a similar signature `Rand[A] => (A, Rand[A])`. You need to pass the right version of the state through to the next function, else you lose an update to your internal state. Using `State`, especially in a for-comprehension, this all happens automatically, and you can't get it wrong.
+
+On the other hand I've heard comments like "I've never actually used it in production", usually accompanied by descriptions of using related structures. So I'm thinking of this as a pedagogical tool for learning about building a program by composing functions, expecting that we as functional programming novices progress, we will soon learn about more sophisticated structures based on the same ideas (I'm looking at you, [`ReaderWriterStateT`](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.package@RWST[F[_],-R,W,S,A]=scalaz.package.ReaderWriterStateT[F,R,W,S,A])) that have more direct application. Thinking about a program in this way is at least a new view on how to compose functionality together.
+
 ## Example: swapping head of a stack
 
 {::options parse_block_html="true" /}
@@ -62,12 +70,13 @@ val f: State[S, S] = for {
 } yield s
 
 // then run it
-val result: S = f.run(List.empty[Int])._1
+val result: S =
+  f.run(List(1, 2, 3, 4, 5))._1
 {% endhighlight %}
 </div>
 {::options parse_block_html="false" /}
 
-As a running example imagine swapping the top two elements of a stack. At each line in the for-comprehension the right-hand-side is some combinator acting on the state, and the type of the thing on the left is the _value type_ from the `State` on the right-hand-side.
+Imagine swapping the top two elements of a stack. At each line in the for-comprehension the right-hand-side is some combinator acting on the state, and the type of the thing on the left is the _value type_ from the `State` on the right-hand-side.
 
 (I'm totally ignoring the case where the input stack has few elements. Just pretend, and we'll cover the error handling aspect another day.)
 
@@ -75,9 +84,13 @@ As with many constructions around monads, _nothing actually happens_ until right
 
 If you want to visualise exactly what's happening, then do so through the `run` functions that are called. The `pop` functions look like `h :: t => (h, t)`, where the input stack is decomposed into head (new value) and tail (new state). After the second invocation of this the "value" is the second item on the input stack.
 
+### Step-by-step
+
 These two values are used later by the `push` commands, which act as if they have side-effects and so "return" `Unit`. They don't have side-effects in any traditional sense (everything is immutable, right?), and they return a value only in the for-comprehension pull-a-value-out-of-the-right sense. This value is available later as an argument.
 
-Finally, `get` turns the internal state into the value of the computation, so that it can be accessed after running the for-comprehension.
+The last function, `get` turns the internal state into the value of the computation, so that it can be accessed after running the for-comprehension.
+
+What is the type of the whole for-comprehension? The non-fixed type parameter is the same as the type of the `yield`ed thing, so we get `State[S, S]`. When we finally run the function that we've built up, `f.run`, we get a pair containing the value and the current internal state, so we pick off the first value of that as our result `List(2, 1, 3, 4, 5)`
 
 <div class="clearfix"></div>
 
