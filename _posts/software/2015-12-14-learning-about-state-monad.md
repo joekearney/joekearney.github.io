@@ -97,7 +97,7 @@ trait M[A] {
 
 Let's step back and look at what's required for a type to be used in a for-comprehension. We need only `map` and `flatMap`, whose types are defined as shown.
 
-The type `M` here can be anything that has one type parameter, or anything that you can make _look like it has_ one type parameter -- it's more about finding a type with the right number of _holes_. In particular, if you have more, you can just fix the other type parameters. In pseudocode it's like saying, for example `type M[_] = State[S, _]`.
+The type `M` here can be anything that has one type parameter, or anything that you can make _look like it has_ one type parameter, which is the input type of the functions you pass to `map` and `flatMap`. In particular, if you have more, you can just fix the other type parameters. In pseudocode it's like saying, for example `type M[_] = State[S, _]`.
 
 At each step, `map` and `flatMap` can change this one type parameter as functions are applied, but the outer type (`State`, for us) and the fixed types (`S`) cannot change. You can't write a for-comprehension over `State` and `Option`, for example, at least not without getting into monad transformers.
 
