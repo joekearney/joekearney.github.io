@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is the State monad?"
-description: ""
+description: "functional programming with state"
 meta_description: "Learning about what the State monad represents and how to use and understand it"
 categories:
 - post
