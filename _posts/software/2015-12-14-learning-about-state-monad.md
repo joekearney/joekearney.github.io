@@ -8,7 +8,6 @@ categories:
 tags:
 - article
 - software
-- draft
 keywords:
 - scala
 - scalaz
