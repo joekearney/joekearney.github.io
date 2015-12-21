@@ -33,6 +33,8 @@ Set the following variables to use this include:
 {% endunless %}
 {% unless include.header-only %}
 
+{% assign totalWordCount = 0 %}
+
       <ul class="listing">
         {% if include.orderAscending %}
           {% assign orderedPosts = site.posts | reverse %}
@@ -44,18 +46,20 @@ Set the following variables to use this include:
           {% unless post.tags contains 'draft' and hideDrafts %}
             {% unless post.tags contains 'landing' %}
               {% if post.categories contains 'post' and post.tags contains include.tag %}
-                  <li>
-                    {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                    {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-                    <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-                    {% if post.description %}
-                      {% unless post.description == "" %}
-                        <span class="post-description">&ndash; {{ post.description }}</span>
-                      {% endunless %}
-                    {% endif %}
-                    <span class="post-author"> &ndash; {{ post.author }}</span>
-                  </li>
+                {% assign postWords = post.content | number_of_words %}
+                {% assign totalWordCount = totalWordCount | plus: postWords %}
+                <li>
+                  {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                  {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+                  <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
+                  {% if post.description %}
+                    {% unless post.description == "" %}
+                      <span class="post-description">&ndash; {{ post.description }}</span>
+                    {% endunless %}
+                  {% endif %}
+                  <span class="post-author"> &ndash; {{ post.author }}</span>
+                </li>
               {% endif %}
             {% endunless %}
           {% endunless %}
@@ -65,7 +69,7 @@ Set the following variables to use this include:
       {% if include.include_footer %}
         {% include {{ include.include_footer }} %}
       {% endif %}
-
+      
     </div></div>
   </section>
 </div>
