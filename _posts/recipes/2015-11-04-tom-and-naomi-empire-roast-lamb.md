@@ -18,6 +18,10 @@ title_image_float_right_alt: "Empire Roast Lamb"
 title_image_float_right_text: "Empire Roast Lamb"
 ---
 
+My favourite of Jamie's. It is not a quick recipe but it is tasty and awesome for big groups.
+
+***
+
 Beautifully tender roast lamb marinated with a whole load of spice to give you amazingly gnarly, sticky, sweet but feisty Empire roast lamb.
 
 _Serves: 10_<br />
