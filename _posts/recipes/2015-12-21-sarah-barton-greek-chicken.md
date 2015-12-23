@@ -18,7 +18,7 @@ title_image_float_right_alt: "Gorgeous Greek Chicken"
 title_image_float_right_text: "Gorgeous Greek Chicken"
 ---
 
-Here is my recipe (stolen from JO) for you to add to your cook book. It's so quick and easy to do when people come over. Enjoy!
+Here is my recipe (stolen from <abbr title="Jamie Oliver?">JO</abbr>) for you to add to your cook book. It's so quick and easy to do when people come over. Enjoy!
 
 ***
 
