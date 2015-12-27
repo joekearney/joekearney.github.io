@@ -3,8 +3,10 @@
     {% if include.title_image_href %}
       <a href="{{include.title_image_href}}">
     {% endif %}
-        <div class="title-image">
-          <img src="{{ include.title_image_img }}" alt="{{ include.title_image_alt }}" title="{{ include.title_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div-{{include.page-id}}').style.display = 'none';">
+        <div class="title-image" {% if include.title_image_max_height %}style="max-height: {{include.title_image_max_height}};"{% endif %}>
+          <img src="{{ include.title_image_img }}" alt="{{ include.title_image_alt }}" title="{{ include.title_image_alt }}" onerror="this.onerror=null;this.src='';document.getElementById('page-title-img-parent-div-{{include.page-id}}').style.display = 'none';"
+          {% if include.title_image_max_height %}style="max-height: {{include.title_image_max_height}};"{% endif %}
+          >
         </div>
     {% if include.title_image_href %}
       </a>
@@ -15,7 +17,7 @@
   {% if include.title_image_href %}
     <a href="{{include.title_image_href}}">
   {% endif %}
-      <div class="title-image">
+      <div class="title-image" {% if include.title_image_max_height %}style="max-height: {{include.title_image_max_height}};"{% endif %}>
         <iframe src="{{ include.title_image_iframe }}" width="100%" height="100%" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
       </div>
   {% if include.title_image_href %}

@@ -1,13 +1,14 @@
 <section class="byline">
   <div class="row">
-    <div class="col-xs-8">
+    <div class="col-sm-8">
       {% unless include.tags contains 'no-date' %}{{ include.date | date: "%B %e, %Y" }}{% endunless %}
       {% if include.author %}{% assign authorArray = include.author | join: "|" | split: "|" %}
         &ndash; {{ authorArray | array_to_sentence_string }}
       {% endif %}
       &ndash; {% include time-to-read.html %}
     </div>
-    <div class="col-xs-4 article-index-link">
+    <div class="col-sm-4 article-index-link">
+      {% include auto-tag-index-link.html %}
     </div>
   </div>
   {% if include.source %}
