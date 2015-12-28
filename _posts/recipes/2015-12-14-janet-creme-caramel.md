@@ -28,8 +28,8 @@ published: true
 
 ### For the custard:
 
-* 150 ml milk
-* 275 ml single cream (relative amounts of milk and cream can be varied)
+* 150ml milk
+* 275ml single cream (relative amounts of milk and cream can be varied)
 * 4 large eggs
 * 40g brown sugar
 * 1 vanilla pod
