@@ -366,7 +366,7 @@ pre {
   border: none;
 }
 
-ul, ol {
+ul:not(.listing), ol {
   list-style-position: inside;
   margin-left: 1em;
   display: table;
