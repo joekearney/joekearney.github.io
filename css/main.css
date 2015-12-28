@@ -366,6 +366,8 @@ pre {
   border: none;
 }
 
-li {
+ul, ol {
   list-style-position: inside;
+  margin-left: 1em;
+  display: table;
 }
