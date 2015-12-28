@@ -360,3 +360,12 @@ pre {
 .inlined {
   display: inline;
 }
+
+.janet-frame > img {
+  padding-bottom: 10px;
+  border: none;
+}
+
+li {
+  list-style-position: inside;
+}
