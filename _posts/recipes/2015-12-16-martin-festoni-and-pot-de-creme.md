@@ -9,7 +9,7 @@ tags:
 - tasty-rsvps
 - wedding
 - tasty-rsvps-sweet
-- tasty-rsvps-ssvoury
+- tasty-rsvps-savoury
 status: publish
 type: post
 published: true
