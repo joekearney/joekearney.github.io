@@ -47,12 +47,12 @@ Bake for 35min or until starts to smell cakey and cake tester comes out clean.
 
 NB This makes one seven inch cake! Not a birthday cake size!
 
-# Chocolate Fudge Icing
+## Chocolate Fudge Icing
 
-* 1.5 0z butter
-* 1 Oz cocoa,sieved ,2 tablespoon equivalent
+* 1.5 oz butter
+* 1 oz cocoa, sieved, 2 tablespoon equivalent
 * 1.5 ish tablespoon evaporated milk
-* 4 Oz icing sugar
+* 4 oz icing sugar
 * 0.5 tsp vanilla essence
 
 Melt butter, add cocoa, cook over low heat for a minute. Remove from heat, add evaporated milk and icing sugar. Mix thoroughly, spread over cake.
