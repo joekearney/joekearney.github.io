@@ -102,12 +102,10 @@ article p {
   margin-right: auto;
   max-width: 500px;
 }
-@media (max-width: 754px) {
-  .inline-image-cap p {
-    text-align: center;
-  }
+.inline-image-cap, .inline-image-cap p {
+  text-align: center;
 }
-@media (min-width: 755px) {
+@media (min-width: 768px) {
   .inline-image-right {
     float: right;
     margin-left: 20px;
@@ -366,8 +364,11 @@ pre {
   border: none;
 }
 
-ul:not(.listing), ol {
-  list-style-position: inside;
-  margin-left: 1em;
-  display: table;
+ul, ol {
+  list-style-position: outside;
+  overflow: auto;
+  padding-left: 40px;
+}
+ul .listing, ul .nav {
+  padding-left: 0;
 }
