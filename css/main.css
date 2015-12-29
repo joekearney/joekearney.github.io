@@ -102,6 +102,11 @@ article p {
   margin-right: auto;
   max-width: 500px;
 }
+@media (max-width: 500px) {
+  .inline-image img {
+    max-width: 100%;
+  }
+}
 .inline-image-cap, .inline-image-cap p {
   text-align: center;
 }
@@ -371,4 +376,10 @@ ul, ol {
 }
 ul .listing, ul .nav {
   padding-left: 0;
+}
+@media (max-width: 383px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

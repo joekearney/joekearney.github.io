@@ -25,6 +25,7 @@ Set the following variables to use this include:
           <p>{{ include.description }}.</p>
         {% endif %}
       </div>
+    </div></div>
 
       {% if include.include_sub_header %}
         {% include {{ include.include_sub_header }} %}
@@ -35,6 +36,7 @@ Set the following variables to use this include:
 
 {% assign totalWordCount = 0 %}
 
+  <div class="row"><div class="col-md-12">
       <ul class="listing">
         {% if include.orderAscending %}
           {% assign orderedPosts = site.posts | reverse %}
@@ -69,7 +71,7 @@ Set the following variables to use this include:
       {% if include.include_footer %}
         {% include {{ include.include_footer }} %}
       {% endif %}
-      
+
     </div></div>
   </section>
 </div>

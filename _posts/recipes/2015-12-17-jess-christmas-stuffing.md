@@ -11,6 +11,7 @@ tags:
 status: publish
 type: post
 published: true
+title_image_img: /images/jess-sausage-stuffing.jpg
 ---
 
 I am attaching a very special family recipe on behalf of my dearly loved and much missed Grandma Elisabeth. I will be making it myself in just a few days' time as it's a key part of the Harvey and Carter Christmas traditions! It's a lovely thought for us that it may become part of the Kearney-Heald Christmas as well :)
