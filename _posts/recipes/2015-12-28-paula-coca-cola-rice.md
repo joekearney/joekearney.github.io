@@ -9,6 +9,7 @@ categories:
 tags:
 - tasty-rsvps
 - wedding
+- tasty-rsvps-savoury
 status: publish
 type: post
 published: true
