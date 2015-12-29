@@ -5,9 +5,11 @@
       {% if include.author %}{% assign authorArray = include.author | join: "|" | split: "|" %}
         &ndash; {{ authorArray | array_to_sentence_string }}
       {% endif %}
-      {% unless include.tags contains 'tasty-rsvps' %}
-      &ndash; {% include time-to-read.html %}
-      {% endunless %}
+      {% if include.categories contains 'posts' %}
+        {% unless include.tags contains 'tasty-rsvps' %}
+        &ndash; {% include time-to-read.html %}
+        {% endunless %}
+      {% endif %}
     </div>
     <div class="col-sm-4 article-index-link">
       {% include auto-tag-index-link.html %}

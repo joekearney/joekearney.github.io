@@ -6,7 +6,7 @@ layout: layout
   <article>
     {% include post-header.html title=page.title description=page.description description-newline=page.description-newline %}
 
-    {% include post-byline.html tags=page.tags date=page.date author=page.author source=page.source %}
+    {% include post-byline.html tags=page.tags date=page.date author=page.author source=page.source categories=page.categories %}
 
     {% include post-header-image.html title_image_img=page.title_image_img title_image_alt=page.title_image_alt page-id=page.id title_image_href=page.title_image_href title_image_iframe=page.title_image_iframe title_image_max_height=page.title_image_max_height %}
 
