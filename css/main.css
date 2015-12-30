@@ -377,9 +377,3 @@ ul, ol {
 ul .listing, ul .nav {
   padding-left: 0;
 }
-@media (max-width: 383px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
