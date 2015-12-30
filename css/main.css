@@ -1,8 +1,17 @@
 /* big block title */
-.title h1 {
-  font-size: 45pt;
+.title h1, .title h1 a, .title h1 span {
   text-align: center;
   border-bottom: 1px solid #ddd;
+}
+@media (max-width: 450px) {
+  .title h1, .title h1 a, .title h1 span {
+    font-size: 56px;
+  }
+}
+@media (min-width: 451px) {
+  .title h1, .title h1 a, .title h1 span {
+    font-size: 72px;
+  }
 }
 /* subtitle of big block title */
 .title p {
@@ -46,6 +55,7 @@ body {
   text-align: center;
 /*  background: black; */
   margin-bottom: 25px;
+  margin-top: 15px;
 }
 .title-image img {
   display: inline;
@@ -79,6 +89,7 @@ article img {
 article p {
   text-align: justify;
 }
+listing
 
 /* TODO rename */
 .inline-image {
@@ -125,17 +136,26 @@ article p {
   }
 }
 
-@media (max-width:383) {
+@media (max-width:383px) {
   .title-image > iframe { height: 256px; }
-  .title-image, .title-image > img { max-height: 256px; }
+  .title-image, .title-image > img {
+    max-height: 256px;
+    max-width: 100%;
+  }
 }
 @media (min-width:384px) and (max-width:450px) {
   .title-image > iframe { height: 384px; }
-  .title-image, .title-image > img { max-height: 384px; }
+  .title-image, .title-image > img {
+    max-height: 384px;
+    max-width: 100%;
+  }
 }
 @media (min-width:451px) {
   .title-image > iframe { height: 512px; }
-  .title-image, .title-image > img { max-height: 512px; }
+  .title-image, .title-image > img {
+    max-height: 512px;
+    max-width: 100%;
+  }
 }
 .title-image > iframe {
   width: 100%;
@@ -376,4 +396,5 @@ ul, ol {
 }
 ul .listing, ul .nav {
   padding-left: 0;
+  text-align: left;
 }
