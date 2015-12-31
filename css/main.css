@@ -328,13 +328,12 @@ span.post-description {
 }
 
 .map-full-width {
-  position: absolute;
   left: 0;
   right: 0;
   height: 400px;
 }
 .filler-400px {
-  margin-bottom: 420px;
+  margin-bottom: 400px;
 }
 .navbar .divider-vertical {
   height: 30px;
@@ -397,4 +396,8 @@ ul, ol {
 ul .listing, ul .nav {
   padding-left: 0;
   text-align: left;
+}
+
+.category-stats {
+  text-align: center;
 }

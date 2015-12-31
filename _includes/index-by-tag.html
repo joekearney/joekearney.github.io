@@ -6,6 +6,7 @@ Set the following variables to use this include:
   [include_sub_header] - name of a file to include as a sub header, relative to the post
   [orderAscending] - to make the posts appear chronologically (default is most recent first)
   [showDrafts] - default false
+  [showStats] - default false - show time to read and word counts
 
 {% endcomment %}
 
@@ -34,8 +35,6 @@ Set the following variables to use this include:
 {% endunless %}
 {% unless include.header-only %}
 
-{% assign totalWordCount = 0 %}
-
   <div class="row"><div class="col-md-12">
       <ul class="listing">
         {% if include.orderAscending %}
@@ -44,6 +43,7 @@ Set the following variables to use this include:
           {% assign orderedPosts = site.posts %}
         {% endif %}
 
+        {% assign totalWordCount = 0 %}
         {% for post in orderedPosts %}
           {% unless post.tags contains 'draft' and hideDrafts %}
             {% unless post.tags contains 'landing' %}
@@ -60,7 +60,9 @@ Set the following variables to use this include:
                       <span class="post-description">&ndash; {{ post.description }}</span>
                     {% endunless %}
                   {% endif %}
-                  <span class="post-author"> &ndash; {{ post.author }}</span>
+                  {% if post.author %}{% assign authorArray = post.author | join: "|" | split: "|" %}
+                    <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
+                  {% endif %}
                 </li>
               {% endif %}
             {% endunless %}
@@ -70,6 +72,23 @@ Set the following variables to use this include:
 
       {% if include.include_footer %}
         {% include {{ include.include_footer }} %}
+      {% endif %}
+
+      {% if include.showStats %}
+      <div class="category-stats">
+        {% assign mins = totalWordCount | plus:90 | divided_by: 180 %}
+        {% assign hours = mins | divided_by: 60 %}
+        {% assign full_hours_in_mins = hours | times: 60 %}
+        {% assign mins_rem = mins | minus: full_hours_in_mins %}
+        <p>{{hours}}h{{mins_rem}}m to read
+          {% if totalWordCount > 2000 %}
+            {{ totalWordCount | plus: 500 | divided_by: 1000 }}k
+          {% else %}
+            {{ totalWordCount }}
+          {% endif %}
+          words
+        </p>
+      </div>
       {% endif %}
 
     </div></div>
