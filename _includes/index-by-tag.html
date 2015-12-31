@@ -80,13 +80,15 @@ Set the following variables to use this include:
         {% assign hours = mins | divided_by: 60 %}
         {% assign full_hours_in_mins = hours | times: 60 %}
         {% assign mins_rem = mins | minus: full_hours_in_mins %}
-        <p>{{hours}}h{{mins_rem}}m to read
+        {% capture display_wc %}
           {% if totalWordCount > 2000 %}
             {{ totalWordCount | plus: 500 | divided_by: 1000 }}k
           {% else %}
             {{ totalWordCount }}
           {% endif %}
-          words
+        {% endcapture %}
+
+        <p>Estimated {{hours}}h{{mins_rem}}m reading time for {{display_wc}} words
         </p>
       </div>
       {% endif %}
