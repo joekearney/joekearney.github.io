@@ -5,7 +5,7 @@
       {% if include.author %}{% assign authorArray = include.author | join: "|" | split: "|" %}
         &ndash; {{ authorArray | array_to_sentence_string }}
       {% endif %}
-      {% if include.categories contains 'posts' %}
+      {% if include.categories contains 'post' %}
         {% unless include.tags contains 'tasty-rsvps' %}
         &ndash; {% include time-to-read.html %}
         {% endunless %}
