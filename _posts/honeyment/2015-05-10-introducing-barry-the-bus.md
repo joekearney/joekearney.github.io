@@ -17,7 +17,7 @@ The New Zealand road trip started as usual, with a night-time arrival at the fir
 
 Jo finally drove us off the forecourt after we'd spent two and a half hours at the Britz hire place, a hive of inefficiency. The time waiting did give us a chance to scavenge through stuff left by the previous hirers of camper vans; beans, cling film and an apparently-unopened jar of herbs covered in drips of soy sauce. (We left the herbs.) Our new steed was quickly dubbed Barry the Britz Bus, and Harry the ginger tent fits neatly in the boot.
 
-Our first night stop was Akaroa, a small town two hours south-east at the end of a peninsula, set on the giant estuary Akatoa* Harbour. After relaxing with a glass of wine that nearly slid of the table we had such a comfortable night's sleep that we overslept. (Note to self: buy a sleeping mat next time in Harry.) We were woken by a seagull walking over the roof barely inches above us and found, not for the last time I suspect, a stunning vista over the harbour below.
+Our first night stop was Akaroa, a small town two hours south-east at the end of a peninsula, set on the giant estuary Akatoa* Harbour. After relaxing with a glass of wine that nearly slid off the table we had such a comfortable night's sleep that we overslept. (Note to self: buy a sleeping mat next time in Harry.) We were woken by a seagull walking over the roof barely inches above us and found, not for the last time I suspect, a stunning vista over the harbour below.
 
 The town Arakoa* is notable for being the only attempt by the French to establish a colony in New Zealand, and so there's tricolore bunting everywhere and some of the shops have a French name. Some should really try harder though -- looking at you, Le Thai and Le Bike Hire.
 
