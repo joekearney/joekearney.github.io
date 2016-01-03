@@ -20,6 +20,7 @@ title_image_float_right_text: "Gooey Chocolate Fondant"
 ---
 
 We've used this one before and it's awesome. Great for dinner parties – much easier than they look.
+
 Also freezes well if you can't eat all 9 that should come out :)
 
 ***
@@ -38,6 +39,8 @@ _Serves: 6_
 * [Caramel sauce](http://www.bbcgoodfood.com/recipes/8167/caramel-sauce) and vanilla ice cream or orange sorbet, to serve
 
 ## Method
+
+{% include image-float.html src='/images/chris-sophie-recipe.png' txt_alt='Chris, Sophie and Cake' id='chris-sophie-made-cake-img' side='right' %}
 
 1. First get your moulds ready. Using upward strokes, heavily brush the melted butter all over the inside of the pudding mould. Place the mould in the fridge or freezer. Brush more melted butter over the chilled butter, then add a good spoonful of cocoa powder into the mould. Tip the mould so the powder completely coats the butter. Tap any excess cocoa back into the jar, then repeat with 1 the next mould.
 1. Place a bowl over a pan of barely simmering water, then slowly melt the chocolate and butter together. Remove bowl from the heat and stir until smooth. Leave to cool for about 10 mins.

@@ -390,7 +390,7 @@ pre {
 
 ul, ol {
   list-style-position: outside;
-  overflow: auto;
+  overflow: visible;
   padding-left: 40px;
 }
 ul .listing, ul .nav {

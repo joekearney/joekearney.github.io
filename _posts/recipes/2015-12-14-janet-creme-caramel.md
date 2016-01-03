@@ -14,7 +14,7 @@ type: post
 published: true
 ---
 
-<div class="image-border-frame inline-image inline-image-left inline-image-with-caption janet-frame" id="img-parent-div-for-janet-pictures">
+<div class="image-border-frame inline-image inline-image-right inline-image-with-caption janet-frame" id="img-parent-div-for-janet-pictures">
   <img src='/images/janet-creme-caramel/Picture1.png' id="img-janet-1" />
   <img src='/images/janet-creme-caramel/Picture2.png' id="img-janet-2" />
   <img src='/images/janet-creme-caramel/Picture3.png' id="img-janet-3" />
