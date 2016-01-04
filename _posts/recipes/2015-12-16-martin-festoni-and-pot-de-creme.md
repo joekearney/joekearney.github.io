@@ -72,7 +72,7 @@ Put the tin into the preheated oven for 25 minutes. When ready, golden and sizzl
 
 # Chocolate Pot De Crème
 
-And to follow, my go-to, actually-super-easy-but-looks-quite-impressive dinner party dessert: Chocolate Pot De Crème from the highly recommend [Balthazar Cookbook](http://www.amazon.co.uk/Balthazar-Cookbook-Keith-McNally/dp/1906650330).
+And to follow, my go-to, actually-super-easy-but-looks-quite-impressive dinner party dessert: Chocolate Pot De Crème from the highly recommended [Balthazar Cookbook](http://www.amazon.co.uk/Balthazar-Cookbook-Keith-McNally/dp/1906650330).
 
 Named for the chubby porcelain pots that they're typically baked in, these chocolate custards are intensely flavoured and smooth. Bake and serve them in the traditional lidded porcelains, ramekins or even espresso cups. Experiment with combinations of dark and milk chocolates for a varying depth of flavour - just be sure to use the best quality chocolate.
 

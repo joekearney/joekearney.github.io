@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sarah's Gorgeous Greek Chicken"
-author: "Sarah Barton"
+author: "Sarah Horley"
 description-newline: true
 categories:
 - post

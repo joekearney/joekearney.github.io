@@ -14,7 +14,7 @@ type: post
 published: true
 ---
 
-our recipe from the good old days when we cooked nice meals for each other ;-)
+Our recipe from the good old days when we cooked nice meals for each other ;-)
 
 ***
 

@@ -30,7 +30,7 @@ Here is a special Horley family recipe: Paradise Squares
 
 ## Method
 
-1. put pastry in 12x8inch tin
+1. Put pastry in 12x8inch tin
 1. Cream the margarine and sugar in a bowl
 1. Beat the egg and add to bowl along with other ingredients
 1. Smooth mixture into pastry and bake in the over @ 170C for 30 mins
