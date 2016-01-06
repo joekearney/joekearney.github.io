@@ -15,7 +15,7 @@ title_image_iframe: "https://www.flickr.com/photos/joekearney/16714796062/in/alb
 
 There's nothing to see on the train from Singapore to Kuala Lumpur but palm trees, so what better way to pass the time but on my laptop!
 
-We've been kindly hosted on our short stop in Singapore by Jenny and Dan from Jo's college days, and Tones from mine. Many thanks to them, you've given us a great start to our time away!
+We've been kindly hosted on our short stop in Singapore by Jenny and Dan from Jo's college days, and Sarah and Tones from mine. Many thanks to them, you've given us a great start to our time away!
 
 Travelling got off to an appropriately middle-class start in a date with St Catharine's college alumni, a meal in a family restaurant with a karaoke-singing host and free-flowing wine. Hangover successfully defeated jet lag.
 

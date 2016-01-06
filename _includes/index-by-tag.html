@@ -44,12 +44,14 @@ Set the following variables to use this include:
         {% endif %}
 
         {% assign totalWordCount = 0 %}
+        {% assign totalPosts = 0 %}
         {% for post in orderedPosts %}
           {% unless post.tags contains 'draft' and hideDrafts %}
             {% unless post.tags contains 'landing' %}
               {% if post.categories contains 'post' and post.tags contains include.tag %}
                 {% assign postWords = post.content | number_of_words %}
                 {% assign totalWordCount = totalWordCount | plus: postWords %}
+                {% assign totalPosts = totalPosts | plus: 1 %}
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
@@ -88,8 +90,7 @@ Set the following variables to use this include:
           {% endif %}
         {% endcapture %}
 
-        <p>Estimated {{hours}}h{{mins_rem}}m reading time for {{display_wc}} words
-        </p>
+        <p>Estimated {{hours}}h{{mins_rem}}m reading time for {{display_wc}} words in {{ totalPosts }} posts</p>
       </div>
       {% endif %}
 
