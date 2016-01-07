@@ -75,7 +75,7 @@ For a start, scalaz provides the `Traverse[List]` instance for us. This import s
 
 {% highlight scala %}
 import scalaz.std.list._
-  import scalaz.syntax.traverse._
+import scalaz.syntax.traverse._
 {% endhighlight %}
 
 Now you need an `Applicative` for `MyOption`. It turns to be easier to create a `Monad`, which extends `Applicative` anyway.
