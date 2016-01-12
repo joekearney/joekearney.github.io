@@ -23,8 +23,6 @@ Here is my recipe (stolen from <abbr title="Jamie Oliver?">JO</abbr>) for you to
 
 ***
 
-Beautifully tender roast lamb marinated with a whole load of spice to give you amazingly gnarly, sticky, sweet but feisty Empire roast lamb.
-
 _Serves: 4_<br />
 _Time: 15 minutes_
 
@@ -59,10 +57,10 @@ _Time: 15 minutes_
 
 ## Method
 
-Ingredients out • Kettle boiled • Large frying pan, medium-high heat • Food processor (bowl blade)
+Ingredients out, kettle boiled, large frying pan, medium-high heat, food processor (bowl blade).
 
-Put 1 mug of couscous and 2 mugs of boiling water into a bowl with a small pinch of salt and cover • On a large sheet of greaseproof paper, toss the chicken with salt, pepper, the oregano, allspice and finely grated lemon zest • Fold over the paper, then bash and flatten the chicken to 1.5cm thick with a rolling pin • Put into the frying pan with 2 tablespoons of olive oil, turning after 3 or 4 minutes, until golden and cooked through
+Put 1 mug of couscous and 2 mugs of boiling water into a bowl with a small pinch of salt and cover. On a large sheet of greaseproof paper, toss the chicken with salt, pepper, the oregano, allspice and finely grated lemon zest. Fold over the paper, then bash and flatten the chicken to 1.5cm thick with a rolling pin. Put into the frying pan with 2 tablespoons of olive oil, turning after 3 or 4 minutes, until golden and cooked through.
 
-Using a box grater, coarsely grate the cucumber • Sprinkle it with a small pinch of salt, then squeeze and scrunch with clean hands to get rid of the excess salty water • Pop in a bowl with the yoghurt, juice of ½ a lemon and a pinch of pepper, finely chop and add the top leafy half of the mint, then mix together • Remove the stalk and seeds from the peppers and chilli, then pulse in the processor with the trimmed spring onions and the dill until finely chopped • Scatter over a large tray or platter
+Using a box grater, coarsely grate the cucumber. Sprinkle it with a small pinch of salt, then squeeze and scrunch with clean hands to get rid of the excess salty water. Pop in a bowl with the yoghurt, juice of ½ a lemon and a pinch of pepper, finely chop and add the top leafy half of the mint, then mix together. Remove the stalk and seeds from the peppers and chilli, then pulse in the processor with the trimmed spring onions and the dill until finely chopped. Scatter over a large tray or platter.
 
-Add the peas to the veg (if using frozen peas, blanch them in boiling water for a couple of minutes first), destone and tear over the olives, then squeeze over the juice of the zested lemon and add the extra virgin olive oil • Fluff up and scatter over the couscous, toss well and season to taste • Move the cooked chicken to a board, slice it up, then lay it around the couscous • Crumble over the feta and serve with the tzatziki
+Add the peas to the veg (if using frozen peas, blanch them in boiling water for a couple of minutes first), destone and tear over the olives, then squeeze over the juice of the zested lemon and add the extra virgin olive oil. Fluff up and scatter over the couscous, toss well and season to taste. Move the cooked chicken to a board, slice it up, then lay it around the couscous. Crumble over the feta and serve with the tzatziki.

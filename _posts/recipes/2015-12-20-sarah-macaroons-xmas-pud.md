@@ -18,7 +18,7 @@ Here are two family Christmas recipes, one each from each of my wonderful grandm
 
 Sarah xxx
 
-## Grandma Joan’s Macaroons
+## Grandma Joan's Macaroons
 
 _(makes 10)_
 
@@ -43,7 +43,7 @@ This is my grandma’s macaroon recipe -- she used to make vast quantities every
 
 ***
 
-## Grandma Sue’s Christmas Pudding
+## Grandma Sue's Christmas Pudding
 
 My Australian grandma got this recipe from her own mother. When my grandparents first moved to the UK in the fifties, my great-grandmother would send them Christmas puddings by sea mail from Tasmania in a calico pudding cloth. Apparently they keep for more than a year. We still have it every year for Christmas.
 

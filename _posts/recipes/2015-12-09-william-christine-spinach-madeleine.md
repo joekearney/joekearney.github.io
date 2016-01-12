@@ -49,10 +49,10 @@ _From start to finish I can knock this out in about 35-45 minutes depending on s
 1dd the chopped onions and cook until soft but not brown.    
 1. Slowly add the evaporated milk and vegetable liquor, stirring constantly to avoid lumps. Cook until smooth and thick, continue stirring while adding the pepper, garlic salt, celery salt and Worcestershire sauce.
 1. Add the cut up cheese and cook until the cheese is completely melted.
-1. **READ CAREFULLY**:  Now the tricky part!!! Stirring in the Red (Cayenne) Pepper!! The receipt says to add red pepper to taste. Go slowly and add a bit at a time, a few shakes over the simmering sauce then dab on finger to test. Note: It will take a few seconds for taste buds to discover the delicate seasonings. Repeat until you find the amount right for you. It should have a bite to it in the end. You can always blend in a little more to spice it up but you can’t tone it down if you put in too much.
+1. **READ CAREFULLY**:  Now the tricky part!!! Stirring in the Red (Cayenne) Pepper!! The recipe says to add red pepper to taste. Go slowly and add a bit at a time, a few shakes over the simmering sauce then dab on finger to test. Note: It will take a few seconds for taste buds to discover the delicate seasonings. Repeat until you find the amount right for you. It should have a bite to it in the end. You can always blend in a little more to spice it up but you can’t tone it down if you put in too much.
 1. When step 6 is completed pour the onion and cheese sauce over the well drained spinach and blend thoroughly. The final concoction may be served immediately or put into a casserole and topped with buttered bread crumbs (I do not do the bread crumb bit, never have). I feel the flavor is enhanced if the latter is done and the finished product is kept in the refrig overnight, then reheated. This can easily serve 12-16 people and is great with just about any type of meat, especially beef. Any extra amounts can be bagged in a zip lock bag or put in a plastic container, then frozen for future use.
 
-**NOTE**: It is very important to be accurate when adding the liquids and cheese as this insures the proper consistency of the final product -- not to thick, not to runny.
+**NOTE**: It is very important to be accurate when adding the liquids and cheese as this ensures the proper consistency of the final product -- not too thick, not too runny.
 
 ***
 
