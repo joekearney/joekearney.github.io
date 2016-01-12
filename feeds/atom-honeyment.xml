@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include atom-for-tag.xml tag='honeyment' title=site.honeyment.tag_name description=site.honeyment.tag_description sectionPath=site.honeyment.index_path %}

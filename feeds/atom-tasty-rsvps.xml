@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include atom-for-tag.xml tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description sectionPath=site.tasty-rsvps.index_path %}

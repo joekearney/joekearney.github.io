@@ -81,7 +81,7 @@ Bake 30 to 35 minute or until toothpick inserted in center comes out with fudgy 
 
 Cool brownies, then cut* them into 3/4- to 1-inch squares for use in the cheesecake. You will have more than the two cups of cubes, loosely measured, than you will need, and I’m sorry, you’re just going to have to decide for yourself what to do with the extra. Add cubes to cake batter as directed below.
 
-I find that brownies are fantastically easy to cut once they’ve been refrigerated–you end up with nice clean lines, and in this case, a sharp pizza wheel was especially helpful. Also, brownies taste better cold. I’m just saying.
+\*I find that brownies are fantastically easy to cut once they’ve been refrigerated–you end up with nice clean lines, and in this case, a sharp pizza wheel was especially helpful. Also, brownies taste better cold. I’m just saying.
 
 ### Part Two: Crumb Crust
 Adapted from Gourmet, 1999

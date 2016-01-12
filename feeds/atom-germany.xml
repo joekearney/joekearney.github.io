@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include atom-for-tag.xml tag='germany' title=site.germany.tag_name description=site.germany.tag_description sectionPath=site.germany.index_path %}

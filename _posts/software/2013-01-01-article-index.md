@@ -5,6 +5,7 @@ categories:
 - index
 tags:
 - article
+- software
 - landing
 permalink: /article-index
 sitemap:

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+{% comment %}
+Parameters:
+
+  title - appended to the site title
+  description
+  sectionPath - url component, or empty to default to the tag
+  tag - tag of posts to include
+{% endcomment %}
+
+{% unless include.sectionPath and include.sectionPath != "" %}
+  {% assign sectionPath = include.tag %}
+{% else %}
+  {% assign sectionPath = include.sectionPath %}
+{% endunless %}
+
+{% capture xml %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ include.title }}</title>
+  <subtitle>{{ include.description }}</subtitle>
+  <link href="{{ site.production_url }}/{{ include.sectionPath }}"/>
+  <link href="{{ site.production_url }}/feeds/atom-{{ include.tag }}.xml" rel="self" type="application/atom+xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.production_url }}/{{ sectionPath }}</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+  </author>
+
+  {% for post in site.posts %}
+    {% if post.categories contains 'post' and post.tags contains {{include.tag}} %}{% unless post.tags contains 'draft' %}
+      <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <link href="{{ site.production_url }}{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>{{ site.production_url }}{{ post.id }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
+        <author>
+          {% for a in post.author %}<name>{{ a }}</name>{% endfor %}
+        </author>
+      </entry>
+    {% endunless %}{% endif %}
+  {% endfor %}
+</feed>
+{% endcapture %}
+{{ xml }}

@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include atom-for-tag.xml tag='software' title=site.article.tag_name description=site.article.tag_description sectionPath=site.article.index_path %}

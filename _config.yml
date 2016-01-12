@@ -35,13 +35,17 @@ enumerable-tags:
 article:
   tag_description: "Some stuff I wrote"
   tag_name: "Articles"
+  index_path: "articles-index"
 honeyment:
   tag_description: "Post-engagement pre-honeymoon adventure"
   tag_name: "Honeyment"
+  index_path: "honeyment-index"
 tasty-rsvps:
   tag_description: "Our wedding guest book of recipes"
   tag_name: "Tasty RSVP"
   website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
+  index_path: "tasty-rsvps-index"
 germany:
   tag_name: "Das Jo(e)"
   tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
+  index_path: "germany-index"

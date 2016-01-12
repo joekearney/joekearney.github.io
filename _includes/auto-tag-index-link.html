@@ -5,11 +5,11 @@
 {% endfor %}
 
 {% if chosenTag == 'honeyment' %}
-  <a href="/honeyment-index">{{site.honeyment.tag_name}} index</a>
+  <a href="/{{site.honeyment.index_path}}">{{site.honeyment.tag_name}} index</a>
 {% elsif page.tags contains 'tasty-rsvps' %}
-  <a href="/tasty-rsvps-index">{{site.tasty-rsvps.tag_name}} index</a>
+  <a href="/{{site.tasty-rsvps.index_path}}">{{site.tasty-rsvps.tag_name}} index</a>
 {% elsif page.tags contains 'germany' %}
-  <a href="/germany-index">{{site.germany.tag_name}} index</a>
+  <a href="/{{site.germany.index_path}}">{{site.germany.tag_name}} index</a>
 {% elsif page.tags contains 'article' %}
-  <a href="/article-index">{{site.article.tag_name}} index</a>
+  <a href="/{{site.article.index_path}}">{{site.article.tag_name}} index</a>
 {% endif %}
