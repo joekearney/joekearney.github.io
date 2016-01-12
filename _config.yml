@@ -35,7 +35,7 @@ enumerable-tags:
 article:
   tag_description: "Some stuff I wrote"
   tag_name: "Articles"
-  index_path: "articles-index"
+  index_path: "article-index"
 honeyment:
   tag_description: "Post-engagement pre-honeymoon adventure"
   tag_name: "Honeyment"
