@@ -89,7 +89,6 @@ article img {
 article p {
   text-align: justify;
 }
-listing
 
 /* TODO rename */
 .inline-image {
@@ -396,6 +395,9 @@ ul, ol {
 ul .listing, ul .nav {
   padding-left: 0;
   text-align: left;
+}
+ul.listing > li:last-child {
+  border: none;
 }
 
 .category-stats {
