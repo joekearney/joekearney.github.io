@@ -33,8 +33,8 @@ enumerable-tags:
 - article
 
 article:
-  tag_description: "Some stuff I wrote"
-  tag_name: "Articles"
+  tag_description: "Trying to be cogent"
+  tag_name: "Joe's Mots on Software"
   index_path: "article-index"
 honeyment:
   tag_description: "Post-engagement pre-honeymoon adventure"
