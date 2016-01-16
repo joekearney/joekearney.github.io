@@ -12,7 +12,7 @@ published: true
 author: Joe Kearney
 ---
 
-We were met as promised at Hong Kong airport by our new travel buddy Kate, waiting at arrivals and brandishing a lovingly handcrafted sign: "The Joe(s)". Freebies for tourists were thrust into our hands (ferry ticket, useful; fridge magnets, presents) and we grappled with our latest currency to get onto the train to town. We flew to Vietnam the very next day, saving our main stay in HK for the last week of the honeyment.
+We were met as promised at Hong Kong airport by our new travel buddy Kate, waiting at arrivals and brandishing a lovingly handcrafted sign: "The Jo(e)s". Freebies for tourists were thrust into our hands (ferry ticket, useful; fridge magnets, presents) and we grappled with our latest currency to get onto the train to town. We flew to Vietnam the very next day, saving our main stay in HK for the last week of the honeyment.
 
 Hong Kong seems to work pretty efficiently, and we saw many similarities with Singapore. But once your armpits adjust to the heat the thing you notice is the quantity of people. Everywhere, packed on to the pavements, and it wasn't even rush hour. In London we're used to Oxford Street being rammed, but that doesn't extend to every street in the city. It was mad.
 
