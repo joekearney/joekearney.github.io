@@ -129,7 +129,7 @@ public class TestsForCalculators {
 }
 {% endhighlight %}
 
-Now you can just keep adding tests that are independent of the impleentations.
+Now you can just keep adding tests that are independent of the implementations.
 
 # Features
 
@@ -184,4 +184,4 @@ Note you can also annotate tests to run only if the feature is not implemented b
 
 * Our Calculators don't do much, we need to add implementations of other operations, such as multiply.
 * Once we've got tests for new features, we could add them to the `Feature` enum. Test suites implementing a new `MULTIPLY` feature could be declared as such so that only those calculators that support it are tested.
-* Tester classes can be annnotated as well as methods, so we might annotate the `AddTester` class itself with `@Require(CalculatorFeature.ADDITION)`.
+* Tester classes can be annotated as well as methods, so we might annotate the `AddTester` class itself with `@Require(CalculatorFeature.ADDITION)`.
