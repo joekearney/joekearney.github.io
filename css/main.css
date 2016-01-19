@@ -86,7 +86,7 @@ article img {
   margin: 0px;
   border: 1px solid #e7e7e7;
 }
-article p {
+article p, article li {
   text-align: justify;
 }
 
