@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Podkova';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/css/font/Podkova-regular/Podkova-regular.eot');
+  src: url('/css/font/Podkova-regular/Podkova-regular.eot?#iefix') format('embedded-opentype'),
+       local('Podkova'),
+       local('Podkova-regular'),
+       url('/css/font/Podkova-regular/Podkova-regular.woff2') format('woff2'),
+       url('/css/font/Podkova-regular/Podkova-regular.woff') format('woff'),
+       url('/css/font/Podkova-regular/Podkova-regular.ttf') format('truetype'),
+       url('/css/font/Podkova-regular/Podkova-regular.svg#Podkova') format('svg');
+}
+
+@font-face {
+  font-family: 'Metrophobic';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/css/font/Metrophobic-regular/Metrophobic-regular.eot');
+  src: url('/css/font/Metrophobic-regular/Metrophobic-regular.eot?#iefix') format('embedded-opentype'),
+       local('Metrophobic'),
+       local('Metrophobic-regular'),
+       url('/css/font/Metrophobic-regular/Metrophobic-regular.woff2') format('woff2'),
+       url('/css/font/Metrophobic-regular/Metrophobic-regular.woff') format('woff'),
+       url('/css/font/Metrophobic-regular/Metrophobic-regular.ttf') format('truetype'),
+       url('/css/font/Metrophobic-regular/Metrophobic-regular.svg#Metrophobic') format('svg');
+}
