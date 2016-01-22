@@ -356,8 +356,8 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#428bca}
  */
  @font-face{
  	font-family:'FontAwesome';
- 	src:url('/css/font/fontawesome-webfont.eot?v=4.0.3');
- 	src:url('/css/font/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('/css/font/fontawesome-webfont.woff?v=4.0.3') format('woff'),url('/css/font/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('/css/font/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+ 	src:url('/css/font/Fontawesome/fontawesome-webfont.eot?v=4.0.3');
+ 	src:url('/css/font/Fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('/css/font/Fontawesome/fontawesome-webfont.woff?v=4.0.3') format('woff'),url('/css/font/Fontawesome/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('/css/font/Fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
  	font-weight:normal;font-style:normal
  }
  .fa{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
