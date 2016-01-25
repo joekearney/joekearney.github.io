@@ -38,9 +38,8 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
 @media print{
-	*{text-shadow:none!important;color:#000!important;background:transparent!important;box-shadow:none!important}
+	*{text-shadow:none!important;background:transparent!important;box-shadow:none!important}
 	a,a:visited{text-decoration:underline}
-	a[href]:after{content:" (" attr(href) ")"}
 	abbr[title]:after{content:" (" attr(title) ")"}
 	a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
 	pre,blockquote{border:1px solid #999;page-break-inside:avoid}

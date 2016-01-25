@@ -401,3 +401,9 @@ ul .listing, ul .nav {
 .category-stats {
   text-align: center;
 }
+
+@media print{
+  p,li,blockquote>p,.todo,blockquote:not(.twitter-tweet) p {
+    font-size: 12pt;
+  }
+}

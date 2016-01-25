@@ -11,7 +11,7 @@
       {% assign tagPosts = tagPosts | push: post %}
     {% endif %}
   {% endfor %}
-  <div class="row">
+  <div class="row hidden-print">
     {% for post in tagPosts %}
       {% if post.title == page.title %}
         <hr></hr>
