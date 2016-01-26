@@ -18,7 +18,7 @@ author: Joe Kearney
 
 SBT has long been able to [cross compile](http://www.scala-sbt.org/0.13/docs/Cross-Build.html) code to multiple versions of Scala. What if you want to cross compile to different versions of a library?
 
-In the case that came up today we're building a library that uses a Hadoop client library that has versions supporting v1 and v2 of the underlying MapReduce. We need to produce a version that supports both MRv1 and MRv2.
+In the case that came up today we're building a library that uses a Hadoop client library that has versions supporting v1 and v2 of the underlying MapReduce. We need to produce a version of our library that supports both MRv1 and MRv2.
 
 ## Problem
 
