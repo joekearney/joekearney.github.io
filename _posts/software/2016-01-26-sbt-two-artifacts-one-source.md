@@ -114,7 +114,7 @@ lazy val commonSettings: _* = Seq(
 val projectVersion = "1.0.0"
 val hadoopClientVersion = suffix => s"2.6.0${suffix}-cdh5.5.0"
 
-def generateProject(subProjectName: String, hadoopClientSuffix: Option[String] = {
+def generateProject(subProjectName: String, hadoopClientSuffix: Option[String]) = {
   val suffix = hadoopClientSuffix.getOrElse("")
 
   Project(subProjectName, file(s"target/${projectName}"))
