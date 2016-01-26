@@ -104,7 +104,7 @@ lazy val commonSettings: _* = Seq(
 
   /**
    * Define the scala sources relative to the sub-directory the project source. The
-   * individual projects have their sources defined in `./target/{projectName}`,
+   * individual projects have their sources defined in `./target/${projectName}`,
    * therefore `./src` lives two directories above base. Also do this for `resources`
    * etc, if needed.
    */
