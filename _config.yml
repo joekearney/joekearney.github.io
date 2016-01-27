@@ -32,6 +32,7 @@ enumerable-tags:
 - germany
 - article
 
+# software posts that are to be read, not just howto
 article:
   tag_description: "Trying to be cogent"
   tag_name: "Joe's Mots on Software"
