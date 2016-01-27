@@ -8,7 +8,6 @@ categories:
 tags:
 - howto
 - software
-- draft
 keywords:
 - scala
 - sbt
