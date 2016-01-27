@@ -69,7 +69,7 @@ lazy val projectForMr1 = (project in file("."))
       % "hadoop-client" % s"2.6.0-mr1-cdh5.5.0"
   )
 lazy val projectForMr2 = (project in file("."))
-  .settings // ... the same, but for m2
+  .settings // ... the same, but for mr2
 {% endhighlight %}
 </div>
 {::options parse_block_html="false" /}
