@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Better Late than Never"
-description: "Writing blogs is admin, too"
+description: "writing blogs is admin, too"
 categories:
 - post
 tags:
