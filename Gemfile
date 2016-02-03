@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.2.1"
+ruby "2.3.0"
 
 # github-pages pulls in jekyll, among others
 # remember to delete Gemfile.lock when upgrading
