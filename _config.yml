@@ -1,7 +1,9 @@
 permalink: /posts/:title
 rdiscount:
   extensions: [smart]
+highlighter: rouge
 exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components ]
+timezone: Europe/Berlin
 title: Joe's Mots
 production_url: "http://www.joekearney.co.uk"
 description: "Trying to be cogent."
