@@ -14,4 +14,4 @@ echo "Done with exit code $?"
 # bundle install
 # ./runLocal
 
-jekyll serve --source $DIR --watch --trace --profile --incremental
+jekyll serve --source $DIR --watch --future --trace --profile --incremental
