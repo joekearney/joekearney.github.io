@@ -114,17 +114,57 @@ It's not particularly efficient, but it's not supposed to be. We're still quite 
 
 {% include todo.html note='animation of stack example' %}
 
+Here's an example of the steps of execution of a short code snippet:
+
+{% highlight java %}"my favourite number is: " + (1 + 2){% endhighlight %}
+
+* first, the two integer values, 1 and 2, are added to the stack.
+* the `iadd` instruction to add two integers is invoked, and the result remains on the stack.
+* next we need to convert this integer 3 into a string that can be concatenated with the prefix `"my favourite number is: "`. The instruction here is `invokestatic String.valueOf`, which invokes this method with the parameter 3 and leaves the string `"3"` on the stack.
+* finally, add the longer string and run the instruction `invokevirtual String.concat`. The expected result is left on the stack.
+
+Note the `static` and `virtual` instructions -- these have the same meaning as described above. The virtual call is because the String concatenation method "belongs" to the string on which it is called, and the static call has no such instance.
+
 ### Reading a classfile
+
+{::options parse_block_html="true" /}
+<div class="inline-image-right">
+{% highlight c %}javap -p -c <class-name>{% endhighlight %}
+{% highlight scala %}
+object ScalaConstants {
+  val ichBinEinConstant = "some string"
+  def ichBinEinUtilityFunction(param: Int) = param.toString
+}
+{% endhighlight %}
+{% highlight java %}
+Compiled from "ScalaConstants.scala"
+public final class ScalaConstants$ {
+  public static final ScalaConstants$ MODULE$;
+  private final java.lang.String ichBinEinConstant;
+  public static {};
+  public java.lang.String ichBinEinConstant();
+  public java.lang.String ichBinEinUtilityFunction(int);
+  private ScalaConstants$();
+}
+
+public final class ScalaConstants {
+  public static java.lang.String ichBinEinUtilityFunction(int);
+  public static java.lang.String ichBinEinConstant();
+}
+{% endhighlight %}
+</div>
+{::options parse_block_html="false" /}
 
 The JDK ships with a disassembler app called `javap` that can display bytecode in a somewhat human-readable form.
 
-{% highlight c %}javap -p -c <class-name>{% endhighlight %}
+We're going to use a trivial example to look at some bytecode. This example `ScalaConstants` contains a constant value and a utility function. Below it is the bytecode as shown by `javap -p ScalaConstants`.
+
+
+{% include clearfix.html %}
 
 ***
 
 > Every problem in computer science is solved by an extra level of indirection
-
-{% include clearfix.html %}
 
 ***
 
