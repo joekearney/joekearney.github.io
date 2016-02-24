@@ -19,6 +19,12 @@ sitemap:
 
   <div class="row">
     <div class="col-md-12">
+      {% include short-toc-by-tag.html tag='article' title=site.article.tag_short_name numPosts='100' %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
       {% include short-toc-by-tag.html tag='germany' title=site.germany.tag_name description=site.germany.tag_description showAuthor='false' %}
     </div>
   </div>
@@ -32,12 +38,6 @@ sitemap:
   <div class="row">
     <div class="col-md-12">
       {% include short-toc-by-tag.html tag='honeyment' title=site.honeyment.tag_name description=site.honeyment.tag_description additionalLinkUrl="/where" additionalLinkText="where page" showAuthor='true' %}
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='article' title=site.article.tag_short_name numPosts='100' %}
     </div>
   </div>
 
