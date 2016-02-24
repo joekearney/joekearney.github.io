@@ -78,10 +78,6 @@ The mapping from Java types to the JVM is easy -- the types are the same. This i
 
 Scala has a less direct correspondence between its types and JVM classfiles. `trait`s compile to `interface`s if the have no implementation and only define API. This makes sense if you think about what is allowed in a Java `interface`. All other Scala types compile down to `class`es.
 
-> Every problem in computer science is solved by an extra level of indirection
->
-> <p class="cite">&mdash; one of my lecturers</p>
-
 The fun really starts when looking at how inheritance in Scala (which allows multiple inheritance from types with behaviour, in the form of `trait`s) is implemented in the JVM type system (which does not). I might come back to address this in the future, but I left it out of scope of the talk, which was already growing too long!
 
 #### How do Scala and Java class members compare?
@@ -122,7 +118,9 @@ The JDK ships with a disassembler app called `javap` that can display bytecode i
 
 {% highlight c %}javap -p -c <class-name>{% endhighlight %}
 
-
+> Every problem in computer science is solved by an extra level of indirection
+>
+> <p class="cite">&mdash; one of my lecturers</p>
 
 {% include clearfix.html %}
 
