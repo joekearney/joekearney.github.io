@@ -30,7 +30,7 @@ TODO handle iframe instead of img
     {% if include.kind == 'iframe' %}
       <iframe src='{{include.src}}' id="iframe-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
     {% else %}
-      <img src='{{include.src}}' id="img-{{include.id}}"
+      <img src='{{include.src}}' id="img-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" 
         {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}
 
       />
