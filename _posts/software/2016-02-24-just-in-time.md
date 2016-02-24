@@ -98,7 +98,7 @@ The bytecode for Java is a pretty direct correspondence -- you see methods and f
 
 ## 2. What is bytecode?
 
-{% include image-float.html src='/images/homer-just-because-i-dont-care-50.jpg' id='homer-just-because-i-dont-care' side='right' %}
+{% include image-float.html src='/images/homer-just-because-i-dont-care.jpg' id='homer-just-because-i-dont-care' side='right' %}
 
 First, why do we even care?
 
