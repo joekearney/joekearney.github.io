@@ -120,9 +120,9 @@ The JDK ships with a disassembler app called `javap` that can display bytecode i
 
 {% highlight c %}javap -p -c <class-name>{% endhighlight %}
 
+***
+
 > Every problem in computer science is solved by an extra level of indirection
->
-> <p class="cite">&mdash; one of my lecturers</p>
 
 {% include clearfix.html %}
 
