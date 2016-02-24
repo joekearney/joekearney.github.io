@@ -17,7 +17,7 @@ type: post
 author: Joe Kearney
 ---
 
-_This post was written to accompany [a talk I gave](http://www.meetup.com/Scala-Berlin-Brandenburg/events/228703195/) at the Berlin-Brandenburg Scala User Group Meetup in February 2016._
+_This post was written to accompany [a talk I gave](http://www.meetup.com/Scala-Berlin-Brandenburg/events/228703195/) to the Berlin-Brandenburg Scala User Group in February 2016._
 
 > Scala code is a long way from the metal. In this talk we'll see some of the steps in between, including some nuggets of JIT compilation, and I'll introduce JMH as a tool for both benchmarking and investigating what your app is actually doing.
 
