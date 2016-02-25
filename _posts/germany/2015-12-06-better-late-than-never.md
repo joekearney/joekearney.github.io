@@ -12,7 +12,7 @@ published: true
 author: Joe Kearney
 ---
 
-What a crazy year. After getting engaged, quitting our jobs, leaving London and [going travelling](/honeyment-index) for five months we now live in a new country!
+What a crazy year. After getting engaged, quitting our jobs, leaving London and [going travelling](/honeyment-index) for five months we're now three months into living in a new country!
 
 We've talked for a long time about wanting to move abroad for a while. We looked at Australia for a while, though our parents are pleased we decided not to move so far. Besides, [the weather didn't seem so good](/posts/tropical-storm-sydney/) there after all. We've also wanted to go somewhere with another language, and Australia (mostly) didn't tick that box either.
 
