@@ -132,7 +132,7 @@ Note the `static` and `virtual` instructions -- these have the same meaning as d
 ### Reading a classfile
 
 {::options parse_block_html="true" /}
-<div class="inline-image-right half-width">
+<div class="inline-image-right">
 {% highlight c %}javap -p -c <class-name>{% endhighlight %}
 {% highlight scala %}
 object ScalaConstants {
@@ -209,12 +209,12 @@ First note that this one doesn't have a `static` modifier -- it's an instance me
 1. invoke the `toString` method on the new object. This is a `virtual` call because it's a non-static method, called on an instance.
 1. return the string reference.
 
-The stack holds parameters to the method, as we saw. When calling a method _on an instance_, a non-static method, the zeroth parameter is `this`. You'll notice the difference when loading the `int` parameter in these last two examples, `iload_1` instead of `iload_0`.
+The **stack holds parameters** to the method, as we saw. When calling a method _on an instance_, a non-static method, the zeroth parameter is `this`. You'll notice the difference when loading the `int` parameter in these last two examples, `iload_1` instead of `iload_0`.
 
 #### Initialising a singleton `object`
 
 {::options parse_block_html="true" /}
-<div class="inline-image-right half-width">
+<div class="inline-image-right">
 {% highlight java %}
 public final class ScalaConstants$ {
   public static final ScalaConstants$ MODULE$;
@@ -255,7 +255,7 @@ Let's walk through the constructor of the class, `private ScalaConstants$()`:
 {% capture java_singleton %}
 #### Sidebar: Java and the Singleton Pattern
 
-<div class="inline-image-left half-width">
+<div class="inline-image-left">
 {% highlight java %}
 public Singleton {
   private static final class Holder {
@@ -280,23 +280,58 @@ The Scala `object` case is the simpler eager initialisation version, which doesn
 {% endcapture %}
 {% include sidebar.html content=java_singleton %}
 
+That's enough of an introduction to bytecode. The language compilers `scalac` and `javac` that compile to bytecode do some optimisation, including any language-specific things -- an often-cited example is transformation of string contatenation like `"a" + "b" + "c"` into a single `StringBuilder`, which is much more efficient.
+
+Most of the heavy lifting is done later, by the Just-in-Time compilers at runtime.
+
 ***
 
 ## 3. Benchmarking
 
+We like our code to run fast, and the compiler helps this to happen with a lot of just-in-time optimisations.
 
+Sometimes we want to measure how fast our code runs, or compare different possible implementations looking for the fastest. This type of measuring is usually done on small scales -- **microbenchmarking** is the practice of isolating small blocks of code to measure their runtime. By removing complexity and only benchmarking a small portion of code we aim to improve measurement, but the fact is that we're now running code in a very different context to where it will eventually run.
 
-***
+The relative simplicity of code not running in a production environment means that the compiler can find many more optimisations to perform when compiling the code. In doing this the compiler can make changes that vastly change what the code is doing, to the extent that we're no longer measureing anything useful.
 
-{% include todo.html note='Still going!' %}
+> Compiler optimisations are a huge benefit at runtime; they're a huge problem in benchmarking.
 
-* `String.<method>` calls can be static-ised with CHA
-* numbered lines, numbers `#16` in instructions
+In this third section we'll look at just-in-time compilers. These run in the JVM, and transform the intermediate classfiles/bytecode into actual CPU instructions. I'm going to instroduce some of the compiler optimisations that can be performed by looking at benchmarking, in particular with the Java Microbenchmarking Harness, JMH.
 
-***
+Benchmarking is an instructive way to learn about the JIT in the JVM because you need a certain understanding of what's going in order to convince yourself that you're actually measuring what you think you're measuring.
 
-> Every problem in computer science is solved by an extra level of indirection
+JMH is a benchmarking tool that aims to handle some of the complexity around measuring correctly. It times invocations of your code, taking averages from many runs, it handles requirements like warming up the JVM and it provides help for preventing certain over-eager optimisations that would spoil your measurements.
 
+There are a lot of articles around about JMH, but the advice presented in them can be often boiled down to the following:
+
+* read the [samples](http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/), which cover a lot of the pitfalls
+* some general advice about pitfalls of which you need to be aware (such as only benchmark operations in steady states, looping is generally discouraged inside benchmarks, ...)
+* results will vary between runs
+* you have to analyse benchmarks to understand the results, you shouldn't just take the results at face value
+
+Benchmarking is for comparing implementation choices. It's not correct to conclude that a benchmark showing that some code runs in 20 nanoseconds in a synthetic benchmark will run in that time in production, surrounded by all manner of other context and under a different pattern of load.
+
+### Writing benchmarks
+
+<div class="inline-image-right">
+{% highlight scala %}
+class BenchmarkSomething {
+  @Benchmark
+  def wellHelloThere() {
+    // code here is timed
+  }
+}
+
+{% endhighlight %}
+</div>
+
+Writing the code for a benchmark is pretty straightforward -- you put the code you want to run in a method marked with `@Benchmark`. With sbt it's also easy to run, with `sbt jmh:run`.
+
+One practical note: JMH **isn't set up to run inside another project**, which is what you would do for unit tests. Rather than having benchmarks in a folder inside your project, better to keep it external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
+
+When you run this, it generates the benchmark code for you, and there's quite a lot of it. Indeed it can be pretty instructive to have a look at it for yourself.
+
+{% include clearfix.html %}
 ***
 
 ### Resources
