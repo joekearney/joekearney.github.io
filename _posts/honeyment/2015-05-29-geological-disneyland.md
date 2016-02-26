@@ -15,7 +15,7 @@ title_image_iframe: https://www.flickr.com/photos/joekearney/19250153695/in/albu
 ---
 
 
-At [Mount Doom](/posts/mount-doom/) we had seen a dormant volcano, but the next few days in Lake Taupo and Rotorua showcased the decidedly active geological side effects that come with this volcanic region, where the Earth's crust is about as thin as it gets anywhere in the world.
+At [Mount Doom](/posts/mount-doom) we had seen a dormant volcano, but the next few days in Lake Taupo and Rotorua showcased the decidedly active geological side effects that come with this volcanic region, where the Earth's crust is about as thin as it gets anywhere in the world.
 
 The first clues were the strange cloud formations we could see from the car -- looking like small patches of forest fires sending narrow plumes of smoke into the air. Only once we got close could we see clearly that there was no fire -- just the earth smoking. Which is not at all normal where I come from.
 

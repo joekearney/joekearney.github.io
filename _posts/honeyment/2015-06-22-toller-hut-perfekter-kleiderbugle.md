@@ -14,7 +14,7 @@ author: Joe Kearney
 title_image_iframe: "https://www.flickr.com/photos/joekearney/22736097727/in/album-72157660647306877/player/"
 ---
 
-Sunday on our [Iceberg trip](/posts/iceberg-ahoy/) was snorkelling day. The first stop, we were assured, is the best reef snorkelling in the Whitsundays. Anchored a little away from the reef itself we suited and masked up, went a little closer on the tender and jumped in.
+Sunday on our [Iceberg trip](/posts/iceberg-ahoy) was snorkelling day. The first stop, we were assured, is the best reef snorkelling in the Whitsundays. Anchored a little away from the reef itself we suited and masked up, went a little closer on the tender and jumped in.
 
 The sensation of colour was even stronger than at Lady Musgrave. Fish were everywhere, darting around. There were the beaked parrot fish again, and I swear you can hear the scraping sound of beak on coral. There were schools of hundreds of blue fish whose sheen changed with the angle of the sun as they passed me. And then... we found him! Nemo and his family, three little orange and black clownfish keeping to their own little area of the reef. They're really small, only a couple of inches long; I think Jo expected them to be much bigger.
 
