@@ -344,6 +344,10 @@ span.post-author {
 span.post-description {
   font-family: Metrophobic, Verdana, sans-serif;
 }
+.post-long-description {
+  padding-left: 10px;
+  font-size: 16px;
+}
 
 .map-full-width {
   left: 0;

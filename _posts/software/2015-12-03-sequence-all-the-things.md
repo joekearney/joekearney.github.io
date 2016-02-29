@@ -2,7 +2,7 @@
 layout: post
 title: "How to: Sequence All The Things"
 description: "implement sequence on your own types"
-meta_description: "How to add Applicative and Traverse instances for your own types with one or many type parameters, to use sequence, sequenceU, Unapply"
+meta_description: "How to add Applicative and Traverse instances for your own types, use sequence, sequenceU and Unapply"
 categories:
 - post
 tags:

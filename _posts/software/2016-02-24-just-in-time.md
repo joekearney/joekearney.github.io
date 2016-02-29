@@ -2,7 +2,7 @@
 layout: post
 title: "Just In Time"
 description: "introduction to JVM compilation"
-meta_description: "An introduction to compilation for the JVM, bytecode as the common code format for the JVM and just-in-time (JIT) compilation at runtime."
+meta_description: "An introduction to compilation for the JVM, bytecode and JIT compilation, and benchmarking with JMH"
 categories:
 - post
 tags:
