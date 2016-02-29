@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Learning about Non-blocking IO"
+title: "Learning about Non-blocking I/O"
 description: "no-code intro"
+meta_description: "Deriving how non-blocking I/O must work, from first principles"
 categories:
 - post
 tags:

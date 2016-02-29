@@ -18,60 +18,7 @@
     {% endif %}
   </span>
 </h2>
-<ul class="listing">
-  {% comment %} Only list the top few and any new items further down the list {% endcomment %}
-  {% if include.numPosts %}
-    {% assign numPosts = include.numPosts %}
-  {% else %}
-    {% assign numPosts = 5 %}
-  {% endif %}
 
-  {% assign remaining = numPosts | plus: 0 %}
-  {% assign postsNotListed = 0 %}
-
-  {% if include.showDrafts == "true" %}
-    {% assign hideDrafts = false %}
-  {% else %}
-    {% assign hideDrafts = true %}
-  {% endif %}
-
-  {% assign totalPostsCount = 0 %}
-  {% for post in site.posts %}
-    {% if post.categories contains 'post' and post.tags contains {{include.tag}} %}
-      {% unless post.tags contains 'landing' %}
-        {% unless post.tags contains 'draft' and hideDrafts %}
-          {% if remaining > 0 or post.tags contains 'new' %}
-            {% assign remaining = remaining | minus: 1 %}
-            <li>
-              {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-              {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-              <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-              {% if post.description %}
-                {% unless post.description == "" %}
-                  <span class="post-description">&ndash; {{ post.description }}</span>
-                {% endunless %}
-              {% endif %}
-              {% if include.showAuthor == "true" %}
-                {% assign authorArray = post.author | join: "|" | split: "|" %}
-                <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-              {% endif %}
-              {% if include.showLongDescription == "true" %}
-                <p class="post-long-description">{{post.meta_description}}</p>
-              {% endif %}
-            </li>
-          {% else %}
-            {% assign postsNotListed = postsNotListed | plus: 1 %}
-          {% endif %}
-          {% assign totalPostsCount = totalPostsCount | plus: 1 %}
-        {% endunless %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-
-  {% if postsNotListed > 0 %}
-    <li><span class="post-description"><a href="/{{ include.tag }}-index">...see all {{ totalPostsCount }}</a></span></li>
-  {% endif %}
-</ul>
+{% include toc-listing.html numPosts=include.numPosts showDrafts=include.showDrafts tag=include.tag showAuthor=include.showAuthor showLongDescription=include.showLongDescription %}
 
 {% endif %}

@@ -2,6 +2,7 @@
 layout: post
 title: Guava Testlib Example
 description: a brief introduction to generated tests
+meta_description: "Step-by-step guide to using the Guava Testlib library for test case generation"
 categories:
 - post
 tags:

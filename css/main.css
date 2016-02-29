@@ -430,3 +430,22 @@ ul .listing, ul .nav {
     font-size: 12pt;
   }
 }
+
+section.sidebar blockquote {
+  background-color: #fff;
+}
+
+a.no-link-highlight {
+  color: #333;
+}
+a.no-link-highlight:hover {
+  text-decoration: initial;
+}
+a.no-link-highlight:hover .link-highlight, a.no-link-highlight:focus .link-highlight {
+  color:#2a6496;
+  text-decoration: underline;
+}
+a.no-link-highlight .link-highlight {
+  color: #428bca;
+  text-decoration: none;
+}

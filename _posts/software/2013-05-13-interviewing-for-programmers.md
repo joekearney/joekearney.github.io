@@ -2,6 +2,7 @@
 layout: post
 title: Interviewing for Programmers
 description: my approach to interviewing
+meta_description: "A description of my interview approach while at GSA &ndash; what I was looking for what I expected from candidates"
 categories:
 - post
 tags:
@@ -23,6 +24,8 @@ In five years at GSA Capital I gave almost 200 job interviews to software engine
 It seems only fair to try to describe how I approach giving an interview, to distil some of my aims.
 
 Let's start at the beginning.
+
+> **Update:** _In 2016 I'm no longer sure that this kind of interview provides the best signal. I still think this is a pretty good test for strong programmers, but perhaps not for all of the range of skills we'd look for in a member of a team of engineers._
 
 ## What are we trying to achieve in an interview?
 
