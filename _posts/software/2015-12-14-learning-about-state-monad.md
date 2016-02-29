@@ -94,7 +94,7 @@ What is the type of the whole for-comprehension? The non-fixed type parameter is
 <div class="clearfix"></div>
 
 {% capture for_comprehensions_and_monad %}
-## Sidebar: for-comprehensions and `M[_]`
+### Sidebar: for-comprehensions and `M[_]`
 
 {::options parse_block_html="true" /}
 <div class="inline-image-left">

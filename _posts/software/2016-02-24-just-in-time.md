@@ -257,7 +257,7 @@ Let's walk through the constructor of the class, `private ScalaConstants$()`:
 
 <div class="inline-image-left">
 {% highlight java %}
-public Singleton {
+public class Singleton {
   private static final class Holder {
     private static final Holder INSTANCE
       = new Holder();
@@ -270,7 +270,7 @@ public Singleton {
 {% endhighlight %}
 </div>
 
-Java has something of a troubled history with the singleton pattern, in particular with double-checked locking as an attempted optimisation. The insufficient memory model pre-Java 1.5 and a poor understanding of locking made it easy to have incorrectly or unsafely initialised singletons, that would present as rare and unexplainable bugs.
+Java has something of a troubled history with the singleton pattern, in particular with double-checked locking as an attempted optimisation. The under-specified memory model pre-Java 1.5 made it easy to have incorrectly or unsafely initialised singletons, that would present as rare and unexplainable bugs.
 
 The accepted idiom these days is the holder-class pattern, which makes the singleton as lazy as possible but also allows the fastest possible access, with no synchronisation required. The instance is created when the class is loaded and all locking happens internally in the JVM.
 
@@ -321,15 +321,116 @@ class BenchmarkSomething {
     // code here is timed
   }
 }
-
 {% endhighlight %}
 </div>
 
 Writing the code for a benchmark is pretty straightforward -- you put the code you want to run in a method marked with `@Benchmark`. With sbt it's also easy to run, with `sbt jmh:run`.
 
-One practical note: JMH **isn't set up to run inside another project**, which is what you would do for unit tests. Rather than having benchmarks in a folder inside your project, better to keep it external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
+One practical note: **JMH isn't set up to run inside another project**, which is what you would do for unit tests. Rather than having benchmarks in a folder inside your project, better to keep it external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
 
 When you run this, it generates the benchmark code for you, and there's quite a lot of it. Indeed it can be pretty instructive to have a look at it for yourself.
+
+### 1. Is compiling worth it?
+
+<div class="inline-image-left">
+{% highlight scala %}
+def target_default: Unit = ()
+@CompilerControl(CompilerControl.Mode.EXCLUDE)
+def target_interpreted: Unit = ()
+
+@Benchmark
+def compiled: Unit = target_default
+@Benchmark
+def interpreted: Unit = target_interpreted
+{% endhighlight %}
+</div>
+
+JMH allows control over all sorts of JVM configuration. One JVM option exposed is compiler flags, which include the ability to selectively exclude methods from compilation, forcing them to be interpreted instead.
+
+| Benchmark | time/invocation |
+| --- | ---: |
+| compiled | 2.3ns |
+| interpreted | 89.5ns |
+{: class="table table-bordered table-condensed table-striped width-initial inline-image-right"}
+
+The example here is the most trivial one, compiling or interpreting a no-op method. We can see the difference clearly; the compiled method runs around 40 times faster than the interpreted method.
+
+{% include clearfix.html %}
+
+### 2. What's the cost of method invocation?
+
+<div class="inline-image-right">
+{% highlight scala %}
+@CompilerControl(CompilerControl.Mode.DONT_INLINE)
+def target_dontInline: Unit = ()
+@CompilerControl(CompilerControl.Mode.INLINE)
+def target_inline: Unit = ()
+
+@Benchmark
+def dontInlineBench: Unit = target_dontInline
+@Benchmark
+def inlineBench: Unit = target_inline
+{% endhighlight %}
+</div>
+
+We can force the compiler to inline, or not to inline, a given method. In this benchmark we can test the overhead of invoking a method.
+
+| Benchmark | time/invocation |
+| --- | ---: |
+| not inlined | 2.3ns |
+| inlined | 0.3ns |
+{: class="table table-bordered table-condensed table-striped width-initial inline-image-left"}
+
+Again the result is clear, and in this example the overhead of the method call is around 2ns per invocation.
+
+The JVM has a default maximum size for a method to be allowed to be inlined, which defaults to 35 bytes. You can change this, but it's not recommended without a really good reason and some evidence. Why shouldn't everything be inlined? Inlining makes for bigger methods that take longer to be compiled, for smaller benefit given that in larger methods the time spent invoking other methods is relatively smaller.
+
+Note that inlining of methods that you get on the JVM usually only happens in JIT, not in `scalac` or `javac`. This allows stack traces to include the full call stack, for example. A notable exception to this is the Scala [`@inline` annotation](http://www.scala-lang.org/api/2.11.7/#scala.inline), which "requests that the compiler should try especially hard to inline the annotated method".
+
+{% include clearfix.html %}
+
+### 3. Dead code elimination
+
+<div class="inline-image-left">
+{% highlight scala %}
+var x = Math.PI
+@Benchmark
+def measureLogWrong: Unit = { Math.log(x) }
+@Benchmark
+def measureLogRight: Double = Math.log(x)
+{% endhighlight %}
+</div>
+
+Code that produces a value that isn't used is code that's just burning CPU unnecessarily. At runtime, it's great for unused code to be removed, because removing it makes our code better. In a benchmark, sometimes you have to persuade the compiler that your code isn't useless, otherwise your benchmarks give the wrong results.
+
+Suppose that we want to measure a utility function like `Math.log`. If the compiler thinks that the value returned is not used then it is free to remove the call. It's easy to construct a benchmark method that "suffers" from this optimisation. JMH has support for preventing in the form of a type called `BlackHole` -- stuff goes in and doesn't come out. Any value returned from a benchmark method is consumed by a `BlackHole` and it's possible to access one for use inside the method as well. BlackHole goes to great lengths to ensure that the compiler cannot prove that the value is unused, while doing this quickly and with predictable performance.
+
+| Benchmark | time/invocation |
+| --- | ---: |
+| code eliminated | 0.3ns |
+| code runs | 21.8ns |
+{: class="table table-bordered table-condensed table-striped width-initial inline-image-right"}
+
+Note that the first example here doesn't return the value -- it's a `Unit` method and the compiler can easily show that the value is not used. (It also needs to know that there are no side-effects, which is likely easy to do with a native operation like `log` but may be harder with others.) The second version returns the value, and JMH will consume it for us.
+
+The first version runs much faster, a result of <abbr title="dead code elimination">DCE</abbr>, but the second is the measurement we're actually interested in.
+
+{% include clearfix.html %}
+
+### 4. Parameter specialisation
+
+<div class="inline-image-right">
+{% highlight scala %}
+var x = Math.PI
+@Benchmark
+def measureLogConst: Double = Math.log(Math.PI)
+@Benchmark
+def measureLogParam: Double = Math.log(x)
+{% endhighlight %}
+</div>
+{% include clearfix.html %}
+
+### 5. Class hierarchy analysis
 
 {% include clearfix.html %}
 ***

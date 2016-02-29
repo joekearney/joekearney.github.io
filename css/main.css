@@ -98,6 +98,14 @@ article p, article li {
   background: #f8f8f8;
   border: 1px solid #e7e7e7;
 }
+section.sidebar {
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .image-border-frame {
   /* no padding at bottom only when there's a caption */
   padding: 18px 18px 18px 18px;
@@ -135,6 +143,14 @@ article p, article li {
   .inline-image-cap {
     text-align: center;
     margin-top: 4px;
+  }
+  .width-initial {
+    width: initial;
+  }
+}
+@media (max-width: 767px) {
+  .width-initial {
+    width: 100%;
   }
 }
 
