@@ -39,15 +39,13 @@ There are three parts:
 
 ## 1. What is compilation?
 
-{% include image-float.html src='/images/xkcd-303-compiling.png' href='https://xkcd.com/303/' id='xkcd-compiling' side='left' %}
-
-Compiling is, of course, what happens while you're sword-fighting on office chairs.
+{% include image-float.html src='/images/xkcd-303-compiling.png' href='https://xkcd.com/303/' id='xkcd-compiling' side='left' caption="Compiling is, of course, what happens while you're sword-fighting on office chairs" %}
 
 Compiling is the process of going from **human-readable code to executable instructions** that can run on a processor. These days there are many stages to this. If you watch closely enough you can see the Scala compiler going through many different phases during compilation of Scala code to JVM bytecode, and that's just the first step, getting to the JVM's **intermediate representation**.
 
 Why not just compile straight to machine code, skipping this intermediate step? There are a lot of reasons for this. Primarily, this intermediate step is how Java implements its "write once, run anywhere" policy -- it's a level of indirection that allows the same source code to be translated eventually into machine-specific instructions, whether a laptop, phone or data-centre blade.
 
-But the fact that ultimate compilation is deferred until runtime has other benefits too -- it allows the compiler to **use runtime information to guide optimisation** of the code. Hotspot was originally shipped as having "just-in-time compilation **with adaptive optimisation**". At runtime your code generates a lot of information about how it is used, about distribution of parameters, hot-spots (geddit?) of code that could benefit from more aggressive optimisation. It's a profiler that automatically tunes your code.
+But the fact that ultimate compilation is deferred until runtime has other benefits too -- it allows the compiler to **use runtime information to guide optimisation** of the code. Hotspot was originally shipped with a description of "just-in-time compilation **with adaptive optimisation**". At runtime your code generates a lot of information about how it is used, about distribution of parameters, hot-spots (geddit?) of code that could benefit from more aggressive optimisation. It's a profiler that automatically tunes your code.
 
 At its core, `scalac` or any other JVM language compiler is just a function `String => Seq[ByteCode]`, bytecode being is the JVM's internal language, where the string is your program's source code. When you consider having multiple source files and multiple output classfiles containing the bytecode it's more like:
 
@@ -375,15 +373,15 @@ def inlineBench: Unit = target_inline
 
 We can force the compiler to inline, or not to inline, a given method. In this benchmark we can test the overhead of invoking a method.
 
+Again the result is clear, and in this example the overhead of the method call is around 2ns per invocation.
+
+The JVM has a default maximum size for a method to be allowed to be inlined, which defaults to 35 bytes. You can change this, but it's not recommended without a really good reason and some evidence. Why shouldn't everything be inlined? Inlining makes for bigger methods that take longer to be compiled, for smaller benefit given that in larger methods the time spent invoking other methods is relatively smaller.
+
 | Benchmark | time/invocation |
 | --- | ---: |
 | not inlined | 2.3ns |
 | inlined | 0.3ns |
 {: class="table table-bordered table-condensed table-striped width-initial inline-image-left"}
-
-Again the result is clear, and in this example the overhead of the method call is around 2ns per invocation.
-
-The JVM has a default maximum size for a method to be allowed to be inlined, which defaults to 35 bytes. You can change this, but it's not recommended without a really good reason and some evidence. Why shouldn't everything be inlined? Inlining makes for bigger methods that take longer to be compiled, for smaller benefit given that in larger methods the time spent invoking other methods is relatively smaller.
 
 Note that inlining of methods that you get on the JVM usually only happens in JIT, not in `scalac` or `javac`. This allows stack traces to include the full call stack, for example. A notable exception to this is the Scala [`@inline` annotation](http://www.scala-lang.org/api/2.11.7/#scala.inline), which "requests that the compiler should try especially hard to inline the annotated method".
 
@@ -428,11 +426,58 @@ def measureLogConst: Double = Math.log(Math.PI)
 def measureLogParam: Double = Math.log(x)
 {% endhighlight %}
 </div>
+
+If the compiler can prove that the input to a function is always the same, then it can use this fact to assist in optimisations. If the parameter to a function is always the same value then this value can be loaded directly onto the stack without having to read its value from a field on each invocation.
+
+| Benchmark | time/invocation |
+| --- | ---: |
+| constant param | 3.1ns |
+| varying param | 21.8ns |
+{: class="table table-bordered table-condensed table-striped width-initial inline-image-left"}
+
+We can see that here, where in the first example the value is provably constant. In the second example, having the value come from a `var` is enough to force the compiler not to make this optimisation. The difference here is indeed so great that we might suspect more is going on that only eliminating a load of a value from a field.
+
 {% include clearfix.html %}
 
 ### 5. Class hierarchy analysis
 
+<div class="inline-image-left">
+{% highlight scala %}
+trait ThingA { def get: Int }
+trait ThingB { def get: Int }
+
+class ThingA1(value: Int) extends ThingA {
+  def get = value
+} // ... and other copies
+class ThingB1(value: Int) extends ThingB {
+  def get = value
+}
+// all different types
+val a1: ThingA = new ThingA1(1)
+val a2: ThingA = new ThingA2(2)
+val a3: ThingA = new ThingA3(3)
+val a4: ThingA = new ThingA4(4)
+// all same type
+val b1: ThingB = new ThingB1(1)
+val b2: ThingB = new ThingB1(2)
+val b3: ThingB = new ThingB1(3)
+val b4: ThingB = new ThingB1(4)
+{% endhighlight %}
+</div>
+
+Given a hierarchy of types inheriting and overriding a method, how do you choose which one to call? The code for each implementation of a method exists in the class...
+
+| Benchmark | time/invocation |
+| --- | ---: |
+| multiple classes | 5.3ns |
+| single class | 3.6ns |
+{: class="table table-bordered table-condensed table-striped width-initial inline-image-right"}
+
 {% include clearfix.html %}
+***
+
+{% include todo.html note="asm for param specialisation example?" %}
+
 ***
 
 ### Resources
