@@ -290,15 +290,15 @@ We like our code to run fast, and the compiler helps this to happen with a lot o
 
 Sometimes we want to measure how fast our code runs, or compare different possible implementations looking for the fastest. This type of measuring is usually done on small scales -- **microbenchmarking** is the practice of isolating small blocks of code to measure their runtime. By removing complexity and only benchmarking a small portion of code we aim to improve measurement, but the fact is that we're now running code in a very different context to where it will eventually run.
 
-The relative simplicity of code not running in a production environment means that the compiler can find many more optimisations to perform when compiling the code. In doing this the compiler can make changes that vastly change what the code is doing, to the extent that we're no longer measureing anything useful.
+The relative simplicity of code not running in a production environment means that the compiler can find many more optimisations to perform when compiling the code. In doing this the compiler can make changes that vastly change what the code is doing, to the extent that we're no longer measuring anything useful.
 
-> Compiler optimisations are a huge benefit at runtime; they're a huge problem in benchmarking.
+> Compiler optimisations are a huge benefit at runtime; they can be a huge problem in benchmarking.
 
-In this third section we'll look at just-in-time compilers. These run in the JVM, and transform the intermediate classfiles/bytecode into actual CPU instructions. I'm going to instroduce some of the compiler optimisations that can be performed by looking at benchmarking, in particular with the Java Microbenchmarking Harness, JMH.
+In this third section we'll look at just-in-time compilers. These run in the JVM, and transform the intermediate classfiles/bytecode into actual CPU instructions. I'm going to introduce some of the compiler optimisations that can be performed by looking at benchmarking, in particular with the **Java Microbenchmarking Harness**, JMH.
 
 Benchmarking is an instructive way to learn about the JIT in the JVM because you need a certain understanding of what's going in order to convince yourself that you're actually measuring what you think you're measuring.
 
-JMH is a benchmarking tool that aims to handle some of the complexity around measuring correctly. It times invocations of your code, taking averages from many runs, it handles requirements like warming up the JVM and it provides help for preventing certain over-eager optimisations that would spoil your measurements.
+JMH is a benchmarking tool that aims to handle some of the complexity around measuring correctly. It times invocations of your code, taking averages from many runs; it handles requirements like warming up the JVM; and it provides help for **preventing certain optimisations** that would spoil your measurements.
 
 There are a lot of articles around about JMH, but the advice presented in them can be often boiled down to the following:
 
@@ -307,7 +307,7 @@ There are a lot of articles around about JMH, but the advice presented in them c
 * results will vary between runs
 * you have to analyse benchmarks to understand the results, you shouldn't just take the results at face value
 
-Benchmarking is for comparing implementation choices. It's not correct to conclude that a benchmark showing that some code runs in 20 nanoseconds in a synthetic benchmark will run in that time in production, surrounded by all manner of other context and under a different pattern of load.
+Benchmarking is for **comparing implementation choices**. It's not correct to conclude that a benchmark showing that some code runs in 20 nanoseconds in a synthetic benchmark will run in that time in production, surrounded by all manner of other context and under a different pattern of load.
 
 ### Writing benchmarks
 
@@ -324,7 +324,7 @@ class BenchmarkSomething {
 
 Writing the code for a benchmark is pretty straightforward -- you put the code you want to run in a method marked with `@Benchmark`. With sbt it's also easy to run, with `sbt jmh:run`.
 
-One practical note: **JMH isn't set up to run inside another project**, which is what you would do for unit tests. Rather than having benchmarks in a folder inside your project, better to keep it external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
+One practical note: **JMH isn't set up to run inside another project**, in the way that you would do for unit tests. Rather than having benchmarks in a folder inside your project, it's usual to keep them external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
 
 When you run this, it generates the benchmark code for you, and there's quite a lot of it. Indeed it can be pretty instructive to have a look at it for yourself.
 
@@ -441,6 +441,45 @@ We can see that here, where in the first example the value is provably constant.
 
 ### 5. Class hierarchy analysis
 
+In a hierarchy of inheriting types with methods that override other methods, actual code for operations is distributed around in different types. Given an instance of some interface or trait, how do you find which code you need to run for a method call?
+
+#### Quick intro: runtime types
+
+To answer this fully we need a basic understanding of how the JVM represents objects and types at runtime. Any object has a concrete type, and that type is represented by a type descriptor in memory describing its methods, its one super-class and any super-interfaces, among other things. Each object has a pointer in memory to its type descriptor. This type descriptor is never an interface, it's always a class; **you can't instantiate an interface**, you always need some concrete type.
+
+You can see and manipulate representations of these types using reflection; in Java, `<your-type>.class` or `<your-object>.getClass()` gives a `Class` object that exposes details of hierarchy, methods and fields available. (Fun fact: if you look closely enough in the JVM you'll discover that these things are called `klass`, to disambiguate from the Java-level keyword.)
+
+Consider an example type hierarchy with an interface `List` and three implementations `ArrayList`, `LinkedList` and `ImmutableList`. In code you might have a reference to an object of type `List`, and polymorphism being a pillar of something means that the object will be one of the three sub-types, but can be treated generically.
+
+{::options parse_block_html="true" /}
+<div class="inline-image-right">
+{% highlight java %}
+// bytecode for method call list.size()
+aload_1            // load list onto stack
+invokevirtual #28  // Method List.size:()I
+// now the integer size is on the stack
+{% endhighlight %}
+</div>
+{::options parse_block_html="false" /}
+
+Suppose that we want to call a method `.size()` on our list. By the time this is compiled to bytecode it will look something like this. The method being called is on the interface, but the object on the stack has a concrete type and the code for the method has to be chosen based on the actual object, not the interface.
+
+Doing this requires a few hops in memory:
+
+* find the actual object (follow pointer from object reference to the actual object)
+* find the object's concrete type (follow pointer from object header to its class)
+* this class has a pointer to where the actual code of the method, which we can now invoke. (This is similar to a _vtable_ in other settings.)
+
+Note we traverse _up_ the class hierarchy, not down. This is because **each object is an instance of a single concrete type**, and tracing up instead of down means we find method overrides.
+
+Do we need all of these pointer dereferencing steps? In the usual case, the answer is yes. The code is compiled to handle calling methods polymorphically, so must look up the object header first.
+
+This isn't the case for static methods, where the location of the code is known at compile time because there's no overriding (compare this to static vs dynamic linking of libraries). This is the difference between the `invokevirtual` and `invokestatic` instructions -- the latter doesn't need to dereference an object in order to be invoked.
+
+Now consider the case where there's only one implementation of an interface method in the JVM -- when the method is **monomorphic, not polymorphic**. The just-in-time compiler is able to optimise method calls where the code of the method is statically known, using **class hierarchy analysis**. In our example, if only one implementation of `List` exists in the JVM then the object dereference can be skipped and the method call be made effectively `static`.
+
+#### The benchmark
+
 <div class="inline-image-left">
 {% highlight scala %}
 trait ThingA { def get: Int }
@@ -462,10 +501,19 @@ val b1: ThingB = new ThingB1(1)
 val b2: ThingB = new ThingB1(2)
 val b3: ThingB = new ThingB1(3)
 val b4: ThingB = new ThingB1(4)
+
+@Benchmark
+def multipleClasses = a1.get + a2.get + a3.get + a4.get
+@Benchmark
+def singleClass     = b1.get + b2.get + b3.get + b4.get
 {% endhighlight %}
 </div>
 
-Given a hierarchy of types inheriting and overriding a method, how do you choose which one to call? The code for each implementation of a method exists in the class...
+Can we observe this effect in practice? Certainly! `List` is a poor choice for this because many implementation of it will be loaded just by accident. So we'll construct a synthetic hierarchy to do this.
+
+The code for both traits and all implementing classes is the same, so that we can test the difference when the only change is the number of implementations.
+
+We've got four instances of `ThingA` of four different concrete types, and four instances of `ThingB` all of the same type. In the benchmark we'll load an integer from each of the four instances and add them together. This ensures that none of method calls are removed by the optimiser.
 
 | Benchmark | time/invocation |
 | --- | ---: |
