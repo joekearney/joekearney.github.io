@@ -12,10 +12,7 @@ published: true
 author: Joe Kearney
 ---
 
-<div class="inline-image inline-image-right">
-	<img src="https://c2.staticflickr.com/8/7707/17131594847_2a685a2e40_n.jpg">
-	<div class="inline-image-cap"><p>Too many bags</p></div>
-</div>
+{% include image-float.html src='https://c2.staticflickr.com/8/7707/17131594847_2a685a2e40_n.jpg' caption='Too many bags' id='too-many-bags' side='right' %}
 
 We heard all of the advice from people who have actually done this before, we even made token effort to keep our baggage light. In the end none of it mattered.
 

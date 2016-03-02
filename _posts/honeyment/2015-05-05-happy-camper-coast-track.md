@@ -29,10 +29,7 @@ There was finally some improvement in the weather, but having been raining solid
 
 So it was that our grand plan for the 40km return hike began to be revealed as over-ambitious in the extreme. Going was slow as the terrain showed us who was in charge. It was not rocky terrain that slowed our pace, or even the constant hill climbing -- it was that the path had deteriorated into an assault course in the recent weather. Early on we had to clamber over fallen trees and part bushes that were covering the path. Then we came to the lakes that had formed over the path. We just about got over the first still dry thanks to some helpfully placed tree branches and the magic of Gore-Tex. The second was deeper, wider, wetter. We briefly considered trying to go around on another path (10km round trip) before deciding just to plough on. The socks stayed wet for the rest of the day, despite wringing them out repeatedly.
 
-<div class="inline-image inline-image-right">
-	<iframe src="https://www.flickr.com/photos/joekearney/17203062270/in/set-72157652300500261/player/" width="300" height="400" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-	<div class="inline-image-cap"><p>One of our less scary neighbours</p></div>
-</div>
+{% include image-float.html kind='iframe' src='https://www.flickr.com/photos/joekearney/17203062270/in/set-72157652300500261/player/' width="300" height="400" caption='One of our less scary neighbours' id='parakeet-at-harry' side='right' %}
 
 There is more. In a nice grassy meadow a patch of grey pebbles turned out to be a stream full of floating pumice, which claimed Jo with a splash and a squeal. We had to wade through a river that was apparently only there because the upstream lagoon burst its banks in the recent flooding. We crossed a waterfall with a good view of what awaited us if we slipped (though this one is actually the normal state of the track). A path that we had to descend had a stream running down it, and later we climbed up through the water. It felt like when I went gorge walking with school, when we were told to take trainers that we didn't mind getting wrecked.
 
