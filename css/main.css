@@ -408,6 +408,9 @@ pre {
   word-wrap: normal;
   word-break: normal;
 }
+figure {
+  margin: 10px 0;
+}
 .inlined {
   display: inline;
 }
