@@ -9,6 +9,7 @@ tags:
 - article
 - software
 - draft
+- hasIndexPage
 keywords:
 - scala
 - compilation
@@ -21,11 +22,7 @@ author: Joe Kearney
 
 ***
 
-{% include todo.html note="asm for param specialisation example?" %}
-
-***
-
-### Resources
+## Further Reading
 
 * Slides for this talk _(todo)_
 * Alexey Shipilev's blog, in particular his post on [Nanotrusting Nanotime](http://shipilev.net/blog/2014/nanotrusting-nanotime/)

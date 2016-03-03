@@ -12,6 +12,6 @@ I hope that those who read this post or attend the talk will take away with them
 
 There are three parts:
 
-1. an introduction to what we mean by compilation and why it has multiple stages. What are classfiles, and what are types from the point of view of the JVM?
-1. what is bytecode and how does it work? A brief comparison between how Scala and Java compile similar structures.
-1. how can you see the assembler code that the JIT compiler generates to be run on the actual CPU? We'll look at this by way of some examples of benchmarking.
+1. [an introduction to what we mean by compilation](/posts/just-in-time-1) and why it has multiple stages. What are classfiles, and what are types from the point of view of the JVM?
+1. [what is bytecode and how does it work?](/posts/just-in-time-2) A brief comparison between how Scala and Java compile similar structures.
+1. [how can you see the assembler code](/posts/just-in-time-3) that the JIT compiler generates to be run on the actual CPU? We'll look at this by way of some examples of benchmarking.

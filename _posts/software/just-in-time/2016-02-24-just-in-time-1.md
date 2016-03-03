@@ -9,6 +9,7 @@ tags:
 - article
 - software
 - draft
+- hasIndexPage
 keywords:
 - scala
 - compilation
