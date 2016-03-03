@@ -19,7 +19,7 @@ sitemap:
 
   <div class="row">
     <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='article' title=site.article.tag_short_name numPosts='100' showDrafts='true' showLongDescription='true' %}
+      {% include short-toc-by-tag.html tag='software' title=site.software.tag_short_name numPosts='100' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
     </div>
   </div>
 
@@ -51,7 +51,7 @@ sitemap:
 
   <div class="row">
     <div class="{{ coltype }}">
-      <h2 class="thin">Software</h2>
+      <h2 class="thin">Software How To</h2>
       <ul class="listing">
         {% for post in site.posts %}
           {% if post.categories contains 'post' and post.tags contains 'software' %} {% unless post.tags contains 'article' or post.tags contains 'draft' %}

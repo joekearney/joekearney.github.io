@@ -29,14 +29,14 @@ enumerable-tags:
 - honeyment
 - tasty-rsvps
 - germany
-- article
+- software
 
 # software posts that are to be read, not just howto
-article:
+software:
   tag_description: "Trying to be cogent"
   tag_name: "Joe's Mots on Software"
   tag_short_name: "Software"
-  index_path: "article-index"
+  index_path: "software-index"
 honeyment:
   tag_description: "Post-engagement pre-honeymoon adventure"
   tag_name: "Honeyment"

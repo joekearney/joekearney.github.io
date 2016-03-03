@@ -97,6 +97,7 @@ article p, article li {
   padding: 18px 18px 18px 18px;
   background: #f8f8f8;
   border: 1px solid #e7e7e7;
+  max-width: 500px;
 }
 section.sidebar {
   background: #f8f8f8;
@@ -104,6 +105,10 @@ section.sidebar {
   padding: 0 10px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-bottom:10px;
+}
+section.sidebar h1, section.sidebar h2, section.sidebar h3, section.sidebar h4, section.sidebar h5, section.sidebar h6 {
+  margin-top: 10px;
 }
 
 .image-border-frame {
@@ -432,7 +437,7 @@ ul .listing, ul .nav {
   }
 }
 
-section.sidebar blockquote {
+section.sidebar blockquote, section.sidebar .bs-callout {
   background-color: #fff;
 }
 

@@ -20,6 +20,13 @@
 {% else %}
   {% assign hideDrafts = true %}
 {% endif %}
+
+{% if include.showOnlyArticles %}
+  {% assign showNonArticles = false %}
+{% else %}
+  {% assign showNonArticles = true %}
+{% endif %}
+
 <ul class="listing">
   {% comment %} Only list the top few and any new items further down the list {% endcomment %}
 
@@ -27,37 +34,39 @@
   {% for post in orderedPosts %}
     {% if post.categories contains 'post' and post.tags contains include.tag %}
       {% unless post.tags contains 'landing' %}
-        {% unless post.tags contains 'draft' and hideDrafts %}
-          {% if remaining > 0 or post.tags contains 'new' %}
-            {% assign remaining = remaining | minus: 1 %}
-            {% assign postWords = post.content | number_of_words %}
-            {% assign totalWordCount = totalWordCount | plus: postWords %}
-            {% assign totalPosts = totalPosts | plus: 1 %}
-            <a href="{{ post.url }}" class="no-link-highlight">
-            <li>
-              {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-              {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-              <span class="link-highlight">{{ post.title | replace:'-','&ndash;' }}</span>
-              {% if post.description %}
-                {% unless post.description == "" %}
-                  <span class="post-description">&ndash; {{ post.description }}</span>
-                {% endunless %}
-              {% endif %}
-              {% if include.showAuthor == "true" %}
-                {% assign authorArray = post.author | join: "|" | split: "|" %}
-                <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-              {% endif %}
-              {% if include.showLongDescription == "true" %}
-                <p class="post-long-description">{{post.meta_description}}</p>
-              {% endif %}
-            </li>
-            </a>
-          {% else %}
-            {% assign postsNotListed = postsNotListed | plus: 1 %}
-          {% endif %}
-          {% assign totalPostsCount = totalPostsCount | plus: 1 %}
-        {% endunless %}
+        {% if showNonArticles or post.tags contains 'article' %}
+          {% unless post.tags contains 'draft' and hideDrafts %}
+            {% if remaining > 0 or post.tags contains 'new' %}
+              {% assign remaining = remaining | minus: 1 %}
+              {% assign postWords = post.content | number_of_words %}
+              {% assign totalWordCount = totalWordCount | plus: postWords %}
+              {% assign totalPosts = totalPosts | plus: 1 %}
+              <a href="{{ post.url }}" class="no-link-highlight">
+              <li>
+                {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                <span class="link-highlight">{{ post.title | replace:'-','&ndash;' }}</span>
+                {% if post.description %}
+                  {% unless post.description == "" %}
+                    <span class="post-description">&ndash; {{ post.description }}</span>
+                  {% endunless %}
+                {% endif %}
+                {% if include.showAuthor == "true" %}
+                  {% assign authorArray = post.author | join: "|" | split: "|" %}
+                  <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
+                {% endif %}
+                {% if include.showLongDescription == "true" %}
+                  <p class="post-long-description">{{post.meta_description}}</p>
+                {% endif %}
+              </li>
+              </a>
+            {% else %}
+              {% assign postsNotListed = postsNotListed | plus: 1 %}
+            {% endif %}
+            {% assign totalPostsCount = totalPostsCount | plus: 1 %}
+          {% endunless %}
+        {% endif %}
       {% endunless %}
     {% endif %}
   {% endfor %}
