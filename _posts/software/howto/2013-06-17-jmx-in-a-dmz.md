@@ -36,7 +36,9 @@ Usually you don't need to know the dynamic port used here until runtime, but obv
 
 You can specify that the connection server factory should use the same port for these two roles when creating the JMX connection server programmatically in the `JMXServiceURL`, for example:
 
-    service:jmx:rmi:///jndi/rmi:///jmxrmi
+{% highlight shell %}
+service:jmx:rmi:///jndi/rmi:///jmxrmi
+{% endhighlight %}
 
 Here the first port is that used for exported JMX RMI connection objects and the second port is where the RMI registry listens. The value of `jmxHost` here is ignored always.
 
