@@ -23,25 +23,27 @@ Tests can be annotated with `Feature`s that correspond to differences in impleme
 
 [This project](https://github.com/joekearney/guava-testlib-example.git), described on this page, gives a simple and contrived example of how to set up these tests. We have a `Calculator` interface and various implementations that support some of the operations for some of the parameters.
 
+{% include clearfix.html %}
+
 > Check out the project on Github [here](https://github.com/joekearney/guava-testlib-example.git). This page walks through the bits that make up that project, so read through or skip to the whole thing.
 
 This page doesn't go into any detail on derived test suites, where sub-test suites can be created recursively based on the test subject. There's a wealth of examples in the library itself around tests of collections and their derived collections (views, iterators, reserialised, etc).
 
 ***
 
-# What's the big idea?
+## What's the big idea?
 
 > Write tests against the interface. Run the generated test suite per implementation, with the set of features that your implementation supports.
 
 ***
 
-# What are the components?
+## What are the components?
 
 * `FeatureSpecificTestSuiteBuilder` -- this creates the test suite. Extend this, pass it a subject generator and call `createTestSuite`. This is where the set of tester classes is declared.
 * `AbstractTester` -- extend this to provide actual tests. Test methods should be JUnit 3 style tests, not using `@Test` annotations. This class provides access to the subject generator. You might also want an abstract subclass from which your test cases extend if you want to give default assertion methods, for example.
 * `TestSubjectGenerator` -- this is just a supplier of your implementation.
 
-# Let's get started
+## Let's get started
 
 We'll start with a really simple calculator interface. We can consider an implementation that uses `BigDecimal` to make accurate calculations, and an integer calculator that doesn't know about decimals and throws if passed anything other than an `Integer`. Or even a broken integer calculator that can't handle negative numbers.
 
@@ -71,7 +73,7 @@ public class CalculatorTestSuiteBuilder extends
 
 As soon as we write any test classes we'll add those classes to the list returned from `getTesters`.
 
-# Writing a first test
+## Writing a first test
 
 To start with, let's write a superclass for our test cases, which can contain the common assertions and functions that we'll want to use.
 
@@ -109,7 +111,7 @@ Now the test class can be added to the list of testers in the `CalculatorTestSui
 }
 {% endhighlight %}
 
-# Running the tests
+## Running the tests
 
 The builder builds the test suite for a subject generator that you provide. Here, all the generator has to do is to supply an instance the calculator.
 
@@ -132,7 +134,7 @@ public class TestsForCalculators {
 
 Now you can just keep adding tests that are independent of the implementations.
 
-# Features
+## Features
 
 Different implementations can have different features. If we know that a specific Calculator won't handle non-integers, or negative numbers, say, then the tests asserting behaviour around these features shouldn't be run. Even better, we should test that they throw `IllegalArgumentException` or some other consistent response.
 
@@ -181,7 +183,7 @@ Note you can also annotate tests to run only if the feature is not implemented b
 
 ***
 
-# Next steps
+## Next steps
 
 * Our Calculators don't do much, we need to add implementations of other operations, such as multiply.
 * Once we've got tests for new features, we could add them to the `Feature` enum. Test suites implementing a new `MULTIPLY` feature could be declared as such so that only those calculators that support it are tested.

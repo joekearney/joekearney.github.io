@@ -393,6 +393,7 @@ pre code {
   white-space: pre;
   word-wrap: normal;
   word-break: normal;
+  margin: 0;
 }
 code {
   overflow: auto;
@@ -406,7 +407,6 @@ pre {
   white-space: pre;
   word-wrap: normal;
   word-break: normal;
-  margin: 10px 0 10px 0;
 }
 .inlined {
   display: inline;
