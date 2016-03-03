@@ -1,15 +1,19 @@
-{% for pageTag in page.tags %}
-  {% if site.enumerable-tags contains pageTag %}
-    {% assign chosenTag = pageTag %}
-  {% endif %}
-{% endfor %}
+{% if page.series_index and page.series %}
+  <a href="/{{page.series_index}}">{{page.series}} index</a>
+{% else %}
+  {% for pageTag in page.tags %}
+    {% if site.enumerable-tags contains pageTag %}
+      {% assign chosenTag = pageTag %}
+    {% endif %}
+  {% endfor %}
 
-{% if chosenTag == 'honeyment' %}
-  <a href="/{{site.honeyment.index_path}}">{{site.honeyment.tag_name}} index</a>
-{% elsif page.tags contains 'tasty-rsvps' %}
-  <a href="/{{site.tasty-rsvps.index_path}}">{{site.tasty-rsvps.tag_name}} index</a>
-{% elsif page.tags contains 'germany' %}
-  <a href="/{{site.germany.index_path}}">{{site.germany.tag_name}} index</a>
-{% elsif page.tags contains 'software' %}
-  <a href="/{{site.software.index_path}}">{{site.software.tag_short_name}} index</a>
+  {% if chosenTag == 'honeyment' %}
+    <a href="/{{site.honeyment.index_path}}">{{site.honeyment.tag_name}} index</a>
+  {% elsif page.tags contains 'tasty-rsvps' %}
+    <a href="/{{site.tasty-rsvps.index_path}}">{{site.tasty-rsvps.tag_name}} index</a>
+  {% elsif page.tags contains 'germany' %}
+    <a href="/{{site.germany.index_path}}">{{site.germany.tag_name}} index</a>
+  {% elsif page.tags contains 'software' %}
+    <a href="/{{site.software.index_path}}">{{site.software.tag_short_name}} index</a>
+  {% endif %}
 {% endif %}

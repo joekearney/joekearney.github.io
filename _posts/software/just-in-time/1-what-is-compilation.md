@@ -1,5 +1,3 @@
-## 1. What is compilation?
-
 {% include image-float.html src='/images/xkcd-303-compiling.png' href='https://xkcd.com/303/' id='xkcd-compiling' side='left' caption="Compiling is, of course, what happens while you're sword-fighting on office chairs" %}
 
 Compiling is the process of going from **human-readable code to executable instructions** that can run on a processor. These days there are many stages to this. If you watch closely enough you can see the Scala compiler going through many different phases during compilation of Scala code to JVM bytecode, and that's just the first step, getting to the JVM's **intermediate representation**.
@@ -27,7 +25,7 @@ There are four compilers at work.
 1. **server**, or **C2** -- the more aggressive cousin of C1. This takes the other side of the tradeoff, sacrificing startup speed (compilation times) for later runtime speed thanks to much greater optimisation of code.
 1. **tiered** -- chains together the other three, to get the benefits of quick startup times with eventual high performance. The level of optimisation is progressive. After the first few interpreted invocations a method will be compiled by C1, and after a few more (usually on the order of 10,000) the method will be recompiled and a faster, shinier version swapped in.
 
-### Types and classfiles
+## Types and classfiles
 
 Bytecode is organised into classfiles, and one type is stored in each file. **What's a type**, in this context?
 
@@ -35,7 +33,7 @@ Languages express their types in different ways. Scala has three **kinds** of ty
 
 (**Aside**: counting kinds like this is at least reasonable, but the exact numbers depend on the details. Scala's `case class`es are just `class`es with some free sugar. Java's `enum`s are just `class`es too and annotations are really interfaces, at least at the classfile storage level, and though Java and the JVM have the whole problem with primitives being different to reference types, we'll just ignore that for now.)
 
-#### How do Scala and Java types compile down to classfiles?
+### How do Scala and Java types compile down to classfiles?
 
 The mapping from Java types to the JVM is easy -- the types are the same. This is because Java grew up in a pretty close with the JVM. There is very little in the JVM itself that isn't there to support some feature of Java, because for a long time Java was the only language worth mention that used the JVM. These days there are many more, and features like the `invokedynamic` instruction were added specifically for those others.
 
@@ -43,7 +41,7 @@ Scala has a less direct correspondence between its types and JVM classfiles. `tr
 
 The fun really starts when looking at how inheritance in Scala (which allows multiple inheritance from types with behaviour, in the form of `trait`s) is implemented in the JVM type system (which does not). I might come back to address this in the future, but I left it out of scope of the talk, which was already growing too long!
 
-#### How do Scala and Java class members compare?
+### How do Scala and Java class members compare?
 
 There are two sorts of code that can be invoked in Scala or Java -- those on exist on an instance of some type and have access to its members (`this` reference, other fields), and those that have no such context other than global state. The difference between these two sorts of function is that the code for the second type exists in a single place, it has a statically-known address.
 

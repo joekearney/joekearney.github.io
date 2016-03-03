@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Just In Time 3 &ndash; Benchmarking and Assembly"
-description: "compilation at runtime"
-meta_description: "Using benchmarking on the JVM to expose compiler optimisations"
+title: "Just In Time &ndash; Summary"
+description: "what have we learned?"
+meta_description: "The compiler is sneaky, but there's order behind the magic of the JVM"
 categories:
 - post
 tags:
@@ -22,4 +22,4 @@ type: post
 author: Joe Kearney
 ---
 
-{% include_relative 3-benchmarking.md %}
+{% include_relative 4-summary.md %}

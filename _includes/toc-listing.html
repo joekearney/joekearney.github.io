@@ -45,6 +45,7 @@
                 <a href="{{ post.url }}" class="no-link-highlight">
                 <li>
                   {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                  {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
                   {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
                   <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                   <span class="link-highlight">{{ post.title | replace:'-','&ndash;' }}</span>

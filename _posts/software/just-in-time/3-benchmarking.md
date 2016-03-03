@@ -1,5 +1,3 @@
-# 3. Benchmarking
-
 We like our code to run fast, and the compiler helps this to happen with a lot of just-in-time optimisations.
 
 Sometimes we want to measure how fast our code runs, or compare different possible implementations looking for the fastest. This type of measuring is usually done on small scales -- **microbenchmarking** is the practice of isolating small blocks of code to measure their runtime. By removing complexity and only benchmarking a small portion of code we aim to improve measurement, but the fact is that we're now running code in a very different context to where it will eventually run.
@@ -312,7 +310,7 @@ Recall that many of these benchmarks, especially the ones where the compiler man
 
 How can this be the case given that there are **multiple operations to perform on each iteration**?
 
-Unfortunately we go beyond what JMH can tell us here, and I don't know of any instrumentation that is exposed to give any further information. We can speculate, though, that we're seeing examples here of **hardware optimisation** happening in the CPU itself, beyond even the JIT compiler's reach.
+Unfortunately **we go beyond what JMH can tell us** here, and I don't know of any instrumentation that is exposed to give any further information. Although it's difficult to prove more, we can speculate, though, that we're seeing examples here of **hardware optimisation** happening in the CPU itself, beyond even the JIT compiler's reach.
 
 * **Instruction level parallelism** -- modern CPUs are able to parallelise execution of individual instructions in cases where there is no data dependency between instructions. Here incrementing the counter is independent of testing the control field value, so they can be done in parallel.
 * **Pipelining** -- CPUs have pipelines of instructions that are being executed, so that data dependencies can be fetched before they are required. The field value can be loaded early here, so that its value is ready for the jump test.

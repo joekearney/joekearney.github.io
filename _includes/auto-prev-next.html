@@ -1,36 +1,44 @@
-{% for pageTag in page.tags %}
-  {% if site.enumerable-tags contains pageTag %}
-    {% assign chosenTag = pageTag %}
-  {% endif %}
-{% endfor %}
-
-{% if chosenTag and page.categories contains 'post' %}
-  {% assign tagPosts = "" | split: "|" %}
-  {% for post in site.posts %}
-    {% if post.tags contains chosenTag and post.categories contains 'post' %}
-      {% assign tagPosts = tagPosts | push: post %}
+{% if page.series_tag %}
+  {% assign chosenTag = page.series_tag %}
+{% else %}
+  {% for pageTag in page.tags %}
+    {% if site.enumerable-tags contains pageTag %}
+      {% assign chosenTag = pageTag %}
     {% endif %}
   {% endfor %}
-  <div class="row hidden-print">
-    {% for post in tagPosts %}
-      {% if post.title == page.title %}
-        <hr></hr>
-        <div class="col-xs-4 col-md-5 prev-article-link">
-          {% unless forloop.last %}
-            {% assign next = tagPosts[forloop.index] %}
-            &larr; <a href="{{ next.url }}">{{ next.title }}</a>
-          {% endunless %}
-        </div>
-        <div class="col-xs-4 col-md-2 article-index-link">
-          {% include auto-tag-index-link.html %}
-        </div>
-        <div class="col-xs-4 col-md-5 next-article-link">
-          {% unless forloop.first %}
-            <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
-          {% endunless %}
-        </div>
+{% endif %}
+
+{% if chosenTag %}
+  {% if page.categories contains 'post' or page.tags contains 'isIndexRoot' %}
+    {% assign tagPosts = "" | split: "|" %}
+    {% for post in site.posts %}
+      {% if post.tags contains chosenTag %}
+        {% if post.tags contains 'isIndexRoot' or post.categories contains 'post' %}
+          {% assign tagPosts = tagPosts | push: post %}
+        {% endif %}
       {% endif %}
-      {% assign prev = post %}
     {% endfor %}
-  </div>
+    <div class="row hidden-print">
+      {% for post in tagPosts %}
+        {% if post.title == page.title %}
+          <hr></hr>
+          <div class="col-xs-4 col-md-5 prev-article-link">
+            {% unless forloop.last %}
+              {% assign next = tagPosts[forloop.index] %}
+              &larr; <a href="{{ next.url }}">{{ next.title }}</a>
+            {% endunless %}
+          </div>
+          <div class="col-xs-4 col-md-2 article-index-link">
+            {% include auto-tag-index-link.html %}
+          </div>
+          <div class="col-xs-4 col-md-5 next-article-link">
+            {% unless forloop.first %}
+              <a href="{{ prev.url }}">{{ prev.title }}</a> &rarr;
+            {% endunless %}
+          </div>
+        {% endif %}
+        {% assign prev = post %}
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endif %}
