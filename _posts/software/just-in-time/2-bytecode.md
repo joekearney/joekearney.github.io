@@ -6,7 +6,7 @@ Don't expect to have to look at bytecode too frequently. Usually (hopefully) we 
 
 But it does give some context as to what's happening, and having this context can give you an understanding of why certain optimisations are possible or not, and why some code runs blazingly fast while some limps along.
 
-## Bytecode is a stack-based machine
+## Bytecode is for a stack-based machine
 
 Bytecode is the first intermediate step of the compilers that lead to the CPU. It's a language describing your code in a platform-independent way, in particular for a fictional platform.
 
@@ -22,8 +22,8 @@ Here's an example of the steps of execution of a short code snippet:
 
 1. first, the two integer values, 1 and 2, are added to the stack.
 1. the `iadd` instruction to add two integers is invoked, and the result remains on the stack.
-1. next we need to convert this integer 3 into a string that can be concatenated with the prefix `"my favourite number is: "`. The instruction here is `invokestatic String.valueOf`, which invokes this method with the parameter 3 and leaves the string `"3"` on the stack.
-1. finally, add the longer string and run the instruction `invokevirtual String.concat`. The expected result is left on the stack.
+1. next we need to convert this integer 3 into a string that can be concatenated with the longer prefix. The instruction here is `invokestatic String.valueOf`, which invokes this method with the parameter 3 and leaves the string `"3"` on the stack.
+1. finally, add the longer string `"my favourite number is: "` and run the instruction `invokevirtual String.concat`. The expected result is left on the stack.
 
 Note the `static` and `virtual` instructions -- these have the same meaning as described above. The virtual call is because the String concatenation method "belongs" to the string on which it is called, and the static call has no such instance.
 
@@ -157,20 +157,23 @@ Let's walk through the constructor of the class, `private ScalaConstants$()`:
 {% highlight java %}
 public class Singleton {
   private static final class Holder {
-    private static final Holder INSTANCE
-      = new Holder();
+    private static final Singleton INSTANCE
+      = new Singleton();
     // singleton state here
   }
 
-  // delegate to Holder.INSTANCE
-  // from other methods here
+  private Singleton() {}
+
+  public static Singleton getInstance() {
+    return Holder.INSTANCE;
+  }
 }
 {% endhighlight %}
 </div>
 
 Java has something of a troubled history with the singleton pattern, in particular with double-checked locking as an attempted optimisation. The under-specified memory model pre-Java 1.5 made it easy to have incorrectly or unsafely initialised singletons, that would present as rare and unexplainable bugs.
 
-The accepted idiom these days is the holder-class pattern, which makes the singleton as lazy as possible but also allows the fastest possible access, with no synchronisation required. The instance is created when the class is loaded and all locking happens internally in the JVM.
+The accepted idiom these days is the holder-class pattern. The singleton object is created lazily, only when the inner holder class is loaded. This allows the fastest possible access, with no other synchronisation required. All locking happens internally in the JVM.
 
 The Scala `object` case is the simpler eager initialisation version, which doesn't need the extra indirection.
 
