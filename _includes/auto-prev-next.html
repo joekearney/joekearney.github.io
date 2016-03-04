@@ -25,7 +25,11 @@
           <div class="col-xs-4 col-md-5 prev-article-link">
             {% unless forloop.last or page.tags contains 'isIndexRoot' %}
               {% assign next = tagPosts[forloop.index] %}
+              {% if next.series_index %}
+              &larr; <a href="/{{ next.series_index }}">{{next.series}}</a>
+              {% else %}
               &larr; <a href="{{ next.url }}">{{ next.title }}</a>
+              {% endif %}
             {% endunless %}
           </div>
           <div class="col-xs-4 col-md-2 article-index-link">
