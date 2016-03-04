@@ -21,7 +21,9 @@ layout: null
         <link href="{{ site.production_url }}{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.production_url }}{{ post.id }}</id>
-        <content type="html">{{ post.content | xml_escape }}</content>
+        {% unless post.tags contains 'hasIndexPage' or post.tags contains 'isIndexRoot' %}
+        <content type="html">{{ post.content | markdownify | xml_escape }}</content>
+        {% endunless %}
       </entry>
     {% endunless %}{% endif %}
   {% endfor %}
