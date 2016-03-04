@@ -6,13 +6,9 @@ A lot of cleverness happens between writing your code in an IDE and having run o
 
 I hope that those who read this post (or attended the talk) will take away with them an idea of some of the tools that can be used to inspect the post-IDE lifetime of their code, and an idea of how to understand the output. I would not expect to use these tools every day, but a more important goal is to give some **context of what's happening at a level beneath** your source code.
 
-There are three parts:
+There are three parts and a summary to finish:
 
-1. **[an introduction to what we mean by compilation](/posts/just-in-time-1)** and why it has multiple stages. What are classfiles, and what are types from the point of view of the JVM?
-1. **[what is bytecode and how does it work?](/posts/just-in-time-2)** A brief comparison between how Scala and Java compile similar structures.
-1. **[how can you see the assembler code](/posts/just-in-time-3)** that the JIT compiler generates to be run on the actual CPU? We'll look at this by way of some examples of benchmarking.
-
-and a **[short summary](/posts/just-in-time-4)** to finish.
+{% include toc-listing.html numPosts='all' showDrafts='true' tag='just-in-time' showAuthor='false' showLongDescription='true' orderAscending='true' showOnlyArticles='true' showDate='false' prependSeriesToTitles='false' %}
 
 ***
 

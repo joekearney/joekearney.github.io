@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just In Time &ndash; Summary"
+title: "Summary"
 description: "what have we learned?"
 meta_description: "The compiler is sneaky, but there's order behind the magic of the JVM"
 categories:

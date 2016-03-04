@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Just In Time 2 &ndash; Bytecode"
+title: "2. Bytecode"
 description: "compilation at compile-time"
-meta_description: "Introducing JVM bytecode, and how you can read and understand it"
+meta_description: "What is bytecode and how does it work? What does Scala code look like when compiled to bytecode?"
 categories:
 - post
 tags:
@@ -12,7 +12,7 @@ tags:
 - hasIndexPage
 - just-in-time
 series_index: just-in-time
-series: "Just in Time"
+series: "Just In Time"
 series_tag: just-in-time
 keywords:
 - scala

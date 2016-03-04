@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <title>{{ page.title }}</title>
+  <title>{% if page.series %}{{page.series}} &ndash; {% endif %}{{ page.title }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
   {% if page.meta_description %}

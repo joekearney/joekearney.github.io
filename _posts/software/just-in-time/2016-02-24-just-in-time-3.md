@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Just In Time 3 &ndash; Benchmarking and Assembly"
+title: "3. Benchmarking and Assembly"
 description: "compilation at runtime"
-meta_description: "Using benchmarking on the JVM to expose compiler optimisations"
+meta_description: "How you can see the assembler code that the JIT compiler generates to be run on the actual CPU, explored by way of some examples of benchmarking."
 categories:
 - post
 tags:
@@ -12,7 +12,7 @@ tags:
 - hasIndexPage
 - just-in-time
 series_index: just-in-time
-series: "Just in Time"
+series: "Just In Time"
 series_tag: just-in-time
 keywords:
 - scala

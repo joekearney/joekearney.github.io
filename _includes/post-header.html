@@ -1,6 +1,6 @@
 <div class="row title-group">
   <h1 class="h1 title title-colour">
-    <a href="{{ include.url }}">{{ include.title | replace:' - ',' &ndash; ' }}</a>
+    <a href="{{ include.url }}">{% if page.series %}{{page.series}} &ndash; {% endif %}{{ include.title | replace:' - ',' &ndash; ' }}</a>
     {% unless include.description == blank %}
       {% if include.description-newline == true %}<br />{% endif %}
       <small>{{ include.description }}</small>
