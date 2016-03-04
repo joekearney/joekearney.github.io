@@ -429,6 +429,10 @@ ul .listing, ul .nav {
   padding-left: 0;
   text-align: left;
 }
+.listing li {
+  /* just for the titles, body text of descriptions gets justified */
+  text-align: left;
+}
 
 .category-stats {
   text-align: center;
