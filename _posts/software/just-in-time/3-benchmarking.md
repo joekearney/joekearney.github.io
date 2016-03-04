@@ -1,18 +1,18 @@
-We like our code to run fast, and the compiler helps this to happen with a lot of just-in-time optimisations.
+We like our code to run fast, and the just-in-time compiler helps this to happen with a lot of optimisations.
 
-Sometimes we want to measure how fast our code runs, or compare different possible implementations looking for the fastest. This type of measuring is usually done on small scales -- **microbenchmarking** is the practice of isolating small blocks of code to measure their runtime. By removing complexity and only benchmarking a small portion of code we aim to improve measurement, but the fact is that we're now running code in a very different context to where it will eventually run.
+Sometimes we want to measure how fast our code runs, or compare different possible implementations looking for the fastest. This type of measurement is usually done on small scales -- **microbenchmarking** is the practice of isolating small blocks of code to measure their runtime. By removing complexity and only benchmarking a small portion of code we aim to improve measurement, but the fact is that we're now running code in a very different context to where it will eventually run.
 
-The relative simplicity of code not running in a production environment means that the compiler can find many more optimisations to perform when compiling the code. In doing this the compiler can make changes that vastly change what the code is doing, to the extent that we're no longer measuring anything useful.
+The relative simplicity of code not running in a production environment means that the compiler can find more optimisations to perform when compiling the code. In doing this the compiler can make changes that vastly change what the code is doing, to the extent that we're no longer measuring anything useful. Great care must be taken to **ensure that you're measuring what you think you're measuring**.
 
 > Compiler optimisations can be a huge benefit at runtime; they can be a huge problem in benchmarking.
 
 In this third section we'll look at just-in-time compilers. These run in the JVM, and transform the intermediate classfiles/bytecode into actual CPU instructions. I'm going to introduce some of the compiler optimisations that can be performed by looking at benchmarking, in particular with the **Java Microbenchmarking Harness**, JMH.
 
-Benchmarking is an instructive way to learn about the JIT in the JVM because you need a certain understanding of what's going in order to convince yourself that you're actually measuring what you think you're measuring.
+Benchmarking is an instructive way to learn about JIT in the JVM because you need a certain understanding of what's going in order to **convince yourself that your benchmarks are valid**.
 
-JMH is a benchmarking tool that aims to handle some of the complexity around measuring correctly. It times invocations of your code, taking averages from many runs; it handles requirements like warming up the JVM; and it provides help for **preventing certain optimisations** that would spoil your measurements.
+It's easy to write your own benchmarks without any framework, consisting of a timing loop repeatedly running your code. But there's so much complexity as a result of possible compiler optimisations that it's very hard to write it yourself and be satisfied that your benchmarks are valid. JMH is a benchmarking tool that aims to handle some of the complexity around measuring correctly. It times invocations of your code, taking averages from many runs; it handles requirements like warming up the JVM; and it provides help for **preventing certain optimisations** that would spoil your measurements.
 
-There are a lot of articles around about JMH, but the advice presented in them can be often boiled down to the following:
+There are a lot of articles around about JMH, and the advice presented in them can be often similar to the answers given in [this StackOverflow question](http://codereview.stackexchange.com/a/91027/50965). It boils down to:
 
 * read the [samples](http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/), which cover a lot of the pitfalls
 * some general advice about pitfalls of which you need to be aware (such as only benchmark operations in steady states, looping is generally discouraged inside benchmarks, ...)
@@ -34,11 +34,11 @@ class BenchmarkSomething {
 {% endhighlight %}
 </div>
 
-Writing the code for a benchmark is pretty straightforward -- you put the code you want to run in a method marked with `@Benchmark`. With sbt it's also easy to run, with `sbt jmh:run`.
+Writing the code for a benchmark is pretty straightforward -- you put the code you want to run in a method marked with `@Benchmark`. With sbt it's also easy to run, with `sbt jmh:run`. (See: [sbt-jmh set-up instructions](https://github.com/ktoso/sbt-jmh).)
 
 One practical note: **JMH isn't set up to run inside another project**, in the way that you would do for unit tests. Rather than having benchmarks in a folder inside your project, it's usual to keep them external and either depend on the code you want to benchmark or write it as a one-off exploratory project.
 
-When you run this, it generates the benchmark code for you, and there's quite a lot of it. Indeed it can be pretty instructive to have a look at it for yourself.
+When you run this, it **generates the benchmark code for you**, and there's quite a lot of it. Indeed it can be pretty instructive to have a look at it for yourself.
 
 ## 1. Is compiling worth it?
 
@@ -64,6 +64,8 @@ JMH allows control over all sorts of JVM configuration. One JVM option exposed i
 {: class="table table-bordered table-condensed table-striped width-initial inline-image-right"}
 
 The example here is the most trivial one, compiling or interpreting a no-op method. We can see the difference clearly; the compiled method runs around 40 times faster than the interpreted method.
+
+Yes, compilation is worth it!
 
 {% include clearfix.html %}
 
@@ -111,7 +113,7 @@ def measureLogRight: Double = Math.log(x)
 {% endhighlight %}
 </div>
 
-Code that produces a value that isn't used is code that's just burning CPU unnecessarily. At runtime, it's great for unused code to be removed, because removing it makes our code better. In a benchmark, sometimes you have to persuade the compiler that your code isn't useless, otherwise your benchmarks give the wrong results.
+Code that produces a value that isn't used is code that's just burning CPU unnecessarily. At runtime, it's great for unused code to be removed, because removing it makes our code better. In a benchmark, sometimes you have to persuade the compiler that your code isn't useless, otherwise your benchmarks would give the wrong results.
 
 Suppose that we want to measure a utility function like `Math.log`. If the compiler thinks that the value returned is not used then it is free to remove the call. It's easy to construct a benchmark method that "suffers" from this optimisation. JMH has support for preventing in the form of a type called `BlackHole` -- stuff goes in and doesn't come out. Any value returned from a benchmark method is consumed by a `BlackHole` and it's possible to access one for use inside the method as well. BlackHole goes to great lengths to ensure that the compiler cannot prove that the value is unused, while doing this quickly and with predictable performance.
 
@@ -159,7 +161,7 @@ In a hierarchy of inheriting types with methods that override other methods, act
 
 To answer this fully we need a basic understanding of how the JVM represents objects and types at runtime. Any object has a concrete type, and that type is represented by a type descriptor in memory describing its methods, its one super-class and any super-interfaces, among other things. Each object has a pointer in memory to its type descriptor. This type descriptor is never an interface, it's always a class; **you can't instantiate an interface**, you always need some concrete type.
 
-You can see and manipulate representations of these types using reflection; in Java, `<your-type>.class` or `<your-object>.getClass()` gives a `Class` object that exposes details of hierarchy, methods and fields available. (Fun fact: if you look closely enough in the JVM you'll discover that these things are called `klass`, to disambiguate from the Java-level keyword.)
+You can see and manipulate representations of these types using reflection; in Java, `<your-type>.class` or `<your-object>.getClass()` gives a `Class` object that exposes details of hierarchy, methods and fields available. (Fun fact: if you look closely enough in the JVM source you'll discover that these things are called `klass`, to disambiguate from the Java-level keyword.)
 
 Consider an example type hierarchy with an interface `List` and three implementations `ArrayList`, `LinkedList` and `ImmutableList`. In code you might have a reference to an object of type `List`, and polymorphism being a pillar of something means that the object will be one of the three sub-types, but can be treated generically.
 
@@ -188,7 +190,7 @@ Do we need all of these pointer dereferencing steps? In the usual case, the answ
 
 This isn't the case for static methods, where the location of the code is known at compile time because there's no overriding (compare this to static vs dynamic linking of libraries). This is the difference between the `invokevirtual` and `invokestatic` instructions -- the latter doesn't need to dereference an object in order to be invoked.
 
-Now consider the case where there's only one implementation of an interface method in the JVM -- when the method is **monomorphic, not polymorphic**. The just-in-time compiler is able to optimise method calls where the code of the method is statically known, using **class hierarchy analysis**. In our example, if only one implementation of `List` exists in the JVM then the object dereference can be skipped and the method call be made effectively `static`.
+Now consider the case where there's only one implementation of an interface method in the JVM -- when the method is **monomorphic, not polymorphic**. The just-in-time compiler is able to optimise method calls where the code of the method is statically known, using **class hierarchy analysis**. In our example, if only one implementation of `List` existed in the JVM (i.e. if its class had been loaded) then the object dereference can be skipped and the method call be made effectively `static`.
 
 ### The benchmark
 
@@ -221,7 +223,7 @@ def singleClass     = b1.get + b2.get + b3.get + b4.get
 {% endhighlight %}
 </div>
 
-Can we observe this effect in practice? Certainly! `List` is a poor choice for this because many implementation of it will be loaded just by accident. So we'll construct a synthetic hierarchy to do this.
+Can we observe this effect in practice? Certainly! `List` is a poor choice for this because many implementations of it will be loaded just by accident. So we'll construct a synthetic hierarchy to test this scientifically.
 
 The code for both traits and all implementing classes is the same, so that we can test the difference when the only change is the number of implementations.
 
@@ -235,7 +237,7 @@ We've got four instances of `ThingA` of four different concrete types, and four 
 
 {% include clearfix.html %}
 
-This effect has caused changes in code in the wild. The `ImmutableList` implementation in Google Guava, a set of core library extensions for Java, once had specialised implementations for small list sizes, but the effect of the method call overhead was discovered to be greater than the benefit given by these specialisations.
+The effect is not insignificant -- about a one-third performance boost by collapsing our four types into one. In many settings it may not be possible to do this, where the code is doing different things in different implementation, but effect has been observed in the wild. The [`ImmutableList`](http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/collect/ImmutableList.html) implementation in Google Guava, a set of core library extensions for Java, has specialised implementations for small list sizes, and there has been a lot of discussion about how best to balance performance here. [This GitHub issue](https://github.com/google/guava/issues/1268) has a lot of the context.
 
 You can imagine why it could have been easy to miss this kind of performance difference in testing. In a typical benchmark you'd test each implementation (empty, one item, two items, ...) separately, and CHA would optimise method calls for you. In production code where you'd expect all of these types to be loaded, the opportunity for the JIT to perform these optimisations would much less.
 
@@ -310,7 +312,7 @@ Recall that many of these benchmarks, especially the ones where the compiler man
 
 How can this be the case given that there are **multiple operations to perform on each iteration**?
 
-Unfortunately **we go beyond what JMH can tell us** here, and I don't know of any instrumentation that is exposed to give any further information. Although it's difficult to prove more, we can speculate, though, that we're seeing examples here of **hardware optimisation** happening in the CPU itself, beyond even the JIT compiler's reach.
+Unfortunately **we go beyond what JMH can tell us** here, and I don't know of any instrumentation that is able to expose any further information. Although it's difficult to prove more, we can speculate, though, that we're seeing examples here of **hardware optimisation** happening in the CPU itself, beyond even the JIT compiler's reach.
 
 * **Instruction level parallelism** -- modern CPUs are able to parallelise execution of individual instructions in cases where there is no data dependency between instructions. Here incrementing the counter is independent of testing the control field value, so they can be done in parallel.
 * **Pipelining** -- CPUs have pipelines of instructions that are being executed, so that data dependencies can be fetched before they are required. The field value can be loaded early here, so that its value is ready for the jump test.

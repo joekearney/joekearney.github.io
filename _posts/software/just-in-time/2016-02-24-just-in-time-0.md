@@ -8,10 +8,8 @@ categories:
 tags:
 - article
 - software
-- draft
 - isIndexRoot
 - just-in-time
-- new
 permalink: /just-in-time
 keywords:
 - scala

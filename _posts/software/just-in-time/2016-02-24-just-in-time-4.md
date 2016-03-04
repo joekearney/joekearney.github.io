@@ -8,11 +8,10 @@ categories:
 tags:
 - article
 - software
-- draft
 - hasIndexPage
 - just-in-time
 series_index: just-in-time
-series: "Just in Time"
+series: "Just In Time"
 series_tag: just-in-time
 keywords:
 - scala

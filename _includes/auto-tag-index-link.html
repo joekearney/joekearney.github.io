@@ -1,5 +1,5 @@
 {% if page.series_index and page.series %}
-  <a href="/{{page.series_index}}">{{page.series}} index</a>
+  part of the <a href="/{{page.series_index}}">{{page.series}} series</a>
 {% else %}
   {% for pageTag in page.tags %}
     {% if site.enumerable-tags contains pageTag %}

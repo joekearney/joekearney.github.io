@@ -14,8 +14,6 @@ It describes the execution of your program on a stack-based machine, as opposed 
 
 It's not particularly efficient, but it's not supposed to be. We're still quite a long way from the metal.
 
-{% include todo.html note='animation of stack example' %}
-
 Here's an example of the steps of execution of a short code snippet:
 
 {% highlight java %}"my favourite number is: " + (1 + 2){% endhighlight %}
@@ -155,6 +153,7 @@ Let's walk through the constructor of the class, `private ScalaConstants$()`:
 
 <div class="inline-image-left">
 {% highlight java %}
+// Idiomatic lazy singleton pattern
 public class Singleton {
   private static final class Holder {
     private static final Singleton INSTANCE
@@ -173,9 +172,9 @@ public class Singleton {
 
 Java has something of a troubled history with the singleton pattern, in particular with double-checked locking as an attempted optimisation. The under-specified memory model pre-Java 1.5 made it easy to have incorrectly or unsafely initialised singletons, that would present as rare and unexplainable bugs.
 
-The accepted idiom these days is the holder-class pattern. The singleton object is created lazily, only when the inner holder class is loaded. This allows the fastest possible access, with no other synchronisation required. All locking happens internally in the JVM.
+The accepted idiom these days is the holder-class pattern. The singleton object is created lazily, only when the singleton is actually accessed. This allows the fastest possible access, with no other synchronisation required. All locking happens internally in the JVM.
 
-The Scala `object` case is the simpler eager initialisation version, which doesn't need the extra indirection.
+The Scala `object` case is the eager initialisation version, which doesn't need the extra indirection.
 
 {% include clearfix.html %}
 {% endcapture %}

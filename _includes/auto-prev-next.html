@@ -23,7 +23,7 @@
         {% if post.title == page.title %}
           <hr></hr>
           <div class="col-xs-4 col-md-5 prev-article-link">
-            {% unless forloop.last %}
+            {% unless forloop.last or page.tags contains 'isIndexRoot' %}
               {% assign next = tagPosts[forloop.index] %}
               &larr; <a href="{{ next.url }}">{{ next.title }}</a>
             {% endunless %}

@@ -8,7 +8,6 @@ categories:
 tags:
 - article
 - software
-- draft
 - hasIndexPage
 - just-in-time
 series_index: just-in-time
