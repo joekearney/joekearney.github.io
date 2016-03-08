@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Summary"
-description: "what have we learned?"
-meta_description: "The compiler is sneaky, but there's order behind the magic of the JVM"
+description: "benchmarking and compilation in perspective"
+meta_description: "The compiler is sneaky, but there's order behind the magic of the JVM. This is all fascinating, but it's probably not the bottleneck in your application."
 categories:
 - post
 tags:
