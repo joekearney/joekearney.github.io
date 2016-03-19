@@ -45,8 +45,7 @@ _From start to finish I can knock this out in about 35-45 minutes depending on s
 
 1. Cook spinach according to directions on package. After the spinach is cooked drain the liquid (vegetable liquor) from the spinach and save for later use. Be aggressive and attempt to get as much liquid out of the spinach as you can.
 1. Enjoy the fine wine.
-1. In the large saucepan: melt the butter, then add flour, stirring until blended and smooth but not brown.
-1dd the chopped onions and cook until soft but not brown.    
+1. In the large saucepan: melt the butter, then add flour, stirring until blended and smooth but not brown. Add the chopped onions and cook until soft but not brown.    
 1. Slowly add the evaporated milk and vegetable liquor, stirring constantly to avoid lumps. Cook until smooth and thick, continue stirring while adding the pepper, garlic salt, celery salt and Worcestershire sauce.
 1. Add the cut up cheese and cook until the cheese is completely melted.
 1. **READ CAREFULLY**:  Now the tricky part!!! Stirring in the Red (Cayenne) Pepper!! The recipe says to add red pepper to taste. Go slowly and add a bit at a time, a few shakes over the simmering sauce then dab on finger to test. Note: It will take a few seconds for taste buds to discover the delicate seasonings. Repeat until you find the amount right for you. It should have a bite to it in the end. You can always blend in a little more to spice it up but you can’t tone it down if you put in too much.
