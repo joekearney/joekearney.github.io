@@ -24,3 +24,11 @@
     </a>
   {% endif %}
 {% endif %}
+{% if include.title_image_flickr_url %}
+  <div class="title-image" {% if include.title_image_max_height %}style="max-height: {{include.title_image_max_height}};"{% endif %}>
+    <a class="flickr-embed-frame" data-flickr-embed="true" data-context="true"  href="https://www.flickr.com/photos/joekearney/{{include.title_image_flickr_picture}}{% if include.title_image_flickr_album %}/in/album-{{include.title_image_flickr_album}}/{% endif %}">
+      <img src="{{include.title_image_flickr_url}}" width="100%" height="100%">
+    </a>
+    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
+{% endif %}

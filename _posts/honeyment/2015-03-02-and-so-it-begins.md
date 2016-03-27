@@ -11,9 +11,15 @@ type: post
 published: true
 author: Joanna Heald
 
-title_iframe_float_right_url: https://www.flickr.com/photos/joekearney/16696031682/in/set-72157647810587354/player/
-title_iframe_float_right_width: "300px"
-title_iframe_float_right_height: "400px"
+#title_iframe_float_right_url: https://www.flickr.com/photos/joekearney/16696031682/in/set-72157647810587354/player/
+#title_iframe_float_right_width: "300px"
+#title_iframe_float_right_height: "400px"
+
+title_flickr_float_right_url: https://farm9.staticflickr.com/8576/16696031682_1543f718ff_b.jpg
+title_flickr_float_right_width: 300px
+title_flickr_float_right_height: 400px
+title_flight_float_right_picture: 16696031682
+title_flight_float_right_album: 72157647810587354
 ---
 
 And so it begins... We're off ready for adventure of a lifetime!

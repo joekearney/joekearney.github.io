@@ -114,9 +114,9 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
 
   this.setFlickrLinkForIndex = function(addressIndex) {
     if (addressIndex >= 0) {
-      var flickrLink = flickrLinks[addressIndex];
+      var flickrLink = this.flickrLinks[addressIndex];
       var flickrIframe = document.getElementById("flickr-canvas");
-      if (flickrIframe.src != flickrLink && flickrLink.length != 0) {
+      if (flickrIframe && flickrIframe.src != flickrLink && flickrLink.length != 0) {
         flickrIframe.src = flickrLink;
       }
     } else {
@@ -124,7 +124,7 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
     }
   }
   this.setFlickrLinkFor = function(placeName) {
-    var addressIndex = locations.slice(0, this.currentLocationIndex+1).lastIndexOf(placeName);
+    var addressIndex = this.locations.slice(0, this.currentLocationIndex+1).lastIndexOf(placeName);
     this.setFlickrLinkForIndex(addressIndex);
   }
 
@@ -204,7 +204,7 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
         for (var place2 in ms) {
           var iw = self.infoWindows[place2];
           if (iw) {
-            iw.close(map, ms[place2]);
+            iw.close(self.map, ms[place2]);
           }
         }
 
@@ -212,8 +212,8 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
 
         var iwToOpen = self.infoWindows[placeForMarker];
         if (iwToOpen) {
-          iwToOpen.open(map, m);
-          setFlickrLinkFor(placeForMarker);
+          iwToOpen.open(self.map, m);
+          self.setFlickrLinkFor(placeForMarker);
         } else {
           console.log("Found no infoWindow for " + placeForMarker);
         }
@@ -281,7 +281,7 @@ function WherePage(locationsCsvUrl, locationsTimelineUrl, numberOfPointsToShowOn
       // have to do this through a closure to capture one value of marker! WAT!
       function attachMarkerClickListener(m) {
         google.maps.event.addListener(m, 'click', function() {
-          markerClick(m, markers);
+          markerClick(m, self.markers);
         });
       }
 

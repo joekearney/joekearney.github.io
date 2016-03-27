@@ -2,6 +2,8 @@
 Parameters:
 
   src - image path
+  picture_id - flickr picture ID for the link
+  album_id - flickr album ID for the link
   [txt_alt] - alt text, title
   [href] - optional url for a link
   [caption] optional caption
@@ -25,14 +27,15 @@ TODO handle iframe instead of img
 
 {% if include.src %}
 
-  <div class="image-border-frame {% if include.class %}{{include.class}}{% else %}inline-image inline-image-{{side}}{% endif %} {% if include.caption and include.caption != "" %}inline-image-with-caption{% endif %}" id="img-parent-div-for-{{include.id}}">
+  <div class="image-border-frame {% if include.class %}{{include.class}}{% else %}inline-image inline-image-{{side}}{% endif %} {% if include.caption and include.caption != "" %}inline-image-with-caption{% endif %} {% if include.kind == 'flickr' %}flickr-embed-frame{% endif %}" id="img-parent-div-for-{{include.id}}">
     {% if include.href and include.href != '' %}<a href="{{include.href}}">{% endif %}
     {% if include.kind == 'iframe' %}
       <iframe src='{{include.src}}' id="iframe-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    {% elsif include.kind == 'flickr' %}
+      <a data-flickr-embed="true" data-context="true"  href="https://www.flickr.com/photos/joekearney/{{include.picture_id}}/in/album-{{include.album_id}}/" {% if include.txt_alt and include.txt_alt != "" %}title="{{include.txt_alt}}"{% endif %}><img src="{{include.src}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
     {% else %}
-      <img src='{{include.src}}' id="img-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}" 
+      <img src='{{include.src}}' id="img-{{include.id}}" height="{% if include.height %}{{include.height}}{% else %}100%{% endif %}" width="{% if include.width %}{{include.width}}{% else %}100%{% endif %}"
         {% if include.txt_alt and include.txt_alt != "" %} alt="{{include.txt_alt}}" title="{{include.txt_alt}}"{% endif %}
-
       />
     {% endif %}
     {% if include.href and include.href != '' %}</a>{% endif %}

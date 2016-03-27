@@ -175,13 +175,13 @@ section.sidebar h1, section.sidebar h2, section.sidebar h3, section.sidebar h4, 
   }
 }
 @media (min-width:451px) {
-  .title-image > iframe { height: 512px; }
-  .title-image, .title-image > img {
+  .title-image > iframe, .title-image > .flickr-embed-frame { height: 512px; }
+  .title-image, .title-image > img, .title-image > .flickr-embed-frame {
     max-height: 512px;
     max-width: 100%;
   }
 }
-.title-image > iframe {
+.title-image > iframe, .title-image > .flickr-embed-frame {
   width: 100%;
 }
 
