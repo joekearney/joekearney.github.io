@@ -32,6 +32,10 @@ How can you tell whether two notes played together are in tune? No, don't bother
 
 Given any two notes, how can we decide if they sound good together? What does it mean for them to be in tune?
 
+To answer this let's think mathematically about what it means to play two notes together. Take a note of a certain frequency \\(f\\), and consider a note within an octave above \\(f\\). The octave doubles the frequency, so our second note has frequency \\(r f, r \in (1, 2)\\). So our question is: for what values of \\(r\\) do these two notes sound good together?
+
+Some standard "good" intervals include a perfect fifth, \\(r = 3/2 \\) and a perfect fourth, \\(r = 4/3 \\). The usual suspect for a cacophonous interval is the tritone, or augmented fourth, with \\(r = \sqrt{2}\\). This might lead us towards rational numbers as a source of "good" intervals.
+
 ## 2. Measuring the rationals
 
 The rationals numbers, called $$\mathbb{Q}$$, are all of the fractions -- numbers of the form \\(p/q\\) for integers \\(p\\) and \\(q\\). The real numbers $$\mathbb{R}$$ are everything else that's not a fraction.
