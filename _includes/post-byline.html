@@ -2,8 +2,16 @@
   <div class="row">
     <div class="col-sm-8">
       {% unless include.tags contains 'no-date' %}{{ include.date | date: "%B %e, %Y" }}{% endunless %}
-      {% if include.author %}{% assign authorArray = include.author | join: "|" | split: "|" %}
-        &ndash; {{ authorArray | array_to_sentence_string }}
+      {% if include.author %} &ndash;
+        {% assign authorArray = include.author | join: "|" | split: "|" %}
+        {% if authorArray.size == 1 %}
+          <a href="/authors#{{ include.author | slugify}}">{{ include.author }}</a>
+        {% else %}
+          {% assign secondLast = authorArray.size | minus: 1 %}
+          {% for author in authorArray %}
+            <a href="/authors#{{ author | slugify}}">{{ author }}</a>{% if forloop.index == secondLast %} and {% elsif forloop.index < secondLast %},{% endif %}
+          {% endfor %}
+        {% endif %}
       {% endif %}
       {% if include.categories contains 'post' %}
         {% unless include.tags contains 'tasty-rsvps' %}
