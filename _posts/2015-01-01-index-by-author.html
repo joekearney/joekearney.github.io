@@ -35,17 +35,20 @@ sitemap:
     {% endfor %}
 
     {% if numPosts > 1 %}
-      <h1>{{ author }} &ndash; {{ numPosts }} posts</h1>
+      <h1>{{ author }}</h1>
+      <p>{{ numPosts }} posts</p>
       <ul>
       {% for p in site.posts %}
         {% if p.author contains author or p.author == author %}
           <li>
+            {% if p.tags contains 'hasIndexPage' or p.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span> {% if p.series %}<a href="{{p.series_index}}">{{ p.series }}</a> <span class="post-description">&ndash;</span> {% endif %}{% endif %}
+            <a href="{{p.url}}">{{p.title}}</a>
+            <span class="post-description">&ndash; {{ p.date | date: "%Y-%m-%d" }}</span>
             {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
             {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
             {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
             {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-            <span class="post-description">[{{ p.tags | join: ', ' }}] {{ p.date | date: "%Y-%m-%d" }}</span>
-            <a href="{{p.url}}">{{p.title}}</a>
+            <span class="post-description">[{{ p.tags | join: ', ' }}]</span>
           </li>
         {% endif %}
       {% endfor %}
