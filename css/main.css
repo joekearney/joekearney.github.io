@@ -341,6 +341,13 @@ table.highlighttable td.linenos pre code {
   text-align: right;
 }
 
+ul.listing li span.post-date{
+  padding-top:3px;
+  float:right;
+  font-size:12px;
+  color:#999
+}
+.post-description{color:#999}
 span.post-author {
   padding-top: 3px;
   font-size: 12px;
@@ -354,6 +361,10 @@ span.post-description {
   padding-left: 10px;
   font-size: 16px;
   margin: 3px 0;
+}
+span.post-tags {
+  font-size:12px;
+  color:#999
 }
 
 .map-full-width {

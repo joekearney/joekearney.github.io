@@ -16,14 +16,15 @@ sitemap:
 {% capture site_authors %}{% for post in site.posts %}{{ post.author | join: '|' }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
 {% assign all_authors = site_authors | split:'|' | sort %}
 
-{% assign all_authors_uniq = "Joe Kearney,Joanna Kearney,Kate Jones" | split: ',' %}
+{% assign main_authors = "Joe Kearney,Joanna Kearney,Kate Jones" | split: ',' %}
+{% assign all_authors_uniq = site.empty_array %}
 {% for a in all_authors %}
   {% unless all_authors_uniq contains a %}
     {% assign all_authors_uniq = all_authors_uniq | push: a %}
   {% endunless %}
 {% endfor %}
 
-{% for author in all_authors_uniq %}
+{% for author in main_authors %}
   {% unless author == "" %}
     {% assign numPosts = 0 %}
     {% for p in site.posts %}
@@ -34,58 +35,29 @@ sitemap:
       {% endif %}
     {% endfor %}
 
-    {% if numPosts > 1 %}
-      <h1><a class="jumptarget" name="{{ author | slugify }}"></a>{{ author }}</h1>
-      <p>{{ numPosts }} posts</p>
-      <ul>
-      {% for p in site.posts %}
-        {% if p.author contains author or p.author == author %}
-          <li>
-            {% if p.tags contains 'hasIndexPage' or p.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span> {% if p.series %}<a href="{{p.series_index}}">{{ p.series }}</a> <span class="post-description">&ndash;</span> {% endif %}{% endif %}
-            <a href="{{p.url}}">{{p.title}}</a>
-            <span class="post-description">&ndash; {{ p.date | date: "%Y-%m-%d" }}</span>
-            {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
-            {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
-            {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
-            {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-            <span class="post-description">[{{ p.tags | join: ', ' }}]</span>
-          </li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    {% endif %}
+    {% assign authorPosts = site.empty_array %}
+    {% for p in site.posts %}
+      {% if p.author contains author or p.author == author %}{% if p.categories contains 'post' %}
+        {% assign authorPosts = authorPosts | push: p %}
+      {% endif %}{% endif %}
+    {% endfor %}
+
+    <a class="jumptarget" name="{{ author | slugify }}"></a><h1>{{ author }} &ndash; {{ numPosts }} posts</h1>
+
+    {% include toc-listing.html posts=authorPosts numPosts='all' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="true" %}
   {% endunless %}
 {% endfor %}
 
 <h1>Other authors</h1>
-<ul>
+{% assign otherAuthorPosts = site.empty_array %}
 {% for author in all_authors_uniq %}
-  {% unless author == "" %}
-    {% assign numPosts = 0 %}
+  {% unless author == "" or main_authors contains author %}
     {% for p in site.posts %}
-      {% if p.categories contains 'post' %}
-        {% if p.author contains author or p.author == author %}
-          {% assign numPosts = numPosts | plus: 1 %}
-        {% endif %}
+      {% if p.author contains author or p.author == author %}
+        {% assign otherAuthorPosts = otherAuthorPosts | push: p %}
       {% endif %}
     {% endfor %}
-
-    {% if numPosts == 1 %}
-      {% for p in site.posts %}
-        {% if p.author contains author or p.author == author %}
-          <li>
-            <a name="{{ author | slugify }}"></a>{{ author }} &ndash;
-            <a href="{{p.url}}">{{p.title}}</a>
-            <span class="post-description">&ndash; {{ p.date | date: "%Y-%m-%d" }}</span>
-            {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
-            {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
-            {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
-            {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-            <span class="post-description">[{{ p.tags | join: ', ' }}]</span>
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
   {% endunless %}
 {% endfor %}
-</ul>
+
+{% include toc-listing.html posts=otherAuthorPosts numPosts='all' showAuthor='true' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="true" %}

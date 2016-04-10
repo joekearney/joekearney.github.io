@@ -15,6 +15,7 @@ author :
   github : joekearney
   twitter : joejkearney
 
+empty_array: []
 
 ####
 #### To add a new tag:
@@ -30,6 +31,16 @@ enumerable-tags:
 - tasty-rsvps
 - germany
 - software
+- just-in-time
+
+hidden_tags:
+- article
+- draft
+- hasIndexPage
+- isIndexRoot
+- tasty-rsvps-savoury
+- tasty-rsvps-sweet
+- wedding
 
 # software posts that are to be read, not just howto
 software:
@@ -53,3 +64,6 @@ germany:
   tag_short_name: "Germany"
   tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
   index_path: "germany-index"
+just-in-time:
+  tag_name: "Just In Time"
+  index_path: "just-in-time"

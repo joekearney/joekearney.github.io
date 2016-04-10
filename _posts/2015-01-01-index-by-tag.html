@@ -17,57 +17,35 @@ sitemap:
 {% assign all_tags = site_tags | split:',' | sort %}
 
 {% for tag in site.enumerable-tags %}
-  {% assign numPosts = 0 %}
+  {% assign posts = site.empty_array %}
   {% for p in site.posts %}
     {% if p.categories contains 'post' and p.tags contains tag %}
       {% unless p.tags contains 'draft' or p.tags contains 'landing' %}
-        {% assign numPosts = numPosts | plus: 1 %}
+        {% assign posts = posts | push: p %}
       {% endunless %}
     {% endif %}
   {% endfor %}
 
-  <h1>{{ tag }} &ndash; {{ numPosts }} posts</h1>
-  <ul>
-  {% for p in site.posts %}
-    {% if p.tags contains tag %}
-      <li>
-        {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
-        {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
-        {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
-        {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-        <a href="{{p.url}}">{{p.title}}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-  </ul>
+  <a class="jumptarget" name="{{ tag | slugify }}"></a><h1>{{ tag }} &ndash; {{ posts.size }} posts</h1>
+  {% include toc-listing.html posts=posts numPosts='all' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="false" showAuthor="true" %}
 {% endfor %}
 
 <hr></hr>
 
-{% for t in all_tags %}
-  {% unless site.enumerable-tags contains t %}
-    {% assign numPosts = 0 %}
+{% for tag in all_tags %}
+  {% unless site.enumerable-tags contains tag or site.hidden_tags contains tag %}
+    {% assign posts = site.empty_array %}
     {% for p in site.posts %}
-      {% if p.categories contains 'post' and p.tags contains t %}
+      {% if p.categories contains 'post' and p.tags contains tag %}
         {% unless p.tags contains 'draft' or p.tags contains 'landing' %}
-          {% assign numPosts = numPosts | plus: 1 %}
+          {% assign posts = posts | push: p %}
         {% endunless %}
       {% endif %}
     {% endfor %}
 
-    <h1>{{ t }} &ndash; {{ numPosts }} posts</h1>
-    <ul>
-    {% for p in site.posts %}
-      {% if p.tags contains t %}
-        <li>
-          {% if p.categories contains 'post' %}<span class="post-description">[Post]</span>{% endif %}
-          {% if p.categories contains 'index' %}<span class="post-description">[Index]</span>{% endif %}
-          {% if p.tags contains 'landing' %}<span class="post-description">[Landing]</span>{% endif %}
-          {% if p.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-          <a href="{{p.url}}">{{p.title}}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-    </ul>
+    {% unless posts.size == 0 %}
+      <a class="jumptarget" name="{{ tag | slugify }}"></a><h1>{{ tag }} &ndash; {{ posts.size }} posts</h1>
+      {% include toc-listing.html posts=posts numPosts='all' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="false" showAuthor="true" %}
+    {% endunless %}
   {% endunless %}
 {% endfor %}

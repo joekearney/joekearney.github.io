@@ -1,7 +1,19 @@
-{% if include.orderAscending %}
-  {% assign orderedPosts = site.posts | reverse %}
+{% if include.posts %}
+  {% assign unorderedPosts = include.posts %}
+{% elsif include.tag %}
+  {% assign unorderedPosts = site.empty_array %}
+  {% for p in site.posts %}
+    {% if p.tags contains include.tag %}
+      {% assign unorderedPosts = unorderedPosts | push: p %}
+    {% endif %}
+  {% endfor %}
 {% else %}
-  {% assign orderedPosts = site.posts %}
+{% endif %}
+
+{% if include.orderAscending %}
+  {% assign orderedPosts = unorderedPosts | reverse %}
+{% else %}
+  {% assign orderedPosts = unorderedPosts %}
 {% endif %}
 
 {% if include.numPosts and include.numPosts == 'all' %}
@@ -32,72 +44,82 @@
 
   {% assign totalPostsCount = 0 %}
   {% for post in orderedPosts %}
-    {% if post.tags contains include.tag %}
-      {% assign veto = false %}
-      {% if page.url == post.url %}
+    {% assign veto = false %}
+    {% if page.url == post.url %}
+      {% assign veto = true %}
+    {% endif %}
+    {% if post.tags contains 'hasIndexPage' %}
+      {% unless page.tags contains 'isIndexRoot' or include.showSeriesPages == 'true' %}
         {% assign veto = true %}
-      {% endif %}
-      {% if post.tags contains 'hasIndexPage' %}
-        {% unless page.tags contains 'isIndexRoot' or include.showSeriesPages == 'true' %}
-          {% assign veto = true %}
-        {% endunless %}
-      {% endif %}
-
-
-      {% unless veto %}
-
-      {% if post.categories contains 'post' or post.tags contains 'isIndexRoot' %}
-        {% unless post.tags contains 'landing' %}
-          {% if showNonArticles or post.tags contains 'article' or post.tags contains 'isIndexRoot' %}
-            {% unless post.tags contains 'draft' and hideDrafts %}
-              {% if remaining > 0 or post.tags contains 'new' %}
-                {% assign remaining = remaining | minus: 1 %}
-                {% assign postWords = post.content | number_of_words %}
-                {% assign totalWordCount = totalWordCount | plus: postWords %}
-                {% assign totalPosts = totalPosts | plus: 1 %}
-                <a href="{{ post.url }}" class="no-link-highlight">
-                <li>
-                  {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                  {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
-                  {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-                  {% if include.showDate != 'false' %}
-                  <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                  {% endif %}
-                  {% assign titlePrefix = '' %}
-                  {% if post.series %}
-                    {% unless include.prependSeriesToTitles == 'false' %}
-                      {% capture titlePrefix %}{{post.series}} &ndash; {% endcapture %}
-                    {% endunless %}
-                  {% endif %}
-                  <span class="link-highlight listing-title">{{titlePrefix}}{{ post.title | replace:'-','&ndash;' }}</span>
-                  {% if post.description %}
-                    {% unless post.description == "" %}
-                      <span class="post-description listing-title">&ndash; {{ post.description }}</span>
-                    {% endunless %}
-                  {% endif %}
-                  {% if include.showAuthor == "true" %}
-                    {% assign authorArray = post.author | join: "|" | split: "|" %}
-                    <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-                  {% endif %}
-                  {% if include.showLongDescription == "true" %}
-                    <p class="post-long-description">{{post.meta_description}}</p>
-                  {% endif %}
-                </li>
-                </a>
-              {% else %}
-                {% assign postsNotListed = postsNotListed | plus: 1 %}
-              {% endif %}
-              {% assign totalPostsCount = totalPostsCount | plus: 1 %}
-            {% endunless %}
-          {% endif %}
-        {% endunless %}
-      {% endif %}
-
       {% endunless %}
     {% endif %}
+
+    {% unless veto %}
+
+    {% if post.categories contains 'post' or post.tags contains 'isIndexRoot' %}
+      {% unless post.tags contains 'landing' %}
+        {% if showNonArticles or post.tags contains 'article' or post.tags contains 'isIndexRoot' %}
+          {% unless post.tags contains 'draft' and hideDrafts %}
+            {% if remaining > 0 or post.tags contains 'new' %}
+              {% assign remaining = remaining | minus: 1 %}
+              {% assign postWords = post.content | number_of_words %}
+              {% assign totalWordCount = totalWordCount | plus: postWords %}
+              {% assign totalPosts = totalPosts | plus: 1 %}
+
+              {% unless include.showTags %}<a href="{{ post.url }}" class="no-link-highlight">{% endunless %}
+              <li>
+                {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
+                {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
+                {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
+                {% if include.showDate != 'false' %}
+                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                {% endif %}
+                {% assign titlePrefix = '' %}
+                {% if post.series and post.include_series_in_header_title %}
+                  {% capture titlePrefix %}{{post.series}} &ndash; {% endcapture %}
+                {% endif %}
+
+                {% if include.showTags %}<a href="{{ post.url }}">{% endif %}
+                <span class="link-highlight listing-title">{{titlePrefix}}{{ post.title | replace:'-','&ndash;' }}</span>
+                {% if include.showTags %}</a>{% endif %}
+
+                {% if post.description %}
+                  {% unless post.description == "" %}
+                    <span class="post-description listing-title">&ndash; {{ post.description }}</span>
+                  {% endunless %}
+                {% endif %}
+                {% if include.showAuthor == "true" %}
+                  {% assign authorArray = post.author | join: "|" | split: "|" %}
+                  <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
+                {% endif %}
+                {% if include.showTags == "true" %}
+                  <span class="post-description">&ndash;
+                  {% for t in post.tags %}
+                    {% if site.enumerable-tags contains t %}
+                      [<a href="/{% include tag-to-index-url.html tag=t %}">{{t}}</a>]
+                    {% else %}
+                      {% unless site.hidden_tags contains t %}[<a href="/posts#{{t | slugify}}">{{t}}</a>] {% endunless %}
+                    {% endif %}
+                  {% endfor %}</span>
+                {% endif %}
+                {% if include.showLongDescription == "true" and post.meta_description %}
+                  <p class="post-long-description">{{post.meta_description}}</p>
+                {% endif %}
+              </li>
+              {% unless include.showTags %}</a>{% endunless %}
+            {% else %}
+              {% assign postsNotListed = postsNotListed | plus: 1 %}
+            {% endif %}
+            {% assign totalPostsCount = totalPostsCount | plus: 1 %}
+          {% endunless %}
+        {% endif %}
+      {% endunless %}
+    {% endif %}
+
+    {% endunless %}
   {% endfor %}
 
-  {% if postsNotListed > 0 %}
+  {% if postsNotListed > 0 and include.tag %}
     <li><span class="post-description"><a href="/{{ include.tag }}-index">...see all {{ totalPostsCount }}</a></span></li>
   {% endif %}
 </ul>
