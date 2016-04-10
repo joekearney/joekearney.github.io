@@ -120,6 +120,8 @@
   {% endfor %}
 
   {% if postsNotListed > 0 and include.tag %}
-    <li><span class="post-description"><a href="/{{ include.tag }}-index">...see all {{ totalPostsCount }}</a></span></li>
+    <a href="/{{ include.tag }}-index" class="no-link-highlight">
+      <li><span class="link-highlight listing-title">&hellip; see all {{ totalPostsCount }}</span></li>
+    </a>
   {% endif %}
 </ul>
