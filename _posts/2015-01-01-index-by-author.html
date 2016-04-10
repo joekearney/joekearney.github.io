@@ -16,7 +16,7 @@ sitemap:
 {% capture site_authors %}{% for post in site.posts %}{{ post.author | join: '|' }}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
 {% assign all_authors = site_authors | split:'|' | sort %}
 
-{% assign all_authors_uniq = "Joe Kearney,Joanna Heald,Kate Jones" | split: ',' %}
+{% assign all_authors_uniq = "Joe Kearney,Joanna Kearney,Kate Jones" | split: ',' %}
 {% for a in all_authors %}
   {% unless all_authors_uniq contains a %}
     {% assign all_authors_uniq = all_authors_uniq | push: a %}

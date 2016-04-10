@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 
 title_image_iframe: https://www.flickr.com/photos/joekearney/17635437682/in/album-72157652379606419/player/
 footer_strava_embed: https://www.strava.com/activities/302225993/embed/dc7ac4072d99e0ace66603945a66cc16903915d5

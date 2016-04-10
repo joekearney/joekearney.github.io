@@ -10,7 +10,7 @@ status: publish
 type: post
 published: true
 author:
-- Joanna Heald
+- Joanna Kearney
 - Joe Kearney
 ---
 

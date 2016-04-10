@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 title_image_iframe: https://www.flickr.com/photos/joekearney/17364716096/in/set-72157652300500261/player/
 ---
 

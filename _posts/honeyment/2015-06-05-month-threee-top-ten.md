@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 ---
 
 We're now more than three months through and well over halfway. We'll be back home again before we know it, with only 6,000 photos (and counting) and a whole lot of memories to show for our adventure!

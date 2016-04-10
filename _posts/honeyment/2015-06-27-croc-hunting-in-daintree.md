@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 ---
 
 Daintree is the oldest rainforest in the world, dating from when Australia was still part of the Gondwanaland supercontinent some 180 million years ago. It is also the largest continuous area of tropical rainforest in Australia, so it has plenty of worthy claims for its World Heritage listing. Our visit began at Mossman Gorge, and although it was swarming with tourists, it was impressive for its sheer scale. Essentially, it looked a lot like a gentle stream, criss-crossed with stepping stones -- only it was enormous, with boulders taking the place of pebbles. We half expected to see a giant's foot skipping across the stones.

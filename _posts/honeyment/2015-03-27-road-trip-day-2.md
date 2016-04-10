@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 ---
 
 <div class="title-image">

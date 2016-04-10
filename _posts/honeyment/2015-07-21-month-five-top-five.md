@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 ---
 
 We're home! I can't believe it's all over already, but what an amazing trip! Some final highlights from month five...

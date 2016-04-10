@@ -9,7 +9,7 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Heald
+author: Joanna Kearney
 ---
 
 It turns out we really weren't kidding when we said we were going to be glampacking. Not quite ready to settle into four months of slumming it, Joe arranged an amazing birthday surprise for our time in KL... with a luxury stay in the Grand Hyatt hotel, complete with flowers and birthday cake in the room and a spectacular floor to ceiling view of the Petronas Twin Towers. Wow. I think this stay may have ruined me for the rest of our trip. I'm just not going to be satisfied unless there's a tropical paradise pool and an army of nothing-is-too-much-trouble staff.
