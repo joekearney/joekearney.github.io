@@ -1,11 +1,1 @@
-{% if include.tag == 'honeyment' %}
-{{site.honeyment.index_path}}
-{% elsif include.tag == 'tasty-rsvps' %}
-{{site.tasty-rsvps.index_path}}
-{% elsif include.tag == 'germany' %}
-{{site.germany.index_path}}
-{% elsif include.tag == 'software' %}
-{{site.software.index_path}}
-{% elsif include.tag == 'just-in-time' %}
-just-in-time
-{% endif %}
+{% if include.tag == 'honeyment' %}{{site.honeyment.index_path}}{% elsif include.tag == 'tasty-rsvps' %}{{site.tasty-rsvps.index_path}}{% elsif include.tag == 'germany' %}{{site.germany.index_path}}{% elsif include.tag == 'software' %}{{site.software.index_path}}{% elsif include.tag == 'just-in-time' %}just-in-time{% endif %}
