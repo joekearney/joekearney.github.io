@@ -14,4 +14,8 @@ echo "Done with exit code $?"
 # bundle install
 # ./runLocal
 
+if [[ "$1" == "-c" ]]; then
+  jekyll clean
+fi
+
 jekyll serve --source $DIR --drafts --watch --trace --profile --incremental
