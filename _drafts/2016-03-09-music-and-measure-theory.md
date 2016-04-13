@@ -9,6 +9,7 @@ tags:
 - article
 - software
 - draft
+- comments
 keywords:
 - music
 - maths
