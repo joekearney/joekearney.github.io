@@ -41,6 +41,8 @@ hidden_tags:
 - tasty-rsvps-savoury
 - tasty-rsvps-sweet
 - wedding
+- comments
+- nocomments
 
 # software posts that are to be read, not just howto
 software:

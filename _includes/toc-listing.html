@@ -75,7 +75,7 @@
                 <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
                 {% endif %}
                 {% assign titlePrefix = '' %}
-                {% if post.series and post.include_series_in_header_title %}
+                {% if post.series and include.include_series_in_post_title %}
                   {% capture titlePrefix %}{{post.series}} &ndash; {% endcapture %}
                 {% endif %}
 

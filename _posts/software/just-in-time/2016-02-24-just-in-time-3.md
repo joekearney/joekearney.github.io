@@ -13,7 +13,7 @@ tags:
 series_index: just-in-time
 series: "Just In Time"
 series_tag: just-in-time
-include_series_in_header_title: true
+include_series_in_header_title: false
 keywords:
 - scala
 - compilation

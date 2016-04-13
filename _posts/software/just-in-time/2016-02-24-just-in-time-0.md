@@ -10,6 +10,7 @@ tags:
 - software
 - isIndexRoot
 - just-in-time
+- comments
 permalink: /just-in-time
 keywords:
 - scala

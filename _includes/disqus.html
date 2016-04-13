@@ -1,11 +1,6 @@
-{% if page.container_type %}
-<div id="disqus_container" class={{ page.container_type }}>
-{% else %}
-<div id="disqus_container" class="container">
-{% endif %}
-
+<div id="disqus_container">
 	<div class="row">
-		<div id="disqus_thread" class="col-md-12 inline-image"></div>
+		<div id="disqus_thread" class="col-md-12"></div>
 	</div>
 
 </div>
@@ -15,7 +10,7 @@
     var disqus_identifier = '{{ page.id }}';
     var disqus_title = "{{ site.title }} - {{ page.title }}";
     var disqus_url = "{{ site.production_url }}{{ page.url }}";
-    
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

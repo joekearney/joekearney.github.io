@@ -9,6 +9,7 @@ tags:
 - article
 - howto
 - software
+- comments
 keywords:
 - scala
 - scalaz

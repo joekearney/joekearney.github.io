@@ -37,14 +37,14 @@ sitemap:
 
     {% assign authorPosts = site.empty_array %}
     {% for p in site.posts %}
-      {% if p.author contains author or p.author == author %}{% if p.categories contains 'post' %}
+      {% if p.author contains author or p.author == author %}
         {% assign authorPosts = authorPosts | push: p %}
-      {% endif %}{% endif %}
+      {% endif %}
     {% endfor %}
 
     <a class="jumptarget" name="{{ author | slugify }}"></a><h1>{{ author }} &ndash; {{ numPosts }} posts</h1>
 
-    {% include toc-listing.html posts=authorPosts numPosts='all' showDrafts="true" showSeriesPages="true" showOnlyArticles="false" showLongDescription="true" showTags="true" %}
+    {% include toc-listing.html posts=authorPosts numPosts='all' showDrafts="true" showSeriesPages="true" showOnlyArticles="false" showLongDescription="true" showTags="true" include_series_in_post_title=true %}
   {% endunless %}
 {% endfor %}
 
@@ -60,4 +60,4 @@ sitemap:
   {% endunless %}
 {% endfor %}
 
-{% include toc-listing.html posts=otherAuthorPosts numPosts='all' showAuthor='true' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="true" %}
+{% include toc-listing.html posts=otherAuthorPosts numPosts='all' showAuthor='true' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="true" include_series_in_post_title=true %}

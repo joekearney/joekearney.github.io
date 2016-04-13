@@ -8,6 +8,7 @@ categories:
 tags:
 - article
 - software
+- comments
 keywords:
 - scala
 - scalaz
