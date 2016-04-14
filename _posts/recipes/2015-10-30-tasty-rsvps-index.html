@@ -46,6 +46,13 @@ sitemap:
 
 <div class="row"><div class="col-md-12">
   <h2>All {{ numPosts }} Tasty RSVPs</h2>
-</div></div>
 
-{% include index-by-tag.html listing-only=true tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description orderAscending=false showAuthor='true' %}
+<h3>Savoury</h3>
+{% include toc-listing.html tag='tasty-rsvps-savoury' orderAscending=false showAuthor='true' numPosts='all' %}
+
+<h3>Mixture</h3>
+{% include toc-listing.html tag='tasty-rsvps-mixture' orderAscending=false showAuthor='true' numPosts='all' %}
+
+<h3>Sweet</h3>
+{% include toc-listing.html tag='tasty-rsvps-sweet' orderAscending=false showAuthor='true' numPosts='all' %}
+</div></div>

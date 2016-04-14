@@ -6,6 +6,7 @@ description-newline: true
 categories:
 - post
 tags:
+- tasty-rsvps-mixture
 - tasty-rsvps
 - wedding
 status: publish
