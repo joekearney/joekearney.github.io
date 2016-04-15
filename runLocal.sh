@@ -18,4 +18,10 @@ if [[ "$1" == "-c" ]]; then
   jekyll clean
 fi
 
-jekyll serve --source $DIR --drafts --watch --trace --profile --incremental
+jekyll serve \
+  --config $DIR/_config.yml \
+  --source $DIR \
+  --destination $DIR/_site \
+  --layouts $DIR/_layouts \
+  --drafts --future \
+  --watch --trace --profile --incremental
