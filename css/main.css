@@ -207,7 +207,7 @@ section.sidebar h1, section.sidebar h2, section.sidebar h3, section.sidebar h4, 
 .bs-callout {
   margin: 20px 0;
   padding: 15px 30px 15px 15px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-left-width: 5px;
   border-radius: 3px;
   background-color: #f8f8f8;
@@ -260,7 +260,7 @@ blockquote.twitter-tweet {
   margin: 10px 0;
   max-width: 468px;
   border: #ddd 1px solid;
-  border-top-color: #eee;
+  border-top-color: #ddd;
   border-bottom-color: #bbb;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
@@ -280,7 +280,7 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 blockquote:not(.twitter-tweet) {
   margin: 20px 0;
   padding: 15px 30px 15px 15px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-left-color: #b12930;
   border-left-width: 5px;
   border-radius: 3px;
@@ -478,4 +478,9 @@ a.no-link-highlight .link-highlight {
   display:block;
   height:50px; /* fixed header height*/
   margin:-50px 0 0; /* negative fixed header height */
+}
+
+article div.footnotes {
+  margin-top: 25px;
+  font-size: 14px;
 }

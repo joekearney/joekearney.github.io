@@ -21,7 +21,7 @@ By the time we set off, the sun had disappeared and the rain was pouring again. 
 
 That was the easy bit.
 
-From there, we continued up on the 'advanced' route. The clearly marked path was gone, replaced with rocks and the occasional stick guiding the way. We clambered up as the path got steeper, using all four limbs to get a decent grip when necessary. Before long, ice crystals were visible on the rocks, quickly followed by snow. We were having far too much fun to stop now, so ploughed on up, crunching through the snow. From the distance, there was the definite sound of a miaow -- we like to think it was one of the cute little snow leopard cats we'd seen in Singapore Zoo, but I guess it could have just been a feline-sounding squark from one of the impressive birds of prey that we occasionally spotted flying about. Our pace slowed as we could see the route markers but not the route, and carefully prodded our way. By the time the snow was coming in over our boots, we figured it was probably time to turn back and began the steep descent, retracing our snowy footprints. Over 3.5 hours we covered a massive... 6km, which I think is testament to how tough going the route was!
+From there, we continued up on the 'advanced' route. The clearly marked path was gone, replaced with rocks and the occasional stick guiding the way. We clambered up as the path got steeper, using all four limbs to get a decent grip when necessary. Before long, ice crystals were visible on the rocks, quickly followed by snow. We were having far too much fun to stop now, so ploughed on up, crunching through the snow. From the distance, there was the definite sound of a miaow -- we like to think it was one of the cute little snow leopard cats we'd seen in Singapore Zoo, but I guess it could have just been a feline-sounding squark from one of the impressive birds of prey that we occasionally spotted flying about. Our pace slowed as we could see the route markers but not the route, and carefully prodded our way. By the time the snow was coming in over our boots, we figured it was probably time to turn back and began the steep descent, retracing our snowy footprints. Over 3.5 hours we covered a massive... 6km, which I think is testament to how tough going the route was![^mount-cook]
 
 After lunch back in trusty Barry, we decided we definitely had time for another walk, and headed into the Hooker Valley.
 
@@ -29,6 +29,4 @@ We power-walked along this much more popular route, overtaking groups of meander
 
 We're now sitting in chilly Barry, looking like Michelin Men wrapped in seven layers and a blanket, clinging to hot chocolate. Brrr.
 
-***
-
-*Ok, so it wasn't actually Mt Cook, which I think requires ropes and ice picks (and skill) to climb, but it was one of it's equally snowy neighbours. So I think that still counts.
+[^mount-cook]: Ok, so it wasn't actually Mt Cook, which I think requires ropes and ice picks (and skill) to climb, but it was one of it's equally snowy neighbours. So I think that still counts.

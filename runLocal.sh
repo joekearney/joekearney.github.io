@@ -24,4 +24,4 @@ jekyll serve \
   --destination $DIR/_site \
   --layouts $DIR/_layouts \
   --drafts --future \
---watch --trace --verbose --profile --incremental
+--watch --trace --profile --incremental

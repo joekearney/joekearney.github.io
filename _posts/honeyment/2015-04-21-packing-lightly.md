@@ -10,9 +10,13 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
----
 
-{% include image-float.html src='https://c2.staticflickr.com/8/7707/17131594847_2a685a2e40_n.jpg' caption='Too many bags' id='too-many-bags' side='right' %}
+title_flickr_float_right_url: https://c2.staticflickr.com/8/7707/17131594847_2a685a2e40_n.jpg
+title_flickr_float_right_width: 320px
+title_flickr_float_right_height: 314px
+title_flickr_float_right_alt: "Too many bags"
+title_flickr_float_right_text: "Too many bags"
+---
 
 We heard all of the advice from people who have actually done this before, we even made token effort to keep our baggage light. In the end none of it mattered.
 
