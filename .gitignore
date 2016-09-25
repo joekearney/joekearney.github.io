@@ -18,5 +18,5 @@ bower_components/
 components/
 *content-id-problem*
 .jekyll-metadata
-ebooks/honeyment.epub
-ebooks/honeyment.mobi
+ebooks/*.epub
+ebooks/*.mobi
