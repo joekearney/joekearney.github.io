@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/joekearney
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.joekearney.co.uk
+  * I am joekearney (https://keybase.io/joekearney) on keybase.
+  * I have a public key ASDjuCDN_qslyA0ivZt6b8iZyXbC8IeAcBmuXSQ0u1LlGwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101f60d89c348c97983cb765951c78b0361c959284239085e44a7e662005e2748720a",
+            "host": "keybase.io",
+            "kid": "0120e3b820cdfeab25c80d22bd9b7a6fc899c976c2f087807019ae5d2434bb52e51b0a",
+            "uid": "0ea8691ae665207932d1694848830b19",
+            "username": "joekearney"
+        },
+        "service": {
+            "hostname": "www.joekearney.co.uk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1474893182,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1474893130,
+        "hash": "aa8d4124521e3c3950f49fd4a353c5d604dcba349f3cdbdbba6c9371be2877b7675b34232add6618acadc71253b1ea46f1fc6f4088389512f8358686d0acaf3e",
+        "seqno": 653321
+    },
+    "prev": "711b1badd2a413d7d4ed5600394045d763974b729a6bd36bf8f353b74fb5b097",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg47ggzf6rJcgNIr2bem/Imcl2wvCHgHAZrl0kNLtS5RsKp3BheWxvYWTFAv17ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZjYwZDg5YzM0OGM5Nzk4M2NiNzY1OTUxYzc4YjAzNjFjOTU5Mjg0MjM5MDg1ZTQ0YTdlNjYyMDA1ZTI3NDg3MjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZTNiODIwY2RmZWFiMjVjODBkMjJiZDliN2E2ZmM4OTljOTc2YzJmMDg3ODA3MDE5YWU1ZDI0MzRiYjUyZTUxYjBhIiwidWlkIjoiMGVhODY5MWFlNjY1MjA3OTMyZDE2OTQ4NDg4MzBiMTkiLCJ1c2VybmFtZSI6ImpvZWtlYXJuZXkifSwic2VydmljZSI6eyJob3N0bmFtZSI6Ind3dy5qb2VrZWFybmV5LmNvLnVrIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNyJ9LCJjdGltZSI6MTQ3NDg5MzE4MiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDc0ODkzMTMwLCJoYXNoIjoiYWE4ZDQxMjQ1MjFlM2MzOTUwZjQ5ZmQ0YTM1M2M1ZDYwNGRjYmEzNDlmM2NkYmRiYmE2YzkzNzFiZTI4NzdiNzY3NWIzNDIzMmFkZDY2MThhY2FkYzcxMjUzYjFlYTQ2ZjFmYzZmNDA4ODM4OTUxMmY4MzU4Njg2ZDBhY2FmM2UiLCJzZXFubyI6NjUzMzIxfSwicHJldiI6IjcxMWIxYmFkZDJhNDEzZDdkNGVkNTYwMDM5NDA0NWQ3NjM5NzRiNzI5YTZiZDM2YmY4ZjM1M2I3NGZiNWIwOTciLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDL+Dgfg58LD8+R65txkC7GeTA8go4wHzXN8pDCgg8bIYVMM7g3yEl+ELuOZWw/oldZpk/wcOBwiRf2cDKYypQEqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgf3nITbZeEYBoR47VM/YPIIJfMKcBxKCGVwEc3lfjVxWjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joekearney
+
+==================================================================
