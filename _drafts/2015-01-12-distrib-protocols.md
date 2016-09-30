@@ -9,7 +9,7 @@ tags:
 - draft
 - software
 author: Joe Kearney
-published: false
+published: true
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 ---
@@ -71,12 +71,10 @@ Partitions in the network always mean that some nodes become stale. However as w
 
 Suppose that a minority of nodes is partitioned from the rest. No proposal from within that minority will be unanimously accepted, so no new values will be agreed; any clients connecting to a node in the minority will see no progress. However the majority can still continue -- note that if the majority of nodes can still communicate with each other then it is safe to reduce the size of the cluster to that majority, ignoring the other nodes for the purposes of voting. (Yes, there's some handwaving happening here around managing that reduction safely.)
 
+{% capture ag-digression %}
 #### A Digression on Availability Groups
 
-This section describes a practical use case based on 2PC plus a lot of heuristics. Basic 2PC is buried in there somewhere, underneath a lot of other technology. (<a data-toggle="collapse" href="#ag-collapse">click to embiggen</a>)
-
-{::options parse_block_html="true" /}
-<div class="collapse" id="ag-collapse">
+This section describes a practical use case based on 2PC plus a lot of heuristics. Basic 2PC is buried in there somewhere, underneath a lot of other technology.
 
 **SQL Server Availability Groups** (AG) implement this sort of explicit quorum management, where the _new value_ is a transaction and there's always a distinguished **primary** replica acting as the coordinator and some secondary replicas. All writes go through the primary, which pushes new data out to each secondary replica using 2PC. Secondary replicas are available for read-only access by clients, giving good read availability. (I'll only consider the synchronous replication model here; the asynchronous version allows consistency violations -- you can lose data when the primary fails.)
 
@@ -90,8 +88,8 @@ Failure of the primary in a system with a dedicated leader requires something el
 
 In summary, it is possible to extend 2PC to be tolerant to some degree to network partitions. SQL Server clustering and AGs are a centralised solution to this, but only as a side effect of fixing a coordinator. In the presence of network partitions the system is only available to clients in the same partition as the leader. You get very strong consistency, and without partitions clients always see the latest state.
 
-</div>
-{::options parse_block_html="false" /}
+{% endcapture %}
+{% include sidebar.html content=ag-digression %}
 
 ### See also
 
