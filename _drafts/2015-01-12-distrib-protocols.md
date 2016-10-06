@@ -9,7 +9,7 @@ tags:
 - draft
 - software
 author: Joe Kearney
-published: true
+published: false
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 ---
