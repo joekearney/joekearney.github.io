@@ -21,6 +21,10 @@
   color: #b12930;
 }
 
+p > b, p > strong, li > b, li > strong {
+  color: #b12930;
+}
+
 /* e.g. post title */
 .title-group {
   border-bottom: 1px solid #ddd;
