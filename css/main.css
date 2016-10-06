@@ -109,6 +109,7 @@ section.sidebar {
 }
 section.sidebar h1, section.sidebar h2, section.sidebar h3, section.sidebar h4, section.sidebar h5, section.sidebar h6 {
   margin-top: 10px;
+  color: #b12930;
 }
 
 .image-border-frame {
