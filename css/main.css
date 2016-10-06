@@ -446,6 +446,10 @@ ul .listing, ul .nav {
   text-align: left;
 }
 
+li > p {
+  margin: 0;
+}
+
 .category-stats {
   text-align: center;
 }
