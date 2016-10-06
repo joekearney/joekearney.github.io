@@ -24,10 +24,21 @@ The tech lead role was established to tie teams back together. A tech lead works
 
 It's worth noting that the specifics of the role vary by area. So my description here is coloured by how I interpret the role for the Data Platform. This is a group that provides infrastructure to other teams within the company, specifically engineers and data scientists. Interfaces with other internal engineers obviously represent a different set of challenges and tradeoffs to, say, providing features to external users.
 
-I see the role as a combination of a few areas: **architecture**, **robustness** at multiple levels, and **representation** of the team and of the wider organisation. And I think a lot of values in this are tied together by this observation:
+What is this role not?
+
+* Grand arbiter of all technical decisions for the team
+* Line manager, people manager
+* The "best" engineer on the team
+
+<div class="bs-callout bs-callout-danger">
+  <span class="heading">TL;DR:</span>
+  A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"
+</div>
+
+I see the role as a combination of a few areas: **architecture**, **robustness** at multiple levels, and **representation** of the team and of the wider organisation. And I think a lot of values in this are tied together by the following observation:
 
 {% capture tradeoffs %}
-### Everything is a tradeoff; be explicit about them
+### Observation: everything is a tradeoff; be explicit about them
 
 It's very rare in software engineering that we get to make absolute choices.
 Every decision to build something one way means losing the benefits of another approach, and there are costs and opportunity costs at every step. The evaluation of these choices often varies over time, as requirements, priorities, technology and even staff change. Worse, the costs involved may not only be borne by your team but also by your customers, now or in the future.
@@ -66,10 +77,10 @@ If straightforward failure of a machine is easy to handle, it's harder to protec
 
 There are one or two general principles that can help here, such as making your operations idempotent so that responding to duplicate requests doesn't cause inconsistency. In some cases it is possible to introduce some process to make certain failure modes impossible, or at least ensure that they occur with lower probability.
 
-Suppose you have a computation that is triggered by an event and makes a decision based on some other information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether some changed state or behaviour, or some transient errors -- but doing this may provide an upper bound on the time for which your service was broken.
+Suppose you have a flow of events and a decision to take some action based on information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning this decision on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether there was a change in state or behaviour or even the event source. Doing this may provide an upper bound on the time for which your service was broken, and might allow some more time to figure out what's gone wrong.
 
-
-To catch timing failures in A process can be duplicated on a delay, perhaps triggered in a different way,
+I've found it difficult to codify or formalise these techniques beyond examples, but in general the idea of setting up process that make it impossible to things to fail in
+This is an example of
 
 ### 3. allow for organisational change
 
