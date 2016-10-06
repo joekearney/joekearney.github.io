@@ -24,6 +24,10 @@
 p > b, p > strong, li > b, li > strong {
   color: #b12930;
 }
+.bs-callout > p > b, .bs-callout > p > strong, .bs-callout > li > b, .bs-callout > li > strong,
+.sidebar > p > b, .sidebar > p > strong, .sidebar > li > b, .sidebar > li > strong {
+  color: #333;
+}
 
 /* e.g. post title */
 .title-group {
@@ -493,4 +497,7 @@ a.no-link-highlight .link-highlight {
 article div.footnotes {
   margin-top: 25px;
   font-size: 14px;
+}
+article div.footnotes ul, article div.footnotes ol {
+  padding-left: 20px;
 }
