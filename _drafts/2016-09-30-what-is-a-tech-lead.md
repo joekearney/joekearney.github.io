@@ -14,18 +14,20 @@ type: post
 author: Joe Kearney
 ---
 
-It's well documented that the process of moving teams internally is well supported at [SoundCloud][soundcloud]. I recently moved teams to became a tech lead, and I want to describe here what I think that means in terms of my work and the things that we build together. The process for this move included an interview in which I was to describe how I would interpret the role, and this is the basis for this post.
+It's well documented that the process of moving teams internally is well supported at [SoundCloud][soundcloud]. I recently moved teams to became a tech lead, and I want to describe here what I think that means in terms of my work and the things that we build together. The process for this move included an interview in which I was to describe how I would interpret the role, and this post is something of a distillation from that.
 
-The tech lead role came about here a couple of years ago and, as I see it, continues to be refined. In the loosest possible description, at SoundCloud engineering we work in teams of a product owner **prioritises and decides what** we should build, an engineering manager who **organises the resources** of the team by assigning work, hiring and supporting personal development, and a few engineers **write the code** and keep our systems running. The organisation is set up to allow decisions to be made locally within teams where possible -- this means that teams can progress with minimal coordination ("move fast") but can allow technical choices made in separate teams to diverge ("break things").
+## History
+
+The tech lead role came about here a couple of years ago and, as I see it, continues to be refined. In the loosest possible description, at SoundCloud engineering we work in teams of a product owner **prioritises and decides what** we should build, an engineering manager who **organises the resources** of the team by assigning work, hiring and supporting personal development, and a few engineers **write the code** and keep our systems running. The organisation is set up to allow decisions to be made locally within teams where possible -- this means that teams can progress with minimal coordination (_"move fast"_) but can allow technical choices made in separate teams to diverge (_"break things"_).
 
 The tech lead role was established to tie teams back together. A tech lead works across around two to four related engineering teams, to help keep some consistency around engineering approach across the company and to keep an eye on the longer-term architecture of our systems. There are now around ten tech leads across the company, and with the [recent reorganisation][ele-medium] of our data platform I'm excited to be the newest of them.
 
 It's worth noting that the specifics of the role vary by area. So my description here is coloured by how I interpret the role for the Data Platform. This is a group that provides infrastructure to other teams within the company, specifically engineers and data scientists. Interfaces with other internal engineers obviously represent a different set of challenges and tradeoffs to, say, providing features to external users.
 
-I see the role as a combination of a few areas, tied together by this observation:
+I see the role as a combination of a few areas: **architecture**, **robustness** at multiple levels, and **representation** of the team and of the wider organisation. And I think a lot of values in this are tied together by this observation:
 
 {% capture tradeoffs %}
-### Everything is a tradeoff
+### Everything is a tradeoff; be explicit about them
 
 It's very rare in software engineering that we get to make absolute choices.
 Every decision to build something one way means losing the benefits of another approach, and there are costs and opportunity costs at every step. The evaluation of these choices often varies over time, as requirements, priorities, technology and even staff change. Worse, the costs involved may not only be borne by your team but also by your customers, now or in the future.
@@ -40,7 +42,7 @@ That we deal in tradeoffs should be neither a groundbreaking nor surprising obse
 {% endcapture %}
 {% include sidebar.html content=tradeoffs %}
 
-## System architecture
+## Architecture
 
 The longer-term view of wider system.
 
@@ -50,14 +52,26 @@ This is the part performed in some organisation by titles such as _lead engineer
 
 We engineers like our systems to be robust; we don't want our stuff to break, but what does this mean more precisely? There multiples modes of failure of a system once it's running[^1], and robustness against them means different things.
 
+### 1. protect against code and node failure
 
-### Code and node failure
+This is the easy bit, covering general good practice at the level of code and software process.
 
-This is the easy bit, and covers application design and .
+Handle errors consistently and close your I/O resources properly; write tests for your features and don't test in production; keep the build green. Handling failure of a single server is nowadays a pretty well-understood problem, and the principles of [Twelve Factor][12-factor] apps help by encouraging a style of coding and design that allows problems in parts of your infrastructure not to cause total failure of _your_ system.
 
-### Systemic failure
+The tech lead's role here is primarily one of **encouraging best practice in code** and the process around coding, whether through pairing or code review. Much of this point is tied to the maturity of the developers on the team; those are are more senior do this better almost by definition.
 
-### Organisational change
+### 2. protect against systemic failure
+
+If straightforward failure of a machine is easy to handle, it's harder to protect against the introduction of a bug that causes changes in behaviour. It's even more difficult if the bug is introduced in code owned by another team. There are some techniques that can help make a system resilient to these kinds of problem.
+
+There are one or two general principles that can help here, such as making your operations idempotent so that responding to duplicate requests doesn't cause inconsistency. In some cases it is possible to introduce some process to make certain failure modes impossible, or at least ensure that they occur with lower probability.
+
+Suppose you have a computation that is triggered by an event and makes a decision based on some other information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether some changed state or behaviour, or some transient errors -- but doing this may provide an upper bound on the time for which your service was broken.
+
+
+To catch timing failures in A process can be duplicated on a delay, perhaps triggered in a different way,
+
+### 3. allow for organisational change
 
 ## Representation
 
@@ -65,11 +79,10 @@ The tech lead can also be something of an ambassadorial role.
 
 * representing the team
 
+***
 
-
+[^1]: I'm not referring to failure of a team to deliver a project; this is a hard problem in itself, but delivery of features is not a part of the responsibility of a tech lead in our model. That part of project management falls to either the engineering manager or the project manager.
 
 [soundcloud]: https://soundcloud.com
 [ele-medium]: https://medium.com/@_eleftherios/https-medium-com-eleftherios-above-the-clouds-5-years-of-data-at-soundcloud-part-1-8803e2059fa
 [12-factor]: https://12factor.net/
-
-[^1]: I'm not referring to failure of a team to deliver a project; this is a hard problem in itself, but delivery of features is not a part of the responsibility of a tech lead in our model.
