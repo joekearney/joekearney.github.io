@@ -26,13 +26,14 @@ It's worth noting that the specifics of the role vary by area. So my description
 
 What is this role not?
 
+{% include todo.html %}
+
 * Grand arbiter of all technical decisions for the team
 * Line manager, people manager
 * The "best" engineer on the team
 
 <div class="bs-callout bs-callout-danger">
-  <span class="heading">TL;DR:</span>
-  A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"
+  <span class="heading">TL;DR:</span> A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"
 </div>
 
 I see the role as a combination of a few areas: **architecture**, **robustness** at multiple levels, and **representation** of the team and of the wider organisation. And I think a lot of values in this are tied together by the following observation:
@@ -55,9 +56,13 @@ That we deal in tradeoffs should be neither a groundbreaking nor surprising obse
 
 ## Architecture
 
-The longer-term view of wider system.
+{% include todo.html %}
+* The longer-term view of wider system.
+* This is the part performed in some organisation by titles such as _lead engineer_ and _software architect_.
 
-This is the part performed in some organisation by titles such as _lead engineer_ and _software architect_.
+- longer term and wider scale decisions, balancing (competing) requirements of teams
+- prioritising finding global maximum over local
+- interactions -- how does this service interact with others, how should we be doing service interaction generally
 
 ## Robustness, at all levels
 
@@ -77,18 +82,22 @@ If straightforward failure of a machine is easy to handle, it's harder to protec
 
 There are one or two general principles that can help here, such as making your operations idempotent so that responding to duplicate requests doesn't cause inconsistency. In some cases it is possible to introduce some process to make certain failure modes impossible, or at least ensure that they occur with lower probability.
 
-Suppose you have a flow of events and a decision to take some action based on information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning this decision on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether there was a change in state or behaviour or even the event source. Doing this may provide an upper bound on the time for which your service was broken, and might allow some more time to figure out what's gone wrong.
+* **redundancy in computation** -- suppose you have a flow of events and a decision to take some action based on information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning this decision on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether there was a change in state or behaviour or even the event source. Doing this may provide an upper bound on the time for which your service was broken, and might allow some more time to figure out what's gone wrong.
+* **redundancy in data** -- suppose your system uses data provided from some other source, and if your source becomes unavailable then your service can't work. It may be that it's possible to build in robustness against their failure by a simple layer of caching, even to the extreme where you cache all of the downstream data. A previous project of mine copied all data from a particular dependency internally in batch a few times a day; the data might be a few hours stale but at least we had total control over access.
 
-I've found it difficult to codify or formalise these techniques beyond examples, but in general the idea of setting up process that make it impossible to things to fail in
-This is an example of
+In both of these cases there are costs, as well as benefits. In the first your computation is doubled, in the second you need the space to store everything again. I've found it difficult to codify or formalise these techniques beyond examples, but I hope it's clear that there is some value here. In general the idea is to **implement process that makes failure impossible**, of course weighing up the costs of doing so against the benefit.
 
 ### 3. allow for organisational change
 
+{% include todo.html note="Consistency of approach across teams, share code and tech" %}
+
 ## Representation
 
-The tech lead can also be something of an ambassadorial role.
+The tech lead can also be something of an ambassadorial role:, both representing the team outwards to internal users of our services, and representing the rest of the company inwards to the team.
 
-* representing the team
+Representing the team **outwards** to the rest of the company could include advertising tools that are available for use, or communicating changes to services and published APIs. The tech lead can be a point of coordination for wider efforts, changes that affect multiple teams.
+
+Representation **inwards** means being an advocate for consistent use of technology across the company and introducing best practice from across the industry. In SoundCloud the collective of tech leads from around the company meets regularly to share and disseminate guidance on common approaches and patterns that come up, working towards consistency in choices. This brings shared experience and a shared vocabulary that can improve shared understanding of the systems across the company and context around the challenges that other groups face, which in turn allows us to work better with users and stakeholders.
 
 ***
 
