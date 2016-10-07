@@ -21,6 +21,7 @@
   color: #b12930;
 }
 
+/*
 p > b, p > strong, li > b, li > strong {
   color: #b12930;
 }
@@ -28,6 +29,7 @@ p > b, p > strong, li > b, li > strong {
 .sidebar > p > b, .sidebar > p > strong, .sidebar > li > b, .sidebar > li > strong {
   color: #333;
 }
+*/
 
 /* e.g. post title */
 .title-group {
