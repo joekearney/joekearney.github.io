@@ -14,7 +14,7 @@ type: post
 published: true
 ---
 
-For a 9 in 23 cm cake
+For a 9in 23cm cake
 
 * 1025g fruit – currants, raisins, sultanas
 * 350g or more glace cherries – keep them whole
