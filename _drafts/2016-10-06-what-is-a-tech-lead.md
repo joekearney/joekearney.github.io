@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is a Tech Lead"
+title: "What is a Tech Lead?"
 description: "or, how I think of my job"
 meta_description: "I recently became a tech lead, and this describes what I think that means"
 categories:
@@ -16,7 +16,7 @@ author: Joe Kearney
 
 It's well documented that the process of moving teams internally is well supported at [SoundCloud][soundcloud]. I recently moved teams to became a tech lead, and I want to describe here what I think that means in terms of my work and the things that we build together. The process for this move included an interview in which I was to describe how I would interpret the role, and this post is something of a distillation from that.
 
-## History
+## Context of the role
 
 The tech lead role came about here a couple of years ago and, as I see it, continues to be refined. In the loosest possible description, at SoundCloud engineering we work in teams of a product owner **prioritises and decides what** we should build, an engineering manager who **organises the resources** of the team by assigning work, hiring and supporting personal development, and a few engineers **write the code** and keep our systems running. The organisation is set up to allow decisions to be made locally within teams where possible -- this means that teams can progress with minimal coordination (_"move fast"_) but can allow technical choices made in separate teams to diverge (_"break things"_).
 
@@ -24,25 +24,18 @@ The tech lead role was established to tie teams back together. A tech lead works
 
 It's worth noting that the specifics of the role vary by area. So my description here is coloured by how I interpret the role for the Data Platform. This is a group that provides infrastructure to other teams within the company, specifically engineers and data scientists. Interfaces with other internal engineers obviously represent a different set of challenges and tradeoffs to, say, providing features to external users.
 
-What is this role not?
+### What is this role not?
 
-{% include todo.html %}
-
-* Grand arbiter of all technical decisions for the team
-* Line manager, people manager
-* The "best" engineer on the team
-
-<div class="bs-callout bs-callout-danger">
-  <span class="heading">TL;DR:</span> A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"
-</div>
+* Grand arbiter of all technical decisions for the team -- we should still be aiming for consensus, and the tech lead's role is not to impose decisions on the other engineers
+* Line manager, people manager -- this is part of the engineering manager role, in our model
+* The "best" engineer on the team, indeed I don't expect to be on the critical path for much feature development
+* The only member of the team who should be thinking about the concerns below
 
 I see the role as a combination of a few areas: **architecture**, **robustness** at multiple levels, and **representation** of the team and of the wider organisation. And I think a lot of values in this are tied together by the following observation:
 
-{% capture tradeoffs %}
-### Observation: everything is a tradeoff; be explicit about them
+### Everything is a tradeoff; be explicit about them
 
-It's very rare in software engineering that we get to make absolute choices.
-Every decision to build something one way means losing the benefits of another approach, and there are costs and opportunity costs at every step. The evaluation of these choices often varies over time, as requirements, priorities, technology and even staff change. Worse, the costs involved may not only be borne by your team but also by your customers, now or in the future.
+It's very rare in software engineering that we get to make absolute choices. Every decision to build something one way means losing the benefits of another approach, and there are costs and opportunity costs at every step. The evaluation of these choices often varies over time, as requirements, priorities, technology and even staff change. Worse, the costs involved may not only be borne by your team but also by your customers, now or in the future.
 
 These tradeoffs typically manifest as choices to be made on cost.
 
@@ -51,14 +44,20 @@ These tradeoffs typically manifest as choices to be made on cost.
 * a choice of a technology now may make it harder to move to something else later; a given design choice now may lead to scaling or maintenance costs in the future or make it harder to migrate when the next change happens
 
 That we deal in tradeoffs should be neither a groundbreaking nor surprising observation, but **making them explicit** allows at least a sensible discussion of the problems. In discussions on approaches to solving a technical problem the role of a tech lead is to provide this clarity, so that the judgement on prioritisation can be made with some understanding of the future consequences.
-{% endcapture %}
-{% include sidebar.html content=tradeoffs %}
+
+<div class="bs-callout bs-callout-danger">
+  <p><span class="heading">TL;DR:</span> A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"</p>
+</div>
 
 ## Architecture
 
+The whole team should understand the broad architecture of the system, and understand where features fit within that. 
+
+This is the part performed in some organisations by titles such as _lead engineer_ and _software architect_.
+
 {% include todo.html %}
 * The longer-term view of wider system.
-* This is the part performed in some organisation by titles such as _lead engineer_ and _software architect_.
+*
 
 - longer term and wider scale decisions, balancing (competing) requirements of teams
 - prioritising finding global maximum over local
@@ -95,9 +94,9 @@ In both of these cases there are costs, as well as benefits. In the first your c
 
 The tech lead can also be something of an ambassadorial role:, both representing the team outwards to internal users of our services, and representing the rest of the company inwards to the team.
 
-Representing the team **outwards** to the rest of the company could include advertising tools that are available for use, or communicating changes to services and published APIs. The tech lead can be a point of coordination for wider efforts, changes that affect multiple teams.
+Representing the team **outwards** to the rest of the company could include advertising tools that are available for use, or communicating changes to services and published APIs. This might include articulating context about why changes we want to make will (eventually) help other teams, or why we chose not to do something in a way that you wanted. The tech lead can also be a point of coordination for wider efforts, changes that affect multiple teams; in the context of the data platform maybe that even means helping to coordinate when no engineering needs to be done in my team.
 
-Representation **inwards** means being an advocate for consistent use of technology across the company and introducing best practice from across the industry. In SoundCloud the collective of tech leads from around the company meets regularly to share and disseminate guidance on common approaches and patterns that come up, working towards consistency in choices. This brings shared experience and a shared vocabulary that can improve shared understanding of the systems across the company and context around the challenges that other groups face, which in turn allows us to work better with users and stakeholders.
+Representation **inwards** means being an advocate for consistent use of technology across the company and introducing best practice from across the industry. In SoundCloud the collective of tech leads from around the company meets regularly to share and disseminate guidance on common approaches and patterns that come up, working towards consistency in choices. This brings shared experience and a shared vocabulary that can improve shared understanding of the systems across the company and context around the challenges that other groups face, which in turn allows us to work better with users and stakeholders. It's also here that conflict can arise between local views on choices of technology and wider views on whether there should be a consistent approach between teams.
 
 ***
 
