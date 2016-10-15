@@ -2,7 +2,7 @@
 layout: post
 title: "Everything is a tradeoff"
 description: "write down your working!"
-meta_description: "Being explicit about costs and implications when making choices makes future decisions easier when things change."
+meta_description: "Being explicit about costs and implications when making choices makes future decisions easier when things change. A document like an RFC is a great implementation of this."
 categories:
 - post
 tags:
