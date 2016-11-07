@@ -11,7 +11,7 @@ type: post
 published: true
 author: Kate Jones
 
-title_image_img: https://www.flickr.com/photos/joekearney/27656134964/in/album-72157668121187344/player/
+title_image_iframe: https://www.flickr.com/photos/joekearney/27656134964/in/album-72157668121187344/player/
 ---
 
 One of the conditions of being allowed to join the Jo(e)s on the last leg of their trip was contributing to their blog. A grand honour. So here goes. I hope it makes it past the discerning editors.
