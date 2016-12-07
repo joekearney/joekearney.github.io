@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Levels of Robustness"
-description: "so many things can go wrong"
+description: "so many things to go wrong"
 meta_description: "We like our code to be \"robust\". This post looks at different failure modes against which a system needs to be protected"
 categories:
 - post
