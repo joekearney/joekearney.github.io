@@ -22,6 +22,8 @@ The tech lead role was established to tie teams back together. A tech lead works
 
 ## So what is it?
 
+The tech lead is responsible for the overall architecture of their area, and for the quality in engineering standards.
+
 I see the role as a combination of a few areas: **architecture**, **robustness** of the system and an understanding of what that means in context, and **representation** of the team and of the wider organisation.
 
 In contrast, the tech lead is not:
@@ -33,23 +35,7 @@ In contrast, the tech lead is not:
 
 ## Everything is tradeoffs; be explicit about them
 
-I also believe that a lot of it boils down to this observation.
-
-It's very rare in software engineering that we get to make absolute choices. Every decision to build something one way means losing the benefits of another approach, and there are costs and opportunity costs at every step. The evaluation of these choices often varies over time, as requirements, priorities, technology and even staff change. Worse, the costs involved may not only be borne by your team but also by your customers, now or in the future.
-
-That we deal in tradeoffs should be neither a groundbreaking nor surprising observation, but **making them explicit** allows at least a sensible discussion of the problems. In discussions on approaches to solving a technical problem the role of a tech lead is to provide this clarity, so that the judgement on prioritisation can be made with some understanding of the future consequences.
-
-These tradeoffs typically manifest as choices to be made on cost.
-
-* **technical debt** --- a quicker solution now may deliver a feature sooner but require cleaning up later, while doing it "properly" may take longer up-front but cause less maintenance cost and require less developer brainpower to work with it later
-* **familiarity** --- using a technology that is already familiar to you and your team might again allow faster delivery but could make it harder to be used by another team, whereas using technology and patterns that are consistent with other parts of the company may take longer but can reduce that cost for others.
-* **future-proofing** --- a choice of a technology now may make it harder to move to something else later; a given design choice now may lead to scaling or maintenance costs in the future or make it harder to migrate when the next change happens
-
-
-
-<div class="bs-callout bs-callout-danger">
-  <p><span class="heading">TL;DR:</span> A lot of the role of a tech lead boils down to questions of process: "find a process that <b>makes it impossible</b> to break our stuff"</p>
-</div>
+[here][everything-is-a-tradeoff]
 
 ## Architecture
 
@@ -67,30 +53,7 @@ This is the part performed in some organisations by titles such as _lead enginee
 
 ## Robustness, at all levels
 
-We engineers like our systems to be robust; we don't want our stuff to break, but what does this mean more precisely? There multiples modes of failure of a system once it's running[^1], and robustness against them means different things.
-
-### 1. protect against code and node failure
-
-This is the easy bit, covering general good practice at the level of code and software process.
-
-Handle errors consistently and close your I/O resources properly; write tests for your features and don't test in production; keep the build green. Handling failure of a single server is nowadays a pretty well-understood problem, and the principles of [Twelve Factor][12-factor] apps help by encouraging a style of coding and design that allows problems in parts of your infrastructure not to cause total failure of _your_ system.
-
-The tech lead's role here is primarily one of **encouraging best practice in code** and the process around coding, whether through pairing or code review. Much of this point is tied to the maturity of the developers on the team; those are are more senior do this better almost by definition.
-
-### 2. protect against systemic failure
-
-If straightforward failure of a machine is easy to handle, it's harder to protect against the introduction of a bug that causes changes in behaviour. It's even more difficult if the bug is introduced in code owned by another team. There are some techniques that can help make a system resilient to these kinds of problem.
-
-There are one or two general principles that can help here, such as making your operations idempotent so that responding to duplicate requests doesn't cause inconsistency. In some cases it is possible to introduce some process to make certain failure modes impossible, or at least ensure that they occur with lower probability.
-
-* **redundancy in computation** -- suppose you have a flow of events and a decision to take some action based on information about the event. A whole class of timing errors, or even short-term outages of dependencies, can be dealt with by rerunning this decision on a delay, perhaps triggered in a different way. If the reruns respond differently to the first runs, then it's likely there was a problem -- whether there was a change in state or behaviour or even the event source. Doing this may provide an upper bound on the time for which your service was broken, and might allow some more time to figure out what's gone wrong.
-* **redundancy in data** -- suppose your system uses data provided from some other source, and if your source becomes unavailable then your service can't work. It may be that it's possible to build in robustness against their failure by a simple layer of caching, even to the extreme where you cache all of the downstream data. A previous project of mine copied all data from a particular dependency internally in batch a few times a day; the data might be a few hours stale but at least we had total control over access.
-
-In both of these cases there are costs, as well as benefits. In the first your computation is doubled, in the second you need the space to store everything again. I've found it difficult to codify or formalise these techniques beyond examples, but I hope it's clear that there is some value here. In general the idea is to **implement process that makes failure impossible**, of course weighing up the costs of doing so against the benefit.
-
-### 3. allow for organisational change
-
-{% include todo.html note="Consistency of approach across teams, share code and tech" %}
+[here][robustness]
 
 ## Representation
 
@@ -100,10 +63,8 @@ Representing the team **outwards** to the rest of the company could include adve
 
 Representation **inwards** means being an advocate for consistent use of technology across the company and introducing best practice from across the industry. In SoundCloud the collective of tech leads from around the company meets regularly to share and disseminate guidance on common approaches and patterns that come up, working towards consistency in choices. This brings shared experience and a shared vocabulary that can improve shared understanding of the systems across the company and context around the challenges that other groups face, which in turn allows us to work better with users and stakeholders. It's also here that conflict can arise between local views on choices of technology and wider views on whether there should be a consistent approach between teams.
 
-***
-
-[^1]: I'm not referring to failure of a team to deliver a project; this is a hard problem in itself, but delivery of features is not a part of the responsibility of a tech lead in our model. That part of project management falls to either the engineering manager or the project manager.
-
 [soundcloud]: https://soundcloud.com
 [ele-medium]: https://medium.com/@_eleftherios/https-medium-com-eleftherios-above-the-clouds-5-years-of-data-at-soundcloud-part-1-8803e2059fa
-[12-factor]: https://12factor.net/
+
+[everything-is-a-tradeoff]: /posts/everything-is-a-tradeoff/
+[robustness]: /posts/levels-of-robustness/
