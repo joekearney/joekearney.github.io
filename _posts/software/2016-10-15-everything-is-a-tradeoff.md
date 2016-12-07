@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Everything is a tradeoff"
-description: "in praise of RFCs"
-meta_description: "Being explicit about costs and implications when making choices makes future decisions easier when things change. A document like an RFC is a great implementation of this."
+description: "in praise of writing down design choices"
+meta_description: "Being explicit about costs and implications when making choices makes future decisions easier when things change. A collaborative document can be a great implementation of this."
 categories:
 - post
 tags:
