@@ -8,7 +8,6 @@ categories:
 tags:
 - article
 - software
-- draft
 status: published
 type: post
 author: Joe Kearney
