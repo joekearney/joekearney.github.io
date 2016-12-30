@@ -289,7 +289,7 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 }
 
 blockquote:not(.twitter-tweet) {
-  margin: 20px 0;
+  margin: 0;
   padding: 15px 30px 15px 15px;
   border: 1px solid #ddd;
   border-left-color: #b12930;
