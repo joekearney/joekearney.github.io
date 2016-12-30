@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 'JMX in a DMZ'
+description: "understanding RMI settings"
+meta_description: "An SSH tunnel can allow access to a JMX endpoint that is only exposed to the local machine."
 categories:
 - post
 tags:
