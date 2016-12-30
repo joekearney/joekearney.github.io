@@ -25,8 +25,8 @@ layout: layout
     {% include auto-prev-next.html %}
   </article>
 
-  {% if page.tags contains 'comments' %}
-    {% unless page.tags contains 'nocomments' %}
+  {% if page.tags contains 'comments' or page.tags contains 'software' %}
+    {% unless page.tags contains 'nocomments' or page.tags contains 'draft' %}
       {% include disqus.html %}
     {% endunless %}
   {% endif %}
