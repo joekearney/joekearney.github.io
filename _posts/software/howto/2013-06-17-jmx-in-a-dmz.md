@@ -59,7 +59,7 @@ Nowhere with this relatively simple setup can you define the bind address of the
 
 The `java.rmi.server.hostname` property is defined VM-wide; it's not respected if passed in as the new connector server's environment. So this might not be appropriate for applications using RMI in other ways. Though if you're already running an app in a DMZ and using RMI to connect home, either you already know that and have solved these problems, or you're completely insane.
 
-[1]: /posts/jmx-ssh-tunnelling-into-a-dmz/ "SSH tunnel into a DMZ"
+[1]: /posts/jmx-ssh-tunnelling-into-a-dmz "SSH tunnel into a DMZ"
 [2]: https://blogs.oracle.com/jmxetc/entry/jmx_connecting_through_firewalls_using "Oracle: JMX - connection through firewalls"
 [3]: https://blogs.oracle.com/jmxetc/entry/java_5_premain_rmi_connectors "Oracle - RMI Connectors, Single Port, SSL, and Firewall"
 [4]: http://blog.markfeeney.com/2010/10/jmx-through-ssh-tunnel.html "Mark Feeney - JMX through a ssh tunnel"
