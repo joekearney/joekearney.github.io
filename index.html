@@ -53,14 +53,7 @@ sitemap:
     <div class="{{ coltype }}">
       <h2 class="thin">Software How To</h2>
       <ul class="listing">
-        {% for post in site.posts %}
-          {% if post.categories contains 'post' and post.tags contains 'software' %} {% unless post.tags contains 'article' or post.tags contains 'draft' %}
-            <li>
-              <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-              <a href="{{ post.url }}">{{ post.title | replace:'-','&ndash;' }}</a>
-            </li>
-          {% endunless %} {% endif %}
-        {% endfor %}
+        {% include toc-listing.html numPosts='all' showDrafts='false' tag='howto' showAuthor='true' showLongDescription='false' orderAscending='true' showOnlyArticles='false' showDate='true' prependSeriesToTitles='true' showSeriesPages='true' %}
       </ul>
     </div>
     <div class="{{ coltype }}">

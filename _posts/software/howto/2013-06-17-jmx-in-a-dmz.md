@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How to: JMX in a DMZ'
+title: 'JMX in a DMZ'
 categories:
 - post
 tags:

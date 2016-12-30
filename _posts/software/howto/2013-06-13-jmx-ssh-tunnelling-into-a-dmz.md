@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How to: SSH tunnel into a DMZ'
+title: 'SSH tunnel into a DMZ'
 categories:
 - post
 tags:
