@@ -20,7 +20,7 @@ source:
 
 Starting with a ton of [protobuf][protobuf] messages, I was interested in querying over them using Hive and Parquet. Parquet describes a columnar storage format for data that is not necessarily tabular, for example with nested message schemas. Columnar storage can be a good choice when queries don't read all columns of the data. How can you store these nested messages in columns, preserving the structure?
 
-The original work for this came from Google. The original [Dremel paper][dremel-paper], published by Google in 2010, describes the storage format and query engine that became the basis for Parquet.
+The original work for this came from Google. The original [Dremel paper][dremel-paper], published in 2010, describes the storage format and query engine that became the basis for Parquet.
 
 This post is based heavily on the [Twitter blog post][twitter-parquet] describing the same. This is an attempt to describe the process for my own understanding, and I'm sure it'll be fleshed out further in the future. This isn't intended to be enough to reproduce the full detail, but should be a start at getting an intuition about the approach.
 
