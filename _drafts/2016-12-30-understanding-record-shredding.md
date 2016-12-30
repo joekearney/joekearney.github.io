@@ -20,7 +20,9 @@ source:
 
 Given a ton of [protobuf][protobuf] messages stored in HDFS I was interested in moving towards Hive and Parquet. Parquet describes a columnar storage format for data that is not necessarily tabular, for example with nested message schemas. Columnar storage can be a good choice when queries don't read all columns of the data. How can you store these nested messages in columns, preserving the structure?
 
-The original work for this came from Google. The original [Dremel paper][dremel-paper], published by Google in 2010, describes the storage format and query engine that became the basis for Parquet. The word **shredding** comes from the idea that we're taking apart the records from their per-message encoding.
+The original work for this came from Google. The original [Dremel paper][dremel-paper], published by Google in 2010, describes the storage format and query engine that became the basis for Parquet.
+
+The term **record shredding**, or **striping**, comes from the idea that we're taking apart the records from their per-message encoding. We lose locality per message in favour of locality per field.
 
 ## Intuition and running examples
 
@@ -64,7 +66,9 @@ Given that fields may be optional or repeated we need to **store some additional
 
 {% include clearfix.html %}
 
-## Extra information stored
+## Extra information
+
+We store two pieces of extra information for each value at each path.
 
 ### Definition Levels
 
@@ -80,9 +84,19 @@ As an optimisation, required nodes don't need to count towards the definition le
 
 ### Repetition Levels
 
+{% include image-float.html src='/images/record-shredding/repetition-levels-diagram.png' txt_alt='Illustration of repetition levels in an AddressBook example' caption='from the Twitter post' id='repetition-levels-diagram-image' side='right' background-colour='white' %}
+
 The definition in the paper is:
 
 > It tells us at what repeated field in the field's path the value has repeated
+
+The **repetition level** handles repeated elements. This is best viewed from the point of view of re-assembling the records from the columnar store into the original message.
+
+A repeated element means we're dealing with lists of subtrees rooted at that node. When reconstructing the message, a value of _n_ for the repetition level means **start a new list of repeated elements at level _n_ in the tree**
+
+{% include clearfix.html %}
+
+## Assembly
 
 ***
 
