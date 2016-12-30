@@ -319,7 +319,7 @@ blockquote .h1, blockquote .h2, blockquote .h3, blockquote .h4, blockquote .h5, 
 table.highlighttable td.code {
   width: 100%;
 }
-table.highlighttable td.linenos pre code {
+table.highlighttable pre code {
   white-space: pre;
 }
 
