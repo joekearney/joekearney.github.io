@@ -13,7 +13,7 @@ status: publish
 type: post
 published: true
 
-source: http://www.antonio-carluccio.com/Festoni_del_Ghiottone
+# formerly at http://www.antonio-carluccio.com/Festoni_del_Ghiottone
 
 ---
 
@@ -21,11 +21,11 @@ Ok, so two recipes, because why not (and because two seems positively restrained
 
 ***
 
-{% include image-float.html src='http://www.antonio-carluccio.com/images/page/lasagne.jpg' txt_alt='Festoni del Ghiottone' caption='Festoni del Ghiottone' href='http://www.antonio-carluccio.com/Festoni_del_Ghiottone' id='title-img-float-right' side='right' %}
+{% include image-float.html src='/images/carluccio-festoni.jpg' txt_alt='Festoni del Ghiottone' caption='Festoni del Ghiottone' id='title-img-float-right' side='right' %}
 
 # Festoni del Ghiottone
 
-First off -- [Antonio Carluccio's Festoni del Ghiottone](http://www.antonio-carluccio.com/Festoni_del_Ghiottone).  It's an indulgent, multi-hour, don't-look-at-the-saturated-fat-content feast of lasagna-but-better.  I've only made it once, but it was amazing (if I do say so myself).  Well worth the faff -- and the washing up!
+First off -- [Antonio Carluccio](http://antonio-carluccio.co.uk/)'s Festoni del Ghiottone.  It's an indulgent, multi-hour, don't-look-at-the-saturated-fat-content feast of lasagna-but-better.  I've only made it once, but it was amazing (if I do say so myself).  Well worth the faff -- and the washing up!
 
 _Serves 8 as a main course_
 
