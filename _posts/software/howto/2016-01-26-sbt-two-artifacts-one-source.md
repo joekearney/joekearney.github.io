@@ -24,7 +24,7 @@ In the case that came up today we're building a library that uses a Hadoop clien
 
 > Using SBT, compile and package the same source code twice, with two different sets of dependencies.
 
-The solution is at the bottom, and in between are the steps that my colleague [Aaron Levin](http://aaronlevin.ca/) and I went through to get there.
+The solution is at the bottom, and in between are the steps that my colleague [Aaron Levin](http://aaronlevin.ca) and I went through to get there.
 
 ### Idea one: fake it
 

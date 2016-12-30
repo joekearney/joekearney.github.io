@@ -14,7 +14,7 @@ type: post
 published: true
 ---
 
-These are three of the recipes I made when I went to cooking school in Hoi An on my travels -- and all work perfectly together. I’m guessing you may have [done a similar thing](/posts/sweaty-tailoring/) when you were there but they are delicious so thought I’d share them with you.
+These are three of the recipes I made when I went to cooking school in Hoi An on my travels -- and all work perfectly together. I’m guessing you may have [done a similar thing](/posts/sweaty-tailoring) when you were there but they are delicious so thought I’d share them with you.
 
 ***
 

@@ -20,7 +20,7 @@ type: post
 author: Joe Kearney
 ---
 
-_This series was written to accompany [a talk I gave](http://www.meetup.com/Scala-Berlin-Brandenburg/events/228703195/) to the Berlin-Brandenburg Scala User Group_
+_This series was written to accompany [a talk I gave](http://www.meetup.com/Scala-Berlin-Brandenburg/events/228703195) to the Berlin-Brandenburg Scala User Group_
 
 ***
 

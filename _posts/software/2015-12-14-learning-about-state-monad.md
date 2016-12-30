@@ -114,7 +114,7 @@ The type `M` here can be anything that has one type parameter, or anything that 
 
 At each step, `map` and `flatMap` can change this one type parameter as functions are applied, but the outer type (`State`, for us) and the fixed types (`S`) cannot change. You can't write a for-comprehension over `State` and `Option`, for example, at least not without getting into monad transformers.
 
-(See [this post about `sequence`](/posts/sequence-all-the-things/) for an example introducing type lambdas, the actual Scala notation for this.)
+(See [this post about `sequence`](/posts/sequence-all-the-things) for an example introducing type lambdas, the actual Scala notation for this.)
 {% endcapture %}
 {% include sidebar.html content=for_comprehensions_and_monad %}
 

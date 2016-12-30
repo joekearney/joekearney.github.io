@@ -17,7 +17,7 @@ published: true
 
 ---
 
-Ok, so two recipes, because why not (and because two seems positively restrained next to [Chloe and Steve's](/posts/chloe-selection/) contribution!)
+Ok, so two recipes, because why not (and because two seems positively restrained next to [Chloe and Steve's](/posts/chloe-selection) contribution!)
 
 ***
 

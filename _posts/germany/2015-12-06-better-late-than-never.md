@@ -14,7 +14,7 @@ author: Joe Kearney
 
 What a crazy year. After getting engaged, quitting our jobs, leaving London and [going travelling](/honeyment-index) for five months we're now three months into living in a new country!
 
-We've talked for a long time about wanting to move abroad for a while. We looked at Australia for a while, though our parents are pleased we decided not to move so far. Besides, [the weather didn't seem so good](/posts/tropical-storm-sydney/) there after all. We've also wanted to go somewhere with another language, and Australia (mostly) didn't tick that box either.
+We've talked for a long time about wanting to move abroad for a while. We looked at Australia for a while, though our parents are pleased we decided not to move so far. Besides, [the weather didn't seem so good](/posts/tropical-storm-sydney) there after all. We've also wanted to go somewhere with another language, and Australia (mostly) didn't tick that box either.
 
 I got chatting to SoundCloud and after emails and phone calls from campsites and hotels (including one in Hong Kong with a view of a North Korean flag on the building opposite!) they flew me out to the offices in Berlin, when it was sunny and around body temperature, and offered me the job before I got home. So here we are, starting the next part of the adventure in Berlin!
 
@@ -37,7 +37,7 @@ After about three months of paperwork (not to mention the four trips to Ikea) an
 
 ***
 
-If Germany has failed categorically to deliver on a reputation of efficiency, Berlin has certainly lived up to its reputation -- it's cool here. Much like the [Melbourne type of cool](/posts/cafe-melbourne/) there's no pretentiousness. Everyone has tattoos of different varieties, you wear what you want, cut your hair however. And yet somehow there is still this high fashion -- on the metro you've never seen so many different ways of wearing all black. I definitely feel like the middle-class Englishman not even attempting to fit in. But that's ok, there are plenty of observer-mode locals and ex-pats too.
+If Germany has failed categorically to deliver on a reputation of efficiency, Berlin has certainly lived up to its reputation -- it's cool here. Much like the [Melbourne type of cool](/posts/cafe-melbourne) there's no pretentiousness. Everyone has tattoos of different varieties, you wear what you want, cut your hair however. And yet somehow there is still this high fashion -- on the metro you've never seen so many different ways of wearing all black. I definitely feel like the middle-class Englishman not even attempting to fit in. But that's ok, there are plenty of observer-mode locals and ex-pats too.
 
 We live on the edge of the lovely suburb of Prenzlauer Berg, full of cafés and bars, young families and little parks. The story goes that after the wall came down, everyone who was still there left to go to the west and the area was taken over by the hippies. They settled, grew up, turned into hipsters, coupled up and had babies, and now it's the most middle-class gentrified area you could imagine. We hit peak hipster while flat-hunting, when we stopped for a drink of rhubarb juice in a vegan organic cafe, next to a square full of prams.
 
@@ -48,7 +48,7 @@ Near our flat and further afield it's easy to find a delightful array of ways of
 While we've started exploring our local area we've made a poor start to tourism. There is so much history here, and though it's difficult to miss the remains of the wall and the memorials, it's only now that we've had a couple of sets of visitors from home that we've started to get to some of the important sights and sites together. There are countless museums on all eras of the country's history, so we should have plenty to see for a while! So far:
 
 * the Berlin Wall Memorial Museum, the Gedenkstätte, which has a good timeline of the events from the creation to demolition of the wall, which was seasoned with some historical context provided by my own personal historian (BA Dunelm).
-* the depressingly thorough Topography of Terrors museum that documents the politics of the rise of the Third Reich and the administration of the Holocaust, with many unavoidable parallels with [Tuol Sleng](/posts/tuol-sleng-genocide-museum/).
+* the depressingly thorough Topography of Terrors museum that documents the politics of the rise of the Third Reich and the administration of the Holocaust, with many unavoidable parallels with [Tuol Sleng](/posts/tuol-sleng-genocide-museum).
 * the DDR Museum, showing life in East Germany under communist rule. Interactive and (literally) touchy-feely, but at the expense of providing much actual information. All a little bit Disney.
 
 There are plenty more to go, but it's already clear from the museums, tourist spots and memorials that the country really goes in for forensic exposition of the atrocities of the past.
