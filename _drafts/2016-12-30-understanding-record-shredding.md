@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Dremel/Parquet Record Shredding"
+title: "Understanding Record Shredding"
 description: "storing nested data in columns"
-meta_description: "Record shredding allows nested data structures to be considered in a sort-of-tabular way, and stored in a columnar data store. This post describes the intuition behind how this can be done preserving message structure."
+meta_description: "Record shredding allows nested data structures to be considered in a sort-of-tabular way, and stored in a columnar data store. This post describes the intuition behind how this can be done preserving message structure, from Dremel and Parquet."
 categories:
 - post
 tags:
@@ -64,7 +64,9 @@ Given that fields may be optional or repeated we need to **store some additional
 
 {% include clearfix.html %}
 
-## Definition Levels
+## Extra information stored
+
+### Definition Levels
 
 The definition in the paper is:
 
@@ -72,9 +74,15 @@ The definition in the paper is:
 
 The **definition level** of a value at a path handles elements that might be `NULL`. It means "how much of the path to the node is defined?".
 
-Leaves under a node that can be missing (because it's optional or repeated)
+For leaves under a node that can be missing (because it's optional or repeated), the leaf can be undefined _from a certain level_. The leaf may be undefined, or its parent, or some other node further up the tree. The definition level records which segment along the path is the first to be undefined.
 
-## Repetition Levels
+As an optimisation, required nodes don't need to count towards the definition level, so for counting segments of the path, required nodes are ignored.
+
+### Repetition Levels
+
+The definition in the paper is:
+
+> It tells us at what repeated field in the field's path the value has repeated
 
 ***
 
