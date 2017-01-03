@@ -60,7 +60,7 @@ We store two pieces of extra information for each value at each path. These allo
 
 ### Definition Levels
 
-{% include image-float.html src='/images/record-shredding/definition-levels-diagram.png' txt_alt='Illustration of definition levels in a simple example' caption='from the Twitter post' id='definition-levels-diagram-image' side='right' background-colour='white' %}
+{% include image-float.html src='/images/record-shredding/definition-levels-diagram.png' txt_alt='Illustration of definition levels in a simple example' caption='from the <a href="https://blog.twitter.com/2013/dremel-made-simple-with-parquet">Twitter post</a>' id='definition-levels-diagram-image' side='right' background-colour='white' %}
 
 > How many fields in [path] _p_ that could be undefined (because they are optional or repeated) are actually present in the record?
 >
@@ -76,7 +76,7 @@ As an optimisation, required nodes don't need to count towards the definition le
 
 ### Repetition Levels
 
-{% include image-float.html src='/images/record-shredding/repetition-levels-diagram.png' txt_alt='Illustration of repetition levels in an AddressBook example' caption='from the Twitter post' id='repetition-levels-diagram-image' side='right' background-colour='white' %}
+{% include image-float.html src='/images/record-shredding/repetition-levels-diagram.png' txt_alt='Illustration of repetition levels in an AddressBook example' caption='from the <a href="https://blog.twitter.com/2013/dremel-made-simple-with-parquet">Twitter post</a>' id='repetition-levels-diagram-image' side='right' background-colour='white' %}
 
 > It tells us at what repeated field in the field's path the value has repeated
 >
