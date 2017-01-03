@@ -11,10 +11,6 @@ tags:
 status: published
 type: post
 author: Joe Kearney
-
-source:
-- https://research.google.com/pubs/pub36632.html
-- https://blog.twitter.com/2013/dremel-made-simple-with-parquet
 ---
 
 Starting with a ton of [protobuf][protobuf] messages, I was interested in querying over them using Hive and Parquet. Parquet describes a columnar storage format for data that is not necessarily tabular, for example with nested message schemas. Columnar storage can be a good choice when queries don't read all columns of the data. How can you store these nested messages in columns, preserving the structure?
@@ -104,9 +100,7 @@ A finite state machine can be constructed for a query, based on the columns that
 >
 > <p class="cite">&mdash; definition from <a href="https://research.google.com/pubs/pub36632.html">the paper</a>, sec 4.3</p>
 
-***
-
-## Resources
+## Sources, resources
 
 * The Google [Dremel paper][dremel-paper]
 * Twitter [blog post][twitter-parquet] describing record shredding in Parquet
