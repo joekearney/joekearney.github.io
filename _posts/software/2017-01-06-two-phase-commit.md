@@ -7,7 +7,6 @@ categories:
 - post
 tags:
 - article
-- draft
 - software
 author: Joe Kearney
 published: true
