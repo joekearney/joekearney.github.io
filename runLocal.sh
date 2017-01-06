@@ -14,8 +14,16 @@ echo "Done with exit code $?"
 # bundle install
 # ./runLocal
 
-if [[ "$1" == "-c" ]]; then
+# TODO do arg processing properly
+if [[ "$1" == "-c" || "$2" == "-c" ]]; then
+  echo
+  echo "Cleaning output"
   jekyll clean
+fi
+if [[ "$1" == "-i" || "$2" == "-i" ]]; then
+  echo
+  echo "Using incremental compilation..."
+  INCREMENTAL="--incremental"
 fi
 
 jekyll serve \
@@ -24,4 +32,4 @@ jekyll serve \
   --destination $DIR/_site \
   --layouts $DIR/_layouts \
   --drafts --future \
---watch --trace --profile --incremental
+--watch --trace --profile $INCREMENTAL
