@@ -9,6 +9,7 @@ tags:
 - article
 - software
 - draft
+- comments
 status: published
 type: post
 author: Joe Kearney
