@@ -509,3 +509,9 @@ article div.footnotes {
 article div.footnotes ul, article div.footnotes ol {
   padding-left: 20px;
 }
+a.footnote::before {
+  content: "["
+}
+a.footnote::after {
+  content: "]"
+}
