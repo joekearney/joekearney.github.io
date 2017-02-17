@@ -79,7 +79,7 @@ No, this wasn't a post about Gödel, it was an excuse to use a tenuous analogy t
 
 ***
 
-[^1]: There is _so_ much wrong with this horrific over-simplification, not least that there are actually two related incompleteness theorems, but it's good enough for the analogy. I'm sorry, Kurt.
+[^1]: There is _so_ much wrong with this horrific over-simplification, not least that there are actually two related incompleteness theorems -- existence of true but non-provable statements, and impossibility of proving consistency from within the system. But it's good enough for the analogy. I'm sorry, Kurt.
 [^2]: The instance in which you can create Bitcoin, mining, is a way of managing decentralised accounting that allows you to create a small amount of new money when you verify a block of transactions.
 
 [godel-incompleteness-wiki]: https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems
