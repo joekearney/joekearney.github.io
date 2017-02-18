@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gödel Blockchain Theorem"
-description: "blockchain has bounds"
+description: "limits of verifiability"
 meta_description: "A blockchain allows independent parties to make verifiable statements. This works with Bitcoin, whose value is determined inside the system, but fails in applications where the value is external."
 categories:
 - post
