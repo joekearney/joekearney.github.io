@@ -10,6 +10,7 @@
 {% comment %}Don't show anything at all if there are no non-draft posts for the tag{% endcomment %}
 {% if anyPosts %}
 
+{% if include.title %}
 <h2>
   <span class="title-colour"><a href="/{{include.tag}}-index">{{ include.title }}</a></span>
   <span class="post-description">{% if include.description %}&mdash; {{ include.description }}{% endif %}
@@ -18,6 +19,7 @@
     {% endif %}
   </span>
 </h2>
+{% endif %}
 
 {% include toc-listing.html numPosts=include.numPosts showDrafts=include.showDrafts tag=include.tag showAuthor=include.showAuthor showLongDescription=include.showLongDescription showOnlyArticles=include.showOnlyArticles %}
 
