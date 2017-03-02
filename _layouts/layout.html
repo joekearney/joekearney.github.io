@@ -30,8 +30,8 @@ layout: compress
   <meta name="theme-color" content="#b12930">
 
   <link rel="shortcut icon" href="/j-inverse.ico">
-  <link rel="alternate" type="application/atom+xml" title="Joe's Mots Feed" href="/atom.xml">
-  <link rel="alternate" type="application/atom+xml" title="Joe's Mots on Software" href="/feeds/atom-software.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{site.title}} Feed" href="/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{site.software.tag_name}}" href="/feeds/atom-software.xml">
   <link rel="alternate" type="application/atom+xml" title="{{site.honeyment.tag_name}}" href="/feeds/atom-honeyment.xml">
   <link rel="alternate" type="application/atom+xml" title="{{site.tasty-rsvps.tag_name}}" href="/feeds/atom-tasty-rsvps.xml">
   <link rel="alternate" type="application/atom+xml" title="{{site.germany.tag_name}}" href="/feeds/atom-germany.xml">
@@ -49,8 +49,8 @@ layout: compress
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  {% for js in page.js-require %}
   <script type="text/javascript" src="/js/up.js"></script>
+  {% for js in page.js-require %}
   <script type="text/javascript" src="{{ js }}"></script>
   {% endfor %}
 </head>

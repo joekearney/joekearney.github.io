@@ -4,7 +4,7 @@ rdiscount:
 highlighter: rouge
 exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components ]
 timezone: Europe/Berlin
-title: Joe's Mots
+title: "Joe’s Mots"
 production_url: "http://www.joekearney.co.uk"
 description: "Trying to be cogent."
 analytics: UA-49379324-1
@@ -47,7 +47,7 @@ hidden_tags:
 # software posts that are to be read, not just howto
 software:
   tag_description: "Trying to be cogent"
-  tag_name: "Joe's Mots on Software"
+  tag_name: "Joe’s Mots on Software"
   tag_short_name: "Software"
   index_path: "software-index"
 honeyment:

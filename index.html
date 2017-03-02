@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: "Joe's Mots"
+title: "Joe’s Mots"
 categories:
 - index
 tags:
@@ -13,16 +13,27 @@ sitemap:
 <div class="container">
 
   <div class="title">
-    <h1 class="title-colour"><a href="/">Joe's Mots</a></h1>
-    <p>Trying to be cogent.</p>
+    <h1 class="title-colour"><a href="/">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='software' title=site.software.tag_short_name numPosts='all' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
+{% capture c %}
+{% include_relative _posts/software/about-me-software.md %}
+{% endcapture %}
+
+{{ c | markdownify }}
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      {% include short-toc-by-tag.html tag='software' title="Posts" numPosts='all' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
+    </div>
+  </div>
+
+{% comment %}
   <div class="row">
     <div class="col-md-12">
       {% include short-toc-by-tag.html tag='germany' title=site.germany.tag_name description=site.germany.tag_description showAuthor='false' %}
@@ -41,7 +52,6 @@ sitemap:
     </div>
   </div>
 
-  {% comment %}If there are drafts use col-md-4, otherwise use col-md-6{% endcomment %}
   {% assign coltype = 'col-md-6' %}
   {% for post in site.posts %}
     {% if post.tags contains 'draft' %}
@@ -70,4 +80,5 @@ sitemap:
     </div>
     {% endif %}
   </div>
+{% endcomment %}
 </div>
