@@ -9,7 +9,6 @@ tags:
 - article
 - software
 - comments
-- draft
 status: published
 type: post
 author: Joe Kearney
@@ -21,9 +20,9 @@ _Many thanks to [Antony Lewis][bitsonblocks] for reviewing this and helping make
 
 {% include image-float.html src='/images/kurt-godel.jpg' txt_alt='Kurt Gödel, owner of zero BTC' caption='Kurt Gödel' id='kurt-godel-portrait' side='right' href="https://en.wikipedia.org/wiki/Kurt_G%C3%B6del" %}
 
-One of my favourite mathematical results is the [Gödel Incompleteness Theorem][godel-incompleteness-wiki]. It describes that in a formal language you can make statements that are true but that can't be proven true within the system itself[^1]. In order to prove these statements you need to use truths external to the system.
+One of my favourite mathematical results is the [Gödel Incompleteness Theorem][godel-incompleteness-wiki]. It describes that in a formal system of logic, you can make statements that are true but that can't be proven true within the system itself[^1]. In order to prove these statements you need to use truths external to the system.
 
-A blockchain is a data structure that became known as the foundation of bitcoin, and has uses in other contexts. With apologies to Prof Gödel, there's a tenuous analogy that I'd like to draw between verifying statements in formal languages and validating statements made about a blockchain.
+A blockchain is a data structure that became known as the foundation of bitcoin, and has uses in other contexts. With apologies to Prof Gödel, there's a tenuous analogy that I'd like to draw between verifying statements in these formal languages and validating statements made about a blockchain.
 
 > I argue that for applications of a blockchain in which the verification of statements requires external facts, blockchain doesn't solve your problem.
 
@@ -33,7 +32,7 @@ The selling point of blockchains is that its record of events is verifiable by a
 
 There are two uses of blockchain that I want to compare, in both of which the intention is to allow verification (proof) of facts about the system: bitcoin; and tracking copyright in music.
 
-In **bitcoin** a transaction might be described as "wallet[^2] A sent wallet B some bitcoins", and the system enforces that all transactions in the ledger are valid -- true. You can then make statements like "wallet B contains X bitcoins", truth of which mean validation derived from the transactions in the history of the ledger.
+In **bitcoin** a transaction might be described as "wallet[^2] A sent wallet B some bitcoins", and the system enforces that all transactions in the ledger are valid. You can then make statements like "wallet B contains X bitcoins", truth of which mean validation derived from the transactions in the history of the ledger.
 
 There has been discussion of using blockchains in tracking **music rights**, which might include statements like "this track had these performers", "this song was written by this songwriter" and "this label owns the rights to the recording". As with bitcoin, ownership can be transferred -- I can give publishing rights, or the rights for the recording, to someone else. You might then want to verify a claim of ownership of some rights.
 
@@ -47,25 +46,25 @@ What does it mean for a statement made in the context of one of these systems to
 
 > I have X bitcoins
 
-Bitcoin as a currency derives its value entirely from the transactions contained within the system itself, and enforcing validity of transactions means you can't spend bitcoin you don't control. You can buy bitcoin outside the system (give someone some dollars) and hope that the seller transfers the right amount of bitcoin to you -- once they have, the bitcoin is verifiably yours.
+Bitcoin as a currency derives its value entirely from the transactions contained within the system itself, and enforcing validity of transactions means you can't spend bitcoin you don't control. You can buy bitcoin outside the system (give someone some dollars) and hope that the seller transfers the right amount of bitcoin to you -- once they have, the bitcoin is verifiably yours. But you can't unilaterally give yourself new bitcoin.
 
 You need a trust relationship here with your bitcoin dealer, because that interaction (trading dollars for bitcoin) happens outside the system and isn't verifiable within it. But that's the only trust required in the whole system. No one else needs to trust either of you in order to trust the record of actions, because these records are all verifiably valid. Once you have some bitcoin in your wallet you're in the system, and you can add transactions to the ledger (spend bitcoin) independently.
-
-**Side note**: this is the same duality between state and the transitions that get you there as is exploited in event sourcing between a database and the log of events to build it. The event/transaction is the _source_ of truth; the current contents of the database/value of a wallet is only _derived_ from those events.
 
 ### Music rights
 
 > I wrote this song
 
-Consider how this works as a musician: after you've written and recorded your music you want to declare the ownership of this work, including your authorship and details of performers.
+Suppose that you're a musician, and after you've written and recorded your music you want to declare the ownership of this work, including your authorship and details of performers. You do this by writing the information into the blockchain.
 
 What's to stop you recording ownership of someone else's work? How do you write this new information into the blockchain in a way that can be trusted by other parties? I could claim ownership of a Justin Bieber track or a Shostakovich symphony just as easily as I could my own work.
 
-In order to protect the integrity of this blockchain the whole community needs to be able to verify statements made. In bitcoin this is intrinsic but, in recording external facts, preventing this kind of fraudulent action can't be done within the system. This is _new value_ entering the system, as opposed to an internal transfer of value in the bitcoin example.
+In order to protect the integrity of this blockchain the whole community needs to be able to verify statements made. In bitcoin this is intrinsic, but when recording external facts you can't rely on what's already within the system.
+
+Statements made about this blockchain cannot be proven within the system. They can only be proven with external information.
 
 ### Requiring a trusted actor
 
-The problem here is distinct notions of truth. In bitcoin, statements around ownership can be evaluated internally; with any system where you're just recording external facts, this isn't the case.
+The problem here is different notions of what it means for these statements to be true. In bitcoin, statements around ownership can be evaluated internally; with any system where you're just recording external facts, this isn't the case.
 
 This leads inevitably to requiring some sort of gatekeeper on the system. This is known as an _oracle_, a **trusted entity that is allowed to write new information**. Traditionally this sort of role would be fulfilled by the record labels and performing rights organisations, because they have all of the information. But the motivation of using a blockchain for music rights management is typically precisely to remove these groups from a position of required trust.
 
@@ -73,9 +72,9 @@ This leads inevitably to requiring some sort of gatekeeper on the system. This i
 
 Bitcoin uses a blockchain to record events, and the truth of statements about bitcoins is determined entirely within the system. This is a special case.
 
-In more complex applications, in our example that of representing copyrights, the blockchain records information whose value is external to the system. The truth of a statement cannot be proven within the system, even though it may have some external (and externally verifiable) truth.
+In more complex applications, including in our example of representing copyrights, the blockchain records information whose value is external to the system. The truth of a statement cannot be proven within the system, even though it may have some external (and externally verifiable) truth.
 
-The difference between these two cases is that while the value of bitcoins comes from the system itself, the value of music rights is external. When a new user entering the system requires trust from all other parties, or requires centralised trust, the benefit of using blockchains is lost.
+The difference between these two cases is that while the **value** of bitcoins comes from the system itself, the value of music rights is external. When new information entering the system requires trust from all other parties, or requires centralised trust, the benefit of using blockchains is lost.
 
 ### Implications
 
