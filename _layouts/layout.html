@@ -44,6 +44,9 @@ layout: compress
   {% for css in page.css-require %}
   <link href="{{ css }}" rel="stylesheet">
   {% endfor %}
+  {% for css in layout.css-require %}
+  <link href="{{ css }}" rel="stylesheet">
+  {% endfor %}
 
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
