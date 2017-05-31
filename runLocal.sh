@@ -26,6 +26,8 @@ if [[ "$1" == "-i" || "$2" == "-i" ]]; then
   INCREMENTAL="--incremental"
 fi
 
+${DIR}/buildImages.sh
+
 jekyll serve \
   --config $DIR/_config.yml \
   --source $DIR \
