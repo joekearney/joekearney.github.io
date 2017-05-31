@@ -329,6 +329,19 @@ table.highlighttable pre code {
   white-space: pre;
 }
 
+table{
+    border-collapse: collapse;
+    border-spacing: 5;
+}
+th{
+    border:2px solid #333;
+    padding: 5px;
+}
+td{
+    border:1px solid #333;
+    padding: 5px;
+}
+
 .glyph:hover {
   color: #b12930;
 }
