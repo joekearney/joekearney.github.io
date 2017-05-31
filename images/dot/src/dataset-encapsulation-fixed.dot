@@ -1,0 +1,36 @@
+digraph {
+  rankdir=LR
+
+  dba[label="database", shape=square]
+  dbb[label="database", shape=square]
+  dw[label="data\nwarehouse"]
+  sa[label="snapshot"]
+  sb[label="snapshot"]
+  hdfs[label="HDFS", shape=square]
+  a[label="analysts"]
+
+  subgraph clusterA {
+    label = "team A"
+    style = dashed
+    dba
+    sa
+  }
+  subgraph clusterB {
+    label = "team B"
+    style = dashed
+    dbb
+    sb
+  }
+
+  subgraph clusterdata {
+    label = "data team"
+    style = dashed
+
+    {rank=same; dw; a}
+    
+    hdfs -> dw -> a
+  }
+
+  dba -> sa -> hdfs
+  dbb -> sb -> hdfs
+}

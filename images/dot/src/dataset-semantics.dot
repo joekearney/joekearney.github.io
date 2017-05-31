@@ -1,0 +1,24 @@
+digraph {
+  rankdir=LR
+
+  n[label="new track\nevents"]
+  t[label="tracks\nsummary"]
+  s[label="summary\nreport"]
+  dr[label="detailed\nreport"]
+
+  subgraph clustertracks {
+    label = "tracks team"
+    style = dashed
+    n
+    t
+  }
+  subgraph clusterreportsteam {
+    label = "reports team"
+    style = dashed
+    s
+    dr
+  }
+
+  n -> t -> s
+  n -> dr [color=red]
+}
