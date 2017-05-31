@@ -1,0 +1,12 @@
+---
+layout: post
+
+css-require:
+- /css/haute-route.css
+---
+
+{% if page.haute_route_strava_embed %}
+	<iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='{{ page.haute_route_strava_embed }}' class="inline-image-right"></iframe>
+{% endif %}
+
+{{ content }}
