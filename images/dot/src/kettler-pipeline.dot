@@ -1,0 +1,24 @@
+digraph {
+  kettler[label="bike"]
+  bluetooth[label="bluetooth"]
+  socket[label="TCP"]
+  antpi[label="Ant TX"]
+  antrx[label="Ant RX"]
+
+  subgraph cluster_laptop {
+    label = "laptop"
+    style = dashed
+    bluetooth
+    antrx
+  }
+
+  subgraph cluster_raspberry_pi {
+    label = "Raspberry Pi"
+    style = dashed
+    socket
+    antpi
+  }
+
+  kettler -> bluetooth -> socket -> antpi
+  antpi -> antrx
+}

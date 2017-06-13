@@ -20,3 +20,5 @@ components/
 .jekyll-metadata
 ebooks/*.epub
 ebooks/*.mobi
+
+/images/dot/img/
