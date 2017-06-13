@@ -17,6 +17,9 @@ author :
 
 empty_array: []
 
+# series specific properties
+haute_route_stage_home_page: http://www.hauteroute.org/events/view-stage/stage-1-alps-2017
+
 ####
 #### To add a new tag:
 #### - add to enumerable-tags

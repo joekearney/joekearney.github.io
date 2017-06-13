@@ -70,14 +70,14 @@ sitemap:
     <div class="{{ coltype }}">
       <h2 class="thin">Cycling</h2>
       <ul class="listing">
-      {% include toc-listing.html numPosts='all' showDrafts='false' tag='cycling' showAuthor='true' showLongDescription='false' orderAscending='true' showOnlyArticles='false' showDate='true' prependSeriesToTitles='true' showSeriesPages='true' %}
+      {% include toc-listing.html numPosts='all' showDrafts='false' tag='cycling' showAuthor='true' showLongDescription='false' showOnlyArticles='false' showDate='true' prependSeriesToTitles='true' showSeriesPages='true' %}
       </ul>
     </div>
 
     {% if coltype == 'col-md-4' %}
     <div class="col-md-4">
       <h2 class="thin">Drafts</h2>
-      {% include toc-listing.html numPosts='all' showDrafts='true' tag='draft' showAuthor='true' showLongDescription='false' orderAscending='true' showOnlyArticles='false' showDate='true' prependSeriesToTitles='true' showSeriesPages='true' %}
+      {% include toc-listing.html numPosts='all' showDrafts='true' tag='draft' showAuthor='true' showLongDescription='false' orderAscending='false' showOnlyArticles='false' showDate='true' prependSeriesToTitles='true' showSeriesPages='true' %}
     </div>
     {% endif %}
   </div>
