@@ -26,7 +26,7 @@ title_image_img: images/haute-route/alps-profile-2017.jpg
 
 My wife thinks it's mad, and keeps telling me that I "could just not do it!"
 
-Since I've been cycling I've looked for something to test me. Pick something hard, and see if I can do it. I've liked to have something to aim towards through the year, to keep me improving (and honest!).
+Since I've been cycling I've looked for rides to test me. Pick something hard, and see if I can do it. I've liked to have something to aim towards through the year, to keep me improving (and honest!).
 
 The first big one, in 2014, was **La Marmotte**, involving climbing four big mountains in the French Alps, finishing with the iconic climb up the 21 bends of Alpe d'Huez. (Until then I was more used to going down Alpe d'Huez on snow, than up it on tarmac!) It's a ride of 175km, climbing more than 5km vertical ascent. That's quite a lot -- it's a day of ten hours in the saddle, including two hours to climb the Col du Galibier, up into the snow-line -- there are no climbs like that in Surrey. It's a beautiful ride.
 
