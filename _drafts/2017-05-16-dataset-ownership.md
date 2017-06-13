@@ -64,9 +64,13 @@ There are two main factors that come into deciding which team should be the owne
 
 A dataset is only meaningful with some definition of the information in the dataset. Many teams might have some idea of what a dataset means, but only one team has the responsibility of designing and evolving the semantics. That team should be the owner of the dataset.
 
+{% include image-float.html src='/images/dot/img/dataset-semantics.png' txt_alt='Downstream team has to re-implement the semantics of this dataset' caption='Downstream team has to re-implement the semantics of this dataset' id='dataset-semantics-wrong' side='right' %}
+
 We see teams trying to rebuild views of datasets from elsewhere in order to fit their precise needs. In this toy example, suppose that this Tracks team creates an event (in the event sourcing sense) each time a new track becomes available on the platform, and uses that to build a dataset summarising all of the tracks. Parts of that process might be simple (e.g. showing counts of tracks, totals of media length), but some may be much more complicated (e.g. tracks have geographical permissions modelled in a different system, and we want to summarise the number of tracks per country).
 
 Now consider a Reports team using this information to build reports. If they need more than a summary, the published dataset may not be enough. A direct way to get the information they need would be to read all of the events that went into that summary, and build the new dataset themselves. But that requires knowledge of all of the details of tracks and the permissions model and for all of that to be exposed in the events. The logic will be duplicated in the two teams, separated from where it should be. This leads to a high risk of inconsistency in different views of data.
+
+{% include image-float.html src='/images/dot/img/dataset-semantics-fixed.png' txt_alt='Downstream team can now consume from a published interface' caption='Downstream team can now consume from a published interface' id='dataset-semantics-right' side='right' %}
 
 At the start of a project using this data, it would be difficult to predict the cost of the work, because the expertise is in the other team. Over time the cost of maintenance of the dataset is also hidden (and larger) because the work is distributed around the consumers. When the semantics of the data change later, it will be easy to miss making the required change everywhere. Handling this all in events can be particularly difficult, because changes to the schema require manipulating the history of events.
 
@@ -78,11 +82,15 @@ A better solution is for the work to be done in the team that has full knowledge
 
 A certain school of programmers learned about encapsulation as one of the pillars of Object Oriented Programming, and the lesson remains valid today. The internal data structures of a component (of any size: system, service or single class) are non-public so that invariants can be maintained. Other parties (calling code, other teams) get access through an interface. This level of indirection through a published interface allows the owner of a system to make changes to the data store without other users having to coordinate.
 
+{% include image-float.html src='/images/dot/img/dataset-encapsulation.png' txt_alt='The database schema lifecycle is coupled to the data warehouse' caption='The database schema lifecycle is coupled to the data warehouse' id='dataset-encapsulation-wrong' side='right' %}
+
 In this example, consider how data gets from various systems in the company to a data warehouse used by data analysts. Such a tool can be great for analysis (find all of the data in one place, easy to query) but can lead to problems of maintenance later.
 
 Consider a tool to take a full snapshot from a database and push it to the data warehouse, where it's available with the same schema and data as at the source. This provides a really easy way to get your data into one place. But it also couples the data warehouse to the internal database of your service -- specifically it couples together the schema of your database, the data warehouse, and any query that reads that data and expects a certain schema. When you want to change your supposedly-internal database schema, you suddenly have to coordinate with a lot of downstream users. Worse, given that the data warehouse is a centrally accessible resource, you probably can't know who those users are.
 
 This setup has **made the internal database an interface to the data**, breaking the system's encapsulation.
+
+{% include image-float.html src='/images/dot/img/dataset-encapsulation-fixed.png' txt_alt='The interface to the data is now the output of the snapshot, not the internal table' caption='The interface to the data is now the output of the snapshot, not the internal table' id='dataset-encapsulation-right' side='right' %}
 
 Indirection to the rescue. Rather than using the snapshot tool to copy from the database to the data warehouse, you as the team producing the data should copy the data somewhere else, say on a shared filesystem such as HDFS. You'll need to define a schema for the snapshot, even if this is (initially) only a representation of the source schema. You'll want to consider the design of this interface, too. For example, include only the fields you need first, adding others later as required. As the schema evolves you'll need to think about backwards compatibility, to ensure that consumers will continue to be able to read the data.
 
