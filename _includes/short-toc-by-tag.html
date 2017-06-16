@@ -10,9 +10,15 @@
 {% comment %}Don't show anything at all if there are no non-draft posts for the tag{% endcomment %}
 {% if anyPosts %}
 
+{% if include.header_href %}
+  {% assign header_href_to_use = {{include.header_href}} %}
+{% else %}
+  {% capture header_href_to_use %}/{{include.tag}}-index{% endcapture %}
+{% endif %}
+
 {% if include.title %}
 <h2>
-  <span class="title-colour"><a href="/{{include.tag}}-index">{{ include.title }}</a></span>
+  <span class="title-colour"><a href="{{ header_href_to_use }}">{{ include.title }}</a></span>
   <span class="post-description">{% if include.description %}&mdash; {{ include.description }}{% endif %}
     {% if include.additionalLinkUrl %}
       &mdash; <a href="{{include.additionalLinkUrl}}">{{include.additionalLinkText}}</a>
