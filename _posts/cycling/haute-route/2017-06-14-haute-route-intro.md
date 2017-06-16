@@ -2,7 +2,7 @@
 layout: post
 title: "Haute Route"
 description: "seven days cycling up mountains"
-meta_description: "I'm riding the Haute Route Alps 2017, and this describes what happened and how much it hurt."
+meta_description: "I'm riding the Haute Route Alps 2017, from Nice to Geneva through the mountains. This describes what it is and how much it's going to hurt."
 categories:
 - index
 tags:
