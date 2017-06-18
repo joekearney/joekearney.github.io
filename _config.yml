@@ -72,3 +72,6 @@ germany:
 just-in-time:
   tag_name: "Just In Time"
   index_path: "just-in-time"
+haute-route:
+  tag_name: "Haute Route Alps 2017"
+  index_path: "haute-route"
