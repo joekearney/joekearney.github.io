@@ -6,7 +6,8 @@ digraph {
   dw[label="data\nwarehouse"]
   sa[label="snapshot"]
   sb[label="snapshot"]
-  hdfs[label="HDFS", shape=square]
+  hdfsA[label="HDFS", shape=square]
+  hdfsB[label="HDFS", shape=square]
   a[label="analysts"]
 
   subgraph clusterA {
@@ -14,12 +15,14 @@ digraph {
     style = dashed
     dba
     sa
+    hdfsA
   }
   subgraph clusterB {
     label = "team B"
     style = dashed
     dbb
     sb
+    hdfsB
   }
 
   subgraph clusterdata {
@@ -27,10 +30,12 @@ digraph {
     style = dashed
 
     {rank=same; dw; a}
-    
-    hdfs -> dw -> a
+
+    hdfsA -> dw
+    hdfsB -> dw
+    dw -> a
   }
 
-  dba -> sa -> hdfs
-  dbb -> sb -> hdfs
+  dba -> sa -> hdfsA
+  dbb -> sb -> hdfsB
 }
