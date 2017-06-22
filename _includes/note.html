@@ -1,0 +1,6 @@
+{% if include.heading %}
+  {% assign heading_to_use = include.heading %}
+{% else %}
+  {% assign heading_to_use = '' %}
+{% endif %}
+<div class="bs-callout bs-callout-danger todo"><p><span class="heading">{{heading_to_use}}</span> {{include.note}}</p></div>
