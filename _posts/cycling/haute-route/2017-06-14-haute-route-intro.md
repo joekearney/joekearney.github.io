@@ -19,7 +19,7 @@ status: published
 type: post
 author: Joe Kearney
 #title_image_img: images/haute-route/alps-profile-2017.jpg
-title_image_img: images/haute-route/pretty-alps.jpg
+title_image_img: images/haute-route/col-cayolle-wide.jpg
 ---
 
 [hra-2017]: http://www.hauteroute.org/events/overview/alps-2017
