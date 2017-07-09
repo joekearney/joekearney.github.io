@@ -72,6 +72,6 @@ The ascents are fun because they're a challenge and the top is an achievement; t
 
 The plan, then, is to keep a sense of the pretty while suffering enough to finish within the limit and not so much that I can't. I don't know exactly how else to explain it to the wife. It hasn't worked so far.
 
-<img src="images/haute-route/alps-profile-2017.jpg" alt="" title="">
+{% include short-toc-by-tag.html tag='haute-route-stage' title="Training and Stages" numPosts='all' showDrafts='false' showOnlyArticles='true' showLongDescription='true' %}
 
-{% include short-toc-by-tag.html tag='haute-route-stage' title="Stages" numPosts='all' showDrafts='false' showOnlyArticles='true' showLongDescription='true' %}
+<img src="images/haute-route/alps-profile-2017.jpg" alt="" title="">
