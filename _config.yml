@@ -64,6 +64,10 @@ tasty-rsvps:
   tag_short_name: "Tasty RSVP"
   website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
   index_path: "tasty-rsvps-index"
+cycling:
+  tag_description: "Two wheeled adventures"
+  tag_name: "Cycling"
+  tag_short_name: "Cycling"
 germany:
   tag_name: "Das Jo(e)"
   tag_short_name: "Germany"
