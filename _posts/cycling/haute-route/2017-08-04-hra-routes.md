@@ -18,6 +18,7 @@ type: post
 author: Joe Kearney
 
 title_image_img: /images/haute-route/alps-map-2017.jpg
+footer_image_img: /images/haute-route/alps-profile-2017.jpg
 
 hra17-s1: https://www.strava.com/routes/9976554
 hra17-s2: https://www.strava.com/routes/9976697
@@ -41,7 +42,7 @@ Here they are for all to see (mostly for my own reference!).
 {% include haute-route-stage-summary-element.html stage_strava=page.hra17-s2 stage_number=2 stage_date="Tuesday, Aug 22" stage_title="Pra Loup to Col du Granon" stage_length="127km" stage_ascent="3,700m" stage_cols="Col de Vars, Col d'Izoard, Col du Granon" stage_description="A nice potter through Barcelonnette, a grind up the valley, and then racing Chris Froome's time up Izoard, on which he all but sealed the yellow jersey this year." %}
 
 {% capture stage4_description %}
-One I've been really looking forward to. We see some of the Lautaret descent that features in <a href="/posts/marmotte-2017">La Marmotte</a>.
+One I've been really looking forward to. We see some of the Lautaret descent that features in <a href="/posts/marmotte-2017">La Marmotte</a>, then the climb up the \"wrong\" side of Alpe d'Huez, to see my favourite ski run at Sarenne. Down through the village and the famous 21 bends, and to the second back-route climb up the Alpe. It'll be like playing on the mountain all day!
 {% endcapture %}
 
 {% include haute-route-stage-summary-element.html stage_strava=page.hra17-s3 stage_number=3 stage_date="Wednesday, Aug 23" stage_title="Serre Chevalier to Alpe d'Huez" stage_length="112km" stage_ascent="3,200m" stage_cols="Col du Lautaret, Col de Sarenne, Pas de la Confession, Alpe d'Huez" stage_description=stage4_description %}
