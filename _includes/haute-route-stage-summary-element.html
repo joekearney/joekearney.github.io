@@ -1,4 +1,4 @@
-<a href="{{ post.url }}" class="no-link-highlight">
+<a href="{{ include.stage_strava }}" class="no-link-highlight">
   <li>
     <span class="post-description">[Stage {{include.stage_number}}]</span>
     <span class="post-date">{{ include.stage_date }}</span>
@@ -7,5 +7,6 @@
     <span class="post-description listing-title"> &ndash; {{ include.stage_length }}, {{ include.stage_ascent }}</span>
 
     <p class="post-long-description">{{ include.stage_cols }}</p>
+    <p class="post-long-description">{{ include.stage_description }}</p>
   </li>
 </a>
