@@ -28,6 +28,12 @@ title_image_img: images/haute-route/col-cayolle-wide.jpg
 [marmotte-2016]: https://www.strava.com/activities/627740014
 [msr-2016]: https://www.strava.com/activities/599634295
 
+{% include short-toc-by-tag.html tag='haute-route-stage' title="Training and Stages" numPosts='all' showDrafts='false' showOnlyArticles='true' showLongDescription='true' %}
+
+***
+
+## Intro
+
 My wife thinks it's mad, and keeps telling me that I "could just not do it!"
 
 Since I've been cycling I've wanted to find rides that are a challenge. Pick something hard, and see if I can do it. I've liked to have something to aim towards through the year, to keep me improving (and honest!).
@@ -71,7 +77,5 @@ The couple of days before my first Marmotte were the first time I'd cycled in mo
 The ascents are fun because they're a challenge and the top is an achievement; the descents are fun, and they're long enough to get comfortable with some speed. On long rides like these you see [so much of a stunning landscape][too-many-pretty].
 
 The plan, then, is to keep a sense of the pretty while suffering enough to finish within the limit and not so much that I can't. I don't know exactly how else to explain it to the wife. It hasn't worked so far.
-
-{% include short-toc-by-tag.html tag='haute-route-stage' title="Training and Stages" numPosts='all' showDrafts='false' showOnlyArticles='true' showLongDescription='true' %}
 
 <img src="images/haute-route/alps-profile-2017.jpg" alt="" title="">

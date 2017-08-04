@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Haute Route stage routes released"
+title: "Haute Route stage routes"
 description: "the full detail"
-meta_description: "The basic route was published months ago, but now we can see the detail, including how we're doing three ascents of Alpe d'Huez!"
+meta_description: "The basic route was published months ago, but now we can see the detail, including how we're doing three ascents of Alpe d'Huez"
 categories:
 - post
 tags:
@@ -11,6 +11,11 @@ tags:
 - comments
 - haute-route
 - haute-route-stage
+- hasIndexPage
+series_index: haute-route
+series: "Haute Route"
+series_tag: haute-route
+include_series_in_header_title: false
 keywords:
 - cycling
 status: published
