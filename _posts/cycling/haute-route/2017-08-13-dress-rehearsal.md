@@ -27,7 +27,7 @@ author: Joe Kearney
 
 {% include image-float.html src='/images/haute-route/taking-bike-apart.jpg' txt_alt='Time to take the bike apart to find that squeak' caption='Time to take the bike apart to find that squeak' id='taking-bike-apart-picture' side='right' %}
 
-Not long to go now, and today was to be my last proper ride before heading to Nice. I got 20km before a puncture, fixed it but immediately had a second flat, not 20 metres down the road! I'm not sure what I did wrong the first time but took extra care to check everything as I put the new tube in... and in the process fed about 30 mosquitoes. I now have a few bites that are itchy and one that's swollen up along half of my arm!
+Not long to go now, and today was to be my last proper ride before heading to Nice. I got 20km before a puncture, fixed it but immediately had a second flat, not 20 metres down the road! I'm not sure what I did wrong the first time but took extra care to check everything as I put the new tube in... and in the process fed about 30 mosquitoes. I now have a few bites that are itchy and one that's swollen up along half of my arm! First puncture on this bike, after 2000km, and then I get two at once.
 
 So that didn't go so well. Rather now than next week, for sure. I'm hoping this is the cycling version of that last rehearsal that turns into a farce before the grand opening.
 
