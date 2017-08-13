@@ -33,9 +33,9 @@ So that didn't go so well. Rather now than next week, for sure. I'm hoping this 
 
 Suddenly it's all very close. I think I'm as ready as I can be, and I've hit my targets in training. I'm lightest I've been since about age 15, I'm reaching the power output I'd hoped for, and in fact the combination is better than I'd hoped, with my hour threshold power at 4.25 W/kg. Above all it's feeling great -- I even had fun this week stretching to breaking point two colleagues who were comfortably stronger me last year! The bike feels comfortable (apart from that damn creaking in the cranks!) and after a few weeks of worry about an overused tendon swelling in my ankle, it seems fine now and hopefully manageable if it happens again.
 
-As I wind down into a taper week, the Haute Route Pyrenees started today. It's been exciting to see them get going on the twitters and facebooks. Judging by the gorgeous landscapes on their [first daily video](https://www.youtube.com/watch?v=CRf3iOlT26k), there's a chance this might have to be the next one!
+As I wind down into a taper week, the Haute Route Pyrenees started today. It's been exciting to see them get going on the twitters and facebooks before I go to the Alps. Judging by the gorgeous landscapes on their [first daily video](https://www.youtube.com/watch?v=CRf3iOlT26k), there's a chance this might have to be the next one!
 
 > * Live tracking, photos and a daily video will be here: [Haute Route Live](https://hauteroute.org/live)
 > * My bib number is **2050**
 
-In one week I'll be registered for the start, will have picked up a load of new kit and met the people I'll spend the next week racing, both on the bike and in quantity of pasta we can eat, and I'll have one last sleep in Nice before heading up to the Alps. A week later and it'll all be all over in Geneva, where I suspect I'll barely be able to walk.
+In one week I'll be registered for the start, will have picked up a load of new kit and met the people I'll spend the next week racing, both on the bike and in quantity of pasta we can eat, and I'll have one last sleep in Nice before heading up into the Alps. A week later and it'll all be all over in Geneva, where I suspect I'll barely be able to walk.
