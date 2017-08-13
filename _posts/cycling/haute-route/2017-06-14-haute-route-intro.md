@@ -33,8 +33,6 @@ title_image_img: images/haute-route/col-cayolle-wide.jpg
 > * Live tracking, photos and a daily video will be here: [Haute Route Live](https://hauteroute.org/live)
 > * My bib number is **2050**
 
-***
-
 ## Intro
 
 My wife thinks it's mad, and keeps telling me that I "could just not do it!"
