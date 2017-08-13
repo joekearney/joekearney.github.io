@@ -18,6 +18,7 @@ series_tag: haute-route
 include_series_in_header_title: false
 keywords:
 - cycling
+- Haute Route
 status: published
 type: post
 author: Joe Kearney

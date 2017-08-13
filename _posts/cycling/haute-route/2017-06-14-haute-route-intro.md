@@ -14,7 +14,7 @@ tags:
 permalink: /haute-route
 keywords:
 - cycling
-- haute-route
+- Haute Route
 status: published
 type: post
 author: Joe Kearney
