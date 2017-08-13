@@ -30,6 +30,9 @@ title_image_img: images/haute-route/col-cayolle-wide.jpg
 
 {% include short-toc-by-tag.html tag='haute-route-stage' title="Training and Stages" numPosts='all' showDrafts='false' showOnlyArticles='true' showLongDescription='true' %}
 
+> * Live tracking, photos and a daily video will be here: [Haute Route Live](https://hauteroute.org/live)
+> * My bib number is **2050**
+
 ***
 
 ## Intro
