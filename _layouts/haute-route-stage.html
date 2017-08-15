@@ -9,8 +9,22 @@ css-require:
 - /css/haute-route.css
 ---
 
+{% assign stages = site.data.haute-route | where: "number", page.stage-number | head %}
+{% for stage in stages %}
+
+{% assign page.title = stage.title %}
+
+{% capture details-note %}
+{{ stage.length }} &ndash; {{ stage.ascent }} &ndash; <b>{{ stage.cols }}</b>
+{% endcapture %}
+{% include note.html note=details-note %}
+
 {% if page.haute_route_strava_embed %}
 	<iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='{{ page.haute_route_strava_embed }}' class="inline-image-right"></iframe>
 {% endif %}
 
 {{ content }}
+
+{% include post-footer-embed.html footer_image_img=stage.profile %}
+
+{% endfor %}

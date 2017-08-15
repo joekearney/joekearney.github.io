@@ -13,7 +13,7 @@ tags:
 - haute-route-stage
 - hasIndexPage
 series_index: haute-route
-series: "Haute Route"
+series: "Haute Route Alps 2017"
 series_tag: haute-route
 include_series_in_header_title: false
 keywords:
