@@ -12,8 +12,6 @@ css-require:
 {% assign stages = site.data.haute-route | where: "number", page.stage-number | head %}
 {% for stage in stages %}
 
-{% assign page.title = stage.title %}
-
 {% capture details-note %}
 {{ stage.length }} &ndash; {{ stage.ascent }} &ndash; <b>{{ stage.cols }}</b>
 {% endcapture %}
