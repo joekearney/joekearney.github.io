@@ -78,4 +78,5 @@ just-in-time:
   index_path: "just-in-time"
 haute-route:
   tag_name: "Haute Route Alps 2017"
+  tag_short_name: "Haute Route Alps 2017"
   index_path: "haute-route"

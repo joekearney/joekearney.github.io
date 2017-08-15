@@ -1,0 +1,76 @@
+- number: 1
+  title: Nice to Pra Loup
+  date: Monday, Aug 21
+  strava-route: https://www.strava.com/routes/9976554
+  length: 173km
+  ascent: 3,700m
+  cols: Ascros, Col de la Cayolle, Pra Loup
+  description: Starting on the Promenade des Anglais (I should feel at home) in the centre of Nice, quickly getting out of town but with a long neutralised start. The descent from the Col de la Cayolle is a long gentle slope through a valley, with signs warning of marmottes on the road! I've seen a fair bit of this stage from rides around Pra Loup and driving back to Nice.
+  profile: /images/haute-route/profiles/1.jpg
+  map: /images/haute-route/maps/1.jpg
+
+- number: 2
+  title: Pra Loup to Col du Granon
+  date: Tuesday, Aug 22
+  strava-route: https://www.strava.com/routes/9976697
+  length: 127km
+  ascent: 3,700m
+  cols: Col de Vars, Col d'Izoard, Col du Granon
+  description: A nice potter through Barcelonnette, a grind up the valley, and then racing Chris Froome's time up Izoard, on which he all but sealed the yellow jersey this year.
+  profile: /images/haute-route/profiles/2.jpg
+  map: /images/haute-route/maps/2.jpg
+
+- number: 3
+  title: Serre Chevalier to Alpe d'Huez
+  date: Wednesday, Aug 23
+  strava-route: https://www.strava.com/routes/9976826
+  length: 112km
+  ascent: 3,200m
+  cols: Col du Lautaret, Col de Sarenne, Pas de la Confession, Alpe d'Huez
+  description: One I've been really looking forward to. We see some of the Lautaret descent that features in <a href="/posts/marmotte-2017">La Marmotte</a>, then the climb up the "wrong" side of Alpe d'Huez, to see my favourite ski run at Sarenne. Down through the village and the famous 21 bends, and to the second back-route climb up the Alpe. It'll be like playing on the mountain all day!
+  profile: /images/haute-route/profiles/3.jpg
+  map: /images/haute-route/maps/3.jpg
+
+- number: 4
+  title: Alpe d'Huez
+  date: Thursday, Aug 24
+  strava-route: https://www.strava.com/routes/9976932
+  length: 15.5km
+  ascent: 1,100m
+  cols: Alpe d'Huez
+  description: An individual time trial, straight up the mountain. My best time up here is around 1h10 at the end of La Marmotte. I'll aim for under an hour here...
+  profile: /images/haute-route/profiles/4.jpg
+  map: /images/haute-route/maps/4.jpg
+
+- number: 5
+  title: Alpe d'Huez to Megève
+  date: Friday, Aug 25
+  strava-route: https://www.strava.com/routes/9977093
+  length: 182km
+  ascent: 4,500m
+  cols: Col du Glandon, Col de la Madeleine, Col des Saisies
+  description: This one is genuinely scary, it's just massive. It'll start with a familiar feeling, following the route of La Marmotte up the Glandon, but then the Madeleine will be just brutal, with no let-up in the gradient. Maybe there'll be a bit of a break in the valley, but more likely, whatever group is left will motor on to the Col des Saisies for the finish.
+  profile: /images/haute-route/profiles/5.jpg
+  map: /images/haute-route/maps/5.jpg
+
+- number: 6
+  title: Megève to Morzine
+  date: Saturday, Aug 26
+  strava-route: https://www.strava.com/routes/9977165
+  length: 145km
+  ascent: 3,400m
+  cols: Col de l'Epine, Col de la Colombière, Côte de Châtillon, Col de Joux Plane, Col de Ranfolly
+  description: Unknown territory for me, here. It sounds like beautiful scenery, though with a couple of tricky descents that will likely be neutralised for safety.
+  profile: /images/haute-route/profiles/6.jpg
+  map: /images/haute-route/maps/6.jpg
+
+- number: 7
+  title: Morzine to Geneva
+  date: Sunday, Aug 27
+  strava-route: https://www.strava.com/routes/9977285
+  length: 140km
+  ascent: 2,600m
+  cols: Col de l'Encrenaz, Col de la Ramaz, Col du Feu, Col des Moises, Lake Geneva
+  description: If I make it this far, the end is in sight! A medium-length stage, but with the least climbing for a \"proper\" stage. The peaks are early, and the last third is mostly flat with the run-in to Geneva along the lake.
+  profile: /images/haute-route/profiles/7.jpg
+  map: /images/haute-route/maps/7.jpg
