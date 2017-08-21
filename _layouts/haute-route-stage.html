@@ -14,6 +14,7 @@ css-require:
 
 {% capture details-note %}
 {{ stage.length }} &ndash; {{ stage.ascent }} &ndash; <b>{{ stage.cols }}</b>
+{% if page.haute-route-gc-position %}<br />GC position: <b>{{ page.haute-route-gc-position }}</b>{% endif %}
 {% endcapture %}
 {% include note.html note=details-note %}
 
