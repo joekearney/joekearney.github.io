@@ -1,0 +1,40 @@
+- series_tag: "software"
+  tag_description: "Trying to be cogent"
+  tag_name: "Joe’s Mots on Software"
+  tag_short_name: "Software"
+  index_path: "software-index"
+
+- series_tag: "honeyment"
+  tag_description: "Post-engagement pre-honeymoon adventure"
+  tag_name: "Honeyment"
+  tag_short_name: "Honeyment"
+  index_path: "honeyment-index"
+
+- series_tag: "tasty-rsvps"
+  tag_description: "Our wedding guest book of recipes"
+  tag_name: "Tasty RSVP"
+  tag_short_name: "Tasty RSVP"
+  website_link: http://www.joandjoegetmarried.co.uk/#!rsvp
+  index_path: "tasty-rsvps-index"
+
+- series_tag: "cycling"
+  tag_description: "Two wheeled adventures"
+  tag_name: "Cycling"
+  tag_short_name: "Cycling"
+  index_path: "cycling-index"
+
+- series_tag: "germany"
+  tag_name: "Das Jo(e)"
+  tag_short_name: "Germany"
+  tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
+  index_path: "germany-index"
+
+- series_tag: "just-in-time"
+  tag_name: "Just In Time"
+  tag_short_name: "Just In Time"
+  index_path: "just-in-time"
+
+- series_tag: "haute-route"
+  tag_name: "Haute Route Alps 2017"
+  tag_short_name: "Haute Route"
+  index_path: "haute-route"

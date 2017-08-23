@@ -1,5 +1,9 @@
-{% if page.series_index and page.series %}
-  part of the <a href="/{{page.series_index}}">{{page.series}} series</a>
+{% if page.series_tag %}
+
+  {% assign series_list = site.data.series | where: "series_tag", page.series_tag | head %}
+  {% for series in series_list %}{% if series.index_path and series.tag_short_name %}
+  part of the <a href="/{{series.index_path}}">{{series.tag_short_name}}</a> series
+  {% endif %}{% endfor %}
 {% else %}
   {% for pageTag in page.tags %}
     {% if site.enumerable-tags contains pageTag %}
