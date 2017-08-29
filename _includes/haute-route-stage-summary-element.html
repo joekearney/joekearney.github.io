@@ -1,12 +1,14 @@
-<a href="{{ include.stage_strava }}" class="no-link-highlight">
-  <li>
-    <span class="post-description">Stage {{include.stage_number}} &ndash;</span>
-    <span class="post-date">{{ include.stage_date }}</span>
+<li>
+  <span class="post-date">{{ include.stage_date }}</span>
 
-    <span class="link-highlight listing-title">{{ include.stage_title }}</span>
-    <span class="post-description listing-title"> &ndash; {{ include.stage_length }}, {{ include.stage_ascent }}</span>
+  <span class="post-description">{{include.stage_number}} &ndash; </span>
+  <span class="link-highlight listing-title h4">{{ include.stage_title }}</span>
 
-    <p class="post-long-description"><span class="post-description">Cols &ndash;</span> {{ include.stage_cols }}</p>
-    <p class="post-long-description">{{ include.stage_description }}</p>
-  </li>
-</a>
+  <span class="post-description listing-title"> &ndash; {{ include.stage_length }}, {{ include.stage_ascent }}
+    [<a href="/posts/hra-2017-stage-{{ include.stage_number }}" class="no-link-highlight"><span class="link-highlight listing-title">report</span></a>]
+    [<a href="/posts/hra-2017-stage-{{ include.stage_strava }}" class="no-link-highlight"><span class="link-highlight listing-title">route</span></a>]
+  </span>
+
+  <p class="post-long-description"><span class="post-description">Cols &ndash;</span> {{ include.stage_cols }}</p>
+  <p class="post-long-description">{{ include.stage_description }}</p>
+</li>
