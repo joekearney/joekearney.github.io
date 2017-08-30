@@ -32,10 +32,6 @@ Seventeen days to go and the full detail of the routes for each stage have been 
 
 Here they are for all to see (mostly for my own reference!).
 
-## Haute Route Alps 2017 routes
+## Haute Route Alps 2017 stages
 
-<ul class="listing">
-{% for stage in site.data.haute-route %}
-{% include haute-route-stage-summary-element.html stage_strava=stage.strava-route stage_number=stage.number stage_date=stage.date stage_title=stage.title stage_cols=stage.cols stage_description=stage.description stage_length=stage.length stage_ascent=stage.ascent %}
-{% endfor %}
-</ul>
+{% include_relative stage-listing.md %}

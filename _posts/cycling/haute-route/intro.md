@@ -12,11 +12,9 @@ The first big one, in 2014, was [**La Marmotte**][marmotte-2014], climbing four 
 
 In 2016, before revisiting the [Marmotte][marmotte-2014] I went to Italy, for the amateur edition of [**Milan-San Remo**][msr-2016]. This is a prestigious stage race for the pros, among whose ranks (despite the awe in the eyes of the hotel night manager when I explained what I was going to do with the bike in the big bag) I decidedly do not belong. It's famous for being among the longest races in the calendar, just short of 300km from the centre of Milan, over one big hill on the way to the coast, and then to the small town of San Remo, on the Italian riviera. A very different kind of ride to the Marmotte, and a big challenge nonetheless.
 
-## Haute Route
+> The [**Haute Route Alps**][hra-2017] is my challenge for 2017, and it's going to be a proper test.
 
 The Haute Route will be my first mutli-day stage race, and it's crazy. Over seven days at the end of August we ride almost 900km from Nice to Geneva, and over 20 named climbs. The total ascent is around two-and-a-half times the height of Mount Everest.
-
-> The [**Haute Route Alps**][hra-2017] is my challenge for 2017, and it's going to be a proper test.
 
 The riding is well supported, so there'll be a few of those yellow Mavic cars driving around to help with mechanical problems, marshals on motorbikes and food stops. At the finish of each stage there's medical and physio support, and even showers and massages. That's the easy bit!
 

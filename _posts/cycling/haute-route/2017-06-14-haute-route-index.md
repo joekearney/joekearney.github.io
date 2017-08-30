@@ -28,9 +28,10 @@ title_image_img: images/haute-route/col-cayolle-wide.jpg
 [marmotte-2016]: https://www.strava.com/activities/627740014
 [msr-2016]: https://www.strava.com/activities/599634295
 
-{% include short-toc-by-tag.html tag='haute-route-stage' header_href=site.haute-route.index_path title="Training and Stages" numPosts='all' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
+## Stages
 
-> * Live tracking, photos and a daily video will be here: [Haute Route Live](https://hauteroute.org/live)
-> * My bib number is **2050**
+{% include_relative stage-listing.md %}
+
+{% include short-toc-by-tag.html tag='haute-route-stage' header_href=site.haute-route.index_path title="Training" numPosts='all' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
 
 {% include_relative intro.md %}
