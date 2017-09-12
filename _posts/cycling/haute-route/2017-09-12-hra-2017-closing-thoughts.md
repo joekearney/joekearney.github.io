@@ -18,7 +18,7 @@ author: Joe Kearney
 
 title: "Closing thoughts"
 description: "stage racing is a whole new thing"
-meta_description: ""
+meta_description: "An incredible and joyful (and exhausting) week in beautiful places. What an experience."
 
 title_image_iframe: https://www.flickr.com/photos/joekearney/36058260633/in/album-72157687765853505/player/
 ---
