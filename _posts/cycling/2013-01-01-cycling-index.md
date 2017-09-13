@@ -13,4 +13,4 @@ sitemap:
   priority: 0.9
 ---
 
-{% include index-by-tag.html tag='cycling' title=site.cycling.tag_name description=site.cycling.tag_description orderAscending=false showDrafts='true' showSeriesPages='true' %}
+{% include index-by-tag.html tag='cycling' title=site.cycling.tag_name description=site.cycling.tag_description orderAscending=false showDrafts='true' showSeriesPages='true' include_series_in_post_title='true' %}
