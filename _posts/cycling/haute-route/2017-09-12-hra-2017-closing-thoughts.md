@@ -8,6 +8,7 @@ tags:
 - hasIndexPage
 - haute-route
 - haute-route-stage
+- haute-route-closing-thoughts-post
 series_index: haute-route
 series: "Haute Route"
 series_tag: haute-route

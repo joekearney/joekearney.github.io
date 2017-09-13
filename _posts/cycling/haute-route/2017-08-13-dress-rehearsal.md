@@ -10,7 +10,7 @@ tags:
 - cycling
 - comments
 - haute-route
-- haute-route-stage
+- haute-route-pre-event
 - hasIndexPage
 series_index: haute-route
 series: "Haute Route"

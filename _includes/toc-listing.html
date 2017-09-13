@@ -66,48 +66,7 @@
               {% assign totalWordCount = totalWordCount | plus: postWords %}
               {% assign totalPosts = totalPosts | plus: 1 %}
 
-              {% unless include.showTags %}<a href="{{ post.url }}" class="no-link-highlight">{% endunless %}
-              <li>
-                {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
-                {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
-                {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
-                {% if post.tags contains 'howto' %}<span class="post-description">[How To]</span>{% endif %}
-                {% if include.showDate != 'false' %}
-                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                {% endif %}
-                {% assign titlePrefix = '' %}
-                {% if post.series and include.include_series_in_post_title %}
-                  {% capture titlePrefix %}{{post.series}} &ndash; {% endcapture %}
-                {% endif %}
-
-                {% if include.showTags %}<a href="{{ post.url }}">{% endif %}
-                <span class="link-highlight listing-title">{{titlePrefix}}{{ post.title | replace:'-','&ndash;' }}</span>
-                {% if include.showTags %}</a>{% endif %}
-
-                {% if post.description %}
-                  {% unless post.description == "" %}
-                    <span class="post-description listing-title">&ndash; {{ post.description }}</span>
-                  {% endunless %}
-                {% endif %}
-                {% if include.showAuthor == "true" %}
-                  {% assign authorArray = post.author | join: "|" | split: "|" %}
-                  <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-                {% endif %}
-                {% if include.showTags == "true" %}
-                  <span class="post-description">&ndash;
-                  {% for t in post.tags %}
-                    {% if site.enumerable-tags contains t %}
-                      [<a href="/{% include tag-to-index-url.html tag=t %}">{{t}}</a>]
-                    {% else %}
-                      {% unless site.hidden_tags contains t %}[<a href="/posts#{{t | slugify}}">{{t}}</a>] {% endunless %}
-                    {% endif %}
-                  {% endfor %}</span>
-                {% endif %}
-                {% if include.showLongDescription == "true" and post.meta_description %}
-                  <p class="post-long-description">{{post.meta_description}}</p>
-                {% endif %}
-              </li>
-              {% unless include.showTags %}</a>{% endunless %}
+              {% include toc-listing-element.html post_id=post.id showTags=include.showTags showDate=include.showDate include_series_in_post_title=include.include_series_in_post_title showAuthor=include.showAuthor showLongDescription=include.showLongDescription %}
             {% else %}
               {% assign postsNotListed = postsNotListed | plus: 1 %}
             {% endif %}
