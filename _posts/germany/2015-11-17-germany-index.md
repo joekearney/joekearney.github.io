@@ -13,4 +13,4 @@ sitemap:
   priority: 0.9
 ---
 
-{% include index-by-tag.html tag='germany' title=site.germany.tag_name description=site.germany.tag_description orderAscending=true showDrafts=true %}
+{% include index-listing-for-tag.html tag='germany' title=site.germany.tag_name description=site.germany.tag_description orderAscending=true showDrafts=true %}

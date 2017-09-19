@@ -14,7 +14,7 @@ sitemap:
 
 ---
 
-{% include index-by-tag.html tag='software' title=site.software.tag_name description=site.software.tag_description header-only=true %}
+{% include index-listing-for-tag.html tag='software' title=site.software.tag_name description=site.software.tag_description header-only=true %}
 
 {% capture c %}
 {% include_relative about-me-software.md %}

@@ -4,7 +4,6 @@ title: Crystal Palace Crits – June 25
 categories:
 - post
 tags:
-- racing
 - cycling
 status: publish
 author: Joe Kearney

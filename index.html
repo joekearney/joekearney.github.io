@@ -17,13 +17,14 @@ sitemap:
     <p>{{ site.description }}</p>
   </div>
 
+
+  {% capture c %}
+  {% include_relative _posts/software/about-me-software.md %}
+  {% include_relative _posts/cycling/about-me-cycling.md %}
+  {% endcapture %}
   <div class="row">
     <div class="col-md-12">
-{% capture c %}
-{% include_relative _posts/software/about-me-software.md %}
-{% endcapture %}
-
-{{ c | markdownify }}
+      {{ c | markdownify }}
     </div>
   </div>
 

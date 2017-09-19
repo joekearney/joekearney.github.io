@@ -4,7 +4,6 @@ title: First race report - Crystal Palace Crits
 categories:
 - post
 tags:
-- racing
 - cycling
 status: publish
 author: Joe Kearney
