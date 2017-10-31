@@ -11,9 +11,11 @@ status: publish
 type: post
 published: true
 author: Joe Kearney
----
 
-{% include image-float.html src='/images/baby-ultrasound.png' txt_alt='Early portrait of the mini Jo(e), looking very relaxed' caption='Early portrait of the mini Jo(e), looking <i>very</i> relaxed' id='baby-ultrasound-picture' side='right' %}
+title_image_float_right_url: /images/baby-ultrasound.png
+title_image_float_right_text: Early portrait of the mini Jo(e), looking very relaxed
+title_image_alt: Early portrait of the mini Jo(e), looking <i>very</i> relaxed
+---
 
 We're about to be first-time parents. Therefore, we have no idea what we're doing.
 
