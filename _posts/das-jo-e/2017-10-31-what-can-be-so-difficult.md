@@ -27,6 +27,6 @@ On the principal that those who've already done this know what they're doing, we
 
 We've read all of the books that you're supposed to read. The one with a page for each day of pregnancy telling you what's happening to the growing ball of cells, the one that goes into more detail than you could imagine about the positive and negative energies surrounding a Birth Experience (!), and the one by the blogger who described the Richter scale of poo.
 
-Everyone says it's exhausting, that there isn't enough time to do everything needed once it arrives. The thing is, we still don't understand what exactly happens that occupies two people so thoroughly. How can it take so much time to change a nappy a few times, wipe it down, feed it and watch it doing cute things with fluffy toys? We do believe everyone else, we know that it really is going to take all day and more, we just don't understand how yet.
+Everyone says it's exhausting, that there isn't enough time to do everything needed once it arrives. The thing is, we still don't understand what exactly happens that occupies two people so thoroughly. How can it take so much time to change a nappy a few times, wipe it down, feed it and watch it doing cute things with fluffy toys? We do believe everyone else, we know that it really will take more than twenty-four hours a day, we just don't understand how yet.
 
 I'm sure that it will become quickly apparent with the arrival of our little bundle of <s>poo</s> joy!
