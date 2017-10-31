@@ -23,11 +23,11 @@
   tag_short_name: "Cycling"
   index_path: "cycling-index"
 
-- series_tag: "germany"
+- series_tag: "das-jo-e"
   tag_name: "Das Jo(e)"
-  tag_short_name: "Germany"
+  tag_short_name: "Das Jo(e)"
   tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
-  index_path: "germany-index"
+  index_path: "das-jo-e-index"
 
 - series_tag: "just-in-time"
   tag_name: "Just In Time"

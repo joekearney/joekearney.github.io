@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% include atom-for-tag.xml tag='das-jo-e' title=site.das-jo-e.tag_name description=site.das-jo-e.tag_description sectionPath=site.das-jo-e.index_path %}

@@ -32,7 +32,7 @@ haute_route_stage_home_page: http://www.hauteroute.org/events/view-stage/stage-1
 enumerable-tags:
 - honeyment
 - tasty-rsvps
-- germany
+- das-jo-e
 - software
 - just-in-time
 
@@ -68,11 +68,11 @@ cycling:
   tag_description: "Two wheeled adventures"
   tag_name: "Cycling"
   tag_short_name: "Cycling"
-germany:
+das-jo-e:
   tag_name: "Das Jo(e)"
-  tag_short_name: "Germany"
+  tag_short_name: "Das Jo(e)"
   tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
-  index_path: "germany-index"
+  index_path: "das-jo-e-index"
 just-in-time:
   tag_name: "Just In Time"
   index_path: "just-in-time"
