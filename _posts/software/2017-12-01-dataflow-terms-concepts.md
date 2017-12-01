@@ -13,6 +13,9 @@ status: published
 type: post
 author: Joe Kearney
 source: https://research.google.com/pubs/pub43864.html
+
+title_image_float_right_url: /images/dataflow.png
+title_image_float_right_text: Google Cloud Dataflow
 ---
 
 [Li 2005]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.2764&rep=rep1&type=pdf
