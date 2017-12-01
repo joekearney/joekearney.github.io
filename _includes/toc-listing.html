@@ -66,7 +66,7 @@
               {% assign totalWordCount = totalWordCount | plus: postWords %}
               {% assign totalPosts = totalPosts | plus: 1 %}
 
-              {% include toc-listing-element.html post_id=post.id showTags=include.showTags showDate=include.showDate include_series_in_post_title=include.include_series_in_post_title showAuthor=include.showAuthor showLongDescription=include.showLongDescription %}
+              {% include toc-listing-element.html post_id=post.id showTags=include.showTags showDate=include.showDate include_series_in_post_title=include.include_series_in_post_title showAuthor=include.showAuthor showLongDescription=include.showLongDescription showMainTag=include.showMainTag %}
             {% else %}
               {% assign postsNotListed = postsNotListed | plus: 1 %}
             {% endif %}

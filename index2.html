@@ -1,0 +1,37 @@
+---
+layout: layout
+title: "Joe’s Mots"
+categories:
+- index
+tags:
+- landing
+sitemap:
+  changefreq: daily
+  priority: 1.0
+---
+
+<div class="container">
+
+  <div class="title">
+    <h1 class="title-colour"><a href="/">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
+  </div>
+
+
+  {% capture c %}
+  {% include_relative _posts/software/about-me-software.md %}
+  {% include_relative _posts/cycling/about-me-cycling.md %}
+  {% include_relative _posts/das-jo-e/about-me-personal.md %}
+  {% endcapture %}
+  <div class="row">
+    <div class="col-md-12">
+      {{ c | markdownify }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      {% include short-toc-by-tag.html tag='article' title="Posts" numPosts='50' showOnlyArticles='true' showLongDescription='true' showAuthor='false' showMainTag='true' %}
+    </div>
+  </div>
+</div>
