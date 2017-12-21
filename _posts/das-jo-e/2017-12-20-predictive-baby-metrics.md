@@ -30,7 +30,7 @@ In fact, the only way of getting points is by guessing the right name! (Jo and I
 
 ## Preliminary results
 
-By the time of the earliest guess (Jo's dad is losing a lot of points there!) there were 44 entries, which I reckon gives us statistical significance! What can we learn from people's predictions?
+By the time of the earliest guess (Jo's dad is losing a lot of points there!) **there were 44 entries**, which I reckon gives us statistical significance! What can we learn from people's predictions?
 
 Predictions of the sex are fairly even, leaning towards mini Jo rather than mini Joe but only by a couple of percent.
 
