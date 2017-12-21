@@ -55,9 +55,9 @@ On the metrics, not much further. I was hoping to see a correlation between pred
 
 However there are some interesting details in name choices. There were 64 unique name suggestions (37 among girls, 31 among boys), but far more illustrative of the inventiveness of our sample (!) was the `j`'s.
 
-A massive 44% of suggestions started with `j`, rising to 50% among guesses for boys. A quarter of people suggested two names starting with `jo`!
+A massive 44% of suggestions started with `j`, rising to 50% among guesses for boys. A quarter of people suggested two names starting with `jo`! (Let's not kid ourselves, we knew this was coming. Maybe we should have accounted for it in the scoring!)
 
-(Let's not kid ourselves, we knew this was coming. Maybe we should have accounted for it in the scoring!)
+Other than Jo and Joe there weren't many names that had lots of suggestions, but quite a few that had two. But three people suggested calling it Jesus, and all three predicted a Christmas Day birthday!
 
 ## Final score
 
