@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Predictive baby metrics"
-description: "time and babies"
+title: "Predictive Baby Metrics"
+description: "preliminary results"
 meta_description: "What better way to pass the time while waiting for a baby to be born than to engage in a spot of descriptive statistics on an unnecessarily complicated survey of predictions on the baby!"
 categories:
 - post
