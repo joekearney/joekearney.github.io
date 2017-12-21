@@ -19,10 +19,9 @@ showMainTag default ""
       {% assign mainTagCandidate = site.data.series | where: "series_tag", t | first %}
       {% if mainTagCandidate %}{% assign mainTag = mainTagCandidate %}{% endif %}
     {% endfor %}
-    {% if mainTag %}<span class="post-description">[{{ mainTag.tag_short_name }}]</span>{% endif %}
+    {% if mainTag %}<span class="post-description">{{ mainTag.tag_short_name }} &ndash;</span>{% endif %}
   {% endif %}
 
-  {% if post.tags contains 'new' %}<span class="post-description">[NEW]</span>{% endif %}
   {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
   {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
   {% if post.tags contains 'howto' %}<span class="post-description">[How To]</span>{% endif %}

@@ -1,6 +1,6 @@
 {% assign anyPosts = false %}
 {% for post in site.categories.post %}
-  {% if post.tags contains {{include.tag}} %}
+  {% if {{include.tag}} == 'all' or post.tags contains {{include.tag}} %}
     {% unless post.tags contains 'draft' %}
       {% assign anyPosts = true %}
     {% endunless %}
@@ -17,14 +17,7 @@
 {% endif %}
 
 {% if include.title %}
-<h2>
-  <span class="title-colour"><a href="{{ header_href_to_use }}">{{ include.title }}</a></span>
-  <span class="post-description">{% if include.description %}&mdash; {{ include.description }}{% endif %}
-    {% if include.additionalLinkUrl %}
-      &mdash; <a href="{{include.additionalLinkUrl}}">{{include.additionalLinkText}}</a>
-    {% endif %}
-  </span>
-</h2>
+{% include toc-listing-header.html header_href=header_href_to_use title=include.title description=include.description additionalLinkUrl=include.additionalLinkUrl additionalLinkText=include.additionalLinkText %}
 {% endif %}
 
 {% include toc-listing.html numPosts=include.numPosts showDrafts=include.showDrafts tag=include.tag showAuthor=include.showAuthor showLongDescription=include.showLongDescription showOnlyArticles=include.showOnlyArticles showSeriesPages=include.showSeriesPages showMainTag=include.showMainTag %}

@@ -25,6 +25,7 @@
 - series_tag: "haute-route"
   tag_name: "Haute Route Alps 2017"
   tag_short_name: "Haute Route"
+  tag_description: "Seven days cycling up mountains"
   index_path: "haute-route"
 
 - series_tag: "tasty-rsvps"
@@ -37,4 +38,6 @@
 - series_tag: "just-in-time"
   tag_name: "Just In Time"
   tag_short_name: "Just In Time"
+  tag_description: "introduction to JVM compilation"
   index_path: "just-in-time"
+  hide_from_index_page: true

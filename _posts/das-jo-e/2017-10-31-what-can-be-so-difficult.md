@@ -7,6 +7,7 @@ categories:
 - post
 tags:
 - das-jo-e
+- article
 status: publish
 type: post
 published: true

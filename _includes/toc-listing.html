@@ -3,7 +3,7 @@
 {% elsif include.tag %}
   {% assign unorderedPosts = site.empty_array %}
   {% for p in site.posts %}
-    {% if p.tags contains include.tag %}
+    {% if include.tag == 'all' or p.tags contains include.tag %}
       {% assign unorderedPosts = unorderedPosts | push: p %}
     {% endif %}
   {% endfor %}

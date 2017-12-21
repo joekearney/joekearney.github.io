@@ -1,0 +1,13 @@
+{% if include.header_type %}
+  {% assign header_type_to_use = include.header_type %}
+{% else %}
+  {% assign header_type_to_use = include.header_type %}
+{% endif %}
+<h2>
+  <span class="title-colour"><a href="{{ include.header_href }}">{{ include.title }}</a></span>
+  <span class="post-description">{% if include.description %}&mdash; {{ include.description }}{% endif %}
+    {% if include.additionalLinkUrl %}
+      &mdash; <a href="{{include.additionalLinkUrl}}">{{include.additionalLinkText}}</a>
+    {% endif %}
+  </span>
+</h2>
