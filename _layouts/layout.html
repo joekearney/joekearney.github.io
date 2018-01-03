@@ -6,7 +6,10 @@ layout: compress
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <title>{% if page.series %}{{page.series}} &ndash; {% endif %}{{ page.title }} &ndash; {{ site.author.name }}</title>
+  {% capture titleText %}
+  {% if page.series %}{{page.series}} &ndash; {% endif %}{{ page.title }} &ndash; {{ site.author.name }}
+  {% endcapture %}
+  <title>{{ titleText }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
   {% if page.meta_description %}
@@ -28,6 +31,15 @@ layout: compress
   <meta name="keywords" content="joe kearney,{{ page.tags | join: ',' }},{{ page.keywords | join: ',' }},{{ page.description }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#b12930">
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@{{ site.author.twitter }}" />
+  <meta name="twitter:title" content="{{ titleText }}" />
+  <meta name="twitter:description" content="{{ meta_description }}" />
+  {% if page.twitterImage %}
+  <meta name="twitter:image" content="{{ site.production_url }}{{ page.twitterImage }}" />
+  {% endif %}
+
 
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="alternate" type="application/atom+xml" title="{{site.title}} Feed" href="/atom.xml">
