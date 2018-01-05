@@ -21,7 +21,7 @@ footer_image_img: /images/ellie/ellie-christmas-tree.jpg
 [packing-lightly]: /posts/packing-lightly
 [haute-route]: /haute-route
 
-My dad was wasted when my mum went into labour with me on the evening of a big professional exam, and brutally hungover when I finally emerged 24 hour later. For Jo's mum it was kicked off by hot Chinese food, the remainder of which her dad never had the chance to eat.
+My dad was wasted when my mum went into labour with me on the evening of a big professional exam, and brutally hungover when I finally emerged 24 hours later. For Jo's mum it was kicked off by hot Chinese food, the remainder of which her dad never had the chance to eat.
 
 With their stories and our delivery date around Christmas I was convinced that when it was my time it would be after too many mugs of Glühwein, or following a massive post-Christmas turkey curry.
 
@@ -31,7 +31,7 @@ After an otherwise relatively straightforward pregnancy, the doctor had warned t
 
 ***
 
-She turned up a couple of days after the source of Glühwein, the Christmas markets, closed for the season, and a day before we were planning to make the curry. (We even had some proper curry paste imported from Sainsbury's!)
+Mini Jo(e) turned up a couple of days after the source of Glühwein, the Christmas markets, closed for the season, and a day before we were planning to make the curry. (We even had some proper curry paste imported from Sainsbury's!)
 
 The first contraction that wasn't possible to ignore was some time around 1:30am, with Jo curling up in a ball in bed. Later there was a second, though with lots of smaller milder ones in between. "This might really be it."
 
@@ -45,13 +45,13 @@ As the contractions became regular so did Jo's reactions to them. "It's ok, IT'S
 
 (I had naively, and only half-jokingly, been comparing the endurance of labour to a [long day in the saddle][haute-route]. I'm not sure that quite hits the mark!)
 
-It took me a while to realise, but some point in the birthing pool Jo had gone into this kind of trance. Everything else was blocked out (even the snacks we had brought that she'd been so careful to plan!) There weren't many words in these hours. One of the books about giving birth even had a name for this somehow meditative state -- "Labour Land". (For me this conjures more than anything else the image of a party political conference in a drab convention centre in the north of England.)
+It took me a while to realise, but some point in the birthing pool Jo had gone into this kind of trance. Everything else was blocked out (even the snacks we had brought that she'd been so careful to plan!) There weren't many words in these hours. One of the books about giving birth even had a name for this somehow meditative state -- "Labour Land". (For me, this term conjures more than anything else the image of a party political conference in a drab convention centre in the north of England.)
 
 ***
 
 And all of a sudden the midwife announced that some of the head was visible.
 
-A head coming out looks really weird. I'm not sure what I expected to see, but honestly it looked a lot more like a slimy klingon being born than a normal-shaped human. I guess it really does all get squished on the way out! What was clear quickly was that it was a hairy one!
+A head coming out looks really weird. I'm not sure what I expected to see, but honestly it looked a lot more like a slimy Klingon being born than a normal-shaped human. I guess it really does all get squished on the way out! What was clear quickly was that it was a hairy one!
 
 Now it was just a matter of some pushes. The rhythm of the contractions was really slowing by this point, back to having a couple of minutes between each one during which the midwife would coach on how to give stronger pushes, breathing patterns.
 
