@@ -16,6 +16,7 @@ author: Joe Kearney
 title_image_float_right_url: /images/ellie/ellie-santa-hat.jpg
 title_image_float_right_text: Eleanor Margot Kearney, day 3
 footer_image_img: /images/ellie/ellie-christmas-tree.jpg
+footer_image_max_height: 768px
 ---
 
 [packing-lightly]: /posts/packing-lightly

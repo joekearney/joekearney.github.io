@@ -18,7 +18,8 @@ layout: layout
 
     {{ content }}
 
-    {% include post-footer-embed.html footer_strava_embed=page.footer_strava_embed footer_image_img=page.footer_image_img footer_image_alt=page.footer_image_alt page-id=page.id %}
+    {% include post-header-image.html title_image_img=page.footer_image_img title_image_alt=page.footer_image_alt page-id=page.id title_image_max_height=page.footer_image_max_height title_image_flickr_url=page.footer_image_flickr_url title_image_flickr_picture=page.footer_image_flickr_picture title_image_flickr_album=include.footer_image_flickr_album %}
+    {% include post-footer-embed.html footer_strava_embed=page.footer_strava_embed page-id=page.id %}
 
     <div class='clearfix'></div>
 
