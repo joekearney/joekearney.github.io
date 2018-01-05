@@ -45,7 +45,7 @@ As the contractions became regular so did Jo's reactions to them. "It's ok, IT'S
 
 (I had naively, and only half-jokingly, been comparing the endurance of labour to a [long day in the saddle][haute-route]. I'm not sure that quite hits the mark!)
 
-It took me a while to realise, but some point in the birthing pool Jo had gone into this kind of trance. Everything else was blocked out (even the snacks we had brought that she'd been so careful to plan!) There weren't many words in these hours. One of the books about giving birth even had a name for this somehow meditative state -- "Labour Land". (For me, this term conjures more than anything else the image of a party political conference in a drab convention centre in the north of England.)
+It took me a while to realise, but some point in the birthing pool Jo had gone into this kind of trance. Everything else was blocked out (even the snacks we had brought that she'd been so careful to plan!) There weren't many words in these hours. One of the books about giving birth even had a name for this somehow meditative state -- "Labour Land" -- though for me, this term conjures more than anything else the image of a party political conference in a drab convention centre in the north of England.
 
 ***
 
