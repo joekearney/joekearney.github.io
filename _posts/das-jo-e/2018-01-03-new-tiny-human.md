@@ -29,7 +29,6 @@ We're good at logistics, so everything was prepared a couple of weeks earlier. [
 
 After an otherwise relatively straightforward pregnancy, the doctor had warned that we might expect a quick birth when it happened, and that we shouldn't waste time in getting to the hospital. Given that, I was quietly on alert from the moment late on <abbr title="December 26">Boxing Day</abbr> evening when Jo said she felt "a bit funny".
 
-{% include clearfix.html %}
 ***
 
 She turned up a couple of days after the source of Glühwein, the Christmas markets, closed for the season, and a day before we were planning to make the curry. (We even had some proper curry paste imported from Sainsbury's!)
