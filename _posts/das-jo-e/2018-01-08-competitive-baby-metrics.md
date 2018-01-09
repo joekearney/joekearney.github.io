@@ -38,7 +38,7 @@ It looks a lot like Jo went for averages in her choices, like the good statistic
 
 At the other end of the scores, a special mention has to go to **Great Auntie Christine**, scoring an impressive -56.9 points, with a prediction for height (71cm, 28in) that we believe would be in the region of a world record for baby length. We'll put it down to a miscommunication, but we enjoyed it too much to ask for a correction!
 
-Future work might (hint: probably won't) look into the game theoretic questions that arise from closing to new entries only when we went into labour -- when is the optimum time to enter? Leighton will be pleased to hear that he took the honour of the last entry before the competition closed, not that it helped his 42nd place and -30 points.
+Future work might (hint: probably won't) look into the optimisation questions that arise from closing to new entries only when we went into labour -- when is the optimum time to enter? Leighton will be pleased to hear that he took the honour of the last entry before the competition closed, not that it helped his 42nd place and -30 points.
 
 ## How did the "average" prediction do?
 
