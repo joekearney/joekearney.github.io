@@ -17,7 +17,10 @@ author: Joe Kearney
 #title_image_float_right_text: Eleanor Margot Kearney, day 3
 ---
 
-There's something disquieting about the magnitude of the force behind a poo that comes out of a baby. Even though she fits entirely on one arm, the _THUD_ of expelled stool striking nappy is extraordinary. It's often accompanied by a transition from red, contorted, angry face, to a look of supreme innocence and calm.
+[new-tiny-human]: /posts/new-tiny-human
+[predictive-baby-metrics]: /posts/predictive-baby-metrics
+
+There's something disquieting about the magnitude of the force behind a poo that comes out of a [baby][new-tiny-human]. Even though she fits entirely on one arm, the _THUD_ of expelled stool striking nappy is extraordinary. It's often accompanied by a transition from red, contorted, angry face, to a look of supreme innocence and calm.
 
 Our midwife introduced to a particularly evocative German word: _Spritzkaka_. Well, we haven't seen the poo go up the walls yet, but some of these more powerful episodes have managed to dirty not only the nappy, but also her chest, her back and all of her clothes. Naturally, in the course of changing all her clothes, she gets it all over her hands and feet too, and hence a total failure of containment.
 
@@ -25,7 +28,7 @@ Anyway, where were we?
 
 ## Results of the sweepstake
 
-The results are in for the [sweepstake](/posts/predictive-baby-metrics) and there are both clear winners and losers.
+The results are in for the [sweepstake][predictive-baby-metrics] and there are both clear winners and losers.
 
 No-one guessed Eleanor as a name, meaning everyone's scores are negative.
 
