@@ -17,7 +17,6 @@ sitemap:
     <p>{{ site.description }}</p>
   </div>
 
-
   {% capture c %}
   {% include_relative _posts/software/about-me-software.md %}
   {% include_relative _posts/cycling/about-me-cycling.md %}
@@ -29,15 +28,41 @@ sitemap:
     </div>
   </div>
 
+  {% assign headline_post = site.posts %}
+  {% include toc-listing-header.html title="Recent posts" %}
+  {% include toc-listing.html posts=site.posts numPosts=4 showDrafts=false showAuthor=false showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
+
+  {% include toc-listing-header.html title="By category" %}
   <div class="row">
-    <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='all' title="Posts" numPosts='5' showOnlyArticles='false' showLongDescription='true' showAuthor='false' showMainTag='true' showSeriesPages='true' %}
+    <div class="col-sm-6 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="software" %}
+    </div>
+    <div class="col-sm-6 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="das-jo-e" %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="haute-route" %}
+    </div>
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="honeyment" %}
+    </div>
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="tasty-rsvps" %}
     </div>
   </div>
 
+{% comment %}
+  <div class="row">
   {% for series in site.data.series %}
     {% unless series.hide_from_index_page %}
-      {% include toc-listing-header.html header_type="h3" header_href=series.index_path title=series.tag_short_name description=series.tag_description %}
+      <div class="col-md-4">
+        {% include toc-listing-header.html header_href=series.index_path title=series.tag_short_name description=series.tag_description %}
+        {% include toc-listing.html tag=series.series_tag numPosts='3' showOnlyArticles=false showShortDescription=false showLongDescription=false showAuthor=false showDate=false showMainTag=false showSeriesPages=true include_series_in_post_title=true %}
+      </div>
     {% endunless %}
   {% endfor %}
+  </div>
+{% endcomment %}
 </div>

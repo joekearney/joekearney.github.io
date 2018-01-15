@@ -8,7 +8,7 @@ I hope that those who read this post (or attended the talk) will take away with 
 
 ## Contents
 
-{% include toc-listing.html numPosts='all' showDrafts='true' tag='just-in-time' showAuthor='false' showLongDescription='true' orderAscending='true' showOnlyArticles='true' showDate='false' prependSeriesToTitles='false' include_series_in_post_title=false %}
+{% include toc-listing.html numPosts='all' showDrafts=true tag='just-in-time' showAuthor=false showLongDescription=true orderAscending=true showOnlyArticles=true showDate=false prependSeriesToTitles=false include_series_in_post_title=false %}
 
 ***
 

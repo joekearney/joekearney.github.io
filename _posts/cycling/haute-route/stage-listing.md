@@ -18,6 +18,6 @@ Here are the facts and figures for each stage, with a report post from after eac
 {% endfor %}
 
 {% for p in site.tags.haute-route-closing-thoughts-post %}
-{% include toc-listing-element.html post_id=p.id showLongDescription="true" title_class="h4" %}
+{% include toc-listing-element.html post_id=p.id showLongDescription=true title_class="h4" %}
 {% endfor %}
 </ul>

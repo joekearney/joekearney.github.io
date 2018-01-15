@@ -1,0 +1,13 @@
+{% assign series = site.data.series | where: "series_tag", include.tag | first %}
+
+<a href="{{ series.index_path }}">
+  <section class="sidebar no-link-highlight">
+    <h2>
+      <span class="title-colour link-highlight">
+          {{ series.tag_short_name }}
+
+      </span>
+    </h2>
+    <p class="post-description no-link-highlight">{{ series.tag_description }}</p>
+  </section>
+</a>

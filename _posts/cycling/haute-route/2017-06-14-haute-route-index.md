@@ -30,7 +30,7 @@ title_image_img: images/haute-route/col-cayolle-wide.jpg
 
 {% include_relative stage-listing.md %}
 
-{% include short-toc-by-tag.html tag='haute-route-pre-event' header_href=site.haute-route.index_path title="Training" numPosts='all' showDrafts='true' showOnlyArticles='true' showLongDescription='true' %}
+{% include short-toc-by-tag.html tag='haute-route-pre-event' header_href=site.haute-route.index_path title="Training" numPosts='all' showDrafts=true showOnlyArticles=true showLongDescription=true %}
 
 ## Intro
 

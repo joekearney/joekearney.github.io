@@ -27,13 +27,13 @@
 {% assign remaining = numPosts | plus: 0 %}
 {% assign postsNotListed = 0 %}
 
-{% if include.showDrafts == "true" %}
+{% if include.showDrafts == true %}
   {% assign hideDrafts = false %}
 {% else %}
   {% assign hideDrafts = true %}
 {% endif %}
 
-{% if include.showOnlyArticles == 'true' %}
+{% if include.showOnlyArticles == true %}
   {% assign showNonArticles = false %}
 {% else %}
   {% assign showNonArticles = true %}
@@ -49,7 +49,7 @@
       {% assign veto = true %}
     {% endif %}
     {% if post.tags contains 'hasIndexPage' %}
-      {% unless page.tags contains 'isIndexRoot' or include.showSeriesPages == 'true' %}
+      {% unless page.tags contains 'isIndexRoot' or include.showSeriesPages == true %}
         {% assign veto = true %}
       {% endunless %}
     {% endif %}
@@ -66,7 +66,7 @@
               {% assign totalWordCount = totalWordCount | plus: postWords %}
               {% assign totalPosts = totalPosts | plus: 1 %}
 
-              {% include toc-listing-element.html post_id=post.id showTags=include.showTags showDate=include.showDate include_series_in_post_title=include.include_series_in_post_title showAuthor=include.showAuthor showLongDescription=include.showLongDescription showMainTag=include.showMainTag %}
+              {% include toc-listing-element.html post_id=post.id showTags=include.showTags showDate=include.showDate include_series_in_post_title=include.include_series_in_post_title showAuthor=include.showAuthor showShortDescription=include.showShortDescription showLongDescription=include.showLongDescription showMainTag=include.showMainTag %}
             {% else %}
               {% assign postsNotListed = postsNotListed | plus: 1 %}
             {% endif %}

@@ -23,4 +23,4 @@ sitemap:
 {{ c | markdownify }}
 
 
-{% include short-toc-by-tag.html tag='software' numPosts='all' showDrafts='true' showOnlyArticles='false' showLongDescription='true' title="Posts" %}
+{% include short-toc-by-tag.html tag='software' numPosts='all' showDrafts=true showOnlyArticles=false showLongDescription=true title="Posts" %}

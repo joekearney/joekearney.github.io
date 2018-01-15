@@ -10,17 +10,17 @@
   tag_short_name: "Cycling"
   index_path: "cycling-index"
 
-- series_tag: "honeyment"
-  tag_description: "Post-engagement pre-honeymoon adventure"
-  tag_name: "Honeyment"
-  tag_short_name: "Honeyment"
-  index_path: "honeyment-index"
-
 - series_tag: "das-jo-e"
   tag_name: "Das Jo(e)"
   tag_short_name: "Das Jo(e)"
   tag_description: "The Jo(e)s Fighting German Bureaucracy Since 2015"
   index_path: "das-jo-e-index"
+
+- series_tag: "honeyment"
+  tag_description: "Post-engagement pre-honeymoon adventure"
+  tag_name: "Honeyment"
+  tag_short_name: "Honeyment"
+  index_path: "honeyment-index"
 
 - series_tag: "haute-route"
   tag_name: "Haute Route Alps 2017"

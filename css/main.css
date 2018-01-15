@@ -528,3 +528,11 @@ a.footnote::before {
 a.footnote::after {
   content: "]"
 }
+
+.landing-page-series-banner {
+  text-align: center;
+}
+div.landing-page-series-banner {
+  padding-left: 30px;
+  padding-right: 30px;
+}

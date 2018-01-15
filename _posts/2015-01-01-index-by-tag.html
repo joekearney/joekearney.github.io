@@ -27,7 +27,7 @@ sitemap:
   {% endfor %}
 
   <a class="jumptarget" name="{{ tag | slugify }}"></a><h1>{{ tag }} &ndash; {{ posts.size }} posts</h1>
-  {% include toc-listing.html posts=posts numPosts='all' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="false" showAuthor="true" %}
+  {% include toc-listing.html posts=posts numPosts='all' showDrafts=true showSeriesPages=true showLongDescription=true showTags=false showAuthor=true %}
 {% endfor %}
 
 <hr></hr>
@@ -45,7 +45,7 @@ sitemap:
 
     {% unless posts.size == 0 %}
       <a class="jumptarget" name="{{ tag | slugify }}"></a><h1>{{ tag }} &ndash; {{ posts.size }} posts</h1>
-      {% include toc-listing.html posts=posts numPosts='all' showDrafts="true" showSeriesPages="true" showLongDescription="true" showTags="false" showAuthor="true" %}
+      {% include toc-listing.html posts=posts numPosts='all' showDrafts=true showSeriesPages=true showLongDescription=true showTags=false showAuthor=true %}
     {% endunless %}
   {% endunless %}
 {% endfor %}
