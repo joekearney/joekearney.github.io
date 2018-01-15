@@ -17,7 +17,6 @@ sitemap:
     <p>{{ site.description }}</p>
   </div>
 
-
   {% capture c %}
   {% include_relative _posts/software/about-me-software.md %}
   {% include_relative _posts/cycling/about-me-cycling.md %}
@@ -29,53 +28,28 @@ sitemap:
     </div>
   </div>
 
+  {% assign headline_post = site.posts %}
+  {% include toc-listing-header.html title="Recent posts" %}
+  {% include toc-listing.html posts=site.posts numPosts=4 showDrafts=false showAuthor=false showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
+
+  {% include toc-listing-header.html title="By category" %}
   <div class="row">
-    <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='das-jo-e' title=site.das-jo-e.tag_name numPosts='5' description=site.das-jo-e.tag_description showLongDescription=true showAuthor=false showSeriesPages=true showDrafts=true %}
+    <div class="col-sm-6 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="software" %}
+    </div>
+    <div class="col-sm-6 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="das-jo-e" %}
     </div>
   </div>
-
   <div class="row">
-    <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='software' title=site.software.tag_short_name numPosts='5' description=site.software.tag_description showOnlyArticles=true showLongDescription=true showAuthor=false %}
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="haute-route" %}
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      {% include short-toc-by-tag.html tag='cycling' title=site.cycling.tag_name numPosts='5' description=site.cycling.tag_description showOnlyArticles=true showLongDescription=true showAuthor=false showSeriesPages=true showDrafts=true %}
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="honeyment" %}
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      {% include short-toc-by-tag.html tag='honeyment' title=site.honeyment.tag_name description=site.honeyment.tag_description additionalLinkUrl="/where" additionalLinkText="where page" showAuthor=true %}
+    <div class="col-sm-4 landing-page-series-banner">
+      {% include landing-page-series-banner.html tag="tasty-rsvps" %}
     </div>
-    <div class="col-md-6">
-      {% include short-toc-by-tag.html tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description showAuthor=true %}
-    </div>
-  </div>
-
-  {% assign coltype = 'col-md-12' %}
-  {% for post in site.posts %}
-    {% if post.tags contains 'draft' %}
-      {% assign coltype = 'col-md-6' %}
-    {% endif %}
-  {% endfor %}
-
-  <div class="row">
-    <div class="{{ coltype }}">
-      <h2 class="thin">Software How To</h2>
-      <ul class="listing">
-        {% include toc-listing.html numPosts='all' showDrafts=false tag='howto' showAuthor=true showLongDescription=true showOnlyArticles=false showDate=true prependSeriesToTitles=true showSeriesPages=true %}
-      </ul>
-    </div>
-
-    {% if coltype == 'col-md-6' %}
-    <div class="col-md-6">
-      <h2 class="thin">Drafts</h2>
-      {% include toc-listing.html numPosts='all' showDrafts=true tag='draft' showAuthor=true showLongDescription=true showOnlyArticles=false showDate=true prependSeriesToTitles=true showSeriesPages=true %}
-    </div>
-    {% endif %}
   </div>
 </div>
