@@ -1,1 +1,1 @@
-The next exciting change is the new tiny human about to join us!
+The latest exciting change is the [new tiny human](/posts/new-tiny-human) in our lives!
