@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What can be so difficult?"
+title: "What Can Be so Difficult?"
 description: "time and babies"
 meta_description: "We're having a baby! We have no idea what will happen, and don't understand what will take up so much time!"
 categories:

@@ -16,7 +16,7 @@ status: published
 type: post
 author: Joe Kearney
 
-title: "Closing thoughts"
+title: "Closing Thoughts"
 description: "stage racing is a whole new thing"
 meta_description: "An incredible and joyful (and exhausting) week in beautiful places. What an experience."
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Singapore, baby"
+title: "Singapore, Baby"
 description: ""
 categories:
 - post
