@@ -2,7 +2,7 @@
 layout: post
 title: "Dear Eleanor Margot"
 description: "saying hello"
-meta_description: "Four weeks in, and your dad and I are rather taken with you. I was expecting the sleepless nights, projectile vomit, poonamis, but I wasn't expecting you to be so funny."
+long_description: "Four weeks in, and your dad and I are rather taken with you. I was expecting the sleepless nights, projectile vomit, poonamis, but I wasn't expecting you to be so funny."
 categories:
 - post
 tags:

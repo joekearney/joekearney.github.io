@@ -2,7 +2,7 @@
 layout: post
 title: "Understanding Record Shredding"
 description: "storing nested data in columns"
-meta_description: "Record shredding allows nested data structures to be considered in a sort-of-tabular way, and stored in a columnar data store. This post describes the intuition behind how this can be done preserving message structure, from Dremel and Parquet."
+long_description: "Record shredding allows nested data structures to be considered in a sort-of-tabular way, and stored in a columnar data store. This post describes the intuition behind how this can be done preserving message structure, from Dremel and Parquet."
 categories:
 - post
 tags:

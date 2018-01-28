@@ -2,7 +2,7 @@
 layout: post
 title: "Concepts in DataFlow"
 description: "basic definitions"
-meta_description: "Google's 2015 paper on the Dataflow model describes general solutions to general data pipeline processing problems. The terms they use have been helpful to me in understanding patterns in these problems."
+long_description: "Google's 2015 paper on the Dataflow model describes general solutions to general data pipeline processing problems. The terms they use have been helpful to me in understanding patterns in these problems."
 categories:
 - post
 tags:

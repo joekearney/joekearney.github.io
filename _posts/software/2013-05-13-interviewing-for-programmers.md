@@ -2,7 +2,7 @@
 layout: post
 title: Interviewing for Programmers
 description: my approach to interviewing
-meta_description: "A description of my interview approach while at GSA &ndash; what I was looking for what I expected from candidates"
+long_description: "A description of my interview approach while at GSA &ndash; what I was looking for what I expected from candidates"
 categories:
 - post
 tags:

@@ -12,22 +12,22 @@ layout: compress
   <title>{{ titleText }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
-  {% if page.meta_description %}
-    {% assign meta_description = page.meta_description %}
+  {% if page.long_description %}
+    {% assign long_description = page.long_description %}
   {% elsif page.tags contains 'honeyment' %}
-    {% assign meta_description = site.honeyment.tag_description %}
+    {% assign long_description = site.honeyment.tag_description %}
   {% elsif page.tags contains 'tasty-rsvps' %}
-    {% assign meta_description = site.tasty-rsvps.tag_description %}
+    {% assign long_description = site.tasty-rsvps.tag_description %}
   {% elsif page.tags contains 'software' %}
-    {% assign meta_description = site.software.tag_description %}
+    {% assign long_description = site.software.tag_description %}
   {% elsif page.tags contains 'das-jo-e' %}
-    {% assign meta_description = site.das-jo-e.tag_description %}
+    {% assign long_description = site.das-jo-e.tag_description %}
   {% elsif page.description %}
-    {% assign meta_description = page.description %}
+    {% assign long_description = page.description %}
   {% else %}
-    {% assign meta_description = site.description %}
+    {% assign long_description = site.description %}
   {% endif %}
-  <meta name="description" content="{{ meta_description }}" />
+  <meta name="description" content="{{ long_description }}" />
   <meta name="keywords" content="joe kearney,{{ page.tags | join: ',' }},{{ page.keywords | join: ',' }},{{ page.description }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#b12930">
@@ -35,7 +35,7 @@ layout: compress
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="twitter:title" content="{{ titleText }}" />
-  <meta name="twitter:description" content="{{ meta_description }}" />
+  <meta name="twitter:description" content="{{ long_description }}" />
   {% if page.twitterImage %}
   <meta name="twitter:image" content="{{ site.production_url }}{{ page.twitterImage }}" />
   {% endif %}

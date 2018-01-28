@@ -2,7 +2,7 @@
 layout: post
 title: "Competitive Baby Metrics"
 description: "results are in"
-meta_description: "My little brother won, the hive mind averaged out to an exceptionally good score, and I got to play with some inconsequential data while Eleanor had a nap. But first, poo."
+long_description: "My little brother won, the hive mind averaged out to an exceptionally good score, and I got to play with some inconsequential data while Eleanor had a nap. But first, poo."
 categories:
 - post
 tags:

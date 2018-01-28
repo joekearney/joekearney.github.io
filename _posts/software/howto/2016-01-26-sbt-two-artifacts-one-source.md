@@ -2,7 +2,7 @@
 layout: post
 title: "One Source, Two Jars"
 description: "multiple builds for one project"
-meta_description: "How to build two artifacts from one source folder in SBT"
+long_description: "How to build two artifacts from one source folder in SBT"
 categories:
 - post
 tags:

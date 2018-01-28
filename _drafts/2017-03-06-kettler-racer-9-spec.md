@@ -2,7 +2,7 @@
 layout: post
 title: "Kettler Racer 9 Serial Protocol"
 description: ""
-meta_description: ""
+long_description: ""
 categories:
 - post
 tags:

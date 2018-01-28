@@ -2,7 +2,7 @@
 layout: post
 title: "Music and Measure Theory"
 description: "harmonious rationals"
-meta_description: "A write-up of an excellent video by 3blue1brown describing a beautiful correspondence between tuning musical intervals and the measure of the rational numbers."
+long_description: "A write-up of an excellent video by 3blue1brown describing a beautiful correspondence between tuning musical intervals and the measure of the rational numbers."
 categories:
 - post
 tags:

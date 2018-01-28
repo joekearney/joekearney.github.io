@@ -2,7 +2,7 @@
 layout: post
 title: "Getting to Grips with a Newborn"
 description: "sounds, stresses and shenanigans"
-meta_description: ""
+long_description: ""
 categories:
 - post
 tags:

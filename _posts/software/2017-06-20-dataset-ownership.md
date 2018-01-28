@@ -2,7 +2,7 @@
 layout: post
 title: "Who Owns the Data?"
 description: "a better model for data ownership"
-meta_description: "We have a good solution for ownership of services in a microservices architecture. We can learn from this to define ownership of datasets in a way that reduces the total cost of maintenance and integration across teams."
+long_description: "We have a good solution for ownership of services in a microservices architecture. We can learn from this to define ownership of datasets in a way that reduces the total cost of maintenance and integration across teams."
 categories:
 - post
 tags:

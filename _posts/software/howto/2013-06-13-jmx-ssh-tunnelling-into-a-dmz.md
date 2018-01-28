@@ -2,7 +2,7 @@
 layout: post
 title: 'SSH tunnel into a DMZ'
 description: "creating a path back home"
-meta_description: "SSH tunnelling allows opening a hole back through a firewall or NAT, and it's really easy to set up."
+long_description: "SSH tunnelling allows opening a hole back through a firewall or NAT, and it's really easy to set up."
 categories:
 - post
 tags:

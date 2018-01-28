@@ -2,7 +2,7 @@
 layout: post
 title: "Haute Route Alps 2017 stage routes"
 description: "the full detail"
-meta_description: "The basic route was published months ago, but now we can see the detail, including how we're doing three ascents of Alpe d'Huez"
+long_description: "The basic route was published months ago, but now we can see the detail, including how we're doing three ascents of Alpe d'Huez"
 categories:
 - post
 tags:

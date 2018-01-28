@@ -72,8 +72,8 @@ showMainTag default ""
       {% endif %}
     {% endfor %}</span>
   {% endif %}
-  {% if include.showLongDescription == true and post.meta_description %}
-    <p class="post-long-description">{{post.meta_description}}</p>
+  {% if include.showLongDescription == true and post.long_description %}
+    <p class="post-long-description">{{post.long_description}}</p>
   {% endif %}
 </li>
 {% unless include.showTags %}</a>{% endunless %}

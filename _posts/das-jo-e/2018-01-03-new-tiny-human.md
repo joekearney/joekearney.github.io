@@ -2,7 +2,7 @@
 layout: post
 title: "New Tiny Human"
 description: "introducing Eleanor Margot"
-meta_description: "We did a baby! Giving birth looks really hard, and my wife is a hero. The first week of Ellie's life has been a whirlwind of hospital visits, poo, sleep deprivation, and becoming besotted with a new tiny human."
+long_description: "We did a baby! Giving birth looks really hard, and my wife is a hero. The first week of Ellie's life has been a whirlwind of hospital visits, poo, sleep deprivation, and becoming besotted with a new tiny human."
 categories:
 - post
 tags:

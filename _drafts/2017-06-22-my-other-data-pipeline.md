@@ -2,7 +2,7 @@
 layout: post
 title: "My Other Data Pipeline"
 description: "never let a cyclist write code"
-meta_description: "Getting my exercise bike to speak to my laptop took five IO steps, four different serial protocols, three types of radio and a Raspberry Pi"
+long_description: "Getting my exercise bike to speak to my laptop took five IO steps, four different serial protocols, three types of radio and a Raspberry Pi"
 categories:
 - post
 tags:

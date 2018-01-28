@@ -2,7 +2,7 @@
 layout: post
 title: "Just In Time"
 description: "introduction to JVM compilation"
-meta_description: "An introduction to compilation for the JVM, bytecode and JIT compilation, and benchmarking with JMH"
+long_description: "An introduction to compilation for the JVM, bytecode and JIT compilation, and benchmarking with JMH"
 categories:
 - index
 tags:

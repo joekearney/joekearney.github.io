@@ -2,7 +2,7 @@
 layout: post
 title: "Better Late than Never"
 description: "writing blogs is admin, too"
-meta_description: "Getting started in Germany, working out the language, the paperwork, and planning a wedding remotely."
+long_description: "Getting started in Germany, working out the language, the paperwork, and planning a wedding remotely."
 categories:
 - post
 tags:

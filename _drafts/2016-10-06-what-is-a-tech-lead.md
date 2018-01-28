@@ -2,7 +2,7 @@
 layout: post
 title: "What is a Tech Lead?"
 description: "or, how I think of my job"
-meta_description: "I recently became a tech lead, and this describes what I think that means"
+long_description: "I recently became a tech lead, and this describes what I think that means"
 categories:
 - post
 tags:

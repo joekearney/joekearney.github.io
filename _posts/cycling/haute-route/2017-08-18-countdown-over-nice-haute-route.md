@@ -2,7 +2,7 @@
 layout: post
 title: "Heading to Nice"
 description: "the countdown is nearly over"
-meta_description: "Flying with a bike is always a slightly trying affair, all the more so when I'm trying to fill the bag to the brim with kit, food and a big, heavy lock!"
+long_description: "Flying with a bike is always a slightly trying affair, all the more so when I'm trying to fill the bag to the brim with kit, food and a big, heavy lock!"
 categories:
 - post
 tags:

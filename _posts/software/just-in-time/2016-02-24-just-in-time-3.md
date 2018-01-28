@@ -2,7 +2,7 @@
 layout: post
 title: "3. Benchmarking and Assembly"
 description: "compilation at runtime"
-meta_description: "How you can see the assembler code that the JIT compiler generates to be run on the actual CPU, explored by way of some examples of benchmarking."
+long_description: "How you can see the assembler code that the JIT compiler generates to be run on the actual CPU, explored by way of some examples of benchmarking."
 categories:
 - post
 tags:

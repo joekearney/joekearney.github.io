@@ -2,7 +2,7 @@
 layout: post
 title: "1. What is Compilation?"
 description: "introduction to JVM compilation"
-meta_description: "An introduction to what we mean by compilation and why it has multiple stages. A brief comparison between how Scala and Java compile similar structures for use in the JVM."
+long_description: "An introduction to what we mean by compilation and why it has multiple stages. A brief comparison between how Scala and Java compile similar structures for use in the JVM."
 categories:
 - post
 tags:

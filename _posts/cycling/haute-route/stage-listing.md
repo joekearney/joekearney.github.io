@@ -8,7 +8,7 @@ Here are the facts and figures for each stage, with a report post from after eac
 {% comment %} Find report post for this stage {% endcomment %}
 {% for stage_post in site.tags.haute-route-stage-report %}
 {% if stage_post.stage-number == stage.number %}
-{% assign stage_report_summary = stage_post.meta_description %}
+{% assign stage_report_summary = stage_post.long_description %}
 {% assign stage_report_gc = stage_post.haute-route-gc-position %}
 {% assign stage_report_place = stage_post.haute-route-stage-position %}
 {% endif %}

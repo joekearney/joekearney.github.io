@@ -2,7 +2,7 @@
 layout: post
 title: "The Time Warp"
 description: "jump to the left, step to the right"
-meta_description: ""
+long_description: ""
 categories:
 - post
 tags:

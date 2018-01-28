@@ -2,7 +2,7 @@
 layout: post
 title: "Semantics of Data Interfaces"
 description: "batch, point or stream"
-meta_description: "There are different styles of interface that we can define for access to data between systems. ..."
+long_description: "There are different styles of interface that we can define for access to data between systems. ..."
 categories:
 - post
 tags:

@@ -2,7 +2,7 @@
 layout: post
 title: Two Phase Commit
 description: "an old friend"
-meta_description: "Two-phase commit is a long-established means of keeping two resources strongly synchronised. These days it's not so sexy, but it's an important piece of heritage of distributed computing."
+long_description: "Two-phase commit is a long-established means of keeping two resources strongly synchronised. These days it's not so sexy, but it's an important piece of heritage of distributed computing."
 categories:
 - post
 tags:

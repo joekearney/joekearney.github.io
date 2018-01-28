@@ -2,7 +2,7 @@
 layout: post
 title: "Dress Rehearsals Are Always Bad"
 description: "final prep"
-meta_description: "Training done, bike cleaned, punctures repaired and the start is suddenly very close."
+long_description: "Training done, bike cleaned, punctures repaired and the start is suddenly very close."
 categories:
 - post
 tags:
