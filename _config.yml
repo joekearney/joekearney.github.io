@@ -10,10 +10,11 @@ description: "Trying to be cogent."
 analytics: UA-49379324-1
 #disqus: on
 #gauges: 50f2b533613f5d7c8000000c
-author :
-  name : Joe Kearney
-  github : joekearney
-  twitter : joejkearney
+author:
+  name: Joe Kearney
+  github: joekearney
+  github_repo: joekearney.github.io
+  twitter: joejkearney
 
 empty_array: []
 
