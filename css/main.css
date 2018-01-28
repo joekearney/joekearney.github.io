@@ -533,3 +533,7 @@ div.landing-page-series-banner {
   padding-left: 30px;
   padding-right: 30px;
 }
+
+div.pull-quote > p {
+  margin-left: 30pt;
+}

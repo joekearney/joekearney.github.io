@@ -12,6 +12,8 @@ layout: layout
 
     {% include post-draft-marker.html tags=page.tags %}
 
+    {% include post-pull-quote.html text=page.meta_description %}
+
     {% include post-float-image.html kind='img' url=page.title_image_float_right_url title_image_alt=page.title_image_alt page-id=page.id id='title-img-float-right' caption=page.title_image_float_right_text %}
     {% include post-float-image.html kind='iframe' url=page.title_iframe_float_right_url page-id=page.id id='title-iframe-float-right' caption=page.title_iframe_float_right_text height=page.title_iframe_float_right_height width=page.title_iframe_float_right_width %}
     {% include post-float-image.html kind='flickr' url=page.title_flickr_float_right_url page-id=page.id id='title-flickr-float-right' caption=page.title_flickr_float_right_text height=page.title_flickr_float_right_height width=page.title_flickr_float_right_width picture_id=page.title_flight_float_right_picture album_id=page.title_flight_float_right_album %}
