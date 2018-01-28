@@ -26,9 +26,25 @@ showMainTag default ""
   {% if post.tags contains 'isIndexRoot' %}<span class="post-description">[Series]</span>{% endif %}
   {% if post.tags contains 'draft' %}<span class="post-description">[Draft]</span>{% endif %}
   {% if post.tags contains 'howto' %}<span class="post-description">[How To]</span>{% endif %}
-  {% if include.showDate != false %}
-    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+
+  {% if include.showAuthor == true %}
+    {% assign hasRightFloat = true %}
+  {% elsif include.showDate != false %}
+    {% assign hasRightFloat = true %}
+  {% else %}
+    {% assign hasRightFloat = false %}
   {% endif %}
+
+  {% if hasRightFloat == true %}<span class="listing-float-right post-listing-float-details">{% endif %}
+
+  {% if include.showAuthor == true %}
+    {% assign authorArray = post.author | join: "|" | split: "|" %}
+    {{ authorArray | array_to_sentence_string }}{% if include.showDate != false %} &ndash; {% endif %}
+  {% endif %}
+  {% if include.showDate != false %}{{ post.date | date: "%B %e, %Y" }}{% endif %}
+
+  {% if hasRightFloat == true %}</span>{% endif %}
+
   {% assign titlePrefix = '' %}
   {% if post.series and include.include_series_in_post_title %}
     {% capture titlePrefix %}{{post.series}} &ndash; {% endcapture %}
@@ -45,10 +61,7 @@ showMainTag default ""
       {% endunless %}
     {% endif %}
   {% endunless %}
-  {% if include.showAuthor == true %}
-    {% assign authorArray = post.author | join: "|" | split: "|" %}
-    <span class="post-author"> &ndash; {{ authorArray | array_to_sentence_string }}</span>
-  {% endif %}
+
   {% if include.showTags == true %}
     <span class="post-description">&ndash;
     {% for t in post.tags %}

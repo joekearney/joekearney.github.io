@@ -19,4 +19,4 @@ sitemap:
 
 {% include post-header-image.html title_image_img="/images/jo-joe-brandenburg-gate.jpg" %}
 
-{% include index-listing-for-tag.html tag='das-jo-e' title=site.das-jo-e.tag_name description=site.das-jo-e.tag_description orderAscending=false showDrafts=true listing-only=true showLongDescription=true %}
+{% include index-listing-for-tag.html tag='das-jo-e' title=site.das-jo-e.tag_name description=site.das-jo-e.tag_description orderAscending=false showAuthor=true showDrafts=true listing-only=true showLongDescription=true %}

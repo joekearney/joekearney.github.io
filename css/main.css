@@ -370,19 +370,16 @@ td{
   text-align: right;
 }
 
-ul.listing li span.post-date{
-  padding-top:3px;
-  float:right;
-  font-size:12px;
-  color:#999
-}
 .post-description{color:#999}
-span.post-author {
+span.post-listing-float-details {
   padding-top: 3px;
   font-size: 12px;
   color: #999;
   font-family: Metrophobic, Verdana, sans-serif;
   white-space: nowrap;
+}
+ul.listing li span.listing-float-right {
+  float: right;
 }
 span.post-description {
   font-family: Metrophobic, Verdana, sans-serif;
