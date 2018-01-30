@@ -2,7 +2,7 @@
 layout: post
 title: "The Time Warp"
 description: "jump to the left, step to the right"
-long_description: ""
+long_description: "Four weeks in and we're beginning to learn how a baby fills a day."
 categories:
 - post
 tags:
@@ -17,7 +17,7 @@ author: Joanna Kearney
 #title_image_float_right_text: Eleanor Margot Kearney, day 3
 ---
 
-Before Ellie was born, newborn maths never quite seemed to add up. If a newborn baby sleeps for 18 hours a day, how come parents of newborn babies are so notoriously sleep-deprived? Four weeks in, and I think I'm beginning to understand. It is a little joke of nature (or more accurately, of the written rules of modern-day parenting manuals) that newborn babies' needs are perfectly timed to create an endless cycle. We're supposed to feed her and change her nappy every 2-3 hours, which sounds fine until you realise it takes 2-3 hours to change her, feed her and, most importantly, get her back to sleep.
+Before Ellie was born, newborn maths [never quite seemed to add up](/posts/what-can-be-so-difficult). If a newborn baby sleeps for 18 hours a day, how come parents of newborn babies are so notoriously sleep-deprived? Four weeks in, and I think I'm beginning to understand. It is a little joke of nature (or more accurately, of the written rules of modern-day parenting manuals) that newborn babies' needs are perfectly timed to create an endless cycle. We're supposed to feed her and change her nappy every 2-3 hours, which sounds fine until you realise it takes 2-3 hours to change her, feed her and, most importantly, get her back to sleep.
 
 So when Ellie wakes up, we change her (5 mins in a F1-worthy pitstop for Joe, 10 mins with some gentle limb-based negotiation for me, or 20+ mins for a poonami, including a head-to-toe wipe down and complete change of clothes for everyone.)
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Getting to Grips with a Newborn"
 description: "sounds, stresses and shenanigans"
-long_description: ""
+long_description: "The menagerie only becomes apparent at night, when she could convincingly be a dinosaur, an exotic creature, or a ravenous predator."
 categories:
 - post
 tags:
@@ -17,7 +17,9 @@ author: Joanna Kearney
 #title_image_float_right_text: Eleanor Margot Kearney, day 3
 ---
 
-Snuffle, wheeze, squeak, harrumph, snort. The soothing sounds of our baby girl, finally fast asleep next to us, sounding a little like the cast of Star Wars opened the gates at the zoo and the whole menagerie of creatures has congregated in our bedroom. There's the creak of the zoo gates opening, the endearing hamster squeak, the kiwi sniffling and furtling around in the undergrowth, the Chewbacca groan and the heavy breathing of Darth Vader. So far, so cute and reassuringly normal. But then the tone shifts. Gnaw, grr, hamph, om nom nom. Is that a savage wolf next to us, gnawing hungrily on a fleshy bone? Suck, grr, nom, silence. Hang on, silence? I instantly sit up, stare at her peaceful bundle. Is she breathing? She looks so still. Gently, I poke her sleepy body. Her arms flail in a startle. Definitely still breathing. But then the face crumples. Waaaaahaaa. And now very much awake again. Oops.
+Snuffle, wheeze, squeak, harrumph, snort. The soothing sounds of our baby girl, finally fast asleep next to us, sounding a little like the cast of Star Wars opened the gates at the zoo and the whole menagerie of creatures has congregated in our bedroom. There's the creak of the zoo gates opening, the endearing hamster squeak, the kiwi sniffling and furtling around in the undergrowth, the Chewbacca groan and the heavy breathing of Darth Vader.
+
+So far, so cute and reassuringly normal. But then the tone shifts. Gnaw, grr, hamph, om nom nom. Is that a savage wolf next to us, gnawing hungrily on a fleshy bone? Suck, grr, nom, silence. Hang on, silence? I instantly sit up, stare at her peaceful bundle. Is she breathing? She looks so still. Gently, I poke her sleepy body. Her arms flail in a startle. Definitely still breathing. But then the face crumples. Waaaaahaaa. And now very much awake again. Oops.
 
 If it's not checking her breathing that wakes her, there's a whole array of other newborn mummy fussing that does the job. Is she too hot? Shall I take her temperature? Is her sleeping bag too loose? Are her clothes riding up? Are her hands cold? I grab the thermometer, or pull at the clothes, or rebutton the sleeping bag, until, fed up with all this harassment, she is inevitably awake again. By now it's 4am, and time to start the [night-time nappy, feed, rock cycle](/posts/the-time-warp) again.
 
