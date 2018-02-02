@@ -5,6 +5,7 @@ categories:
 - index
 tags:
 - landing
+permalink: /index-more
 sitemap:
   changefreq: daily
   priority: 1.0
@@ -54,28 +55,5 @@ sitemap:
     <div class="col-md-6">
       {% include short-toc-by-tag.html tag='tasty-rsvps' title=site.tasty-rsvps.tag_name description=site.tasty-rsvps.tag_description showAuthor=true %}
     </div>
-  </div>
-
-  {% assign coltype = 'col-md-12' %}
-  {% for post in site.posts %}
-    {% if post.tags contains 'draft' %}
-      {% assign coltype = 'col-md-6' %}
-    {% endif %}
-  {% endfor %}
-
-  <div class="row">
-    <div class="{{ coltype }}">
-      <h2 class="thin">Software How To</h2>
-      <ul class="listing">
-        {% include toc-listing.html numPosts='all' showDrafts=false tag='howto' showAuthor=true showLongDescription=true showOnlyArticles=false showDate=true prependSeriesToTitles=true showSeriesPages=true %}
-      </ul>
-    </div>
-
-    {% if coltype == 'col-md-6' %}
-    <div class="col-md-6">
-      <h2 class="thin">Drafts</h2>
-      {% include toc-listing.html numPosts='all' showDrafts=true tag='draft' showAuthor=true showLongDescription=true showOnlyArticles=false showDate=true prependSeriesToTitles=true showSeriesPages=true %}
-    </div>
-    {% endif %}
   </div>
 </div>

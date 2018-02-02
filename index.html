@@ -29,7 +29,7 @@ sitemap:
   </div>
 
   {% assign headline_post = site.posts %}
-  {% include toc-listing-header.html title="Recent posts" %}
+  {% include toc-listing-header.html title="Recent posts" header_href="/index-more" additionalLinkText="see more" additionalLinkUrl="/index-more" %}
   {% include toc-listing.html posts=site.posts numPosts=4 showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
 
   {% include toc-listing-header.html title="By category" %}
