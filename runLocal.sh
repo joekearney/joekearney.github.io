@@ -20,12 +20,22 @@ function bundle_install() {
   echo "Done with exit code $?"
 }
 
+LOCATION_PARAMS="--config $DIR/_config.yml \
+--source $DIR \
+--destination $DIR/_site \
+--layouts $DIR/_layouts"
+
+function clean_output() {
+  jekyll clean ${LOCATION_PARAMS}
+
+}
+
 
 while getopts "ci" o; do
   case "${o}" in
     c)
       echo "Cleaning output..."
-      jekyll clean
+      clean_output
       ;;
     i)
       echo "Using incremental compilation..."
@@ -52,11 +62,6 @@ echo
 
 ${DIR}/buildImages.sh
 
-jekyll serve \
-  --config $DIR/_config.yml \
-  --source $DIR \
-  --destination $DIR/_site \
-  --layouts $DIR/_layouts \
+jekyll serve ${LOCATION_PARAMS} \
   --drafts --future \
-  --trace \
-  --watch --trace --profile $INCREMENTAL
+  --trace --watch --profile $INCREMENTAL
