@@ -14,7 +14,7 @@ published: true
 author: Joe Kearney
 
 title_image_float_right_url: /images/ellie/ellie-screaming.jpg
-#title_image_float_right_text: Eleanor Margot Kearney, day 3
+title_image_float_right_text: "She also screams at home, sometimes"
 ---
 
 Scene: a tiny room in the paediatrician's surgery, slightly bigger than a phone box. Jo and I are squeezed in with Ellie howling her little lungs out. Sometimes two doctors are in there with us; it's cosy!
