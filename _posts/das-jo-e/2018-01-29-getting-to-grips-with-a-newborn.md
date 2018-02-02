@@ -35,7 +35,7 @@ Out of nowhere, all that tasty milk erupts vertically out of her mouth, sprinkli
 
 Her forehead lifts, her eyes widen, a look of surprise takes hold and then - hiccup. It's adorable. And other than the mild surprise with every little squeak, it doesn't seem to bother her at all. As the midwife said, she's been hiccuping in my belly for months. In an unfamiliar world, hiccups are pretty normal for little Ellie.
 
-#### Scenario 3) Nappy rumbles.
+#### Scenario 3) Nappy rumbles
 
 She lies, peacefully on my lap, as I stare at her ever-changing, sleepy facial expressions. Her body so warm against mine. Very warm actually. And moist. This gentle, sleeping baby has silently unleashed a spritz-kaka that has dribbled out of her nappy, saturated a babygro, spread through her onesie and is seeping through mummy's jeans. The first of  many little spillages, no doubt!
 
