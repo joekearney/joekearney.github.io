@@ -1,13 +1,47 @@
 #! /bin/bash
 
-set -euf
+set -ef
 
 SCRIPT=$(readlink -f $0)
 DIR=$(dirname $SCRIPT)
 
-echo "Ensuring that the required Ruby gems are installed..."
-(cd $DIR && bundle install --quiet)
-echo "Done with exit code $?"
+function usage() {
+  echo "Usage: $0 [-i] [-c] [-b]"
+  echo
+  echo "  -i   enable incremental compilation"
+  echo "  -c   clean any previously built output first"
+  echo "  -b   bundle install first, to check required Ruby gems are installed"
+  exit 1
+}
+
+function bundle_install() {
+  echo "Ensuring that the required Ruby gems are installed..."
+  (cd $DIR && bundle install --quiet)
+  echo "Done with exit code $?"
+}
+
+
+while getopts "ci" o; do
+  case "${o}" in
+    c)
+      echo "Cleaning output..."
+      jekyll clean
+      ;;
+    i)
+      echo "Using incremental compilation..."
+      INCREMENTAL="--incremental"
+      ;;
+    b)
+      bundle_install
+      ;;
+    *)
+      usage
+      ;;
+  esac
+done
+
+echo
+
 
 # you need to apt-get or brew install imagemagick, then gem install bundle, then bundle install
 
@@ -15,18 +49,6 @@ echo "Done with exit code $?"
 # gem install bundle
 # bundle install
 # ./runLocal
-
-# TODO do arg processing properly
-if [[ "$1" == "-c" || "$2" == "-c" ]]; then
-  echo
-  echo "Cleaning output"
-  jekyll clean
-fi
-if [[ "$1" == "-i" || "$2" == "-i" ]]; then
-  echo
-  echo "Using incremental compilation..."
-  INCREMENTAL="--incremental"
-fi
 
 ${DIR}/buildImages.sh
 
@@ -37,4 +59,4 @@ jekyll serve \
   --layouts $DIR/_layouts \
   --drafts --future \
   --trace \
---watch --trace --profile $INCREMENTAL
+  --watch --trace --profile $INCREMENTAL
