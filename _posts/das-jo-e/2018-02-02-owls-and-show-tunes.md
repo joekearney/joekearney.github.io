@@ -31,6 +31,6 @@ At some point we realised just how funny the whole episode was and drowned out E
 
 {% include image-float.html src="/images/ellie/euler.jpg" side="left" %}
 
-She's had a cold, poor little thing, and we took her to the doctor to check on the funny noises she was making while breathing. (She's fine, it was nothing. I doubt it'll be the only time we go to the doctor for nothing!) But with a funny nose, bright lights, lots of people around poking her, and cold stethoscopes making her flinch, it's no wonder that she wanted to have a little moan.
+She's had a cold, poor little thing, and we took her to the doctor to check on the funny noises she was making while breathing. (She's fine, it was nothing. I doubt it'll be the only time we go to the doctor for nothing!) But with a blocked nose, bright lights, lots of people around poking her, and cold stethoscopes making her flinch, it's no wonder that she wanted to have a little moan.
 
 We've definitely got a lucky one. She's normally so quiet and gentle, she doesn't cry for long, and she sleeps like the proverbial baby, not the one that all of the mumsy blogs moan about. So it all came as a bit of a shock to see her so loud and for so long! I don't think it the doctors found it so surprising.
