@@ -17,7 +17,7 @@ status: published
 type: post
 author: Joe Kearney
 
-title: "Closing Thoughts from the Haute Route"
+title: "Closing Thoughts from HRA17"
 description: "stage racing is a whole new thing"
 long_description: "An incredible and joyful (and exhausting) week in beautiful places. What an experience."
 
