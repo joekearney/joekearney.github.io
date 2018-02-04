@@ -1,4 +1,4 @@
-{% if site.url == "site.production_url" %}
+{% unless jekyll.environment == "development" %}
 {% if site.analytics %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
@@ -11,7 +11,5 @@
 </script>
 {% endif %}
 {% else %}
-<!-- Analytics disabled. site.url = [{{site.url}}] -->
-<!-- site.url = [{{site.url}}] -->
-<!-- site.production_url = [{{site.production_url}}] -->
-{% endif %}
+<!-- Analytics disabled. site.url = [{{site.url}}]. jekyll.environment = [{{jekyll.environment}}] -->
+{% endunless %}
