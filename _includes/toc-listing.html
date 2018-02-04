@@ -1,14 +1,44 @@
-{% if include.posts %}
-  {% assign unorderedPosts = include.posts %}
+{% if include.posts and include.tag %}
+  {% if include.skipPosts %}
+    {% assign skipPosts = include.skipPosts %}
+  {% else %}
+    {% assign skipPosts = 0 %}
+  {% endif %}
+
+  {% comment %} This is a poor-man's version of {{ site.posts | tail: recentPostCount }} {% endcomment %}
+  {% assign tailPosts = site.empty_array %}
+  {% assign skipped = 0 %}
+  {% for p in include.posts %}
+    {% if skipped == skipPosts %}
+      {% if p.tags contains include.tag %}
+        {% assign tailPosts = tailPosts | push: p %}
+      {% endif %}
+    {% else %}
+      {% assign skipped = skipped | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign unorderedPostCandidates = tailPosts %}
+
+{% elsif include.posts %}
+  {% assign unorderedPostCandidates = include.posts %}
 {% elsif include.tag %}
-  {% assign unorderedPosts = site.empty_array %}
+  {% assign unorderedPostCandidates = site.empty_array %}
   {% for p in site.posts %}
     {% if include.tag == 'all' or p.tags contains include.tag %}
-      {% assign unorderedPosts = unorderedPosts | push: p %}
+      {% assign unorderedPostCandidates = unorderedPostCandidates | push: p %}
     {% endif %}
   {% endfor %}
 {% else %}
 {% endif %}
+
+{% assign unorderedPosts = site.empty_array %}
+{% for p in unorderedPostCandidates %}
+  {% unless include.hideTag and p.tags contains include.hideTag %}
+    {% assign unorderedPosts = unorderedPosts | push: p %}
+  {% endunless %}
+{% endfor %}
+
 
 {% if include.orderAscending %}
   {% assign orderedPosts = unorderedPosts | reverse %}

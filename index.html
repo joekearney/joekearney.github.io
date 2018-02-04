@@ -28,9 +28,14 @@ sitemap:
     </div>
   </div>
 
-  {% assign headline_post = site.posts %}
-  {% include toc-listing-header.html title="Recent posts" header_href="/index-more" additionalLinkText="see more" additionalLinkUrl="/index-more" %}
-  {% include toc-listing.html posts=site.posts numPosts=4 showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
+  {% assign recentPostCount = 3 %}
+  {% capture seeAllText %}see all {{ site.posts | size }}{% endcapture %}
+
+  {% include toc-listing-header.html title="Recent posts" additionalLinkText=seeAllText additionalLinkUrl="/all-posts" %}
+  {% include toc-listing.html posts=site.posts numPosts=recentPostCount showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
+
+  {% include toc-listing-header.html title="Highlights" %}
+  {% include toc-listing.html posts=site.posts skipPosts=recentPostCount tag="highlight" numPosts=10 showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
 
   {% include toc-listing-header.html title="By category" %}
   <div class="row">

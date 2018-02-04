@@ -10,6 +10,7 @@ tags:
 - howto
 - software
 - comments
+- highlight
 keywords:
 - scala
 - scalaz

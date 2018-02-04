@@ -8,6 +8,7 @@ categories:
 tags:
 - das-jo-e
 - article
+- highlight
 status: publish
 type: post
 published: true

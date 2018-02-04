@@ -8,6 +8,7 @@ tags:
 - hasIndexPage
 - haute-route
 - haute-route-closing-thoughts-post
+- highlight
 series_index: haute-route
 series: "Haute Route"
 series_tag: haute-route
@@ -16,7 +17,7 @@ status: published
 type: post
 author: Joe Kearney
 
-title: "Closing Thoughts"
+title: "Closing Thoughts from the Haute Route"
 description: "stage racing is a whole new thing"
 long_description: "An incredible and joyful (and exhausting) week in beautiful places. What an experience."
 

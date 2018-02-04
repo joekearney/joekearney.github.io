@@ -11,6 +11,7 @@ tags:
 - isIndexRoot
 - haute-route
 - comments
+- highlight
 permalink: /haute-route
 keywords:
 - cycling
