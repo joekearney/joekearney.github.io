@@ -35,7 +35,9 @@ sitemap:
   {% include toc-listing.html posts=site.posts numPosts=recentPostCount showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
 
   {% include toc-listing-header.html title="Highlights" %}
+  <span class="no-highlight-toc-element">
   {% include toc-listing.html posts=site.posts skipPosts=recentPostCount tag="highlight" numPosts=10 showDrafts=false showAuthor=true showLongDescription=true showOnlyArticles=false showSeriesPages=true showMainTag=true %}
+  </span>
 
   {% include toc-listing-header.html title="By category" %}
   <div class="row">

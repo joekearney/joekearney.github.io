@@ -537,3 +537,10 @@ div.landing-page-series-banner {
 div.pull-quote > p {
   margin-left: 30pt;
 }
+
+li.highlight-toc-element {
+  background-color: lightyellow;
+}
+.no-highlight-toc-element li.highlight-toc-element {
+  background-color: inherit;
+}

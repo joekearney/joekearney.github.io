@@ -69,7 +69,7 @@
   {% assign showNonArticles = true %}
 {% endif %}
 
-<ul class="listing">
+<ul class="listing {% if include.tag %}listing-for-tag-{{include.tag}}{% endif %}">
   {% comment %} Only list the top few and any new items further down the list {% endcomment %}
 
   {% assign totalPostsCount = 0 %}

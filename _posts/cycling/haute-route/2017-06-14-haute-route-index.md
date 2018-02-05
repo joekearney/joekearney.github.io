@@ -21,6 +21,8 @@ type: post
 author: Joe Kearney
 
 title_image_img: images/haute-route/col-cayolle-wide.jpg
+
+container-css-class: no-highlight-toc-element
 ---
 
 [hra-2017]: http://www.hauteroute.org/events/overview/alps-2017

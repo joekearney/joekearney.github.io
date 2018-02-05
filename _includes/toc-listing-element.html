@@ -14,7 +14,7 @@ showMainTag default ""
 {% assign post = site.posts | where: "id", include.post_id | first %}
 
 {% unless include.showTags %}<a href="{{ post.url }}" class="no-link-highlight">{% endunless %}
-<li>
+<li {% if post.tags contains "highlight" %}class="highlight-toc-element"{% endif %}>
   {% if include.showMainTag == true %}
     {% for t in post.tags %}
       {% assign mainTagCandidate = site.data.series | where: "series_tag", t | first %}
