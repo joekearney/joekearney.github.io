@@ -75,9 +75,7 @@
   {% assign totalPostsCount = 0 %}
   {% for post in orderedPosts %}
     {% assign veto = false %}
-    {% if page.url == post.url %}
-      {% assign veto = true %}
-    {% endif %}
+    
     {% if post.tags contains 'hasIndexPage' %}
       {% unless page.tags contains 'isIndexRoot' or include.showSeriesPages == true %}
         {% assign veto = true %}

@@ -19,6 +19,8 @@ keywords:
 status: published
 type: post
 author: Joe Kearney
+
+container-css-class: no-highlight-toc-element
 ---
 
 {% include_relative 0-intro.md %}
