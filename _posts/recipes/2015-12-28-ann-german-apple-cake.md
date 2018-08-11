@@ -39,5 +39,5 @@ _Serves: 24_
 
 1. Preheat oven to 350 degrees F (175 degrees C). Grease and flour one 9x13 inch cake pan.
 1. In a mixing bowl; beat oil and eggs with an electric mixer until creamy. Add the sugar and vanilla and beat well.
-1. Combine the flour salt, baking soda, and ground cinnamon together in a bowl. Slowly add this mixture to the egg mixture and mix until combined. The batter will be very thick. Fold in the apples by hand using a wooden spoon. Spread batter into the prepared pan.
+1. Combine the flour, salt, baking soda, and ground cinnamon together in a bowl. Slowly add this mixture to the egg mixture and mix until combined. The batter will be very thick. Fold in the apples by hand using a wooden spoon. Spread batter into the prepared pan.
 1. Bake at 350 degrees F (175 degrees C) for 45 minutes or until cake tests done. Let cake cool on a wire rack. Once cake is cool serve with a dusting of confectioners' sugar or with a Cream Cheese Frosting.
