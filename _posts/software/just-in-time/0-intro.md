@@ -18,5 +18,5 @@ Comments, corrections and clarifications are always welcome, whether by email, T
 
 ## Further Reading
 
-* Slides for this talk _(todo)_
+* [Slides for this talk](/assets/just-in-time.pdf)
 * Alexey Shipilev's blog, in particular his post on [Nanotrusting Nanotime](http://shipilev.net/blog/2014/nanotrusting-nanotime/)
