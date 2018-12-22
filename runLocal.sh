@@ -16,7 +16,18 @@ function usage() {
 
 function bundle_install() {
   echo "Ensuring that the required Ruby gems are installed..."
-  (cd $DIR && bundle install --quiet)
+  if ! brew list libxml2 > /dev/null; then
+    echo "libxml2 required: brew install libxml2"
+    exit 1
+  fi
+  if ! brew list imagemagick@6 > /dev/null; then
+    echo "imagemagick v6 required with special linking:"
+    echo "brew install imagemagick@6 && brew link imagemagick@6 --force"
+    exit 1
+  fi
+  bundle config build.nokogiri --use-system-libraries \
+    --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
+  bundle install --quiet
   echo "Done with exit code $?"
 }
 
@@ -31,7 +42,7 @@ function clean_output() {
 }
 
 
-while getopts "ci" o; do
+while getopts "bci" o; do
   case "${o}" in
     c)
       echo "Cleaning output..."
