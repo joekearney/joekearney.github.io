@@ -7,7 +7,7 @@ layout: compress
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
   {% capture titleText %}
-  {% if page.series %}{{page.series}} &ndash; {% endif %}{{ page.title }} &ndash; {{ site.author.name }}
+  {% if page.series %}{{page.series}} &ndash; {% endif %}{{ page.title }} &ndash; {{ page.author }}
   {% endcapture %}
   <title>{{ titleText }}</title>
 
