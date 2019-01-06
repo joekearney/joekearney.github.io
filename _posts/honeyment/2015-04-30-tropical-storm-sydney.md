@@ -15,7 +15,7 @@ title_image_iframe: https://www.flickr.com/photos/joekearney/17339005565/in/set-
 
 Australia was supposed to be sunny! The run of poor weather has continued, and we've seen lots more rain in the week and half since the Blue Mountains. It's fair to say that we wasted a couple of days through not trying to see enough during the rainy days, but by and large I think we've still managed to fill the calendar and explore the sights of Sydney.
 
-Sydney has the feel of a busy city much more than Melbourne. In many ways it feels like a version of London with a harbour. In the sunshine it's pretty, and there are plenty of places with good views of its spread all around the many coves of the harbour with ferries flitting around. It's not too high-rise, and the buildings seem to be arranged with smaller ones by the water, so there's a great feeling of space. The coffee's still pretty good, but has nothing on the excellence of Melbourne!
+Sydney has the feel of a busy city much more than Melbourne. In many ways it feels like a version of London with a harbour. In the sunshine it's pretty, and there are plenty of places with good views of it spread all around the many coves of the harbour with ferries flitting around. It's not too high-rise, and the buildings seem to be arranged with smaller ones by the water, so there's a great feeling of space. The coffee's still pretty good, but has nothing on the excellence of Melbourne!
 
 ***
 
