@@ -18,7 +18,7 @@ source: https://developers.soundcloud.com/blog/off-platform-validation
 
 <div class="bs-callout bs-callout-danger"><p>This post first appeared on the <a href="{{page.source}}">SoundCloud Developers Backstage blog</a>.</p></div>
 
-Last month we launched SoundCloud Premier Distribution, which allows creators to distribute their music from SoundCloud to many other streaming platforms and stores. The result? Artists can now get paid for plays on other platforms just like they can on SoundCloud.
+Last month we launched [SoundCloud Premier Distribution](https://creators.soundcloud.com/premier), which allows creators to distribute their music from SoundCloud to many other streaming platforms and stores. The result? Artists can now get paid for plays on other platforms just like they can on SoundCloud.
 
 For many of our users, this will be their first experience with the conventions and requirements of the music industry supply chain. The barriers to entry to this world are very different than those to a creator uploading to SoundCloud. At SoundCloud, we’re proud of how easy it is and how few clicks it takes to publish your work. In contrast, the process of getting your content onto Spotify, iTunes, or any of the other platforms fed by distributors has many more strict requirements regarding metadata and media.
 
