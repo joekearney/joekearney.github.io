@@ -12,6 +12,11 @@ function buildImage() {
   dot -Tpng ${input} > ${output}
 }
 
+if ! command -v dot; then
+  echo "The dot executable must be available to build images"
+  exit 1
+fi
+
 echo "Building Graphviz diagrams..."
 
 for d in images/dot/src/*.dot; do

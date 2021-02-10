@@ -2,8 +2,11 @@
 
 set -ef
 
-SCRIPT=$(readlink -f $0)
+SCRIPT=$(cd "$(dirname $0)" && pwd)/$(basename $0)
 DIR=$(dirname $SCRIPT)
+
+# disable deprecation warnings, since there's nothing we can do about them
+export RUBYOPT='-W:no-deprecated'
 
 function usage() {
   echo "Usage: $0 [-i] [-c] [-b]"
@@ -15,19 +18,23 @@ function usage() {
 }
 
 function bundle_install() {
-  echo "Ensuring that the required Ruby gems are installed..."
-  if ! brew list libxml2 > /dev/null; then
-    echo "libxml2 required: brew install libxml2"
-    exit 1
-  fi
-  if ! brew list imagemagick@6 > /dev/null; then
-    echo "imagemagick v6 required with special linking:"
-    echo "brew install imagemagick@6 && brew link imagemagick@6 --force"
-    exit 1
-  fi
-  bundle config build.nokogiri --use-system-libraries \
-    --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
-  bundle install --quiet
+  echo "Ensuring that the required dependencies are installed..."
+  # if ! brew list libxml2 > /dev/null; then
+  #   echo "libxml2 required: brew install libxml2"
+  #   exit 1
+  # fi
+  # if ! brew list imagemagick@6 > /dev/null; then
+  #   echo "imagemagick v6 required with special linking:"
+  #   echo "brew install imagemagick@6 && brew link imagemagick@6 --force"
+  #   exit 1
+  # fi
+  # if ! brew list dot > /dev/null; then
+  #   echo "dot required: brew install dot"
+  #   exit 1
+  # fi
+  # bundle config build.nokogiri --use-system-libraries \
+  #   --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
+  bundle install #--quiet
   echo "Done with exit code $?"
 }
 
@@ -71,7 +78,7 @@ echo
 # bundle install
 # ./runLocal
 
-${DIR}/buildImages.sh
+${DIR}/buildImages.sh || echo "Skipping building dot images"
 
 jekyll serve ${LOCATION_PARAMS} \
   --drafts --future \
