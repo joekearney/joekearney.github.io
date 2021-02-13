@@ -22,7 +22,7 @@ title_flight_float_right_picture: 16696031682
 title_flight_float_right_album: 72157647810587354
 ---
 
-And so it begins... We're off ready for adventure of a lifetime!
+And so it begins... We're off ready for the adventure of a lifetime!
 
 From the first inkling of an idea some 18 months ago, our plans have moved and changed so much we wondered if we'd ever leave (as I think did most of our family and friends). But now with two resignations submitted, boozy leaving drinks survived (thank you Chicken McNuggets[^1], you served us well) and two wardrobes of clothes squeezed into an impossibly small space, we're finally off. As we taxi the runway I can confirm this is definitely happening!
 
