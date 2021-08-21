@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <filename>"
   echo "Trims out the yaml front matter, adds '# <Title>', then prints the content"
@@ -34,5 +36,10 @@ echo
 # remove liquid/jekyll blocks
 # remove hyperlinks
 # remove [^akaroa] links
-awk '/---/{p++}p==2' $file | sed "s/---/# $title\n\n## ${byline}/" | sed '/^</,/^<\//d' | sed -r 's/^(\{%.*|.*%\})$//' | sed -r 's/\[([^]]*)\]\(.*\)/\1/g' | sed 's/\(.\+\)\[^akaroa\]/\1/g'
+awk '/---/{p++}p==2' $file | \
+  sed "s/---/# $title\n\n## ${byline}/" | \
+  sed '/^</,/^<\//d' | \
+  sed -r 's/^(\{%.*|.*%\})$//' | \
+  sed -r 's/\[([^]]*)\]\(.*\)/\1/g' | \
+  sed 's/\(.\+\)\[^akaroa\]/\1/g'
 echo
