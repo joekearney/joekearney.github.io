@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Here we go again!"
-description: "the countdown is nearly over"
-long_description: ""
+title: "Route Plus Haute"
+description: "second visit to the Haute Route Alps"
+long_description: "The longest and highest edition didn't put me off in 2017, so I'm back for their 10th anniversary."
 categories:
 - post
 tags:
@@ -31,6 +31,8 @@ author: Joe Kearney
 
 [Four years ago](/haute-route) I didn't know what I was letting myself in for. I'd done the training but had no idea how I would cope with an actual week full of racing. It went pretty well, was a lot of fun and I couldn't resist signing up again! The intention was to do it before the second baby, but 2020 had something to say about that. So here we are, heading to Megève near Geneva for the start.
 
+The route is actually a little shorter than last time, with just a little less climbing through the week, but not by much. The steep Granon is on the route again, as well as many climbs with more than 1000m of elevation gain. So
+
 > Megève to Nice
 >
 > 800km distance, 21,000m elevation gain
@@ -45,7 +47,7 @@ It's been an exciting start, with a 330am alarm to take the girls to the airport
 
 ***
 
-The route starts with a loop at Megève where we stay for two nights before heading south. There's no gentle warmup, we're straight into the climbs. The queen stage this year is on day 3, where we climb the Iseran, then the monster pairing that is Télégraphe-Galibier from the route of the [Marmotte](/posts/marmotte-2017), and finish on possibly my favourite alpine climb, [Sarenne](/posts/hra-2017-stage-3). The "rest" day 4 features only one climb, straight up Alpe d'Huez before having the afternoon off (nap? pasta? both?). In 2017 the last three days were a bit of a blur as the fatigue really set in, and I have every expectation that will feel the same, even if the riding if going well.
+The route starts with a loop at Megève where we stay for two nights before heading south. There's no gentle warmup, we're straight into the climbs. The queen stage this year is on day 3, where we climb the Iseran, then the monster pairing that is Télégraphe-Galibier (nearly 2000m up, combined!) from the route of the [Marmotte](/posts/marmotte-2017), and finish on possibly my favourite alpine climb, [Sarenne](/posts/hra-2017-stage-3). The "rest" day 4 features only one climb, straight up Alpe d'Huez before having the afternoon off (nap? pasta? both?). In 2017 the last three days were a bit of a blur as the fatigue really set in, and I have every expectation that will feel the same, even if the riding if going well.
 
 The weather forecast is a little more wet than it was for the dry 2017 edition. That new rain jacket may yet have to show its mettle.
 
