@@ -1,34 +1,3 @@
----
-layout: post
-title: "Route Plus Haute"
-description: "second visit to the Haute Route Alps"
-long_description: "The longest and highest edition didn't put me off in 2017, so I'm back for their 10th anniversary."
-categories:
-- post
-tags:
-- article
-- cycling
-- comments
-- haute-route
-- haute-route-pre-event
-# - hasIndexPage
-series_index: haute-route
-series: "Haute Route Alps 2021"
-series_tag: haute-route-hra21
-include_series_in_header_title: false
-keywords:
-- cycling
-- Haute Route
-status: published
-type: post
-author: Joe Kearney
-
-# title_flickr_float_right_url: https://farm5.staticflickr.com/4440/36509963641_d249456851.jpg
-# title_flickr_float_right_width: 375px
-# title_flickr_float_right_height: 500px
-# title_flickr_float_right_text: "What's in the big bag?"
----
-
 [Four years ago](/haute-route) I didn't know what I was letting myself in for. I'd done the training but had no idea how I would cope with an actual week full of racing. It went pretty well, was a lot of fun and I couldn't resist signing up again! The intention was to do it before the second baby, but 2020 had something to say about that. So here we are, heading to Megève near Geneva for the start.
 
 The route is actually a little shorter than last time, with just a little less climbing through the week, but not by much. The steep Granon is on the route again, as well as many climbs with more than 1000m of elevation gain. So
