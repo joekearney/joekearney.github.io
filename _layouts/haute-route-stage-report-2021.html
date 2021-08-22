@@ -1,0 +1,36 @@
+---
+layout: post
+
+series: "Haute Route 2021"
+series_index: "haute-route-2021"
+series_tag: haute-route-2021
+
+css-require:
+- /css/haute-route.css
+---
+
+{% assign stages = site.data.haute-route-2021 | where: "number", page.stage-number | head %}
+{% for stage in stages %}
+
+{% capture details-note %}
+{{ stage.length }} &ndash; {{ stage.ascent }} &ndash; <b>{{ stage.cols }}</b>
+<br />
+{% if page.haute-route-gc-position %}Stage position: <b>{{ page.haute-route-stage-position }}</b>{% endif %}
+<br />
+{% if page.haute-route-gc-position %}GC position: <b>{{ page.haute-route-gc-position }}</b>{% endif %}
+{% endcapture %}
+{% include note.html note=details-note %}
+
+{% if page.haute_route_strava_embed %}
+	<iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='{{ page.haute_route_strava_embed }}' class="inline-image-right"></iframe>
+{% elsif stage.ridewithgps-route-id %}
+	<iframe src="https://ridewithgps.com/embeds?type=route&id={{ stage.ridewithgps-route-id }}&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+{% endif %}
+
+{{ content }}
+
+{% include clearfix.html %}
+
+{% include post-footer-embed.html footer_image_img=stage.profile %}
+
+{% endfor %}
