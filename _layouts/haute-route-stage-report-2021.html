@@ -31,6 +31,10 @@ css-require:
 
 {% include clearfix.html %}
 
+{% if page.haute_route_highlights_video_embed %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{page.haute_route_highlights_video_embed}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endif %}
+
 {% include post-footer-embed.html footer_image_img=stage.profile %}
 
 {% endfor %}
