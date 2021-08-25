@@ -13,11 +13,71 @@
 - number: 2
   title: Megève to Tignes
   date: Monday, Aug 23
-  strava-route: https://ridewithgps.com/routes/34861998
-  ridewithgps-route-id: 34861998
+  strava-route: https://ridewithgps.com/routes/34861996
+  ridewithgps-route-id: 34861996
   length: 109km
   ascent: 3,500m
   cols: Saisies, Cormet de Rosalind, Tignes
   description: "Similar length and ascent to yesterday but in just three long climbs."
+  # profile: /images/haute-route/profiles/1.jpg
+  # map: /images/haute-route/maps/1.jpg
+
+- number: 3
+  title: Tignes to Sarenne
+  date: Tuesday, Aug 24
+  strava-route: https://ridewithgps.com/routes/34861998
+  ridewithgps-route-id: 34861998
+  length: 182km
+  ascent: 4,500m
+  cols: Iséran, Télégraphe, Galibier, Sarenne
+  description: "A huge queen stage. High peaks, long descents, cold and rain."
+  # profile: /images/haute-route/profiles/1.jpg
+  # map: /images/haute-route/maps/1.jpg
+
+- number: 4
+  title: Alpe d'Huez
+  date: Wednesday, Aug 25
+  strava-route: https://ridewithgps.com/routes/34862001
+  ridewithgps-route-id: 34862001
+  length: 15.5km
+  ascent: 1,150m
+  cols: Alpe d'Huez
+  description: "No messing about. Bottom to top as fast as you can."
+  # profile: /images/haute-route/profiles/1.jpg
+  # map: /images/haute-route/maps/1.jpg
+
+- number: 5
+  title: Alpe d'Huez to Col du Granon
+  date: Thursday, Aug 26
+  strava-route: https://ridewithgps.com/routes/34862003
+  ridewithgps-route-id: 34862003
+  length: 86km
+  ascent: 3,000m
+  cols: Lauteret, Granon
+  description: "This looks like an easier day with only two climbs, but Granon's steep ascent will be punishing for tired legs."
+  # profile: /images/haute-route/profiles/1.jpg
+  # map: /images/haute-route/maps/1.jpg
+
+- number: 6
+  title: Serre Chevalier to Auron
+  date: Friday, Aug 27
+  strava-route: https://ridewithgps.com/routes/34862005
+  ridewithgps-route-id: 34862005
+  length: 140km
+  ascent: 3,650m
+  cols: Vars, Bonette, Auron
+  description: "The most traditional stage in a while, in terms of length and shape."
+  # profile: /images/haute-route/profiles/1.jpg
+  # map: /images/haute-route/maps/1.jpg
+
+- number: 7
+  title: Auron to Nice
+  date: Saturday, Aug 28
+  strava-route: https://ridewithgps.com/routes/34862006
+  ridewithgps-route-id: 34862006
+  length: 148km
+  ascent: 3,200m
+  cols: Couillole, St Raphaël, Vence
+  description: "The final stretch, with three climbs all new to me."
   # profile: /images/haute-route/profiles/1.jpg
   # map: /images/haute-route/maps/1.jpg
