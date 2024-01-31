@@ -11,7 +11,8 @@ tags:
 - highlight
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 We engineers like our systems to be robust; we don't want our stuff to break. But what does this mean more precisely, and how can we achieve it?

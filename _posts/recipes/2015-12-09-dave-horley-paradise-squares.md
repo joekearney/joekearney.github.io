@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Dave's Paradise Squares"
-author: "Dave Horley"
+author:
+- "Dave Horley"
 description-newline: true
 categories:
 - post

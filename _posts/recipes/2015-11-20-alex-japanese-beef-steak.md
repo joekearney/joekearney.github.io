@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Alex's Japanese Beef Steak"
-author: "Alex Hudspith"
+author:
+- "Alex Hudspith"
 description-newline: true
 categories:
 - post

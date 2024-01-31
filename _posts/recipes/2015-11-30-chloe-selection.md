@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Chloe and Steve's Entire Cooking History"
-author: "Chloe Redfern and Steve Stone"
+author:
+- "Chloe Redfern and Steve Stone"
 description-newline: true
 categories:
 - post

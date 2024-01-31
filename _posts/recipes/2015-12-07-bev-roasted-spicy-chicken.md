@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Bev's Roasted Spicy Chicken"
-author: "Beverley and David Hole"
+author:
+- "Beverley and David Hole"
 description-newline: true
 categories:
 - post

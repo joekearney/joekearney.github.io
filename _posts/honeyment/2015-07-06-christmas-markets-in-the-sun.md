@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Our second visit to Sydney was much sunnier than [the first](/posts/tropical-storm-sydney), though admittedly that's a pretty low bar! Returning here it felt much more like we know how the city works; we weren't so much exploring anew as coming back to a place we've lived. We strolled confidently onto the subway, knew the way to the hotel in advance and had our first running route planned from last time.

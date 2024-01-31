@@ -12,7 +12,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_float_right_url: /images/baby-ultrasound.png
 title_image_float_right_text: Early portrait of the mini Jo(e), looking very relaxed

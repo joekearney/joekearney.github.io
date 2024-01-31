@@ -12,7 +12,8 @@ tags:
 - highlight
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 source: https://developers.soundcloud.com/blog/a-better-model-of-data-ownership
 ---
 

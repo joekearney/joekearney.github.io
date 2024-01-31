@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Sarah's Grandmas' Macaroons and Christmas Pudding"
-author: "Sarah Chapman and Rob Dickinson"
+author:
+- "Sarah Chapman and Rob Dickinson"
 description-newline: true
 categories:
 - post

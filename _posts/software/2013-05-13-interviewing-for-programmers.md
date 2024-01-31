@@ -12,7 +12,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 title_image_img: /images/i-can-haz-ze-job.jpg

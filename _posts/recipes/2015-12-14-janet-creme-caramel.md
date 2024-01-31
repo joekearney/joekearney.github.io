@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Janet's Crème Caramel"
-author: "Janet Hallett"
+author:
+- "Janet Hallett"
 description-newline: true
 categories:
 - post

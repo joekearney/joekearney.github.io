@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Matthew's White Chocolate and Raspberry Cheesecake"
-author: "Matthew Cannings and Carly O'Dwyer"
+author:
+- "Matthew Cannings and Carly O'Dwyer"
 description-newline: true
 categories:
 - post

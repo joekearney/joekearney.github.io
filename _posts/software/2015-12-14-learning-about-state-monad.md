@@ -16,7 +16,8 @@ keywords:
 - "functional programming"
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 _This post was written after working through the State chapter in the excellent [Functional Programming in Scala](https://www.manning.com/books/functional-programming-in-scala) with a group of colleagues, and intends to capture some of our discussions towards gaining an intuition about the State monad._

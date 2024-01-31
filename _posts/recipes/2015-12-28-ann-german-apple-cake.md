@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Ann's German Apple Cake"
-author: "Ann and Stuart Bond"
+author:
+- "Ann and Stuart Bond"
 description-newline: true
 categories:
 - post

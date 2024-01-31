@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Kate Jones
+author:
+- Kate Jones
 ---
 
 On arrival at Hong Kong airport, the Jo(e)s looked just like the couple I'd waved goodbye to in the UK, four months previously, albeit a little bit tanned.

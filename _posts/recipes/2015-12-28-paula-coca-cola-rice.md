@@ -2,7 +2,8 @@
 layout: post
 title: "Paula's Arroz con Coca-Cola y Pasas"
 description: "Coca-Cola Rice with Raisins"
-author: "Paula and Matt Stinton"
+author:
+- "Paula and Matt Stinton"
 description-newline: true
 categories:
 - post

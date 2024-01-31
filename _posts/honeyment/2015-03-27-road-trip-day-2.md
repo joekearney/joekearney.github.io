@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 ---
 
 <div class="title-image">

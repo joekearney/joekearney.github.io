@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Cheryl's Christmas Cake"
-author: "Cheryl and Matt Kearney"
+author:
+- "Cheryl and Matt Kearney"
 description-newline: true
 categories:
 - post

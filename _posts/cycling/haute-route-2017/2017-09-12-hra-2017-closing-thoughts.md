@@ -15,7 +15,8 @@ series_tag: haute-route
 include_series_in_header_title: true
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title: "Closing Thoughts from HRA17"
 description: "stage racing is a whole new thing"

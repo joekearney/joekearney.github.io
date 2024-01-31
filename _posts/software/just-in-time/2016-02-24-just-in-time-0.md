@@ -18,7 +18,8 @@ keywords:
 - compilation
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 container-css-class: no-highlight-toc-element
 ---

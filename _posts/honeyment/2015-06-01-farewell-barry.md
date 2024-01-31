@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 title_image_img: https://c1.staticflickr.com/9/8839/17635437682_c78248f997_k.jpg
 ---
 

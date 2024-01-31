@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Robin and Hannah's Dropped Scones"
-author: "Hannah Scully and Robin Kearney"
+author:
+- "Hannah Scully and Robin Kearney"
 description-newline: true
 categories:
 - post

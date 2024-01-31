@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Emma and James's Sausage, Chorizo and Lentil Casserole"
-author: "Emma Foster and James Verrill"
+author:
+- "Emma Foster and James Verrill"
 description-newline: true
 categories:
 - post

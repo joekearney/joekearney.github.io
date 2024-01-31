@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_iframe: "https://www.flickr.com/photos/joekearney/22735886287/in/album-72157660647306877/player/"
 footer_strava_embed: "https://www.strava.com/activities/326371398/embed/7c8a3690996c428ce96f10194ed991125e509825"

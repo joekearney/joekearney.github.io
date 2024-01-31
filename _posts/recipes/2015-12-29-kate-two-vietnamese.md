@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Kate's Vietnamese Cookery Class"
-author: "Kate Jones"
+author:
+- "Kate Jones"
 description-newline: true
 categories:
 - post

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Jo's Halloumi, Courgette and Mint Fritters"
-author: "Joanna and Matt Freeman"
+author:
+- "Joanna and Matt Freeman"
 description-newline: true
 categories:
 - post

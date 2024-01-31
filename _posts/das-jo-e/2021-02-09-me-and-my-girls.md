@@ -12,7 +12,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_float_right_url: /images/joe-and-girls.jpg
 title_image_float_right_text: "Already wrapped around their tiny fingers"

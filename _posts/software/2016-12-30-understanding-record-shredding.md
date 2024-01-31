@@ -11,7 +11,8 @@ tags:
 - highlight
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Starting with a ton of [protobuf][protobuf] messages, I was interested in querying over them using Hive and Parquet. Parquet describes a columnar storage format for data that is not necessarily tabular, for example with nested message schemas. Columnar storage can be a good choice when queries don't read all columns of the data. How can you store these nested messages in columns, preserving the structure?

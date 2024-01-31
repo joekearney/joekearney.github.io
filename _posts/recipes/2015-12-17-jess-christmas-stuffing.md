@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Jess's Grandma's Christmas Stuffing"
-author: "Jess and Graham Carter"
+author:
+- "Jess and Graham Carter"
 description-newline: true
 categories:
 - post

@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Aboriginal creation stories refer to The Dreaming, the time before humans. Clans in different areas or language groups have different stories, and broadly they describe the arrival of people and how some of the local geography was formed. The stories are passed down the generations verbally and in the form of songs, and as you get older you learn more and more detail.

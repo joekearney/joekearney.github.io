@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Leena and Bernard's Penrith Peppered Lamb"
-author: "Leena and Bernard Cocksey"
+author:
+- "Leena and Bernard Cocksey"
 description-newline: true
 categories:
 - post

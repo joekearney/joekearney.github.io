@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Frank's Summer Pudding Loaf"
-author: "Frank and Sue Shotter"
+author:
+- "Frank and Sue Shotter"
 description-newline: true
 categories:
 - post

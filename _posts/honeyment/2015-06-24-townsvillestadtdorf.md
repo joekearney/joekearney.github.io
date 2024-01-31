@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 As we approached the tropical north of Queensland the temperature was noticeably rising. Townsville is known, unfortunately, as the skin cancer capital of the world. A combination of the latitude and the hole in the ozone layer means that sun cream is a must from morning to night. We've used an awful lot of the stuff in Queensland, so hopefully we're protected from the worst of the rays but precluding any possibility of tanning our white, white bodies.

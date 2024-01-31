@@ -11,7 +11,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_float_right_url: /images/bebe-jou-changing-mat-baby-metrics.jpg
 title_image_float_right_text: Even nappy time can have baby metrics!

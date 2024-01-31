@@ -12,7 +12,8 @@ tags:
 - draft
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 I recently bought a Kettler Racer 9 indoor bike, and quickly learned that it would be more difficult than planned to get numbers out of it, either into my Garmin or for recording. More on that later.

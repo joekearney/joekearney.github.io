@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Hugh and Val's Mango Chutney Chicken"
-author: "Hugh and Val Edwards"
+author:
+- "Hugh and Val Edwards"
 description-newline: true
 categories:
 - post

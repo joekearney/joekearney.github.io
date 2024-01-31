@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 
 title_image_iframe: https://www.flickr.com/photos/joekearney/18167635036/in/album-72157652379606419/player/
 footer_strava_embed: https://www.strava.com/activities/302779451/embed/f7ade0ca0e50705d0b3ad6019c90dd33d3253f47

@@ -8,7 +8,8 @@ tags:
 - article
 - draft
 - software
-author: Joe Kearney
+author:
+- Joe Kearney
 published: true
 js-require:
 - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

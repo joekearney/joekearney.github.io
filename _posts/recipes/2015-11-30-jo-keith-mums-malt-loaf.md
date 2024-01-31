@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Keith's Mum's Malt Loaf"
-author: "Jo Lucas and Keith Sammons"
+author:
+- "Jo Lucas and Keith Sammons"
 description-newline: true
 categories:
 - post

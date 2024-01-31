@@ -12,7 +12,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_float_right_url: /images/ellie/ellie-santa-hat.jpg
 title_image_float_right_text: Eleanor Margot Kearney, day 3

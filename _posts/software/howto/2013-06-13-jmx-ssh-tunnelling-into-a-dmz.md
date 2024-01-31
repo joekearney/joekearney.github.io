@@ -9,7 +9,8 @@ tags:
 - software
 - howto
 status: publish
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_img: /images/ssh-tunnel-diagram.png
 title_image_alt: "Diagram of JMX over SSH into a DMZ"

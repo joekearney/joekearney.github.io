@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 
 title_image_iframe: "https://www.flickr.com/photos/joekearney/27991271270/in/album-72157670309635141/player/"
 ---

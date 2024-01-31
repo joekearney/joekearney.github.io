@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Matt's Chocolate Amaretti Torte"
-author: "Matt Glossop and Sarah Griffiths"
+author:
+- "Matt Glossop and Sarah Griffiths"
 description-newline: true
 categories:
 - post

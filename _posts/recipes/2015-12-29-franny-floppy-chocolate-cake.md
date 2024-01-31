@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Franny's Floppy Chocolate Cake"
-author: "Franny and Paul Wolpe"
+author:
+- "Franny and Paul Wolpe"
 description-newline: true
 categories:
 - post

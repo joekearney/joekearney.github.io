@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Rachel's Grandma's Pavlova"
-author: "Toby and Rachel Kearney"
+author:
+- "Toby and Rachel Kearney"
 description-newline: true
 categories:
 - post

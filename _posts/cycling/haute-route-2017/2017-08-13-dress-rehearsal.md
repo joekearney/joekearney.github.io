@@ -21,7 +21,8 @@ keywords:
 - Haute Route
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 ---
 

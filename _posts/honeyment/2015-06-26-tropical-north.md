@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 ---
 
 North Queensland is beautiful. Miles of sandy beaches edged with palm trees, set against a backdrop of lush, hilly rainforest. It's idyllic, almost. Since it's Australia, the paradise is punctured by signboards describing the perils that may lurk in the water -- "Warning! Achtung! Crocodiles inhabit these waters and may cause injury or death". 

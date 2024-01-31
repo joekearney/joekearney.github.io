@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Claire's Best Lasagne"
-author: "Claire Wright and Joe Giacomet"
+author:
+- "Claire Wright and Joe Giacomet"
 description-newline: true
 categories:
 - post

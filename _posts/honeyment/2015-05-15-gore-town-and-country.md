@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Tonight was one of those nights where there was no plan, and it worked out perfectly.

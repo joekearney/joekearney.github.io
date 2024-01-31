@@ -11,7 +11,8 @@ tags:
 - comments
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 _Many thanks to [Antony Lewis][bitsonblocks] for reviewing this and helping make it say what I actually meant._

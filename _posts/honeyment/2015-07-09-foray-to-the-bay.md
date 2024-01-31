@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Kate Jones
+author:
+- Kate Jones
 
 title_image_iframe: https://www.flickr.com/photos/joekearney/27656134964/in/album-72157668121187344/player/
 ---

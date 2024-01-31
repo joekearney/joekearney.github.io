@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Ros and Robin's (Cheat) Sausage Casserole"
-author: "Robin and Ros Allen"
+author:
+- "Robin and Ros Allen"
 description-newline: true
 categories:
 - post

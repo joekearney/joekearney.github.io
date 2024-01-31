@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Ashley and Jack's Salted Caramel Millionaire's Shortbread"
-author: "Ashley Fryer and Jack Fitzgerald"
+author:
+- "Ashley Fryer and Jack Fitzgerald"
 description-newline: true
 categories:
 - post

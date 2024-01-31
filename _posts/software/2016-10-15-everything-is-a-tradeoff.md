@@ -11,7 +11,8 @@ tags:
 - highlight
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Maths teachers in my school used to recite "_write down your working_" ad aeternum in an attempt to get us record the path from problem to solution. It took me a long time to realise that this rule generalises to describe a useful practice in software engineering.

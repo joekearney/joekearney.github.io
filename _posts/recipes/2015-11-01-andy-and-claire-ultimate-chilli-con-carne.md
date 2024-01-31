@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Andy and Claire's Ultimate Chilli con Carne"
-author: "Andy and Claire Lemin"
+author:
+- "Andy and Claire Lemin"
 description-newline: true
 categories:
 - post

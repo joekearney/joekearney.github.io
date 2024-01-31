@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Jenny and Dan's Dorset Apple Cake"
-author: "Jenny Morris and Dan Freiss"
+author:
+- "Jenny Morris and Dan Freiss"
 description-newline: true
 categories:
 - post

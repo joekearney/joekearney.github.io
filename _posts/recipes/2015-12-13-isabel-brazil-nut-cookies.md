@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Isabel's Chocolate Brazil Nut Cookies"
-author: "Isabel and Peter Kay"
+author:
+- "Isabel and Peter Kay"
 description-newline: true
 categories:
 - post

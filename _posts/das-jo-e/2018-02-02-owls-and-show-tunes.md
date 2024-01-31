@@ -11,7 +11,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_float_right_url: /images/ellie/ellie-screaming.jpg
 title_image_float_right_text: "She also screams at home, sometimes"

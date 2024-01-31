@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_iframe: "https://www.flickr.com/photos/joekearney/16714796062/in/album-72157651213580997/player/"
 #title_image_flickr_picture: 16714796062

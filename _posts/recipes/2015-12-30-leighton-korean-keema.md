@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Leighton's Korean Keema"
-author: "Leighton and Sarah Eardley"
+author:
+- "Leighton and Sarah Eardley"
 description-newline: true
 categories:
 - post

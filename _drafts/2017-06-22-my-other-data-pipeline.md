@@ -15,7 +15,8 @@ keywords:
 - ant
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 title_image_float_right_url: /images/dot/img/kettler-pipeline.png
 ---
 

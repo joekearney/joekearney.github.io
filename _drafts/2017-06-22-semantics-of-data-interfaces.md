@@ -12,7 +12,8 @@ tags:
 - draft
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 [soundcloud-dataset-ownership]: https://developers.soundcloud.com/blog/a-better-model-of-data-ownership

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Jenny and Rob's Teriyaki Salmon Stir Fry"
-author: "Jenny and Rob Manning"
+author:
+- "Jenny and Rob Manning"
 description-newline: true
 categories:
 - post

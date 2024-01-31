@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Mike and Patrick's No-Churn Margarita Ice Cream"
-author: "Mike Young and Patrick Griffiths"
+author:
+- "Mike Young and Patrick Griffiths"
 description-newline: true
 categories:
 - post

@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 ---
 
 I can't believe we're already a month into our trip -- and having a fantastic time! After much deliberation here's our top five so far (in chronological order):

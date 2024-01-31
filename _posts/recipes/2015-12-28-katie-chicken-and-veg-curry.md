@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Katie's Chicken and Vegetable Curry"
-author: "Katie and Stefan Sieberer"
+author:
+- "Katie and Stefan Sieberer"
 description-newline: true
 categories:
 - post

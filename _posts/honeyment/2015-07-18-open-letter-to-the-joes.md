@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Kate Jones
+author:
+- Kate Jones
 ---
 
 Sadly it's time for my holiday with you two to come to an end. Thanks for having me along for the ride -- it's been ace!

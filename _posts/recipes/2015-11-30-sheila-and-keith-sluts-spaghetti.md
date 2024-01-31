@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Sheila and Keith's Slut's Spaghetti"
-author: "Sheila and Keith Ash"
+author:
+- "Sheila and Keith Ash"
 description-newline: true
 categories:
 - post

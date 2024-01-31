@@ -12,7 +12,8 @@ tags:
 - highlight
 status: publish
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 {% include image-float.html src='/images/hacker-rank-testlib-junit.png' txt_alt='Hierarchy of generated tests in Eclipse JUnit view' caption='Hierarchy of generated tests' id='guava-generated-tests-in-eclipse' side='right' %}

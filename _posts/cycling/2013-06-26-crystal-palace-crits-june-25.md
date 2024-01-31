@@ -6,7 +6,8 @@ categories:
 tags:
 - cycling
 status: publish
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='http://app.strava.com/activities/62843829/embed/a3489c47cf8c56d9fc287fa99142e061c06ab4de' class="inline-image-right"></iframe>

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Philippa's Recipes from Hoi An"
-author: "Philippa Lea"
+author:
+- "Philippa Lea"
 description-newline: true
 categories:
 - post

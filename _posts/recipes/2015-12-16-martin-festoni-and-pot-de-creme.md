@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Martin's Festoni and Pot de Crème"
-author: "Martin McNulty and Mark Papp"
+author:
+- "Martin McNulty and Mark Papp"
 description-newline: true
 categories:
 - post

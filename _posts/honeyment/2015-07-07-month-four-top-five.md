@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 ---
 
 Eek. The Australian leg of our trip is over and it's only a couple of weeks until we come home (sob)! Here are some highlights from our road trip through tropical Queensland:

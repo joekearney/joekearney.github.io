@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Rosie's Cheat's Sticky Toffee Pudding"
-author: "Rosie Hallett"
+author:
+- "Rosie Hallett"
 description-newline: true
 categories:
 - post

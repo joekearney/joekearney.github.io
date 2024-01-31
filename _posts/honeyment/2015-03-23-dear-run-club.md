@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 
 footer_strava_embed: https://www.strava.com/activities/272036214/embed/fe68ea2c4a00eceac4e29d73c2b1d0bd19aee903
 ---

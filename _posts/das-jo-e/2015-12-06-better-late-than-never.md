@@ -11,7 +11,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 What a crazy year. After getting engaged, quitting our jobs, leaving London and [going travelling](/honeyment-index) for five months we're now three months into living in a new country!

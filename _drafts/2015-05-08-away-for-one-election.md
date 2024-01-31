@@ -11,7 +11,8 @@ tags:
 status: publish
 type: post
 published: false
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 I bear around [one ten thousandth](http://www.bbc.com/news/politics/constituencies/E14000926) of the responsibility in my constituency for today's results. Like a moron, I sent in the application form for a proxy vote 6 days before the election, after the 6 _working_ days deadline, and it wasn't accepted. Fair enough, and I felt pretty bad about that. It wouldn't have made a difference, but that's no excuse.

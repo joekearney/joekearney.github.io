@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Cynthia's Steak Provence"
-author: "Cynthia Hobson and Adrian Thwaite"
+author:
+- "Cynthia Hobson and Adrian Thwaite"
 description-newline: true
 categories:
 - post

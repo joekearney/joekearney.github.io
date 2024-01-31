@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Lucie's Melanzane alla Mussettoro"
-author: "Lucie Mussett"
+author:
+- "Lucie Mussett"
 description-newline: true
 categories:
 - post

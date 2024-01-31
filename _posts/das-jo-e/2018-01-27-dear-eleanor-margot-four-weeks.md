@@ -11,7 +11,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 
 title_image_float_right_url: /images/ellie/ellie-yoda-sofa-joe-laptop.jpg
 title_image_float_right_text: Channelling her inner E.T.

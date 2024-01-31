@@ -13,7 +13,8 @@ keywords:
 - sbt
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 SBT has long been able to [cross compile](http://www.scala-sbt.org/0.13/docs/Cross-Build.html) code to multiple versions of Scala. What if you want to cross compile to different versions of a library?

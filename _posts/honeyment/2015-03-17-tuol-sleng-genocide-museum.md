@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Tuol Sleng, known as S-21, was one of the major prison camps of the Khmer Rouge, between 1975-79. It was an old high school, and the classrooms were converted to cells and "interrogation" rooms. The museum was a similar experience to the 9/11 museum in New York -- a must see that is totally depressing; not a fun day. It's terrible that we know so little about the Khmer Rouge atrocities, their path to power and the state of affairs after the Vietnamese invasion/liberation in 1979.

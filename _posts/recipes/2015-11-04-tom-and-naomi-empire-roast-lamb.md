@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Tom and Naomi's Empire Roast Lamb"
-author: "Tom Lambert and Naomi"
+author:
+- "Tom Lambert and Naomi"
 description-newline: true
 categories:
 - post

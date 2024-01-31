@@ -19,7 +19,8 @@ keywords:
 - compilation
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_image_img: /images/just-in-time-chart.png
 ---

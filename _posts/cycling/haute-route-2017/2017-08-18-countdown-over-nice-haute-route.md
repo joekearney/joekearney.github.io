@@ -21,7 +21,8 @@ keywords:
 - Haute Route
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 title_flickr_float_right_url: https://farm5.staticflickr.com/4440/36509963641_d249456851.jpg
 title_flickr_float_right_width: 375px

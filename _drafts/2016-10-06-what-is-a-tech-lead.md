@@ -11,7 +11,8 @@ tags:
 - draft
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 I recently moved teams within [SoundCloud][soundcloud] to became the tech lead of our data platform. The role of tech lead seems to have different interpretations across software engineering, and I want to describe here what I think this role means in SoundCloud.

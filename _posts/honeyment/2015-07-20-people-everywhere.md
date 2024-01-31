@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 We were met as promised at Hong Kong airport by our new travel buddy Kate, waiting at arrivals and brandishing a lovingly handcrafted sign: "The Jo(e)s". Freebies for tourists were thrust into our hands (ferry ticket, useful; fridge magnets, presents) and we grappled with our latest currency to get onto the train to town. We flew to Vietnam the very next day, saving our main stay in HK for the last week of the honeyment.

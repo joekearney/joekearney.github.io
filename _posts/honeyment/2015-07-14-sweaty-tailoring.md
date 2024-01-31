@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 Hoi An felt like a huge relief after the sensory abuse of Hanoi. After our early flight south to Danang near Hoi An (think the RyanAir school of airport locations) we were picked up from the airport quickly by a hotel driver, who seemed much easier to trust than his shifty counterparts in Hanoi. We were worried for a moment when the taxi was pulled over by a police officer, but after a hasty exchange of documents (large-denomination documents) all was well again. "It's only money", he said with a wry smile once we'd sped off.

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Nanny's Quick Chicken Pie"
-author: "Marie and John Hallett"
+author:
+- "Marie and John Hallett"
 description-newline: true
 categories:
 - post

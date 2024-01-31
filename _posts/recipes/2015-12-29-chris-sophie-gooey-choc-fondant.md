@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Chris & Sophie's Gooey Chocolate Fondant"
-author: "Chris Heald and Sophie Billington"
+author:
+- "Chris Heald and Sophie Billington"
 description-newline: true
 categories:
 - post

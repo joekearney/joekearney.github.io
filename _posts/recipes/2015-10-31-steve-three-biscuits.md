@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Steve's Cookies and Brownies"
-author: "Steve Gibson"
+author:
+- "Steve Gibson"
 description-newline: true
 categories:
 - post

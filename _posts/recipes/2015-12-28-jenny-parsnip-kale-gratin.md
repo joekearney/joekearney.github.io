@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Jenny's Parsnip, Kale and Red Onion Gratin"
-author: "Jenny Bond and John Terroni"
+author:
+- "Jenny Bond and John Terroni"
 description-newline: true
 categories:
 - post

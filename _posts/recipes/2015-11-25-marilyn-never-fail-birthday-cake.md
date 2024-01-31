@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Marilyn's Never Fail Chocolate Birthday Cake"
-author: "Marilyn and John Heald"
+author:
+- "Marilyn and John Heald"
 description-newline: true
 categories:
 - post

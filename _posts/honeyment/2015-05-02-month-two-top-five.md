@@ -9,7 +9,8 @@ tags:
 status: publish
 type: post
 published: true
-author: Joanna Kearney
+author:
+- Joanna Kearney
 ---
 
 We're already two months through our trip and can't quite believe how fast the time is going. It's too hard to choose, but here's some of the highlights from month two (in chronological order):

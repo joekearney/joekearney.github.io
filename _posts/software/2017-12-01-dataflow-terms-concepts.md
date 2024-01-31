@@ -11,7 +11,8 @@ tags:
 - comments
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 source: https://research.google.com/pubs/pub43864.html
 
 title_image_float_right_url: /images/dataflow.png

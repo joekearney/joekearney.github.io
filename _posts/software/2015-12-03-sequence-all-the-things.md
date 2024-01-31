@@ -18,7 +18,8 @@ keywords:
 - applicative
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 This post describes how to write a `sequence` method for your shiny new type `F`. This allows you to get from a type `G[F[A]]` to `F[G[A]]` -- that is, to swap the order of your types. Here I'll be using scalaz, and there is no magic involved. For many common types everything is already there for you, but if you write your own `F[_]` then there's a little work to make it all fit together.

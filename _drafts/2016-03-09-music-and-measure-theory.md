@@ -15,7 +15,8 @@ keywords:
 - maths
 published: false
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 title_image_iframe: https://www.youtube.com/embed/cyW5z-M2yzw
 source: http://www.3blue1brown.com/
 js-require:

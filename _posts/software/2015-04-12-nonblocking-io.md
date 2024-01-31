@@ -10,7 +10,8 @@ tags:
 - software
 - comments
 - highlight
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 I have got away without using non-blocking IO directly until recently, because I've not worked on anything that had to scale to a large number of users. Sure, blocking reads and writes have become stuck and stuff has broken, but it's honestly never been too big a deal. If everything is wrapped in timeouts and retry then eventually everything sorts itself out. You don't get away with this when trying to handle large numbers of connections, so something must be done.

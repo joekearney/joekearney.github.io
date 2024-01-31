@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "William's Spinach Madeleine"
-author: "William and Christine Randall"
+author:
+- "William and Christine Randall"
 description-newline: true
 categories:
 - post

@@ -10,7 +10,8 @@ tags:
 - howto
 status: publish
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 We want to manage a Java web server running in a DMZ using JMX. Here we describe how to set this up, with JMX access from clients over SSH. My [last post describes][1] how to set up connect to a port in the DMZ through an SSH tunnel (yes, it's simple). Once we have that, JMX-managed apps can be configured to allow JMX clients to connect to the source-host of the tunnel.
 

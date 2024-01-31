@@ -19,7 +19,8 @@ keywords:
 - compilation
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 ---
 
 {% include_relative 2-bytecode.md %}

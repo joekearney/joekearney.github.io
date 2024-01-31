@@ -8,7 +8,8 @@ categories:
 tags:
 - article
 - software
-author: Joe Kearney
+author:
+- Joe Kearney
 published: true
 ---
 

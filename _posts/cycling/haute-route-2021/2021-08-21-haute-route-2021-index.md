@@ -18,7 +18,8 @@ keywords:
 - Haute Route
 status: published
 type: post
-author: Joe Kearney
+author:
+- Joe Kearney
 
 #title_image_img: images/haute-route/col-cayolle-wide.jpg
 
